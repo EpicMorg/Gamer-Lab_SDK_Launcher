@@ -8,8 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace gSDK_Launcher {
-    public partial class frm_main : Form {
-        public frm_main() {
+    public partial class Form1 : Form {
+        public Form1() {
             InitializeComponent();
         }
     }

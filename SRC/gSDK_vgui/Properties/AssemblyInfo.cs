@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("gSDK_Launcher")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("GoldSource SDK VGUI Library")]
+[assembly: AssemblyDescription("GoldSource SDK VGUI Library")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("gSDK_Launcher")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("EpicMorg")]
+[assembly: AssemblyProduct("GoldSource SDK VGUI Library")]
+[assembly: AssemblyCopyright("Copyright © EpicMorg 2014")]
+[assembly: AssemblyTrademark("EpicMorg")]
 [assembly: AssemblyCulture("")]
 
 // Параметр ComVisible со значением FALSE делает типы в сборке невидимыми 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("ddd79357-9da8-4899-8671-cb495019125b")]
+[assembly: Guid("e4142d48-ff23-4349-aee2-ca7164f9ee30")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
