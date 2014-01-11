@@ -3,8 +3,8 @@ using System.Drawing;
 using System.Windows.Forms;
 
 namespace gSDK_vgui {
-    public partial class frm_main : Form {
-        public frm_main() {
+    public partial class frm_template : Form {
+        public frm_template() {
             InitializeComponent();
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
@@ -39,8 +39,7 @@ namespace gSDK_vgui {
         }
         //---
         #endregion
-         
-
+          
         #region controls_custom
         #region btn_min
         private void pic_btn_min_MouseEnter(object sender, EventArgs e) {
@@ -90,6 +89,11 @@ namespace gSDK_vgui {
         }
         #endregion
         #endregion
+
+        private void frm_template_Load(object sender, EventArgs e) {
+
+        }
+       
 
     }
 }

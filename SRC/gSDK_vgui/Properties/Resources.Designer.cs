@@ -93,6 +93,16 @@ namespace gSDK_vgui.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hl_lab {
+            get {
+                object obj = ResourceManager.GetObject("hl-lab", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap max_button {
             get {
                 object obj = ResourceManager.GetObject("max_button", resourceCulture);
