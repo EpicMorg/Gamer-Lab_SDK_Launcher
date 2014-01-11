@@ -1,4 +1,31 @@
-﻿namespace gSDK_Launcher {
+﻿/*
+*************************************************************************************
+Tis file is distributed under MIT license:
+*************************************************************************************
+The MIT License (MIT)
+
+Copyright © 2013-2014 EpicMorg
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the ''Software''), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED ''AS IS'', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.", @"The MIT License (MIT)
+*************************************************************************************
+*/
+namespace gSDK_Launcher {
     partial class frm_about {
         /// <summary>
         /// Required designer variable.
@@ -26,7 +53,10 @@
             this.btn_close = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_about = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_credits = new System.Windows.Forms.Label();
+            this.labelCopyright = new System.Windows.Forms.Label();
+            this.labelVersion = new System.Windows.Forms.Label();
+            this.labelProductName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).BeginInit();
@@ -37,18 +67,19 @@
             // 
             // pic_btn_min
             // 
-            this.pic_btn_min.Location = new System.Drawing.Point(546, 12);
+            this.pic_btn_min.Location = new System.Drawing.Point(222, 12);
             this.pic_btn_min.Visible = false;
             // 
             // pic_btn_max
             // 
-            this.pic_btn_max.Location = new System.Drawing.Point(570, 12);
+            this.pic_btn_max.Location = new System.Drawing.Point(246, 12);
             this.pic_btn_max.Visible = false;
             // 
             // pic_btn_exit
             // 
             this.pic_btn_exit.Enabled = false;
-            this.pic_btn_exit.Location = new System.Drawing.Point(594, 12);
+            this.pic_btn_exit.Location = new System.Drawing.Point(270, 12);
+            this.pic_btn_exit.Visible = false;
             // 
             // lbl_title
             // 
@@ -59,7 +90,7 @@
             // 
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_close.Location = new System.Drawing.Point(12, 381);
+            this.btn_close.Location = new System.Drawing.Point(210, 305);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 23);
             this.btn_close.TabIndex = 7;
@@ -70,7 +101,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::gSDK_Launcher.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 130);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 95);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(228, 133);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -85,33 +116,70 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_about.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.panel_about.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_about.Controls.Add(this.label1);
+            this.panel_about.Controls.Add(this.lbl_credits);
+            this.panel_about.Controls.Add(this.labelCopyright);
+            this.panel_about.Controls.Add(this.labelVersion);
+            this.panel_about.Controls.Add(this.labelProductName);
             this.panel_about.Controls.Add(this.pictureBox1);
             this.panel_about.Location = new System.Drawing.Point(12, 34);
             this.panel_about.Name = "panel_about";
-            this.panel_about.Size = new System.Drawing.Size(600, 341);
+            this.panel_about.Size = new System.Drawing.Size(276, 265);
             this.panel_about.TabIndex = 9;
             // 
-            // label1
+            // lbl_credits
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(18, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "<program_name>";
+            this.lbl_credits.AutoSize = true;
+            this.lbl_credits.Location = new System.Drawing.Point(18, 40);
+            this.lbl_credits.Name = "lbl_credits";
+            this.lbl_credits.Size = new System.Drawing.Size(109, 52);
+            this.lbl_credits.TabIndex = 10;
+            this.lbl_credits.Text = "vGUI library by STAM\r\nCode by KastHack\r\n\r\nSpecial for:";
+            // 
+            // labelCopyright
+            // 
+            this.labelCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelCopyright.AutoSize = true;
+            this.labelCopyright.BackColor = System.Drawing.Color.Transparent;
+            this.labelCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCopyright.Location = new System.Drawing.Point(18, 237);
+            this.labelCopyright.Name = "labelCopyright";
+            this.labelCopyright.Size = new System.Drawing.Size(43, 13);
+            this.labelCopyright.TabIndex = 9;
+            this.labelCopyright.Text = "<Copy>";
+            // 
+            // labelVersion
+            // 
+            this.labelVersion.AutoSize = true;
+            this.labelVersion.BackColor = System.Drawing.Color.Transparent;
+            this.labelVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelVersion.Location = new System.Drawing.Point(194, 13);
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(34, 13);
+            this.labelVersion.TabIndex = 9;
+            this.labelVersion.Text = "<ver>";
+            // 
+            // labelProductName
+            // 
+            this.labelProductName.AutoSize = true;
+            this.labelProductName.BackColor = System.Drawing.Color.Transparent;
+            this.labelProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelProductName.Location = new System.Drawing.Point(18, 13);
+            this.labelProductName.Name = "labelProductName";
+            this.labelProductName.Size = new System.Drawing.Size(103, 13);
+            this.labelProductName.TabIndex = 9;
+            this.labelProductName.Text = "<program_name>";
             // 
             // frm_about
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 416);
+            this.ClientSize = new System.Drawing.Size(300, 340);
             this.Controls.Add(this.panel_about);
             this.Controls.Add(this.btn_close);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(300, 340);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(300, 340);
             this.Name = "frm_about";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -141,6 +209,9 @@
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel panel_about;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelProductName;
+        private System.Windows.Forms.Label labelVersion;
+        private System.Windows.Forms.Label lbl_credits;
+        private System.Windows.Forms.Label labelCopyright;
     }
 }

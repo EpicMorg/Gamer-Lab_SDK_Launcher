@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("gSDK_Launcher")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("GoldSource SDK Launcher")]
+[assembly: AssemblyDescription("GoldSource SDK Launcher")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("gSDK_Launcher")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("EpicMorg")]
+[assembly: AssemblyProduct("GoldSource SDK Launcher")]
+[assembly: AssemblyCopyright("Copyright © EpicMorg 2014")]
+[assembly: AssemblyTrademark("EpicMorg")]
 [assembly: AssemblyCulture("")]
 
 // Параметр ComVisible со значением FALSE делает типы в сборке невидимыми 
