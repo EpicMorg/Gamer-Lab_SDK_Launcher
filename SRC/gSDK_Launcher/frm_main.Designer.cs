@@ -50,6 +50,8 @@ namespace gSDK_Launcher {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.listv_programs = new System.Windows.Forms.ListView();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_about = new System.Windows.Forms.Button();
@@ -85,7 +87,13 @@ namespace gSDK_Launcher {
             this.listv_programs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.listv_programs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listv_programs.ForeColor = System.Drawing.Color.White;
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "listViewGroup1";
+            this.listv_programs.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1});
             this.listv_programs.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listv_programs.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
             this.listv_programs.Location = new System.Drawing.Point(12, 43);
             this.listv_programs.Name = "listv_programs";
             this.listv_programs.Size = new System.Drawing.Size(336, 180);

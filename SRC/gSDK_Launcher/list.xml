@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<programs>
+	<category name="Editor(s)">
+		<app>
+			<name>Valve Hammer Editor 3.5</name>
+			<icon>.\SDK\Launcher\logos\hammer.ico</icon>
+			<path>.\SDK\hammer.exe</path>
+			<extensions>
+				<ext>rmf</ext>
+				<ext>map</ext>
+			</extensions>
+			<installed>true</installed>
+		</app>
+		<app>
+			<name>Valve Hammer Editor 3.4</name>
+			<icon>.SDK/Launcherlogos\hammer.ico</icon>
+			<path>.\SDK\hammer34.exe</path>
+			<extensions>
+				<ext>rmf</ext>
+				<ext>map</ext>
+			</extensions>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>Valve WorldCraft Editor 3.3</name>
+			<icon>.SDK/Launcherlogos\hammer.ico</icon>
+			<path>.\SDK\wc.exe</path>
+			<extensions>
+				<ext>rmf</ext>
+				<ext>map</ext>
+			</extensions>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>CSM Hammer Editor 3.5</name>
+			<icon>.\SDK\Launcher\logos\hammer.ico</icon>
+			<path>.\SDK\editor.exe</path>
+			<extensions>
+				<ext>rmf</ext>
+				<ext>map</ext>
+			</extensions>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>Neo Hammer Editor 3.5</name>
+			<icon>.\SDK\Launcher\logos\neo.ico</icon>
+			<path>.\SDK\neo.exe</path>
+			<extensions>
+				<ext>rmf</ext>
+				<ext>map</ext>
+			</extensions>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>Neon Hammer Editor 3.5</name>
+			<icon>.\SDK\Launcher\logos\neo.ico</icon>
+			<path>.\SDK\neon.exe</path>
+			<extensions>
+				<ext>rmf</ext>
+				<ext>map</ext>
+			</extensions>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>Neon Hammer Editor 3.5 Rus</name>
+			<icon>.\SDK\Launcher\logos\neo.ico</icon>
+			<path>.\SDK\neon_rus.exe</path>
+			<extensions>
+				<ext>rmf</ext>
+				<ext>map</ext>
+			</extensions>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>QuArK</name>
+			<icon>.\SDK\Launcher\logos\QuArK.ico</icon>
+			<path>.\SDK\addons\QuArK\QuArK.exe</path>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>Sledge Editor</name>
+			<icon>.\SDK\Launcher\logos\QuArK.ico</icon>
+			<path>.\SDK\addons\Sledge\Sledge.Editor.exe</path>
+			<installed>false</installed>
+		</app>
+	</category>
+	<category name="Mapping">
+		<app>
+			<name>Automap</name>
+			<icon>.\SDK\Launcher\logos\Automap.ico</icon>
+			<path>.\SDK\addons\Automap\Automap.exe</path>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>BSPViewer</name>
+			<icon>.\SDK\Launcher\logos\BSPViewer.ico</icon>
+			<path>.\SDK\addons\BSPViewer\BSPViewer.exe</path>
+			<extensions>
+				<ext>bsp</ext>
+			</extensions>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>BSP Tools</name>
+			<icon>.\SDK\Launcher\logos\BSPtoolsLauncher.ico</icon>
+			<path>.\SDK\addons\BSP Tools\BSPtoolsLauncher.exe</path> 
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>Leak Marker</name>
+			<icon>.\SDK\Launcher\logos\LeakMarker01.ico</icon>
+			<path>.\SDK\addons\LeakMarker01\LeakMarker01.exe</path>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>RES Gen</name>
+			<icon>.\SDK\Launcher\logos\RES_Gen.icon</icon>
+			<path>.\SDK\addons\RESGen\RES_Gen.exe</path>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>RandMap</name>
+			<icon>.\SDK\Launcher\logos\RandMap.icon</icon>
+			<path>.\SDK\addons\RandMap\RandMap.exe</path>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>MAPViewer</name>
+			<icon>.\SDK\Launcher\logos\MAPViewer.icon</icon>
+			<path>.\SDK\addons\map viewer\MAPViewer.exe</path>
+			<installed>false</installed>
+		</app>
+		
+		
+		
+		 
+		
+		.\SDK\addons\crafty\Crafty.exe
+		.\SDK\addons\gensurf\GENSURF.EXE
+		.\SDK\addons\TerrainGenerator\TerrainGenerator.exe
+		.\SDK\addons\TBLux\TBLux.exe
+	</category>
+	<category name="Compilling and Decompilling">
+		.\SDK\addons\Batch Compiler\Batch Compiler.exe
+		.\SDK\addons\GUIRipnet\GUIRipent.exe
+		.\SDK\addons\UCompiler\UCompiler.exe
+		.\SDK\addons\BSPTwoMap Launcher\BSPTwoMap_Launcher.exe 
+		.\SDK\addons\bsp map\BSP_MAP.EXE
+		.\SDK\addons\winbspc\winbspc.exe
+	</category>
+	<category name="Content Managment">
+		.\SDK\addons\PakExpl\PakExpl.exe
+		.\SDK\addons\PakScape\PakScape.exe
+		.\HL-LAB\dist\GameCfgManager.exe
+		.\SDK\addons\bsp2zip\17Ims.exe
+	</category>
+	<category name="Modeling">
+		.\SDK\addons\hlmv\hlmv.exe
+		.\SDK\addons\guistudiomdl\guistudiomdl.exe
+	</category>
+	<category name="Texturing">
+		.\SDK\addons\Auto Seamer\Auto Seamer.exe
+		.\SDK\addons\Orbital TexTiler\Orbital TexTiler 1.0.exe
+		.\SDK\addons\QLumpy\QLumpy_Launcher.exe
+		.\SDK\addons\SPR Attrib\SPRAttrib.exe
+		.\SDK\addons\SprExplorer\SprExplorer.exe
+		.\SDK\addons\Wally\Wally.exe
+		.\SDK\addons\textract\TExtract suite v1.0.exe
+		.\SDK\addons\wintextract\wintextract.exe
+		.\SDK\addons\hlcsm\Hlcsm.exe
+	</category>
+	<category name="Modding">
+		.\SDK\addons\HILogoGen\HILogoGen 0.1.exe
+		.\SDK\addons\HLC\HLC.EXE
+		.\SDK\addons\backchanger\backchanger.exe
+	</category>
+	<category name="Help and Manuals">
+		.\SDK\manuals\C++.chm
+		.\SDK\manuals\Counter-Strike Mapping.chm
+		.\SDK\manuals\dmitrich!.chm
+		.\SDK\manuals\HL-SDKT.chm
+		.\SDK\manuals\mapping.chm
+		.\SDK\manuals\MilkShape3D.chm
+		.\SDK\manuals\RussianVHE.chm
+		.\SDK\manuals\zhlt.chm
+	</category>
+	<category name="Support and Links">
+		http://hl-lab.ru/
+		http://cs-mapping.com.ua/
+		http://cs-mapper.com/
+		http://www.microsoft.com/ru-ru/download/details.aspx?id=17851 4
+		http://www.microsoft.com/ru-ru/download/details.aspx?id=30653 45
+		http://ww.epicm.org/
+	</category>
+	<category name="Compillers">
+		<app>
+			<name>Valve (Default) Very old</name>
+			<path name="">.\SDK\tools\default\qbsp2.exe</path>
+			<path name="">.\SDK\tools\default\qcsg.exe</path>
+			<path name="">.\SDK\tools\default\qrad.exe</path>
+			<path name="">.\SDK\tools\default\vis.exe</path>
+			<default>true</default>
+			<installed>true</installed>
+		</app>
+		<app>
+			<name>Vluzacn x32 v31 (2014)</name>
+			<path name="">.\SDK\tools\vluzacn\hlbsp.exe</path>
+			<path name="">.\SDK\tools\vluzacn\hlcsg.exe</path>
+			<path name="">.\SDK\tools\vluzacn\hlrad.exe</path>
+			<path name="">.\SDK\tools\vluzacn\hlvis.exe</path>
+			<default>false</default>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>Zonner's x32 SSE</name>
+			<path name="">.\SDK\tools\zonner-sse\hlbsp.exe</path>
+			<path name="">.\SDK\tools\zonner-sse\hlcsg.exe</path>
+			<path name="">.\SDK\tools\zonner-sse\hlrad.exe</path>
+			<path name="">.\SDK\tools\zonner-sse\hlvis.exe</path>
+			<default>false</default>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>Zonner's x32 SSE2</name>
+			<path name="">.\SDK\tools\zonner-sse2\hlbsp.exe</path>
+			<path name="">.\SDK\tools\zonner-sse2\hlcsg.exe</path>
+			<path name="">.\SDK\tools\zonner-sse2\hlrad.exe</path>
+			<path name="">.\SDK\tools\zonner-sse2\hlvis.exe</path>
+			<default>false</default>
+			<installed>false</installed>
+		</app>
+		<app>
+			<name>Zonner's x64</name>
+			<path name="">.\SDK\tools\zonner-64\hlbsp.exe</path>
+			<path name="">.\SDK\tools\zonner-64\hlcsg.exe</path>
+			<path name="">.\SDK\tools\zonner-64\hlrad.exe</path>
+			<path name="">.\SDK\tools\zonner-64\hlvis.exe</path>
+			<default>false</default>
+			<installed>false</installed>
+		</app>
+	</category>
+</programs>

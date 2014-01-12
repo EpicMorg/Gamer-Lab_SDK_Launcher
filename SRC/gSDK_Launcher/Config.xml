@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<language>
+	<default>en-en</default>
+	<path>none</path>
+	<!--default>ru-ru</default>
+	<path>./lang/lng_rus.xml</path-->
+</language>
