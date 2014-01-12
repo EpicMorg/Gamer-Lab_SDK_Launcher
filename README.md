@@ -31,8 +31,11 @@ TODO for KASTHACK:
 3. В меню настроек есть ассоциация некоторых файлов. При запуске лаунчера сканируется реестр с этими расширениями
 и сверяется с блоком в этом конфиге. Если расширение не зарегано на компе - то в вып. списке отображается none.
 3.1. Если расширение разегистрировано с программой не из SDK - то пишется - Other.
-3.2. Вып. список для каждого расширения фомируется из программ, которые установлены (смотрится list.xml с пометкой true) у которых есть соответствующая <allow_associate_with>. Например если у хаммера <allow_associate_with>rmf, map</associate_with>,
-то он будет в списке ассоциаций у RMF и у MAP.
+3.2. Вып. список для каждого расширения фомируется из программ, которые установлены (смотрится list.xml с пометкой true) у которых есть соответствующая <extensions>. Например если у хаммера 
+<extensions>
+	<ext>rmf</ext>
+	<ext>map</ext>
+</extensions>, то он будет в списке ассоциаций у RMF и у MAP.
 
 
 Язык:
@@ -56,8 +59,11 @@ TODO for KASTHACK:
 		<app>	 
 			<name>Hammer 3.5</name>
 			<icon>./SDK/Launcher/logos/hammer.png(ico)</icon>
-			<path>./SDK/hammer.exe</path>
-			<allow_associate_with>rmf, map</associate_with>
+			<path>./SDK/hammer.exe</path> 
+			<extensions>
+				<ext>rmf</ext>
+				<ext>map</ext>
+			</extensions>
 			<installed>true</installed>
 		</app>
 		<app> 

@@ -45,6 +45,11 @@ namespace gSDK_Launcher {
             frmScanning.ShowDialog();
         }
 
+        private void brn_apply_Click(object sender, EventArgs e) {
+            //save
+            this.Close();
+        }
+
          
     }
 }
