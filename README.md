@@ -61,8 +61,8 @@ TODO for KASTHACK:
 	<category name="Mapping"> 
 		<app>	 
 			<name>Hammer 3.5</name>
-			<icon>./SDK/Launcher/logos/hammer.png(ico)</icon>
-			<path>./SDK/hammer.exe</path> 
+			<icon>.\SDK\Launcher\logos\hammer.ico</icon>
+			<path>.\SDK\hammer.exe</path> 
 			<extensions>
 				<ext>rmf</ext>
 				<ext>map</ext>
@@ -71,8 +71,8 @@ TODO for KASTHACK:
 		</app>
 		<app> 
 			<name>Hammer 3.5 Neon</name>
-			<icon>./SDK/Launcher/logos/hammer_neon.png(ico)</icon>
-			<path>./SDK/neon.exe</path>
+			<icon>.\SDK\Launcher\logos\hammer_neon.ico</icon>
+			<path>.\SDK\neon.exe</path>
 			<extensions>
 				<ext>rmf</ext>
 				<ext>map</ext>
@@ -84,8 +84,8 @@ TODO for KASTHACK:
 	<category name="Texturing">
 		<app>	
 			<name>Wally 1.55b</name>
-			<icon>./SDK/Launcher/logos/wally.png(ico)</icon>
-			<path>./SDK/addons/wally/wally.exe</path>
+			<icon>.\SDK\Launcher\logos\wally.ico</icon>
+			<path>.\SDK\addons\wally\wally.exe</path>
 				<extensions>
 				<ext>pak</ext>
 				<ext>wad</ext>
