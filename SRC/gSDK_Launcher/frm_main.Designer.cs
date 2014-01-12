@@ -53,6 +53,7 @@ namespace gSDK_Launcher {
             this.listView1 = new System.Windows.Forms.ListView();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_about = new System.Windows.Forms.Button();
+            this.btn_settings = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).BeginInit();
@@ -102,6 +103,7 @@ namespace gSDK_Launcher {
             this.btn_exit.TabIndex = 8;
             this.btn_exit.Text = "Close";
             this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_about
             // 
@@ -117,11 +119,26 @@ namespace gSDK_Launcher {
             this.btn_about.UseVisualStyleBackColor = true;
             this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
             // 
+            // btn_settings
+            // 
+            this.btn_settings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_settings.FlatAppearance.BorderSize = 0;
+            this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_settings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
+            this.btn_settings.Location = new System.Drawing.Point(93, 229);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.Size = new System.Drawing.Size(75, 25);
+            this.btn_settings.TabIndex = 8;
+            this.btn_settings.Text = "Config";
+            this.btn_settings.UseVisualStyleBackColor = true;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 266);
+            this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.btn_about);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.listView1);
@@ -138,6 +155,7 @@ namespace gSDK_Launcher {
             this.Controls.SetChildIndex(this.listView1, 0);
             this.Controls.SetChildIndex(this.btn_exit, 0);
             this.Controls.SetChildIndex(this.btn_about, 0);
+            this.Controls.SetChildIndex(this.btn_settings, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).EndInit();
@@ -152,6 +170,7 @@ namespace gSDK_Launcher {
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_about;
+        private System.Windows.Forms.Button btn_settings;
 
        
 

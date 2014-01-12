@@ -25,31 +25,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
+using System;
 using gSDK_vgui;
 using System.Windows.Forms;
 
 namespace gSDK_Launcher {
-    public partial class frm_main : frm_template {
-        public frm_main() {
+    public partial class frm_scanning : frm_template {
+        public frm_scanning() {
             InitializeComponent();
         }
 
-        private void btn_about_Click(object sender, System.EventArgs e) {
-            frm_about frmabout = new frm_about();
-            frmabout.ShowDialog();
-        }
+        private void frm_scanning_Load(object sender, EventArgs e) {
 
-        private void frm_main_Load(object sender, System.EventArgs e) {
-
-        }
-
-        private void btn_settings_Click(object sender, System.EventArgs e) {
-            frm_scanning frmScanning = new frm_scanning();
-            frmScanning.ShowDialog();
-        }
-
-        private void btn_exit_Click(object sender, System.EventArgs e) {
-            Application.Exit();
         }
     }
 }
