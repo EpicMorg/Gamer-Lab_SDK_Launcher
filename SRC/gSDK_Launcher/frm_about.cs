@@ -26,18 +26,25 @@ THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
 using System;
+using System.IO;
 using gSDK_vgui;
-using System.Reflection; 
+using System.Reflection;
 
 namespace gSDK_Launcher {
     public partial class frm_about : frm_template {
+        private static Lazy<Assembly> vguinfo = new Lazy<Assembly>(() => Assembly.LoadFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),"gSDK_vgui.dll")));
+        private static Assembly VGuinfo {
+            get { return vguinfo.Value; }
+        }
         public frm_about() {
             InitializeComponent();
             this.labelProductName.Text = AssemblyProduct;
             this.labelVersion.Text = String.Format("{0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
-            this.lblLibraryname.Text = "";
-        } 
+            this.lbl_libver.Text = VGuinfo.GetName().Version.ToString();
+            // lblLibraryname.Text=
+
+        }
 
         #region Методы доступа к атрибутам сборки
 
@@ -101,20 +108,24 @@ namespace gSDK_Launcher {
         }
         #endregion
 
-         
+
         private void btn_close_Click(object sender, EventArgs e) {
             this.Close();
         }
-         
-        private void btn_credits_Click(object sender, EventArgs e) { 
+
+        private void btn_credits_Click(object sender, EventArgs e) {
             var frmCredits = new frm_credits();
             frmCredits.ShowDialog();
-            
+
 
         }
 
-        
+        private void frm_about_Load(object sender, EventArgs e) {
+            
+        }
 
-        
+
+
+
     }
 }

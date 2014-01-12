@@ -132,9 +132,9 @@ namespace gSDK_Launcher {
             this.lblLibraryname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblLibraryname.Location = new System.Drawing.Point(18, 40);
             this.lblLibraryname.Name = "lblLibraryname";
-            this.lblLibraryname.Size = new System.Drawing.Size(92, 13);
+            this.lblLibraryname.Size = new System.Drawing.Size(178, 13);
             this.lblLibraryname.TabIndex = 11;
-            this.lblLibraryname.Text = "<library_name>";
+            this.lblLibraryname.Text = "GoldSource SDK VGUI Library";
             // 
             // lbl_credits
             // 
@@ -206,6 +206,7 @@ namespace gSDK_Launcher {
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
+            this.Load += new System.EventHandler(this.frm_about_Load);
             this.Controls.SetChildIndex(this.lbl_title, 0);
             this.Controls.SetChildIndex(this.pic_logo, 0);
             this.Controls.SetChildIndex(this.pic_btn_min, 0);
