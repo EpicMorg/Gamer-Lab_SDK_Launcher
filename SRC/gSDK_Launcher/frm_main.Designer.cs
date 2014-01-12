@@ -113,7 +113,7 @@ namespace gSDK_Launcher {
             this.btn_about.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
             this.btn_about.Location = new System.Drawing.Point(12, 229);
             this.btn_about.Name = "btn_about";
-            this.btn_about.Size = new System.Drawing.Size(75, 25);
+            this.btn_about.Size = new System.Drawing.Size(93, 25);
             this.btn_about.TabIndex = 8;
             this.btn_about.Text = "About";
             this.btn_about.UseVisualStyleBackColor = true;
@@ -125,9 +125,9 @@ namespace gSDK_Launcher {
             this.btn_settings.FlatAppearance.BorderSize = 0;
             this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_settings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
-            this.btn_settings.Location = new System.Drawing.Point(93, 229);
+            this.btn_settings.Location = new System.Drawing.Point(111, 229);
             this.btn_settings.Name = "btn_settings";
-            this.btn_settings.Size = new System.Drawing.Size(75, 25);
+            this.btn_settings.Size = new System.Drawing.Size(100, 25);
             this.btn_settings.TabIndex = 8;
             this.btn_settings.Text = "Config";
             this.btn_settings.UseVisualStyleBackColor = true;

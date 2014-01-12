@@ -53,7 +53,7 @@ namespace gSDK_Launcher {
             this.btn_rescan = new System.Windows.Forms.Button();
             this.lbl_def_lang = new System.Windows.Forms.Label();
             this.panel_config = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_compillers = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -104,9 +104,9 @@ namespace gSDK_Launcher {
             // btn_rescan
             // 
             this.btn_rescan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_rescan.Location = new System.Drawing.Point(140, 309);
+            this.btn_rescan.Location = new System.Drawing.Point(21, 309);
             this.btn_rescan.Name = "btn_rescan";
-            this.btn_rescan.Size = new System.Drawing.Size(151, 23);
+            this.btn_rescan.Size = new System.Drawing.Size(270, 23);
             this.btn_rescan.TabIndex = 7;
             this.btn_rescan.Text = "Rescan and Fix program list";
             this.btn_rescan.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@ namespace gSDK_Launcher {
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_config.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.panel_config.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_config.Controls.Add(this.label1);
+            this.panel_config.Controls.Add(this.lbl_compillers);
             this.panel_config.Controls.Add(this.label7);
             this.panel_config.Controls.Add(this.label6);
             this.panel_config.Controls.Add(this.label5);
@@ -154,14 +154,14 @@ namespace gSDK_Launcher {
             this.panel_config.Size = new System.Drawing.Size(307, 348);
             this.panel_config.TabIndex = 9;
             // 
-            // label1
+            // lbl_compillers
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 287);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Set default Compillers:";
+            this.lbl_compillers.AutoSize = true;
+            this.lbl_compillers.Location = new System.Drawing.Point(18, 287);
+            this.lbl_compillers.Name = "lbl_compillers";
+            this.lbl_compillers.Size = new System.Drawing.Size(111, 13);
+            this.lbl_compillers.TabIndex = 10;
+            this.lbl_compillers.Text = "Set default Compillers:";
             // 
             // label7
             // 
@@ -229,11 +229,11 @@ namespace gSDK_Launcher {
             // lbl_ass_files
             // 
             this.lbl_ass_files.AutoSize = true;
-            this.lbl_ass_files.Location = new System.Drawing.Point(18, 54);
+            this.lbl_ass_files.Location = new System.Drawing.Point(18, 63);
             this.lbl_ass_files.Name = "lbl_ass_files";
-            this.lbl_ass_files.Size = new System.Drawing.Size(77, 13);
+            this.lbl_ass_files.Size = new System.Drawing.Size(87, 13);
             this.lbl_ass_files.TabIndex = 10;
-            this.lbl_ass_files.Text = "Associate files:";
+            this.lbl_ass_files.Text = "File associations:";
             // 
             // comboBox1
             // 
@@ -456,7 +456,7 @@ namespace gSDK_Launcher {
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_rmf;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_compillers;
         private System.Windows.Forms.Button btn_lang_info;
     
     }

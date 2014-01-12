@@ -86,9 +86,9 @@ namespace gSDK_Launcher {
             this.lbl_prepearing_text.AutoSize = true;
             this.lbl_prepearing_text.Location = new System.Drawing.Point(9, 42);
             this.lbl_prepearing_text.Name = "lbl_prepearing_text";
-            this.lbl_prepearing_text.Size = new System.Drawing.Size(178, 13);
+            this.lbl_prepearing_text.Size = new System.Drawing.Size(127, 13);
             this.lbl_prepearing_text.TabIndex = 7;
-            this.lbl_prepearing_text.Text = "Please wait.. First start.. Prepearing..";
+            this.lbl_prepearing_text.Text = "Please wait.. Prepearing..";
             // 
             // progressbar_prepearing
             // 
