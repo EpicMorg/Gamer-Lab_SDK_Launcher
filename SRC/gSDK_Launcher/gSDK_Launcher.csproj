@@ -77,6 +77,12 @@
     <Compile Include="frm_scanning.Designer.cs">
       <DependentUpon>frm_scanning.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_settings.Designer.cs">
+      <DependentUpon>frm_settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_about.resx">
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_scanning.resx">
       <DependentUpon>frm_scanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_settings.resx">
+      <DependentUpon>frm_settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

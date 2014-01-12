@@ -50,7 +50,7 @@ namespace gSDK_Launcher {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listv_programs = new System.Windows.Forms.ListView();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_about = new System.Windows.Forms.Button();
             this.btn_settings = new System.Windows.Forms.Button();
@@ -77,20 +77,20 @@ namespace gSDK_Launcher {
             this.lbl_title.Size = new System.Drawing.Size(136, 13);
             this.lbl_title.Text = "GoldSource SDK Launcher";
             // 
-            // listView1
+            // listv_programs
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listv_programs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listView1.ForeColor = System.Drawing.Color.White;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.Location = new System.Drawing.Point(12, 43);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(336, 180);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listv_programs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
+            this.listv_programs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listv_programs.ForeColor = System.Drawing.Color.White;
+            this.listv_programs.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listv_programs.Location = new System.Drawing.Point(12, 43);
+            this.listv_programs.Name = "listv_programs";
+            this.listv_programs.Size = new System.Drawing.Size(336, 180);
+            this.listv_programs.TabIndex = 7;
+            this.listv_programs.UseCompatibleStateImageBehavior = false;
             // 
             // btn_exit
             // 
@@ -141,7 +141,7 @@ namespace gSDK_Launcher {
             this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.btn_about);
             this.Controls.Add(this.btn_exit);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listv_programs);
             this.MinimumSize = new System.Drawing.Size(360, 266);
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -152,7 +152,7 @@ namespace gSDK_Launcher {
             this.Controls.SetChildIndex(this.pic_btn_min, 0);
             this.Controls.SetChildIndex(this.pic_btn_exit, 0);
             this.Controls.SetChildIndex(this.pic_btn_max, 0);
-            this.Controls.SetChildIndex(this.listView1, 0);
+            this.Controls.SetChildIndex(this.listv_programs, 0);
             this.Controls.SetChildIndex(this.btn_exit, 0);
             this.Controls.SetChildIndex(this.btn_about, 0);
             this.Controls.SetChildIndex(this.btn_settings, 0);
@@ -167,10 +167,11 @@ namespace gSDK_Launcher {
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listv_programs;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_about;
         private System.Windows.Forms.Button btn_settings;
+ 
 
        
 
