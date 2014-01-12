@@ -26,6 +26,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
 using System;
+using System.Diagnostics;
 using gSDK_vgui;
 
 namespace gSDK_Launcher {
@@ -37,5 +38,30 @@ namespace gSDK_Launcher {
         private void frm_credits_Load(object sender, EventArgs e) {
 
         }
+
+        private void btn_ok_Click(object sender, EventArgs e) { 
+            this.Close(); 
+        }
+
+        private void pic_logotype_Click(object sender, EventArgs e) {
+            Process.Start("http://hl-lab.ru");
+        }
+
+        private void link_stam_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e) {
+            Process.Start("https://github.com/stamepicmorg");
+        }
+
+        private void link_kasthack_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e) {
+            Process.Start("https://github.com/kasthack");
+        }
+
+        private void link_serj_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e) {
+            Process.Start("http://hl-lab.ru/rus/%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9");
+        }
+
+        private void link_neo_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e) {
+            Process.Start("http://hl-lab.ru/rus/user/NEO");
+        }
+ 
     }
 }

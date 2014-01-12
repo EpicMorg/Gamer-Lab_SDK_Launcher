@@ -35,7 +35,8 @@ namespace gSDK_Launcher {
             InitializeComponent();
             this.labelProductName.Text = AssemblyProduct;
             this.labelVersion.Text = String.Format("{0}", AssemblyVersion);
-            this.labelCopyright.Text = AssemblyCopyright; 
+            this.labelCopyright.Text = AssemblyCopyright;
+            this.lblLibraryname.Text = "";
         } 
 
         #region Методы доступа к атрибутам сборки
@@ -105,9 +106,10 @@ namespace gSDK_Launcher {
             this.Close();
         }
          
-        private void btn_credits_Click(object sender, EventArgs e) {
+        private void btn_credits_Click(object sender, EventArgs e) { 
             var frmCredits = new frm_credits();
             frmCredits.ShowDialog();
+            
 
         }
 

@@ -199,9 +199,9 @@ namespace gSDK_Launcher {
             this.Controls.Add(this.panel_about);
             this.Controls.Add(this.btn_close);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(300, 340);
+            this.MaximumSize = new System.Drawing.Size(300, 177);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(300, 0);
+            this.MinimumSize = new System.Drawing.Size(300, 177);
             this.Name = "frm_about";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
