@@ -83,9 +83,7 @@ namespace gSDK_Launcher {
             // 
             // pic_btn_exit
             // 
-            this.pic_btn_exit.Enabled = false;
             this.pic_btn_exit.Location = new System.Drawing.Point(270, 12);
-            this.pic_btn_exit.Visible = false;
             // 
             // lbl_title
             // 
@@ -247,6 +245,7 @@ namespace gSDK_Launcher {
             this.MaximumSize = new System.Drawing.Size(300, 336);
             this.MinimumSize = new System.Drawing.Size(300, 336);
             this.Name = "frm_credits";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Credits";
             this.Load += new System.EventHandler(this.frm_credits_Load);

@@ -78,9 +78,7 @@ namespace gSDK_Launcher {
             // 
             // pic_btn_exit
             // 
-            this.pic_btn_exit.Enabled = false;
             this.pic_btn_exit.Location = new System.Drawing.Point(270, 12);
-            this.pic_btn_exit.Visible = false;
             // 
             // lbl_title
             // 

@@ -71,8 +71,8 @@ namespace gSDK_Launcher {
             this.list_map = new System.Windows.Forms.ComboBox();
             this.list_rmf = new System.Windows.Forms.ComboBox();
             this.dlist_lang = new System.Windows.Forms.ComboBox();
-            this.brn_apply = new System.Windows.Forms.Button();
             this.btn_lang_info = new System.Windows.Forms.Button();
+            this.brn_apply = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).BeginInit();
@@ -94,9 +94,7 @@ namespace gSDK_Launcher {
             // 
             // pic_btn_exit
             // 
-            this.pic_btn_exit.Enabled = false;
             this.pic_btn_exit.Location = new System.Drawing.Point(301, 12);
-            this.pic_btn_exit.Visible = false;
             // 
             // lbl_title
             // 
@@ -376,6 +374,16 @@ namespace gSDK_Launcher {
             this.dlist_lang.Size = new System.Drawing.Size(192, 21);
             this.dlist_lang.TabIndex = 9;
             // 
+            // btn_lang_info
+            // 
+            this.btn_lang_info.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_lang_info.Location = new System.Drawing.Point(219, 28);
+            this.btn_lang_info.Name = "btn_lang_info";
+            this.btn_lang_info.Size = new System.Drawing.Size(72, 23);
+            this.btn_lang_info.TabIndex = 7;
+            this.btn_lang_info.Text = "Info";
+            this.btn_lang_info.UseVisualStyleBackColor = true;
+            // 
             // brn_apply
             // 
             this.brn_apply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -388,16 +396,6 @@ namespace gSDK_Launcher {
             this.brn_apply.UseVisualStyleBackColor = true;
             this.brn_apply.Click += new System.EventHandler(this.brn_apply_Click);
             // 
-            // btn_lang_info
-            // 
-            this.btn_lang_info.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_lang_info.Location = new System.Drawing.Point(219, 28);
-            this.btn_lang_info.Name = "btn_lang_info";
-            this.btn_lang_info.Size = new System.Drawing.Size(72, 23);
-            this.btn_lang_info.TabIndex = 7;
-            this.btn_lang_info.Text = "Info";
-            this.btn_lang_info.UseVisualStyleBackColor = true;
-            // 
             // frm_settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,6 +403,10 @@ namespace gSDK_Launcher {
             this.ClientSize = new System.Drawing.Size(331, 423);
             this.Controls.Add(this.brn_apply);
             this.Controls.Add(this.panel_config);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(331, 423);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(331, 423);
             this.Name = "frm_settings";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

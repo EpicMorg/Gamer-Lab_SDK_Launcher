@@ -116,7 +116,7 @@ namespace gSDK_vgui {
             pic_btn_exit.Image = Properties.Resources.exit_button_a;
         }
         private void pic_btn_exit_MouseClick(object sender, MouseEventArgs e) {
-            Application.Exit();
+           this.Close();
         }
         #endregion
         #endregion
@@ -187,7 +187,23 @@ namespace gSDK_vgui {
 
         private void frm_template_Load(object sender, EventArgs e) {
 
-        } 
+        }
+
+        public new bool MaximizeBox {
+            get { return base.MaximizeBox; }
+            set {
+                base.MaximizeBox = value;
+                this.pic_btn_max.Enabled = value;
+            }
+        }
+
+        public new bool MinimizeBox {
+            get { return base.MinimizeBox; }
+            set {
+                base.MinimizeBox = value;
+                this.pic_btn_min.Enabled = value;
+            }
+        }
 
         public override string Text {
             get { return base.Text; }
