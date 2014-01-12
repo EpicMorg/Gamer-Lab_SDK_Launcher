@@ -51,17 +51,18 @@ namespace gSDK_Launcher {
         /// </summary>
         private void InitializeComponent() {
             this.btn_close = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_about = new System.Windows.Forms.Panel();
+            this.lbl_libver = new System.Windows.Forms.Label();
+            this.lblLibraryname = new System.Windows.Forms.Label();
             this.lbl_credits = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.Label();
             this.labelProductName = new System.Windows.Forms.Label();
+            this.btn_credits = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_about.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,24 +91,13 @@ namespace gSDK_Launcher {
             // 
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_close.Location = new System.Drawing.Point(210, 305);
+            this.btn_close.Location = new System.Drawing.Point(210, 142);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 23);
             this.btn_close.TabIndex = 7;
             this.btn_close.Text = "OK";
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::gSDK_Launcher.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 95);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(228, 133);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel_about
             // 
@@ -116,24 +106,43 @@ namespace gSDK_Launcher {
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_about.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.panel_about.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_about.Controls.Add(this.lbl_libver);
+            this.panel_about.Controls.Add(this.lblLibraryname);
             this.panel_about.Controls.Add(this.lbl_credits);
             this.panel_about.Controls.Add(this.labelCopyright);
             this.panel_about.Controls.Add(this.labelVersion);
             this.panel_about.Controls.Add(this.labelProductName);
-            this.panel_about.Controls.Add(this.pictureBox1);
             this.panel_about.Location = new System.Drawing.Point(12, 34);
             this.panel_about.Name = "panel_about";
-            this.panel_about.Size = new System.Drawing.Size(276, 265);
+            this.panel_about.Size = new System.Drawing.Size(276, 102);
             this.panel_about.TabIndex = 9;
+            // 
+            // lbl_libver
+            // 
+            this.lbl_libver.AutoSize = true;
+            this.lbl_libver.Location = new System.Drawing.Point(194, 40);
+            this.lbl_libver.Name = "lbl_libver";
+            this.lbl_libver.Size = new System.Drawing.Size(34, 13);
+            this.lbl_libver.TabIndex = 12;
+            this.lbl_libver.Text = "<ver>";
+            // 
+            // lblLibraryname
+            // 
+            this.lblLibraryname.AutoSize = true;
+            this.lblLibraryname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblLibraryname.Location = new System.Drawing.Point(18, 40);
+            this.lblLibraryname.Name = "lblLibraryname";
+            this.lblLibraryname.Size = new System.Drawing.Size(92, 13);
+            this.lblLibraryname.TabIndex = 11;
+            this.lblLibraryname.Text = "<library_name>";
             // 
             // lbl_credits
             // 
             this.lbl_credits.AutoSize = true;
             this.lbl_credits.Location = new System.Drawing.Point(18, 40);
             this.lbl_credits.Name = "lbl_credits";
-            this.lbl_credits.Size = new System.Drawing.Size(109, 52);
+            this.lbl_credits.Size = new System.Drawing.Size(0, 13);
             this.lbl_credits.TabIndex = 10;
-            this.lbl_credits.Text = "vGUI library by STAM\r\nCode by KastHack\r\n\r\nSpecial for:";
             // 
             // labelCopyright
             // 
@@ -141,7 +150,7 @@ namespace gSDK_Launcher {
             this.labelCopyright.AutoSize = true;
             this.labelCopyright.BackColor = System.Drawing.Color.Transparent;
             this.labelCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCopyright.Location = new System.Drawing.Point(18, 237);
+            this.labelCopyright.Location = new System.Drawing.Point(18, 68);
             this.labelCopyright.Name = "labelCopyright";
             this.labelCopyright.Size = new System.Drawing.Size(43, 13);
             this.labelCopyright.TabIndex = 9;
@@ -169,22 +178,34 @@ namespace gSDK_Launcher {
             this.labelProductName.TabIndex = 9;
             this.labelProductName.Text = "<program_name>";
             // 
+            // btn_credits
+            // 
+            this.btn_credits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_credits.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_credits.Location = new System.Drawing.Point(12, 142);
+            this.btn_credits.Name = "btn_credits";
+            this.btn_credits.Size = new System.Drawing.Size(75, 23);
+            this.btn_credits.TabIndex = 7;
+            this.btn_credits.Text = "Credits";
+            this.btn_credits.UseVisualStyleBackColor = true;
+            this.btn_credits.Click += new System.EventHandler(this.btn_credits_Click);
+            // 
             // frm_about
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 340);
+            this.ClientSize = new System.Drawing.Size(300, 177);
+            this.Controls.Add(this.btn_credits);
             this.Controls.Add(this.panel_about);
             this.Controls.Add(this.btn_close);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 340);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(300, 340);
+            this.MinimumSize = new System.Drawing.Size(300, 0);
             this.Name = "frm_about";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
-            this.Load += new System.EventHandler(this.frm_about_Load);
             this.Controls.SetChildIndex(this.lbl_title, 0);
             this.Controls.SetChildIndex(this.pic_logo, 0);
             this.Controls.SetChildIndex(this.pic_btn_min, 0);
@@ -192,11 +213,11 @@ namespace gSDK_Launcher {
             this.Controls.SetChildIndex(this.pic_btn_max, 0);
             this.Controls.SetChildIndex(this.btn_close, 0);
             this.Controls.SetChildIndex(this.panel_about, 0);
+            this.Controls.SetChildIndex(this.btn_credits, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_about.ResumeLayout(false);
             this.panel_about.PerformLayout();
             this.ResumeLayout(false);
@@ -206,12 +227,14 @@ namespace gSDK_Launcher {
 
         #endregion
 
-        private System.Windows.Forms.Button btn_close;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_close; 
         public System.Windows.Forms.Panel panel_about;
         private System.Windows.Forms.Label labelProductName;
         private System.Windows.Forms.Label labelVersion;
         private System.Windows.Forms.Label lbl_credits;
         private System.Windows.Forms.Label labelCopyright;
+        private System.Windows.Forms.Label lbl_libver;
+        private System.Windows.Forms.Label lblLibraryname;
+        private System.Windows.Forms.Button btn_credits;
     }
 }

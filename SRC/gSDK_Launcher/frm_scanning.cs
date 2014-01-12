@@ -27,7 +27,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 */
 using System;
 using gSDK_vgui;
-using System.Windows.Forms;
+ 
 
 namespace gSDK_Launcher {
     public partial class frm_scanning : frm_template {

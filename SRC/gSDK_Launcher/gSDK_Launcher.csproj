@@ -31,6 +31,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>cert_key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,13 +58,21 @@
     <Compile Include="frm_about.Designer.cs">
       <DependentUpon>frm_about.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_credits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_credits.Designer.cs">
+      <DependentUpon>frm_credits.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_scanning.cs" />
+    <Compile Include="frm_scanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_scanning.Designer.cs">
       <DependentUpon>frm_scanning.cs</DependentUpon>
     </Compile>
@@ -63,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_about.resx">
       <DependentUpon>frm_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_credits.resx">
+      <DependentUpon>frm_credits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
@@ -80,6 +100,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="cert_key.snk" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

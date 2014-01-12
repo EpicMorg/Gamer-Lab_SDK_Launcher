@@ -27,8 +27,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 */
 using System;
 using gSDK_vgui;
-using System.Reflection;
-using System.Windows.Forms;
+using System.Reflection; 
 
 namespace gSDK_Launcher {
     public partial class frm_about : frm_template {
@@ -36,8 +35,8 @@ namespace gSDK_Launcher {
             InitializeComponent();
             this.labelProductName.Text = AssemblyProduct;
             this.labelVersion.Text = String.Format("{0}", AssemblyVersion);
-            this.labelCopyright.Text = AssemblyCopyright;
-        }
+            this.labelCopyright.Text = AssemblyCopyright; 
+        } 
 
         #region Методы доступа к атрибутам сборки
 
@@ -101,16 +100,14 @@ namespace gSDK_Launcher {
         }
         #endregion
 
-        private void frm_about_Load(object sender, EventArgs e) {
-
-       
-        }
-
+         
         private void btn_close_Click(object sender, EventArgs e) {
             this.Close();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e) {
+         
+        private void btn_credits_Click(object sender, EventArgs e) {
+            var frmCredits = new frm_credits();
+            frmCredits.ShowDialog();
 
         }
 
