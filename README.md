@@ -1,4 +1,4 @@
-glodsrc_SDK_Launcher
+glodsrc SDK Launcher
 ====================
 
 Launcher для GoldSource SDK от Hl-Lab.ru
