@@ -11,6 +11,7 @@
     <AssemblyName>gSDK_Launcher</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,6 +45,9 @@
   <PropertyGroup>
     <ApplicationIcon>sdk.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyInfoHelper.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="frm_about.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoftwareDetector.cs" />
     <EmbeddedResource Include="frm_about.resx">
       <DependentUpon>frm_about.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +120,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,7 +143,7 @@
   <ItemGroup>
     <Content Include="Config.xml" />
     <Content Include="list.xml" />
-    <Content Include="lng_rus.xml">
+    <Content Include="Langs\lng_rus.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sdk.ico" />

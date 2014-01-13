@@ -26,20 +26,21 @@ THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace gSDK_Launcher {
     static class Program {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
         [STAThread]
         static void Main() {
-          //  Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_main());
+            try {
+                Application.SetCompatibleTextRenderingDefault( false );
+                Application.Run( new frm_main() );
+            }
+            catch (Exception e) {
+                Console.WriteLine( e.Message );
+
+                Console.ReadLine();
+            }
         }
     }
 }

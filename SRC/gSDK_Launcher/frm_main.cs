@@ -33,31 +33,18 @@ namespace gSDK_Launcher {
         public frm_main() {
             InitializeComponent();
         }
-
         private void btn_about_Click(object sender, System.EventArgs e) {
-            var frmabout = new frm_about();
-            frmabout.ShowDialog();
+            new frm_about().ShowDialog();
         }
-
         private void button1_Click(object sender, System.EventArgs e) {
-            var frmScanning = new frm_scanning();
-            frmScanning.ShowDialog();
+            new frm_scanning().ShowDialog();
         }
-
         private void btn_settings_Click(object sender, System.EventArgs e) {
-            var frmSettings = new frm_settings();
-            frmSettings.ShowDialog();
-
+           new frm_settings().ShowDialog();
         }
-
         private void btn_exit_Click(object sender, System.EventArgs e) {
             Application.Exit();
         }
-         
-        private void frm_main_Load(object sender, System.EventArgs e) {
-
-        }
-
-       
+        private void frm_main_Load(object sender, System.EventArgs e) {}
     }
 }

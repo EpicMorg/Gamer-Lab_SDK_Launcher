@@ -25,9 +25,29 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 -->
-
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?> 
 <language>
-	<default>en-US</default>	<!--default>ru-ru</default>
-	<path>./lang/lng_rus.xml</path-->
+	<metadata>
+		<culture>ru-RU</culture>
+		<version>0.1</version>
+		<author>STAM</author>
+	</metadata>
+	<translation>
+		<term name="frm_about">О Прогамме</term>
+		<term name="frm_about.btn_credits">Авторы</term>
+		<term name="frm_credits">Авторы</term>
+		<term name="frm_credits.lbl_special_thnx">Отдельное Спасибо:</term>
+		<term name="frm_credits.lbl_and_community">и ресурсу HL-Lab.ru!</term>
+		<term name="frm_main.btn_about">О программе</term>
+		<term name="frm_main.btn_settings">Настройки</term>
+		<term name="frm_main.btn_exit">Выход</term>
+		<term name="frm_scanning">Пожалуйста, подождите...</term>
+		<term name="frm_scanning.lbl_prepearing_text">Пожалуйста, подождите... Подготовка к запуску...</term>
+		<term name="frm_settings">Настройки</term>
+		<term name="frm_settings.lbl_def_lang">Язык лаунчера</term>
+		<term name="frm_settings.lbl_ass_files">Ассоциации файлов:</term>
+		<term name="frm_settings.lbl_compillers">Компиляторы по умолч.</term>
+		<term name="frm_settings.btn_rescan">Обновить или исправить список программ в меню</term>
+		<term name="frm_settings.btn_lang_info">Инфо</term>
+	</translation>
 </language>

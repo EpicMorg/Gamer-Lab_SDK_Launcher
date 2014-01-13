@@ -29,103 +29,61 @@ using System;
 using System.IO;
 using gSDK_vgui;
 using System.Reflection;
-
 namespace gSDK_Launcher {
     public partial class frm_about : frm_template {
-        private static Lazy<Assembly> vguinfo = new Lazy<Assembly>(() => Assembly.LoadFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),"gSDK_vgui.dll")));
-        private static Assembly VGuinfo {
-            get { return vguinfo.Value; }
-        }
         public frm_about() {
             InitializeComponent();
             this.labelProductName.Text = AssemblyProduct;
             this.labelVersion.Text = String.Format("{0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
-            this.lbl_libver.Text = VGuinfo.GetName().Version.ToString();
-            // lblLibraryname.Text=
+            this.lbl_libver.Text = AssemblyInfoHelper.VGuinfo.GetName().Version.ToString();
 
         }
-
-        #region Методы доступа к атрибутам сборки
-
-        public string AssemblyTitle {
-            get {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
-                if (attributes.Length > 0) {
-                    AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
-                    if (titleAttribute.Title != "") {
-                        return titleAttribute.Title;
-                    }
-                }
-                return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
-            }
-        }
-
+        //public string AssemblyTitle {
+        //    get {
+        //        var attr = AssemblyInfoHelper.GetAttribute<AssemblyTitleAttribute>();
+        //        return attr != null && attr.Title != ""
+        //                   ? attr.Title
+        //                   : Path.GetFileNameWithoutExtension( AssemblyInfoHelper.CurrentAssembly.CodeBase );
+        //    }
+        //}
         public string AssemblyVersion {
             get {
-                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+                return AssemblyInfoHelper.CurrentAssembly.GetName().Version.ToString();
             }
         }
-
         public string AssemblyDescription {
             get {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
-                if (attributes.Length == 0) {
-                    return "";
-                }
-                return ((AssemblyDescriptionAttribute)attributes[0]).Description;
+                var attr = AssemblyInfoHelper.GetAttribute<AssemblyDescriptionAttribute>();
+                return attr != null ? attr.Description : "";
             }
         }
-
         public string AssemblyProduct {
             get {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
-                if (attributes.Length == 0) {
-                    return "";
-                }
-                return ((AssemblyProductAttribute)attributes[0]).Product;
+                var attr = AssemblyInfoHelper.GetAttribute<AssemblyProductAttribute>();
+                return attr != null ? attr.Product : "";
             }
         }
-
         public string AssemblyCopyright {
             get {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
-                if (attributes.Length == 0) {
-                    return "";
-                }
-                return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
+                var attr = AssemblyInfoHelper.GetAttribute<AssemblyCopyrightAttribute>();
+                return attr != null ? attr.Copyright : "";
             }
         }
-
         public string AssemblyCompany {
             get {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-                if (attributes.Length == 0) {
-                    return "";
-                }
-                return ((AssemblyCompanyAttribute)attributes[0]).Company;
+                var attr = AssemblyInfoHelper.GetAttribute<AssemblyCompanyAttribute>();
+                return attr != null ? attr.Company : "";
             }
         }
         #endregion
-
-
         private void btn_close_Click(object sender, EventArgs e) {
             this.Close();
         }
-
         private void btn_credits_Click(object sender, EventArgs e) {
             var frmCredits = new frm_credits();
             frmCredits.ShowDialog();
-
-
         }
-
-        private void frm_about_Load(object sender, EventArgs e) {
-            
-        }
-
-
-
-
+        private void frm_about_Load(object sender, EventArgs e) {}
     }
 }
