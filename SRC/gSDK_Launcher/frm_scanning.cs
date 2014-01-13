@@ -30,7 +30,7 @@ using gSDK_vgui;
  
 
 namespace gSDK_Launcher {
-    public partial class frm_scanning : frm_template {
+    public partial class frm_scanning : FrmTemplate {
         public frm_scanning() {
             InitializeComponent();
         }

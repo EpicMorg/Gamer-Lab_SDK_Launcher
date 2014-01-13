@@ -26,7 +26,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
 namespace gSDK_Launcher {
-    partial class frm_main {
+    partial class FrmMain {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -151,7 +151,7 @@ namespace gSDK_Launcher {
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.listv_programs);
             this.MinimumSize = new System.Drawing.Size(360, 266);
-            this.Name = "frm_main";
+            this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoldSource SDK Launcher";
             this.Load += new System.EventHandler(this.frm_main_Load);

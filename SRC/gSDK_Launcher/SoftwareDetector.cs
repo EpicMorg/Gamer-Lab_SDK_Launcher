@@ -1,20 +1,32 @@
 ﻿using System.IO;
 namespace gSDK_Launcher {
-    class SoftwareDetector {
-        public bool CheckAppInstalled(App app) {
-            return File.Exists( app.Path );
+    public class SoftwareDetector {
+        /// <summary>
+        /// Path must be relative from sdk installation
+        /// </summary>
+        /// <param name="app"></param>
+        /// <returns></returns>
+        public static bool CheckAppInstalled( App app ) {
+            return File.Exists(
+                Path.Combine(
+                    Path.GetDirectoryName( 
+                        AssemblyInfoHelper.CurrentAssembly.Location
+                    ),
+                    app.Path
+                )
+            );
         }
         /// <summary>
         /// Check all app in category and set 'installed' flag to real value
         /// </summary>
-        public void CheckAllInCategory(Category c) {
-            foreach (var app in c.Apps)
-                app.Installed = this.CheckAppInstalled( app );
+        public static void CheckAllInCategory( Category c ) {
+            foreach ( var app in c.Apps )
+                app.Installed = CheckAppInstalled( app );
         }
 
-        public void CheckAllInConfig( Config c ) {
-            foreach (var category in c.Apps)
-                this.CheckAllInCategory( category );
+        public static void CheckAllInConfig( Config c ) {
+            foreach ( var category in c.Apps )
+                CheckAllInCategory( category );
         }
     }
 }

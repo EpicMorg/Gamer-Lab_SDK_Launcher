@@ -30,7 +30,7 @@ using System;
 
 
 namespace gSDK_Launcher {
-    public partial class frm_settings : frm_template {
+    public partial class frm_settings : FrmTemplate {
         public frm_settings() {
             InitializeComponent();
         }

@@ -25,26 +25,43 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
+using System.IO;
 using gSDK_vgui;
 using System.Windows.Forms;
-
+using System;
 namespace gSDK_Launcher {
-    public partial class frm_main : frm_template {
-        public frm_main() {
+    public partial class FrmMain : FrmTemplate {
+        
+        public FrmMain() {
             InitializeComponent();
         }
-        private void btn_about_Click(object sender, System.EventArgs e) {
+        private void btn_about_Click(object sender, EventArgs e) {
             new frm_about().ShowDialog();
         }
-        private void button1_Click(object sender, System.EventArgs e) {
+        private void button1_Click(object sender, EventArgs e) {
             new frm_scanning().ShowDialog();
         }
-        private void btn_settings_Click(object sender, System.EventArgs e) {
+        private void btn_settings_Click(object sender, EventArgs e) {
            new frm_settings().ShowDialog();
         }
-        private void btn_exit_Click(object sender, System.EventArgs e) {
+        private void btn_exit_Click(object sender, EventArgs e) {
             Application.Exit();
         }
-        private void frm_main_Load(object sender, System.EventArgs e) {}
+        private void frm_main_Load( object sender, EventArgs e ) {
+            var configpath = Path.Combine( "configs", "list.xml" );
+            try {
+                Globals.Config = Config.Load( configpath );
+            }
+            catch (Exception ex) {
+                if ( MessageBox.Show(
+                    "Cant't load config file. Create new?",
+                    "ЕГГОГ!",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Error ) != DialogResult.OK )
+                    return;
+                File.WriteAllText( configpath, Properties.Resources.dftcfg );
+                this.listv_programs.
+            }
+        }
     }
 }

@@ -30,7 +30,7 @@ using System.Diagnostics;
 using gSDK_vgui;
 
 namespace gSDK_Launcher {
-    public partial class frm_credits : frm_template {
+    public partial class frm_credits : FrmTemplate {
         public frm_credits() {
             InitializeComponent();
         }

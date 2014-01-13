@@ -11,7 +11,7 @@ namespace gSDK_Launcher {
         }
     }
 
-    class Config {
+    public class Config {
         public Category[] Apps { get; set; }
         public Category Support { get; set; }
         public Config() {}
@@ -35,7 +35,7 @@ namespace gSDK_Launcher {
         }
     }
 
-    class App {
+    public class App {
         public string Name { get; set; }
         public string IconPath { get; set; }
         public string Path { get; set; }
@@ -58,7 +58,7 @@ namespace gSDK_Launcher {
         }
     }
 
-    class Category {
+    public class Category {
         public string Name { get; set; }
         public App[] Apps { get; set; }
         public Category() {}

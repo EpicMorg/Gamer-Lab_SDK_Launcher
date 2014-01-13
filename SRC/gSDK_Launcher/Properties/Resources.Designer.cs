@@ -61,6 +61,25 @@ namespace gSDK_Launcher.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;!--
+        ///*************************************************************************************
+        ///Tis file is distributed under MIT license:
+        ///*************************************************************************************
+        ///The MIT License (MIT)
+        ///
+        ///Copyright © 2013-2014 EpicMorg
+        ///
+        ///Permission is hereby granted, free of charge, to any person obtaining a copy
+        ///of this software and associated documentation files (the &apos;&apos;Software&apos;&apos;), to deal
+        ///in the Software without restriction, including without limitation the  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string dftcfg {
+            get {
+                return ResourceManager.GetString("dftcfg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Logo {

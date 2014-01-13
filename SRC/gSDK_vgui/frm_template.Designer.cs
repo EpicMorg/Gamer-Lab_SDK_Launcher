@@ -26,7 +26,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
 namespace gSDK_vgui {
-    partial class frm_template {
+    partial class FrmTemplate {
         /// <summary>
         /// Требуется переменная конструктора.
         /// </summary>
@@ -50,7 +50,7 @@ namespace gSDK_vgui {
         /// содержимое данного метода при помощи редактора кода.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_template));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTemplate));
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -218,7 +218,7 @@ namespace gSDK_vgui {
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frm_template";
+            this.Name = "FrmTemplate";
             this.Load += new System.EventHandler(this.frm_template_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).EndInit();

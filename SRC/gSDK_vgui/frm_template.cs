@@ -24,39 +24,36 @@ THE SOFTWARE.", @"The MIT License (MIT)
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Reflection;
 using gSDK_vgui.Properties;
 
 namespace gSDK_vgui {
-    public partial class frm_template : Form {
-        public string libvguiname;
-        public frm_template() {
+    public partial class FrmTemplate : Form {
+        public FrmTemplate() {
             InitializeComponent();
             this.DoubleBuffered = true;
             this.SetStyle( ControlStyles.ResizeRedraw, true );
         }
         #region design_hack
         //Resize when border = none + drag
-        private const int cGrip = 16;      // Grip size
-        private const int cCaption = 25;   // Caption bar height;
+        private const int CGrip = 16;      // Grip size
+        private const int CCaption = 25;   // Caption bar height;
         protected override void OnPaint( PaintEventArgs e ) {
-            Rectangle rc = new Rectangle( this.ClientSize.Width - cGrip, this.ClientSize.Height - cGrip, cGrip, cGrip );
+            var rc = new Rectangle( this.ClientSize.Width - CGrip, this.ClientSize.Height - CGrip, CGrip, CGrip );
             ControlPaint.DrawSizeGrip( e.Graphics, this.BackColor, rc );
-            rc = new Rectangle( 0, 0, this.ClientSize.Width, 32 );
+            new Rectangle( 0, 0, this.ClientSize.Width, 32 );
             // e.Graphics.FillRectangle(Brushes.DarkBlue, rc); //----> debug
         }
         protected override void WndProc( ref Message m ) {
             if ( m.Msg == 0x84 ) {  // Trap WM_NCHITTEST
-                Point pos = new Point( m.LParam.ToInt32() & 0xffff, m.LParam.ToInt32() >> 16 );
+                var pos = new Point( m.LParam.ToInt32() & 0xffff, m.LParam.ToInt32() >> 16 );
                 pos = this.PointToClient( pos );
-                if ( pos.Y < cCaption ) {
+                if ( pos.Y < CCaption ) {
                     m.Result = (IntPtr) 2;  // HTCAPTION
                     return;
                 }
-                if ( pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip ) {
-                    m.Result = (IntPtr) 17; // HTBOTTOMRIGHT
-                    return;
-                }
+                if ( pos.X < this.ClientSize.Width - CGrip || pos.Y < this.ClientSize.Height - CGrip ) return;
+                m.Result = (IntPtr) 17; // HTBOTTOMRIGHT
+                return;
             }
             base.WndProc( ref m );
         }
@@ -107,61 +104,6 @@ namespace gSDK_vgui {
             this.Close();
         }
         #endregion
-        #endregion
-        #region Методы доступа к атрибутам сборки
-        public string AssemblyTitle {
-            get {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes( typeof( AssemblyTitleAttribute ), false );
-                if ( attributes.Length > 0 ) {
-                    AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute) attributes[ 0 ];
-                    if ( titleAttribute.Title != "" ) {
-                        return titleAttribute.Title;
-                    }
-                }
-                return System.IO.Path.GetFileNameWithoutExtension( Assembly.GetExecutingAssembly().CodeBase );
-            }
-        }
-        public string AssemblyVersion {
-            get {
-                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            }
-        }
-        public string AssemblyDescription {
-            get {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes( typeof( AssemblyDescriptionAttribute ), false );
-                if ( attributes.Length == 0 ) {
-                    return "";
-                }
-                return ( (AssemblyDescriptionAttribute) attributes[ 0 ] ).Description;
-            }
-        }
-        public string AssemblyProduct {
-            get {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes( typeof( AssemblyProductAttribute ), false );
-                if ( attributes.Length == 0 ) {
-                    return "";
-                }
-                return ( (AssemblyProductAttribute) attributes[ 0 ] ).Product;
-            }
-        }
-        public string AssemblyCopyright {
-            get {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes( typeof( AssemblyCopyrightAttribute ), false );
-                if ( attributes.Length == 0 ) {
-                    return "";
-                }
-                return ( (AssemblyCopyrightAttribute) attributes[ 0 ] ).Copyright;
-            }
-        }
-        public string AssemblyCompany {
-            get {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes( typeof( AssemblyCompanyAttribute ), false );
-                if ( attributes.Length == 0 ) {
-                    return "";
-                }
-                return ( (AssemblyCompanyAttribute) attributes[ 0 ] ).Company;
-            }
-        }
         #endregion
         private void frm_template_Load( object sender, EventArgs e ) {
         }

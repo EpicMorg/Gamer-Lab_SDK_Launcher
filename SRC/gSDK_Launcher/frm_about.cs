@@ -30,7 +30,7 @@ using System.IO;
 using gSDK_vgui;
 using System.Reflection;
 namespace gSDK_Launcher {
-    public partial class frm_about : frm_template {
+    public partial class frm_about : FrmTemplate {
         public frm_about() {
             InitializeComponent();
             this.labelProductName.Text = AssemblyProduct;
@@ -39,14 +39,14 @@ namespace gSDK_Launcher {
             this.lbl_libver.Text = AssemblyInfoHelper.VGuinfo.GetName().Version.ToString();
 
         }
-        //public string AssemblyTitle {
-        //    get {
-        //        var attr = AssemblyInfoHelper.GetAttribute<AssemblyTitleAttribute>();
-        //        return attr != null && attr.Title != ""
-        //                   ? attr.Title
-        //                   : Path.GetFileNameWithoutExtension( AssemblyInfoHelper.CurrentAssembly.CodeBase );
-        //    }
-        //}
+        public string AssemblyTitle {
+            get {
+                var attr = AssemblyInfoHelper.GetAttribute<AssemblyTitleAttribute>();
+                return attr != null && attr.Title != ""
+                           ? attr.Title
+                           : Path.GetFileNameWithoutExtension( AssemblyInfoHelper.CurrentAssembly.CodeBase );
+            }
+        }
         public string AssemblyVersion {
             get {
                 return AssemblyInfoHelper.CurrentAssembly.GetName().Version.ToString();
@@ -76,7 +76,6 @@ namespace gSDK_Launcher {
                 return attr != null ? attr.Company : "";
             }
         }
-        #endregion
         private void btn_close_Click(object sender, EventArgs e) {
             this.Close();
         }

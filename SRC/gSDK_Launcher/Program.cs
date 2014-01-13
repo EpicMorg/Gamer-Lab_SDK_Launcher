@@ -34,7 +34,7 @@ namespace gSDK_Launcher {
         static void Main() {
             try {
                 Application.SetCompatibleTextRenderingDefault( false );
-                Application.Run( new frm_main() );
+                Application.Run( new FrmMain() );
             }
             catch (Exception e) {
                 Console.WriteLine( e.Message );
