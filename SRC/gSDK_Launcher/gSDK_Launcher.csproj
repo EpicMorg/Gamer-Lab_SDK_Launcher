@@ -51,8 +51,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Drawing" />
@@ -60,55 +58,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfoHelper.cs" />
-    <Compile Include="Config.cs" />
-    <Compile Include="frm_about.cs">
+    <Compile Include="Core\AssemblyInfoHelper.cs" />
+    <Compile Include="Core\Config.cs" />
+    <Compile Include="UI\frm_about.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_about.Designer.cs">
+    <Compile Include="UI\frm_about.Designer.cs">
       <DependentUpon>frm_about.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_credits.cs">
+    <Compile Include="UI\frm_credits.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_credits.Designer.cs">
+    <Compile Include="UI\frm_credits.Designer.cs">
       <DependentUpon>frm_credits.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMain.cs">
+    <Compile Include="UI\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMain.Designer.cs">
+    <Compile Include="UI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_scanning.cs">
+    <Compile Include="UI\frm_scanning.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_scanning.Designer.cs">
+    <Compile Include="UI\frm_scanning.Designer.cs">
       <DependentUpon>frm_scanning.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_settings.cs">
+    <Compile Include="UI\frm_settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_settings.Designer.cs">
+    <Compile Include="UI\frm_settings.Designer.cs">
       <DependentUpon>frm_settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Globals.cs" />
+    <Compile Include="Core\Globals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SoftwareDetector.cs" />
-    <EmbeddedResource Include="frm_about.resx">
+    <Compile Include="Core\SoftwareDetector.cs" />
+    <EmbeddedResource Include="UI\frm_about.resx">
       <DependentUpon>frm_about.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_credits.resx">
+    <EmbeddedResource Include="UI\frm_credits.resx">
       <DependentUpon>frm_credits.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMain.resx">
+    <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_scanning.resx">
+    <EmbeddedResource Include="UI\frm_scanning.resx">
       <DependentUpon>frm_scanning.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_settings.resx">
+    <EmbeddedResource Include="UI\frm_settings.resx">
       <DependentUpon>frm_settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -141,7 +139,9 @@
     <None Include="Resources\Logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="configs\list.xml" />
+    <Content Include="configs\list.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="icons\BSPICON.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
