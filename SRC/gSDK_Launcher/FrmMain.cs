@@ -26,6 +26,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
 using System.IO;
+using System.Linq;
 using gSDK_vgui;
 using System.Windows.Forms;
 using System;
@@ -59,9 +60,34 @@ namespace gSDK_Launcher {
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Error ) != DialogResult.OK )
                     return;
-                File.WriteAllText( configpath, Properties.Resources.dftcfg );
-                this.listv_programs.
+                try {
+                    File.WriteAllText( configpath, Properties.Resources.dftcfg );
+                }
+                catch (Exception ex2) {
+                    MessageBox.Show(
+                        "ЕГГОГ",
+                        "Unable to update config. Contact to ya odmin.",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error );
+                    Application.Exit();
+                    return;
+                }
             }
+            this.listv_programs.Items.Clear();
+            //this.listv_programs.Items.AddRange(
+            //    Globals.Config.Apps.Select( 
+            //    )
+            //);
+            this.listv_programs.BeginUpdate();
+            foreach (var category in Globals.Config.Apps) {
+                var grp = new ListViewGroup( category.Name );
+                this.listv_programs.Groups.Add( grp );
+                foreach (var app in category.Apps) {
+                    var Item = new ListViewItem( app.Name, grp );
+                    this.listv_programs.Items.Add( Item );
+                }
+            }
+            this.listv_programs.EndUpdate();
         }
     }
 }

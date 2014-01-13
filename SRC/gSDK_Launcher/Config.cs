@@ -4,17 +4,17 @@ using System.Xml;
 namespace gSDK_Launcher {
     internal class Helper {
         public static XmlNode GNBN( XmlNode n, string name ) {
-            return n.ChildNodes.OfType<XmlNode>().First( a => a.Name == name );
+            return n.ChildNodes.OfType<XmlNode>().FirstOrDefault( a => a.Name == name );
         }
         public static string GNTBN( XmlNode n, string name ) {
-            return GNBN( n, name ).InnerText;
+            return (GNBN( n, name )??new XmlNode(){InnerText = }).InnerText;
         }
     }
 
     public class Config {
         public Category[] Apps { get; set; }
         public Category Support { get; set; }
-        public Config() {}
+        public Config() { }
 
         public Config( XmlNode n ) {
             this.Apps =
@@ -31,7 +31,7 @@ namespace gSDK_Launcher {
         public static Config Load( string path ) {
             var d = new XmlDocument();
             d.Load( path );
-            return new Config( d.DocumentElement);
+            return new Config( d.DocumentElement );
         }
     }
 
@@ -48,12 +48,13 @@ namespace gSDK_Launcher {
             this.IconPath = Helper.GNTBN( n, "icon" );
             this.Installed = bool.Parse( Helper.GNTBN( n, "installed" ) );
             this.Path = Helper.GNTBN( n, "path" );
-            this.Extensions =
-                Helper.GNBN( n, "extensions" )
-                    .ChildNodes.OfType<XmlNode>()
-                    .Where( a => a.Name == "ext" )
-                    .Select( a => a.InnerText )
-                    .ToArray();
+            var tmp = Helper.GNBN( n, "extensions" );
+            this.Extensions = tmp != null
+                                  ? tmp.ChildNodes.OfType<XmlNode>()
+                                        .Where( a => a.Name == "ext" )
+                                        .Select( a => a.InnerText )
+                                        .ToArray()
+                                  : new string[] { };
 
         }
     }
@@ -61,11 +62,16 @@ namespace gSDK_Launcher {
     public class Category {
         public string Name { get; set; }
         public App[] Apps { get; set; }
-        public Category() {}
+        public Category() { }
 
         public Category( XmlNode n ) {
-            this.Name = n.Attributes[ "name" ].Value;
-            this.Apps = n.ChildNodes.OfType<XmlNode>().Select( a => new App( a ) ).ToArray();
+            try {
+                this.Name = n.Attributes[ "name" ].Value;
+                this.Apps = n.ChildNodes.OfType<XmlNode>().Select( a => new App( a ) ).ToArray();
+            }
+            catch {
+
+            }
         }
     }
 }
