@@ -26,7 +26,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 -->
-
 <cfg>
 	<apps>
 		<category name="Editors">
@@ -414,7 +413,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app> 
 			
 		</category>
-		<category name="Compillers">
+		<category name="Compilers">
 		<app>
 			<name>Valve (Default) Very old</name>
 			<path name="bsp">.\SDK\tools\default\qbsp2.exe</path>

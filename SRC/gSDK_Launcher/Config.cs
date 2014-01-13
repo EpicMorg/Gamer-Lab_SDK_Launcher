@@ -7,7 +7,8 @@ namespace gSDK_Launcher {
             return n.ChildNodes.OfType<XmlNode>().FirstOrDefault( a => a.Name == name );
         }
         public static string GNTBN( XmlNode n, string name ) {
-            return (GNBN( n, name )??new XmlNode(){InnerText = }).InnerText;
+            return (GNBN( n, name )//??new XmlNode(){InnerText = ""}
+                ).InnerText;
         }
     }
 
