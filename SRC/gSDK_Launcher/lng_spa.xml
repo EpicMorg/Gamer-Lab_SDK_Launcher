@@ -33,16 +33,16 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<author>Вписать здесь ник или имя</author>
 	</metadata>
 	<translation>
-		<term name="frm_about">О Прогамме</term>
-		<term name="frm_about.btn_credits">Авторы</term>
-		<term name="frm_credits">Авторы</term>
-		<term name="frm_credits.lbl_special_thnx">Отдельное Спасибо:</term>
-		<term name="frm_credits.lbl_and_community">и ресурсу HL-Lab.ru!</term>
-		<term name="frm_main.btn_about">О программе</term>
-		<term name="frm_main.btn_settings">Настройки</term>
-		<term name="frm_main.btn_exit">Выход</term>
-		<term name="frm_scanning">Пожалуйста, подождите...</term>
-		<term name="frm_scanning.lbl_prepearing_text">Пожалуйста, подождите... Подготовка к запуску...</term>
+		<term name="frm_about">Acerca del programa</term>
+		<term name="frm_about.btn_credits">Los autores</term>
+		<term name="frm_credits">Autores</term>
+		<term name="frm_credits.lbl_special_thnx">Un agradecimiento especial a:</term>
+		<term name="frm_credits.lbl_and_community">y resursos hl-lab.ru</term>
+		<term name="frm_main.btn_about">Acerca del programa</term>
+		<term name="frm_main.btn_settings">Configuración</term>
+		<term name="frm_main.btn_exit">Exit</term>
+		<term name="frm_scanning">Por favor, espere ...</term>
+		<term name="frm_scanning.lbl_prepearing_text">Por favor, espere ... Подготовка к запуску...</term>
 		<term name="frm_settings">Настройки</term>
 		<term name="frm_settings.lbl_def_lang">Язык лаунчера</term>
 		<term name="frm_settings.lbl_ass_files">Ассоциации файлов:</term>
