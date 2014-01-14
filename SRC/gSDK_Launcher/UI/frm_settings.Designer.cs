@@ -73,6 +73,7 @@ namespace gSDK_Launcher {
             this.dlist_lang = new System.Windows.Forms.ComboBox();
             this.btn_lang_info = new System.Windows.Forms.Button();
             this.brn_apply = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).BeginInit();
@@ -240,6 +241,7 @@ namespace gSDK_Launcher {
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Enabled = false;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -257,6 +259,7 @@ namespace gSDK_Launcher {
             // 
             this.list_wad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.list_wad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.list_wad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.list_wad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
             this.list_wad.FormattingEnabled = true;
             this.list_wad.Items.AddRange(new object[] {
@@ -271,6 +274,7 @@ namespace gSDK_Launcher {
             // 
             this.list_spr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.list_spr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.list_spr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.list_spr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
             this.list_spr.FormattingEnabled = true;
             this.list_spr.Items.AddRange(new object[] {
@@ -285,6 +289,7 @@ namespace gSDK_Launcher {
             // 
             this.list_pak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.list_pak.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.list_pak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.list_pak.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
             this.list_pak.FormattingEnabled = true;
             this.list_pak.Items.AddRange(new object[] {
@@ -301,6 +306,7 @@ namespace gSDK_Launcher {
             // 
             this.list_mdl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.list_mdl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.list_mdl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.list_mdl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
             this.list_mdl.FormattingEnabled = true;
             this.list_mdl.Items.AddRange(new object[] {
@@ -316,6 +322,7 @@ namespace gSDK_Launcher {
             // 
             this.list_bsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.list_bsp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.list_bsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.list_bsp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
             this.list_bsp.FormattingEnabled = true;
             this.list_bsp.Items.AddRange(new object[] {
@@ -331,6 +338,7 @@ namespace gSDK_Launcher {
             // 
             this.list_map.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.list_map.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.list_map.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.list_map.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
             this.list_map.FormattingEnabled = true;
             this.list_map.Items.AddRange(new object[] {
@@ -346,6 +354,7 @@ namespace gSDK_Launcher {
             // 
             this.list_rmf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.list_rmf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.list_rmf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.list_rmf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
             this.list_rmf.FormattingEnabled = true;
             this.list_rmf.Items.AddRange(new object[] {
@@ -366,6 +375,7 @@ namespace gSDK_Launcher {
             // 
             this.dlist_lang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.dlist_lang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dlist_lang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dlist_lang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
             this.dlist_lang.FormattingEnabled = true;
             this.dlist_lang.Items.AddRange(new object[] {
@@ -397,11 +407,23 @@ namespace gSDK_Launcher {
             this.brn_apply.UseVisualStyleBackColor = true;
             this.brn_apply.Click += new System.EventHandler(this.brn_apply_Click);
             // 
+            // btn_update
+            // 
+            this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_update.Location = new System.Drawing.Point(12, 388);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.TabIndex = 11;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
             // frm_settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(331, 423);
+            this.Controls.Add(this.btn_update);
             this.Controls.Add(this.brn_apply);
             this.Controls.Add(this.panel_config);
             this.MaximizeBox = false;
@@ -420,6 +442,7 @@ namespace gSDK_Launcher {
             this.Controls.SetChildIndex(this.pic_btn_max, 0);
             this.Controls.SetChildIndex(this.panel_config, 0);
             this.Controls.SetChildIndex(this.brn_apply, 0);
+            this.Controls.SetChildIndex(this.btn_update, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).EndInit();
@@ -459,6 +482,7 @@ namespace gSDK_Launcher {
         private System.Windows.Forms.Label lbl_rmf;
         private System.Windows.Forms.Label lbl_compillers;
         private System.Windows.Forms.Button btn_lang_info;
+        private System.Windows.Forms.Button btn_update;
     
     }
 }

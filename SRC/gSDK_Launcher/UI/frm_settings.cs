@@ -125,5 +125,14 @@ namespace gSDK_Launcher {
                 Name = app.Name.Replace( " ", "." )
             }.Save();
         }
+
+        private void btn_update_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("Updater will penmanently close launcher. Save settings before use it!" +Environment.NewLine+"Continue?", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes) {
+                MessageBox.Show("closing launcher via App..Exit();\r\nStarting updater.exe");
+            }
+            else {
+                
+            }
+        }
     }
 }

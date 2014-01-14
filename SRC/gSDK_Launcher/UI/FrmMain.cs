@@ -33,6 +33,8 @@ using System.Linq;
 using gSDK_vgui;
 using System.Windows.Forms;
 using System;
+using Microsoft.VisualBasic;
+
 namespace gSDK_Launcher {
     public partial class FrmMain : FrmTemplate {
 
@@ -54,6 +56,7 @@ namespace gSDK_Launcher {
             Application.Exit();
         }
         private void frm_main_Load( object sender, EventArgs e ) {
+             
             #region Load cfg
                 var configpath = Path.Combine( "configs", "list.xml" );
                 try {
@@ -79,7 +82,7 @@ namespace gSDK_Launcher {
                         return;
                     }
                 }
-            #endregion
+            #endregion 
 
                 ReloadSoftware();
         }
