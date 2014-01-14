@@ -30,7 +30,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using gSDK_Launcher.Core;
-using gSDK_vgui; 
+using gSDK_vgui;
 using System;
 
 
@@ -39,48 +39,80 @@ namespace gSDK_Launcher {
         public frm_settings() {
             InitializeComponent();
         }
-        private void frm_settings_Load(object sender, EventArgs e) {
+        private void frm_settings_Load( object sender, EventArgs e ) {
             dlist_lang.SelectedIndex = 0;
-            Func<string, App[]> getAppsForExt =
-                (x)=>Globals.Config.Apps.SelectMany( a=>a.Apps ).Where( a=>a.Installed ).Where( a=>a.Extensions.Any( b=>b==x ) ).ToArray();
-            Action<string, ComboBox> sv = ( a, b ) => {
-                b.BeginUpdate();
-                b.Items.Clear();
-                b.Items.AddRange( getAppsForExt( a ) );
-                b.EndUpdate();
-            };
-            sv( ".rmf", list_rmf );
-            sv( ".bsp", list_bsp );
-            sv( ".mdl", list_bsp );
-            sv( ".pak", list_pak );
-            sv( ".spr", list_mdl );
-            sv( ".wad", list_wad );
+            LoadExt( "rmf", list_rmf );
+            LoadExt( "map", list_map );
+            LoadExt( "bsp", list_bsp );
+            LoadExt( "mdl", list_mdl );
+            LoadExt( "pak", list_pak );
+            LoadExt( "spr", list_spr );
+            LoadExt( "wad", list_wad );
         }
-        private void btn_rescan_Click(object sender, EventArgs e) {
+
+        private static void LoadExt( string a, ComboBox b ) {
+            b.BeginUpdate();
+            try {
+                b.Items.Clear();
+                var exts = GetAppForExt( a );
+                b.Items.AddRange( exts );
+                var current = Ext.GetCurrentProgID( a );
+                b.Items.Add( "None" );
+                if ( current != null ) {
+                    if ( !exts.Any( x => x.Name.Replace( " ", "." ) == current ) ) {
+                        b.Items.Add( "Other" );
+                        b.SelectedIndex = b.Items.Count - 1;
+                    }
+                    else {
+                        
+                    }
+                }
+                else {
+                    b.SelectedIndex = b.Items.Count - 1;
+                }
+            }
+            catch ( Exception ex ) {
+                Console.WriteLine( ex.Message );
+            }
+            b.EndUpdate();
+        }
+
+        private static App[] GetAppForExt( string x ) {
+            return Globals.Config.Apps.SelectMany( a => a.Apps ).Where( a => a.Installed ).Where( a => a.Extensions.Any( b => b == x ) ).ToArray();
+        }
+        private void btn_rescan_Click( object sender, EventArgs e ) {
             var configpath = Path.Combine( "configs", "list.xml" );
             try {
                 SoftwareDetector.CheckAllInConfig( Globals.Config );
                 Globals.Config.Save( configpath );
             }
-            catch {}
+            catch { }
         }
-        private void brn_apply_Click(object sender, EventArgs e) {
-            foreach (var result in this.panel_config.Controls.OfType<ComboBox>())
+        private void brn_apply_Click( object sender, EventArgs e ) {
+            foreach ( var result in this.panel_config.Controls.OfType<ComboBox>() )
                 this.sv( result );
             Action<string, ComboBox> sv = ( a, b ) => {
-                var app = b.SelectedItem as App;
-                if ( app == null ) return;
+                var it = b.SelectedItem;
+                var app = it as App;
+                string progid = null;
+                if ( it is string ) {
+                    //if ( it == "None" ) progid = null;
+                    //else
+                    if ( it == "Other" ) return;
+                }
+                else progid = ( app ).Name.Replace( " ", "." );
                 new Ext {
                     Extension = a,
-                    ProgID = (app).Name.Replace( " ", "." )
+                    ProgID = progid
                 }.Save();
             };
-            sv( ".rmf", list_rmf );
-            sv( ".bsp", list_bsp );
-            sv( ".mdl", list_bsp );
-            sv( ".pak", list_pak );
-            sv( ".spr", list_mdl );
-            sv( ".wad", list_wad );
+            sv( "rmf", list_rmf );
+            sv( "map", list_map );
+            sv( "bsp", list_bsp );
+            sv( "mdl", list_mdl );
+            sv( "pak", list_pak );
+            sv( "spr", list_spr );
+            sv( "wad", list_wad );
             this.Close();
         }
 
@@ -90,7 +122,7 @@ namespace gSDK_Launcher {
             new ProgID() {
                 Command = app.Path,
                 IconPath = app.IconPath,
-                Name = app.Name.Replace( " ","." )
+                Name = app.Name.Replace( " ", "." )
             }.Save();
         }
     }

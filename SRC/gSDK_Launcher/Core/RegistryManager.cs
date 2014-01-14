@@ -30,5 +30,10 @@ namespace gSDK_Launcher.Core {
             var cur = Registry.ClassesRoot.OOC( "."+this.Extension );
             cur.SetValue( "", ProgID );
         }
+
+        public static string GetCurrentProgID( string ext ) {
+            var cur = Registry.ClassesRoot.OpenSubKey( "." + ext );
+            return cur!=null?cur.GetValue( "" ) as string:null;
+        }
     }
 }
