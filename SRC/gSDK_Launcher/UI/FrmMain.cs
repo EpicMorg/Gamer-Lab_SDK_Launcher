@@ -59,7 +59,10 @@ namespace gSDK_Launcher {
         private void frm_main_Load( object sender, EventArgs e ) {
 
             #region Load cfg
-            var configpath = Path.Combine( "configs", "list.xml" );
+            var configpath = Path.Combine(
+                Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
+                "configs",
+                "list.xml" );
             try {
                 Globals.Config = Config.Load( configpath );
                 if ( String.IsNullOrEmpty( Globals.Config.LANG ) ) {
