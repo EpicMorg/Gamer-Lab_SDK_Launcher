@@ -334,21 +334,15 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<icon>SDK\Launcher\logos\wintextract.ico</icon>
 				<path>SDK\addons\wintextract\wintextract.exe</path>
 				<installed>false</installed>
-			</app>
+			</app> 
+		</category>
+		<category name="Modding"> 
 			<app>
 				<name>Hlcsm sprite manager</name>
 				<icon>SDK\Launcher\logos\Hlcsm.ico</icon>
 				<path>SDK\addons\hlcsm\Hlcsm.exe</path>
 				<installed>false</installed>
 			</app> 
-		</category>
-		<category name="Modding">
-			<app>
-				<name>Hlcsm sprite manager</name>
-				<icon>SDK\Launcher\logos\Hlcsm.ico</icon>
-				<path>SDK\addons\hlcsm\Hlcsm.exe</path>
-				<installed>false</installed>
-			</app>
 			<app>
 				<name>HILogoGen</name>
 				<icon>SDK\Launcher\logos\HILogoGen.ico</icon>
