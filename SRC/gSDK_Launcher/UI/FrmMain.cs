@@ -29,6 +29,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using gSDK_vgui;
 using System.Windows.Forms;
 using System;
@@ -94,17 +95,18 @@ namespace gSDK_Launcher {
             foreach ( var category in Globals.Config.Apps ) {
                 var grp = new ListViewGroup( category.Name, category.Name );
                 this.listv_programs.Groups.Add( grp );
-                foreach ( var app in category.Apps ) {
+                foreach ( var app in category.Apps.Where( x=>x.Installed ) ) {
+                    var ip = AssemblyInfoHelper.GetPath( app.IconPath );
                     try {
-                        var ico = File.Exists( app.IconPath )?
+                        var ico = File.Exists( ip )?
                             Icon.ExtractAssociatedIcon( app.IconPath ):
                             eric;
-                        this.listv_programs.LargeImageList.Images.Add( app.IconPath, ico );
+                        this.listv_programs.LargeImageList.Images.Add( ip, ico );
                     }
                     catch {
-                        this.listv_programs.LargeImageList.Images.Add( app.IconPath, eric);
+                        this.listv_programs.LargeImageList.Images.Add( ip, eric);
                     }
-                    var item = new ListViewItem( app.Name, app.IconPath, grp ) {
+                    var item = new ListViewItem( app.Name, ip, grp ) {
                             Tag = app,
                         };
                     //item.ImageList = this.listv_programs.LargeImageList;
@@ -126,7 +128,15 @@ namespace gSDK_Launcher {
                 ) );
             }
             catch (Exception) {
-                MessageBox.Show( "Failed to run " + info.Name, "ЕГГОГ", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                MessageBox.Show(
+                    string.Format(
+                        "Failed to run {0}({1})",
+                        info.Name, AssemblyInfoHelper.GetPath(info.Path)
+                    ),
+                    "ЕГГОГ",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
     }

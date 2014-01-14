@@ -68,9 +68,11 @@ namespace gSDK_Launcher {
             foreach (var result in this.panel_config.Controls.OfType<ComboBox>())
                 this.sv( result );
             Action<string, ComboBox> sv = ( a, b ) => {
+                var app = b.SelectedItem as App;
+                if ( app == null ) return;
                 new Ext {
                     Extension = a,
-                    ProgID = ( b.SelectedItem as App ).Name.Replace( " ", "." )
+                    ProgID = (app).Name.Replace( " ", "." )
                 }.Save();
             };
             sv( ".rmf", list_rmf );

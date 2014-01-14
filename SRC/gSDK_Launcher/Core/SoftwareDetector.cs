@@ -7,17 +7,17 @@ namespace gSDK_Launcher {
         /// <param name="app"></param>
         /// <returns></returns>
         public static bool CheckAppInstalled( App app ) {
+
+            var p = AssemblyInfoHelper.GetPath( app.Path );
             return File.Exists(
-                AssemblyInfoHelper.GetPath(
-                    app.Path
-                )
+                p
             );
         }
         /// <summary>
         /// Check all app in category and set 'installed' flag to real value
         /// </summary>
         public static void CheckAllInCategory( Category c ) {
-            foreach ( var app in c.Apps )
+            foreach (var app in c.Apps)
                 app.Installed = CheckAppInstalled( app );
         }
 
