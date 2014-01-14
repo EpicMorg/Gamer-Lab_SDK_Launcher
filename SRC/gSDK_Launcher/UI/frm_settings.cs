@@ -64,7 +64,7 @@ namespace gSDK_Launcher {
                         b.SelectedIndex = b.Items.Count - 1;
                     }
                     else {
-                        
+                        b.SelectedItem = b.Items.OfType<App>().First( x => x.Name.Replace( " ", "." ) == current );
                     }
                 }
                 else {
@@ -76,7 +76,7 @@ namespace gSDK_Launcher {
             }
             b.EndUpdate();
         }
-
+        //я в ыцакмпыииовырдолиюрглжмрварг
         private static App[] GetAppForExt( string x ) {
             return Globals.Config.Apps.SelectMany( a => a.Apps ).Where( a => a.Installed ).Where( a => a.Extensions.Any( b => b == x ) ).ToArray();
         }
