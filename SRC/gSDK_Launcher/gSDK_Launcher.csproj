@@ -103,6 +103,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\SoftwareDetector.cs" />
+    <Compile Include="UI\AbyrvalgTranslator.cs" />
     <EmbeddedResource Include="UI\frm_about.resx">
       <DependentUpon>frm_about.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,13 +174,13 @@
     <Content Include="icons\WADICON.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="langs\lng_bel.xml">
+    <Content Include="langs\be-BY.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="langs\lng_rus.xml">
+    <Content Include="langs\ru-RU.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="langs\lng_spa.xml">
+    <Content Include="langs\es-ES.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="logos\hammer.ico">

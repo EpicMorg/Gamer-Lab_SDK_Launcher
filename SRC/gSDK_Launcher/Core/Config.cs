@@ -17,6 +17,7 @@ namespace gSDK_Launcher {
     public class Config {
         public Category[] Apps { get; set; }
         public Category Support { get; set; }
+        public string LANG { get; set; }
         public Config() { }
 
         public Config( XmlNode n ) {
@@ -29,6 +30,7 @@ namespace gSDK_Launcher {
             this.Support = new Category(
                 n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "category" )
             );
+            this.LANG = n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "lang" ).InnerText;
         }
 
         public static Config Load( string path ) {
@@ -42,6 +44,10 @@ namespace gSDK_Launcher {
                 new XDeclaration("1.0","utf-8","yes"),
                 new XElement(
                     "cfg",
+                    new XElement(
+                        "lang",
+                        this.LANG
+                    ),
                     new XElement(
                         "apps",
                         this.Apps.Select(

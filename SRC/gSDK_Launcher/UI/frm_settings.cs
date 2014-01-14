@@ -41,6 +41,7 @@ namespace gSDK_Launcher {
         }
         private void frm_settings_Load( object sender, EventArgs e ) {
             dlist_lang.SelectedIndex = 0;
+            Globals.Translator.Translate( this.Controls.OfType<Control>(), this.Name );
             LoadExt( "rmf", list_rmf );
             LoadExt( "map", list_map );
             LoadExt( "bsp", list_bsp );

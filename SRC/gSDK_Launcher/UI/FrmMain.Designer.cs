@@ -153,7 +153,7 @@ namespace gSDK_Launcher {
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.listv_programs);
             this.MinimumSize = new System.Drawing.Size(360, 266);
-            this.Name = "FrmMain";
+            this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoldSource SDK Launcher";
             this.Load += new System.EventHandler(this.frm_main_Load);

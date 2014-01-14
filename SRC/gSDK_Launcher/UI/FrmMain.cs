@@ -28,8 +28,10 @@ THE SOFTWARE.", @"The MIT License (MIT)
 
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using gSDK_Launcher.UI;
 using gSDK_vgui;
 using System.Windows.Forms;
 using System;
@@ -60,6 +62,21 @@ namespace gSDK_Launcher {
             var configpath = Path.Combine( "configs", "list.xml" );
             try {
                 Globals.Config = Config.Load( configpath );
+                if ( String.IsNullOrEmpty( Globals.Config.LANG ) ) {
+                    Globals.Config.LANG = CultureInfo.CurrentUICulture.Name;
+                }
+                var trans = Path.Combine(
+                        Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
+                        "langs",
+                        Globals.Config.LANG + ".xml" );
+                if ( File.Exists( trans ) )
+                    Globals.Translator = AbyrvalgTranslator.Load( trans );
+                else
+                    Globals.Translator = new AbyrvalgTranslator {
+                        Author = "stam",
+                        Culture = "en-US",
+                        Version = "1.4.8.8"
+                    };
             }
             catch ( Exception ) {
                 if ( MessageBox.Show(
@@ -83,6 +100,7 @@ namespace gSDK_Launcher {
             }
             #endregion
             SoftwareDetector.CheckAllInConfig( Globals.Config );
+            Globals.Translator.Translate( this.Controls.OfType<Control>(), this.Name );
             ReloadSoftware();
         }
 
@@ -96,7 +114,7 @@ namespace gSDK_Launcher {
             if ( a != null ) a.Dispose();
             this.listv_programs.LargeImageList = new ImageList {
                 ImageSize = new Size( 16, 16 ),
-                ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit 
+                ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
             };
             this.listv_programs.SmallImageList = this.listv_programs.LargeImageList;
             var eric = SystemIcons.Error;
@@ -127,17 +145,17 @@ namespace gSDK_Launcher {
             foreach ( var app in Globals.Config.Support.Apps ) {
                 var ip = AssemblyInfoHelper.GetPath( app.Path );
                 try {
-                   // this.listv_programs.LargeImageList.Images.Add(ip, System.Drawing.SystemIcons.WinLogo);
-                    this.listv_programs.LargeImageList.Images.Add( ip, Properties.Resources.ie);
+                    // this.listv_programs.LargeImageList.Images.Add(ip, System.Drawing.SystemIcons.WinLogo);
+                    this.listv_programs.LargeImageList.Images.Add( ip, Properties.Resources.ie );
                 }
                 catch {
                     this.listv_programs.LargeImageList.Images.Add( ip, eric );
                 }
                 var item = new ListViewItem( app.Name, ip, gr ) {
-                  
+
                     Tag = app,
                 };
-              
+
                 //item.ImageList = this.listv_programs.LargeImageList;
                 this.listv_programs.Items.Add( item );
             }

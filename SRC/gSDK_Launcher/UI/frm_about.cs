@@ -27,6 +27,8 @@ THE SOFTWARE.", @"The MIT License (MIT)
 */
 using System;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 using gSDK_vgui;
 using System.Reflection;
 namespace gSDK_Launcher {
@@ -83,6 +85,9 @@ namespace gSDK_Launcher {
             var frmCredits = new frm_credits();
             frmCredits.ShowDialog();
         }
-        private void frm_about_Load(object sender, EventArgs e) {}
+
+        private void frm_about_Load( object sender, EventArgs e ) {
+            Globals.Translator.Translate( this.Controls.OfType<Control>(), this.Name );
+        }
     }
 }

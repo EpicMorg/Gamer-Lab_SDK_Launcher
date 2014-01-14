@@ -27,6 +27,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 -->
 <cfg>
+  <lang>ru-RU</lang>
 	<apps>
 		<category name="Editors">
 			<app>

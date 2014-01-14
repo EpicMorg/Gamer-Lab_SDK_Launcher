@@ -414,8 +414,9 @@ namespace gSDK_Launcher {
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(75, 23);
             this.btn_update.TabIndex = 11;
-            this.btn_update.Text = "Update";
+            this.btn_update.Text = "УПАДЕЦЫ";
             this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Visible = false;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // frm_settings
