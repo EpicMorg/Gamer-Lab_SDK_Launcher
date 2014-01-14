@@ -368,7 +368,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			<installed>false</installed>
 			</app> 
 		</category>
-		<category name="Help and Manuals">
+		<category name="Help and Manuals"> 
 			<app>
 				<name>C++ Manual</name>
 				<icon>SDK\Launcher\logos\man.ico</icon>
@@ -462,6 +462,12 @@ THE SOFTWARE.", @"The MIT License (MIT)
 	</category>
 	</apps>
 	<category name="Support and Links">
+		<app>
+			<name>Zoner's Half-Life Tools</name>
+			<icon>SDK\Launcher\logos\url.ico</icon>
+			<path>http://zhlt.info/download-zhlt.html</path>
+			<installed>false</installed>
+		</app>
 		<app>
 			<name>HL-Lab.ru Community</name>
 			<icon>SDK\Launcher\logos\url.ico</icon>

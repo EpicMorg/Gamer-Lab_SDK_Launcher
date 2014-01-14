@@ -334,21 +334,15 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<icon>SDK\Launcher\logos\wintextract.ico</icon>
 				<path>SDK\addons\wintextract\wintextract.exe</path>
 				<installed>false</installed>
-			</app>
+			</app> 
+		</category>
+		<category name="Modding"> 
 			<app>
 				<name>Hlcsm sprite manager</name>
 				<icon>SDK\Launcher\logos\Hlcsm.ico</icon>
 				<path>SDK\addons\hlcsm\Hlcsm.exe</path>
 				<installed>false</installed>
 			</app> 
-		</category>
-		<category name="Modding">
-			<app>
-				<name>Hlcsm sprite manager</name>
-				<icon>SDK\Launcher\logos\Hlcsm.ico</icon>
-				<path>SDK\addons\hlcsm\Hlcsm.exe</path>
-				<installed>false</installed>
-			</app>
 			<app>
 				<name>HILogoGen</name>
 				<icon>SDK\Launcher\logos\HILogoGen.ico</icon>
@@ -367,8 +361,14 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			<path>SDK\addons\backchanger\backchanger.exe</path>
 			<installed>false</installed>
 			</app> 
+			<app>
+			<name>HL1 SDK Folder</name>
+			<icon>SDK\Launcher\logos\sdk.ico</icon>
+			<path>SDK\Sources\</path>
+			<installed>false</installed>
+			</app> 
 		</category>
-		<category name="Help and Manuals">
+		<category name="Help and Manuals"> 
 			<app>
 				<name>C++ Manual</name>
 				<icon>SDK\Launcher\logos\man.ico</icon>
@@ -462,6 +462,12 @@ THE SOFTWARE.", @"The MIT License (MIT)
 	</category>
 	</apps>
 	<category name="Support and Links">
+		<app>
+			<name>Zoner's Half-Life Tools</name>
+			<icon>SDK\Launcher\logos\url.ico</icon>
+			<path>http://zhlt.info/download-zhlt.html</path>
+			<installed>false</installed>
+		</app>
 		<app>
 			<name>HL-Lab.ru Community</name>
 			<icon>SDK\Launcher\logos\url.ico</icon>
