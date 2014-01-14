@@ -273,7 +273,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<installed>false</installed>
 			</app>
 			<app>
-				<name>guistudiomdl</name>
+				<name>GUI studiomdl</name>
 				<icon>SDK\Launcher\logos\guistudiomdl.ico</icon>
 				<path>SDK\addons\guistudiomdl\guistudiomdl.exe</path> 
 				<installed>false</installed>
