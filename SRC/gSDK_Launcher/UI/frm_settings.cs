@@ -26,29 +26,49 @@ THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
 
+using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using gSDK_Launcher.Core;
 using gSDK_vgui;
-using System;
 
-
-namespace gSDK_Launcher {
-    public partial class frm_settings : FrmTemplate {
-        public frm_settings() {
-            InitializeComponent();
+namespace gSDK_Launcher.UI {
+    public partial class FrmSettings : FrmTemplate {
+        public FrmSettings() {
+            this.InitializeComponent();
         }
         private void frm_settings_Load( object sender, EventArgs e ) {
-            dlist_lang.SelectedIndex = 0;
+            this.dlist_lang.SelectedIndex = 0;
             Globals.Translator.Translate( this.Controls.OfType<Control>(), this.Name );
-            LoadExt( "rmf", list_rmf );
-            LoadExt( "map", list_map );
-            LoadExt( "bsp", list_bsp );
-            LoadExt( "mdl", list_mdl );
-            LoadExt( "pak", list_pak );
-            LoadExt( "spr", list_spr );
-            LoadExt( "wad", list_wad );
+            this.dlist_lang.BeginUpdate();
+            this.dlist_lang.Items.Clear();
+            this.dlist_lang.Items.AddRange(
+                Directory.GetFiles(
+                    Path.Combine(
+                        Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
+                        "langs"
+                    )
+                )
+                .Select( AbyrvalgTranslator.Load )
+                .ToArray()
+            );
+            this.dlist_lang.Items.Add(
+                new AbyrvalgTranslator {
+                    Author = "stam",
+                    Culture = "en-US",
+                    Version = "1.4.8.8"
+                } );
+            this.dlist_lang.SelectedItem =
+                this.dlist_lang.Items.OfType<AbyrvalgTranslator>().First( a => a.Culture == Globals.Config.LANG );
+            this.dlist_lang.EndUpdate();
+            LoadExt( "rmf", this.list_rmf );
+            LoadExt( "map", this.list_map );
+            LoadExt( "bsp", this.list_bsp );
+            LoadExt( "mdl", this.list_mdl );
+            LoadExt( "pak", this.list_pak );
+            LoadExt( "spr", this.list_spr );
+            LoadExt( "wad", this.list_wad );
         }
 
         private static void LoadExt( string a, ComboBox b ) {
@@ -64,9 +84,8 @@ namespace gSDK_Launcher {
                         b.Items.Add( "Other" );
                         b.SelectedIndex = b.Items.Count - 1;
                     }
-                    else {
+                    else
                         b.SelectedItem = b.Items.OfType<App>().First( x => x.Name.Replace( " ", "." ) == current );
-                    }
                 }
                 else {
                     b.SelectedIndex = b.Items.Count - 1;
@@ -79,7 +98,11 @@ namespace gSDK_Launcher {
         }
         //я в ыцакмпыииовырдолиюрглжмрварг
         private static App[] GetAppForExt( string x ) {
-            return Globals.Config.Apps.SelectMany( a => a.Apps ).Where( a => a.Installed ).Where( a => a.Extensions.Any( b => b == x ) ).ToArray();
+            return
+                Globals.Config.Apps.SelectMany( a => a.Apps )
+                    .Where( a => a.Installed )
+                    .Where( a => a.Extensions.Any( b => b == x ) )
+                    .ToArray();
         }
         private void btn_rescan_Click( object sender, EventArgs e ) {
             var configpath = Path.Combine( "configs", "list.xml" );
@@ -91,37 +114,48 @@ namespace gSDK_Launcher {
         }
         private void brn_apply_Click( object sender, EventArgs e ) {
             try {
-                foreach (var result in this.panel_config.Controls.OfType<ComboBox>())
+                var c = ( this.dlist_lang.SelectedItem as AbyrvalgTranslator );
+                if ( c != null && Globals.Config.LANG != c.Culture ) {
+                    Globals.Config.LANG = c.Culture;
+                    Globals.Config.Save(
+                        Path.Combine(
+                            Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
+                            "configs",
+                            "list.xml"
+                        )
+                    );
+                }
+                foreach ( var result in this.panel_config.Controls.OfType<ComboBox>() )
                     this.sv( result );
                 Action<string, ComboBox> sv = ( a, b ) => {
                     var it = b.SelectedItem;
                     var app = it as App;
-                    string progid = "";
+                    var progid = "";
                     if ( it is string ) {
-                        if ( it == "Other" ) return;
+                        if ( (string) it == "Other" ) return;
                     }
-                    else progid = ( app ).Name.Replace( " ", "." );
+                    else if ( app != null ) progid = ( app ).Name.Replace( " ", "." );
                     new Ext {
                         Extension = a,
                         ProgID = progid
                     }.Save();
                 };
-                sv( "rmf", list_rmf );
-                sv( "map", list_map );
-                sv( "bsp", list_bsp );
-                sv( "mdl", list_mdl );
-                sv( "pak", list_pak );
-                sv( "spr", list_spr );
-                sv( "wad", list_wad );
+                sv( "rmf", this.list_rmf );
+                sv( "map", this.list_map );
+                sv( "bsp", this.list_bsp );
+                sv( "mdl", this.list_mdl );
+                sv( "pak", this.list_pak );
+                sv( "spr", this.list_spr );
+                sv( "wad", this.list_wad );
             }
-            catch (UnauthorizedAccessException ex) {
+            catch (UnauthorizedAccessException) {
                 MessageBox.Show(
-                    "Can't update associations: access denied",
-                    "ЕГГОГ",
+                    @"Can't update associations: access denied",
+                    @"ЕГГОГ",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error );
             }
-            catch (Exception ex) {
+            catch ( Exception ex ) {
                 MessageBox.Show( ex.Message );
             }
             this.Close();
@@ -130,7 +164,7 @@ namespace gSDK_Launcher {
         private void sv( ComboBox l ) {
             var app = l.SelectedItem as App;
             if ( app == null ) return;
-            new ProgID() {
+            new ProgID {
                 Command = app.Path,
                 IconPath = app.Path,
                 Name = app.Name.Replace( " ", "." )
@@ -138,11 +172,15 @@ namespace gSDK_Launcher {
         }
 
         private void btn_update_Click( object sender, EventArgs e ) {
-            if ( MessageBox.Show( "Updater will penmanently close launcher. Save settings before use it!" + Environment.NewLine + "Continue?", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1 ) == DialogResult.Yes ) {
+            if (
+                MessageBox.Show(
+                    @"Updater will penmanently close launcher. Save settings before use it!" + Environment.NewLine
+                    + @"Continue?",
+                    @"Warning!",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1 ) == DialogResult.Yes ) {
                 MessageBox.Show( "closing launcher via App..Exit();\r\nStarting updater.exe" );
-            }
-            else {
-
             }
         }
     }

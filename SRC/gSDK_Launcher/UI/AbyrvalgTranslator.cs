@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -9,6 +10,16 @@ namespace gSDK_Launcher.UI {
         public string Version { get; set; }
         public string Author { get; set; }
         private Dictionary<string, string> _translation { get; set; }
+
+        /// <summary>
+        /// Возвращает объект <see cref="T:System.String"/>, который представляет текущий объект <see cref="T:System.Object"/>.
+        /// </summary>
+        /// <returns>
+        /// Объект <see cref="T:System.String"/>, представляющий текущий объект <see cref="T:System.Object"/>.
+        /// </returns>
+        public override string ToString() {
+            return CultureInfo.GetCultureInfo( Culture ).DisplayName;
+        }
 
         public static AbyrvalgTranslator Load( string path ) {
             var doc = XDocument.Load( path );

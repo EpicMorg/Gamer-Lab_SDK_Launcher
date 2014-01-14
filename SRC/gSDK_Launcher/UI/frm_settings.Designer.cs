@@ -25,8 +25,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
-namespace gSDK_Launcher {
-    partial class frm_settings {
+namespace gSDK_Launcher.UI {
+    partial class FrmSettings {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -37,8 +37,8 @@ namespace gSDK_Launcher {
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
-                components.Dispose();
+            if (disposing && (this.components != null)) {
+                this.components.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -432,7 +432,7 @@ namespace gSDK_Launcher {
             this.MaximumSize = new System.Drawing.Size(331, 423);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(331, 423);
-            this.Name = "frm_settings";
+            this.Name = "FrmSettings";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings";
