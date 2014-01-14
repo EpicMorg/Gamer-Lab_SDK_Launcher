@@ -43,13 +43,13 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="frm_main.btn_exit">Выхад</term>
 		<term name="frm_scanning">Калі ласка, пачакайце ...</term>
 		<term name="frm_scanning.lbl_prepearing_text">Калі ласка, пачакайце ... Падрыхтоўка да запуску ...</term>
-		<term name="frm_settings">Настройкі</term>
-		<term name="frm_settings.lbl_def_lang">Язык лаунчера:</term>
-		<term name="frm_settings.lbl_ass_files">Асацыяцыі файлаў:</term>
-		<term name="frm_settings.lbl_compillers">Кампілятары па змаўчанні</term>
-		<term name="frm_settings.btn_rescan">Абнавіць або выправіць спіс праграм у меню</term>
-		<term name="frm_settings.btn_lang_info">Інфармацыя</term>
-		<term name="frm_settings.brn_apply">Применить</term> 
-		<term name="frm_settings.brn_update">Обновить</term>
+		<term name="FrmSettings">Настройкі</term>
+		<term name="FrmSettings.lbl_def_lang">Язык лаунчера:</term>
+		<term name="FrmSettings.lbl_ass_files">Асацыяцыі файлаў:</term>
+		<term name="FrmSettings.lbl_compillers">Кампілятары па змаўчанні</term>
+		<term name="FrmSettings.btn_rescan">Абнавіць або выправіць спіс праграм у меню</term>
+		<term name="FrmSettings.btn_lang_info">Інфармацыя</term>
+		<term name="FrmSettings.brn_apply">Применить</term> 
+		<term name="FrmSettings.brn_update">Обновить</term>
 	</translation>
 </language>

@@ -43,13 +43,13 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="frm_main.btn_exit">Exit</term>
 		<term name="frm_scanning">Por favor, espere ...</term>
 		<term name="frm_scanning.lbl_prepearing_text">Por favor, espere ... Preparándose para lanzar ...</term>
-		<term name="frm_settings">Ajustes</term>
-		<term name="frm_settings.lbl_def_lang">Launcher idioma:</term>
-		<term name="frm_settings.lbl_ass_files">Asociaciones de archivos:</term>
-		<term name="frm_settings.lbl_compillers">Los compiladores predeterminada.</term>
-		<term name="frm_settings.btn_rescan">Actualizar o corregir la lista de programas en el menú</term>
-		<term name="frm_settings.btn_lang_info">Info.</term>
-		<term name="frm_settings.brn_apply">Применить</term> 
-		<term name="frm_settings.brn_update">Обновить</term>
+		<term name="FrmSettings">Ajustes</term>
+		<term name="FrmSettings.lbl_def_lang">Launcher idioma:</term>
+		<term name="FrmSettings.lbl_ass_files">Asociaciones de archivos:</term>
+		<term name="FrmSettings.lbl_compillers">Los compiladores predeterminada.</term>
+		<term name="FrmSettings.btn_rescan">Actualizar o corregir la lista de programas en el menú</term>
+		<term name="FrmSettings.btn_lang_info">Info.</term>
+		<term name="FrmSettings.brn_apply">Применить</term> 
+		<term name="FrmSettings.brn_update">Обновить</term>
 	</translation>
 </language>
