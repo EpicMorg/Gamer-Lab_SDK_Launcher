@@ -1,4 +1,6 @@
 ﻿using System.IO;
+using System.Windows.Forms;
+
 namespace gSDK_Launcher {
     public class SoftwareDetector {
         /// <summary>
@@ -9,9 +11,9 @@ namespace gSDK_Launcher {
         public static bool CheckAppInstalled( App app ) {
 
             var p = AssemblyInfoHelper.GetPath( app.Path );
-            return File.Exists(
-                p
-            );
+            var r = File.Exists( p );
+            //if ( !r ) MessageBox.Show( p );
+            return r;
         }
         /// <summary>
         /// Check all app in category and set 'installed' flag to real value

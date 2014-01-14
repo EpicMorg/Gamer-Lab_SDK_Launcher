@@ -5,7 +5,7 @@ using System.Reflection;
 namespace gSDK_Launcher {
     internal class AssemblyInfoHelper {
         public static string GetPath( string path ) {
-            return Path.Combine( Path.GetDirectoryName( Path.GetDirectoryName( CurrentAssembly.CodeBase ) ), path );
+            return Path.Combine( Path.GetDirectoryName( Path.GetDirectoryName( CurrentAssembly.Location ) ), path );
         }
         private static Lazy<Assembly> _currentAssembly = new Lazy<Assembly>(()=> Assembly.GetAssembly( typeof(AssemblyInfoHelper)) );
         public static Assembly CurrentAssembly {
@@ -21,7 +21,7 @@ namespace gSDK_Launcher {
 
         private static Lazy<Assembly> vguinfo = new Lazy<Assembly>(
             () => Assembly.LoadFile(
-                GetPath( "gSDK_vgui.dll" )
+                Path.Combine(  Path.GetDirectoryName( CurrentAssembly.Location ) ,"gSDK_vgui.dll" )
             )
         );
         public static Assembly VGuinfo {
