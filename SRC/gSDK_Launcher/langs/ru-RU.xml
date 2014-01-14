@@ -29,7 +29,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 <language>
 	<metadata>
 		<culture>ru-RU</culture>
-		<version>0.1</version>
+		<version>0.2</version>
 		<author>STAM</author>
 	</metadata>
 	<translation>
@@ -44,10 +44,12 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="frm_scanning">Пожалуйста, подождите...</term>
 		<term name="frm_scanning.lbl_prepearing_text">Пожалуйста, подождите... Подготовка к запуску...</term>
 		<term name="frm_settings">Настройки</term>
-		<term name="frm_settings.lbl_def_lang">Язык лаунчера</term>
+		<term name="frm_settings.lbl_def_lang">Язык лаунчера:</term>
 		<term name="frm_settings.lbl_ass_files">Ассоциации файлов:</term>
-		<term name="frm_settings.lbl_compillers">Компиляторы по умолч.</term>
-		<term name="frm_settings.btn_rescan">Обновить или исправить список программ в меню</term>
+		<term name="frm_settings.lbl_compillers">Станд. компиляторы:</term>
+		<term name="frm_settings.btn_rescan">Перестроить список программ в меню</term>
 		<term name="frm_settings.btn_lang_info">Инфо</term>
+		<term name="frm_settings.brn_apply">Применить</term>
+		<term name="frm_settings.brn_update">Обновить</term>
 	</translation>
 </language>

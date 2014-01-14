@@ -409,12 +409,13 @@ namespace gSDK_Launcher {
             // 
             // btn_update
             // 
+            this.btn_update.Enabled = false;
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_update.Location = new System.Drawing.Point(12, 388);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(75, 23);
             this.btn_update.TabIndex = 11;
-            this.btn_update.Text = "УПАДЕЦЫ";
+            this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
             this.btn_update.Visible = false;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
