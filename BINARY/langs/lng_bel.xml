@@ -1,0 +1,53 @@
+﻿<!--
+*************************************************************************************
+Tis file is distributed under MIT license:
+*************************************************************************************
+The MIT License (MIT)
+
+Copyright © 2013-2014 EpicMorg
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the ''Software''), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED ''AS IS'', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.", @"The MIT License (MIT)
+*************************************************************************************
+-->
+<?xml version="1.0" encoding="utf-8" ?> 
+<language>
+	<metadata>
+		<culture>be-be</culture>
+		<version>0.1</version>
+		<author>NEO</author>
+	</metadata>
+	<translation>
+		<term name="frm_about">Аб праграме</term>
+		<term name="frm_about.btn_credits">Аўтары</term>
+		<term name="frm_credits">Аўтары</term>
+		<term name="frm_credits.lbl_special_thnx">Асаблівае дзякуй:</term>
+		<term name="frm_credits.lbl_and_community">і рэсурсу HL-Lab.ru!</term>
+		<term name="frm_main.btn_about">Аб праграме</term>
+		<term name="frm_main.btn_settings">Настройкі</term>
+		<term name="frm_main.btn_exit">Выхад</term>
+		<term name="frm_scanning">Калі ласка, пачакайце ...</term>
+		<term name="frm_scanning.lbl_prepearing_text">Калі ласка, пачакайце ... Падрыхтоўка да запуску ...</term>
+		<term name="frm_settings">Настройкі</term>
+		<term name="frm_settings.lbl_def_lang">Язык лаунчера</term>
+		<term name="frm_settings.lbl_ass_files">Асацыяцыі файлаў:</term>
+		<term name="frm_settings.lbl_compillers">Кампілятары па змаўчанні</term>
+		<term name="frm_settings.btn_rescan">Абнавіць або выправіць спіс праграм у меню</term>
+		<term name="frm_settings.btn_lang_info">Інфармацыя</term>
+	</translation>
+</language>
