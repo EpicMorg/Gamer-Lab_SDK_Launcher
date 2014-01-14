@@ -91,8 +91,11 @@ namespace gSDK_Launcher {
         public string Path { get; set; }
         public string[] Extensions { get; set; }
         public bool Installed { get; set; }
-        public App() { }
+        public override string ToString() {
+            return Name;
+        }
 
+        public App() { }
         public App( XmlNode n ) {
             this.Name = Helper.GNTBN( n, "name" );
             this.IconPath = Helper.GNTBN( n, "icon" );

@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Core\AssemblyInfoHelper.cs" />
     <Compile Include="Core\Config.cs" />
+    <Compile Include="Core\RegistryManager.cs" />
     <Compile Include="UI\frm_about.cs">
       <SubType>Form</SubType>
     </Compile>

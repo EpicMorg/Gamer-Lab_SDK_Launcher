@@ -27,6 +27,9 @@ THE SOFTWARE.", @"The MIT License (MIT)
 */
 
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
+using gSDK_Launcher.Core;
 using gSDK_vgui; 
 using System;
 
@@ -36,28 +39,57 @@ namespace gSDK_Launcher {
         public frm_settings() {
             InitializeComponent();
         }
-
         private void frm_settings_Load(object sender, EventArgs e) {
-            //temp
             dlist_lang.SelectedIndex = 0;
+            Func<string, App[]> getAppsForExt =
+                (x)=>Globals.Config.Apps.SelectMany( a=>a.Apps ).Where( a=>a.Installed ).Where( a=>a.Extensions.Any( b=>b==x ) ).ToArray();
+            Action<string, ComboBox> sv = ( a, b ) => {
+                b.BeginUpdate();
+                b.Items.Clear();
+                b.Items.AddRange( getAppsForExt( a ) );
+                b.EndUpdate();
+            };
+            sv( ".rmf", list_rmf );
+            sv( ".bsp", list_bsp );
+            sv( ".mdl", list_bsp );
+            sv( ".pak", list_pak );
+            sv( ".spr", list_mdl );
+            sv( ".wad", list_wad );
         }
-
         private void btn_rescan_Click(object sender, EventArgs e) {
-            //var frmScanning = new frm_scanning();
-            //frmScanning.ShowDialog();
             var configpath = Path.Combine( "configs", "list.xml" );
             try {
-                Globals.Config = Config.Load( configpath );
+                SoftwareDetector.CheckAllInConfig( Globals.Config );
                 Globals.Config.Save( configpath );
             }
             catch {}
         }
-
         private void brn_apply_Click(object sender, EventArgs e) {
-            //save
+            foreach (var result in this.panel_config.Controls.OfType<ComboBox>())
+                this.sv( result );
+            Action<string, ComboBox> sv = ( a, b ) => {
+                new Ext {
+                    Extension = a,
+                    ProgID = ( b.SelectedItem as App ).Name.Replace( " ", "." )
+                }.Save();
+            };
+            sv( ".rmf", list_rmf );
+            sv( ".bsp", list_bsp );
+            sv( ".mdl", list_bsp );
+            sv( ".pak", list_pak );
+            sv( ".spr", list_mdl );
+            sv( ".wad", list_wad );
             this.Close();
         }
 
-         
+        private void sv( ComboBox l ) {
+            var app = l.SelectedItem as App;
+            if ( app == null ) return;
+            new ProgID() {
+                Command = app.Path,
+                IconPath = app.IconPath,
+                Name = app.Name.Replace( " ","." )
+            }.Save();
+        }
     }
 }
