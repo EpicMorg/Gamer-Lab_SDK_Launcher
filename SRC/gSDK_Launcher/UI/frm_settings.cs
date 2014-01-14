@@ -94,7 +94,7 @@ namespace gSDK_Launcher {
             Action<string, ComboBox> sv = ( a, b ) => {
                 var it = b.SelectedItem;
                 var app = it as App;
-                string progid = null;
+                string progid = "";
                 if ( it is string ) {
                     //if ( it == "None" ) progid = null;
                     //else

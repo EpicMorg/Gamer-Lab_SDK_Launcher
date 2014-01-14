@@ -105,10 +105,10 @@ namespace gSDK_Launcher {
                 var grp = new ListViewGroup( category.Name, category.Name );
                 this.listv_programs.Groups.Add( grp );
                 foreach ( var app in category.Apps.Where( x => x.Installed ) ) {
-                    var ip = AssemblyInfoHelper.GetPath( app.IconPath );
+                    var ip = AssemblyInfoHelper.GetPath( app.Path );
                     try {
                         var ico = File.Exists( ip ) ?
-                            Icon.ExtractAssociatedIcon( app.IconPath ) :
+                            Icon.ExtractAssociatedIcon( ip ) :
                             eric;
                         this.listv_programs.LargeImageList.Images.Add( ip, ico );
                     }
