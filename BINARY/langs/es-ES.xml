@@ -1,4 +1,5 @@
-﻿<!--
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
 *************************************************************************************
 Tis file is distributed under MIT license:
 *************************************************************************************
@@ -25,7 +26,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 -->
-<?xml version="1.0" encoding="utf-8" ?> 
 <language>
 	<metadata>
 		<culture>es-es</culture>

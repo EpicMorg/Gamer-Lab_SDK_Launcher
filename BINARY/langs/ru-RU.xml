@@ -1,4 +1,5 @@
-﻿<!--
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
 *************************************************************************************
 Tis file is distributed under MIT license:
 *************************************************************************************
@@ -25,29 +26,28 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 -->
-<?xml version="1.0" encoding="utf-8" ?> 
 <language>
 	<metadata>
-		<culture>be-be</culture>
+		<culture>ru-RU</culture>
 		<version>0.1</version>
-		<author>NEO</author>
+		<author>STAM</author>
 	</metadata>
 	<translation>
-		<term name="frm_about">Аб праграме</term>
-		<term name="frm_about.btn_credits">Аўтары</term>
-		<term name="frm_credits">Аўтары</term>
-		<term name="frm_credits.lbl_special_thnx">Асаблівае дзякуй:</term>
-		<term name="frm_credits.lbl_and_community">і рэсурсу HL-Lab.ru!</term>
-		<term name="frm_main.btn_about">Аб праграме</term>
-		<term name="frm_main.btn_settings">Настройкі</term>
-		<term name="frm_main.btn_exit">Выхад</term>
-		<term name="frm_scanning">Калі ласка, пачакайце ...</term>
-		<term name="frm_scanning.lbl_prepearing_text">Калі ласка, пачакайце ... Падрыхтоўка да запуску ...</term>
-		<term name="frm_settings">Настройкі</term>
+		<term name="frm_about">О Прогамме</term>
+		<term name="frm_about.btn_credits">Авторы</term>
+		<term name="frm_credits">Авторы</term>
+		<term name="frm_credits.lbl_special_thnx">Отдельное Спасибо:</term>
+		<term name="frm_credits.lbl_and_community">и ресурсу HL-Lab.ru!</term>
+		<term name="frm_main.btn_about">О программе</term>
+		<term name="frm_main.btn_settings">Настройки</term>
+		<term name="frm_main.btn_exit">Выход</term>
+		<term name="frm_scanning">Пожалуйста, подождите...</term>
+		<term name="frm_scanning.lbl_prepearing_text">Пожалуйста, подождите... Подготовка к запуску...</term>
+		<term name="frm_settings">Настройки</term>
 		<term name="frm_settings.lbl_def_lang">Язык лаунчера</term>
-		<term name="frm_settings.lbl_ass_files">Асацыяцыі файлаў:</term>
-		<term name="frm_settings.lbl_compillers">Кампілятары па змаўчанні</term>
-		<term name="frm_settings.btn_rescan">Абнавіць або выправіць спіс праграм у меню</term>
-		<term name="frm_settings.btn_lang_info">Інфармацыя</term>
+		<term name="frm_settings.lbl_ass_files">Ассоциации файлов:</term>
+		<term name="frm_settings.lbl_compillers">Компиляторы по умолч.</term>
+		<term name="frm_settings.btn_rescan">Обновить или исправить список программ в меню</term>
+		<term name="frm_settings.btn_lang_info">Инфо</term>
 	</translation>
 </language>
