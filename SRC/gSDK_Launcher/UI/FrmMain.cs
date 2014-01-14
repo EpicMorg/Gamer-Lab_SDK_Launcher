@@ -95,7 +95,8 @@ namespace gSDK_Launcher {
             a = this.listv_programs.SmallImageList;
             if ( a != null ) a.Dispose();
             this.listv_programs.LargeImageList = new ImageList {
-                ImageSize = new Size( 16, 16 )
+                ImageSize = new Size( 16, 16 ),
+                ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit 
             };
             this.listv_programs.SmallImageList = this.listv_programs.LargeImageList;
             var eric = SystemIcons.Error;
@@ -126,15 +127,17 @@ namespace gSDK_Launcher {
             foreach ( var app in Globals.Config.Support.Apps ) {
                 var ip = AssemblyInfoHelper.GetPath( app.Path );
                 try {
-                    //TODO:прикрутить иконку
-                    //                    this.listv_programs.LargeImageList.Images.Add( ip, System.Drawing.SystemIcons. );
+                   // this.listv_programs.LargeImageList.Images.Add(ip, System.Drawing.SystemIcons.WinLogo);
+                    this.listv_programs.LargeImageList.Images.Add( ip, Properties.Resources.ie);
                 }
                 catch {
                     this.listv_programs.LargeImageList.Images.Add( ip, eric );
                 }
                 var item = new ListViewItem( app.Name, ip, gr ) {
+                  
                     Tag = app,
                 };
+              
                 //item.ImageList = this.listv_programs.LargeImageList;
                 this.listv_programs.Items.Add( item );
             }

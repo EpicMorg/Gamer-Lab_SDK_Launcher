@@ -185,6 +185,7 @@
     <Content Include="logos\hammer.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\ie.png" />
     <Content Include="sdk.ico" />
   </ItemGroup>
   <ItemGroup />
