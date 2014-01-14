@@ -49,7 +49,7 @@ namespace gSDK_Launcher {
             new frm_scanning().ShowDialog();
         }
         private void btn_settings_Click( object sender, EventArgs e ) {
-            new frm_settings().ShowDialog();
+            new FrmSettings().ShowDialog();
             this.ReloadSoftware();
 
         }
