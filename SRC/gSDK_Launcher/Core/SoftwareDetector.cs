@@ -11,7 +11,7 @@ namespace gSDK_Launcher {
         public static bool CheckAppInstalled( App app ) {
 
             var p = AssemblyInfoHelper.GetPath( app.Path );
-            var r = File.Exists( p );
+            var r = File.Exists( p )||Directory.Exists( p );
             //if ( !r ) MessageBox.Show( p );
             return r;
         }

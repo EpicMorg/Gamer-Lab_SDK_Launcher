@@ -121,7 +121,7 @@ namespace gSDK_Launcher {
             if ( app == null ) return;
             new ProgID() {
                 Command = app.Path,
-                IconPath = app.IconPath,
+                IconPath = app.Path,
                 Name = app.Name.Replace( " ", "." )
             }.Save();
         }

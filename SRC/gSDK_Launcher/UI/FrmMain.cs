@@ -33,7 +33,6 @@ using System.Linq;
 using gSDK_vgui;
 using System.Windows.Forms;
 using System;
-using Microsoft.VisualBasic;
 
 namespace gSDK_Launcher {
     public partial class FrmMain : FrmTemplate {
@@ -56,35 +55,35 @@ namespace gSDK_Launcher {
             Application.Exit();
         }
         private void frm_main_Load( object sender, EventArgs e ) {
-             
-            #region Load cfg
-                var configpath = Path.Combine( "configs", "list.xml" );
-                try {
-                    Globals.Config = Config.Load( configpath );
-                }
-                catch (Exception) {
-                    if ( MessageBox.Show(
-                        "Cant't load config file. Create new?",
-                        "ЕГГОГ!",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Error ) != DialogResult.OK )
-                        return;
-                    try {
-                        File.WriteAllText( configpath, Properties.Resources.dftcfg );
-                    }
-                    catch ( Exception ex2 ) {
-                        MessageBox.Show(
-                            "ЕГГОГ",
-                            "Unable to update config. Contact to ya odmin.",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error );
-                        Application.Exit();
-                        return;
-                    }
-                }
-            #endregion 
 
-                ReloadSoftware();
+            #region Load cfg
+            var configpath = Path.Combine( "configs", "list.xml" );
+            try {
+                Globals.Config = Config.Load( configpath );
+            }
+            catch ( Exception ) {
+                if ( MessageBox.Show(
+                    "Cant't load config file. Create new?",
+                    "ЕГГОГ!",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Error ) != DialogResult.OK )
+                    return;
+                try {
+                    File.WriteAllText( configpath, Properties.Resources.dftcfg );
+                }
+                catch ( Exception ex2 ) {
+                    MessageBox.Show(
+                        "ЕГГОГ",
+                        "Unable to update config. Contact to ya odmin.",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error );
+                    Application.Exit();
+                    return;
+                }
+            }
+            #endregion
+            SoftwareDetector.CheckAllInConfig( Globals.Config );
+            ReloadSoftware();
         }
 
         private void ReloadSoftware() {
@@ -99,7 +98,7 @@ namespace gSDK_Launcher {
                 ImageSize = new Size( 16, 16 )
             };
             this.listv_programs.SmallImageList = this.listv_programs.LargeImageList;
-            Icon eric = SystemIcons.Error;
+            var eric = SystemIcons.Error;
 
             foreach ( var category in Globals.Config.Apps ) {
                 var grp = new ListViewGroup( category.Name, category.Name );
@@ -109,7 +108,7 @@ namespace gSDK_Launcher {
                     try {
                         var ico = File.Exists( ip ) ?
                             Icon.ExtractAssociatedIcon( ip ) :
-                            eric;
+                            File.Exists( ip = AssemblyInfoHelper.GetPath( app.IconPath ) ) ? Icon.ExtractAssociatedIcon( ip ) : eric;
                         this.listv_programs.LargeImageList.Images.Add( ip, ico );
                     }
                     catch {
@@ -122,6 +121,23 @@ namespace gSDK_Launcher {
                     this.listv_programs.Items.Add( item );
                 }
             }
+            var gr = new ListViewGroup( Globals.Config.Support.Name, Globals.Config.Support.Name );
+            this.listv_programs.Groups.Add( gr );
+            foreach ( var app in Globals.Config.Support.Apps ) {
+                var ip = AssemblyInfoHelper.GetPath( app.Path );
+                try {
+                    //TODO:прикрутить иконку
+                    //                    this.listv_programs.LargeImageList.Images.Add( ip, System.Drawing.SystemIcons. );
+                }
+                catch {
+                    this.listv_programs.LargeImageList.Images.Add( ip, eric );
+                }
+                var item = new ListViewItem( app.Name, ip, gr ) {
+                    Tag = app,
+                };
+                //item.ImageList = this.listv_programs.LargeImageList;
+                this.listv_programs.Items.Add( item );
+            }
             this.listv_programs.EndUpdate();
         }
 
@@ -132,15 +148,14 @@ namespace gSDK_Launcher {
             if ( it != null && ( it.Tag == null || !( it.Tag is App ) ) ) return;
             var info = it.Tag as App;
             try {
-                Process.Start( AssemblyInfoHelper.GetPath(
-                    info.Path
-                ) );
+
+                Process.Start( info.Path.StartsWith( "http" ) ? info.Path : AssemblyInfoHelper.GetPath( info.Path ) );
             }
-            catch (Exception) {
+            catch ( Exception ) {
                 MessageBox.Show(
                     string.Format(
                         "Failed to run {0}({1})",
-                        info.Name, AssemblyInfoHelper.GetPath(info.Path)
+                        info.Name, AssemblyInfoHelper.GetPath( info.Path )
                     ),
                     "ЕГГОГ",
                     MessageBoxButtons.OK,

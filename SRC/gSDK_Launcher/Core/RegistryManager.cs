@@ -26,9 +26,13 @@ namespace gSDK_Launcher.Core {
     public class Ext {
         public string Extension { get; set; }
         public string ProgID { get; set; }
+        public string IconPath { get; set; }
         public void Save() {
             var cur = Registry.ClassesRoot.OOC( "."+this.Extension );
             cur.SetValue( "", ProgID );
+            var icon = cur.OOC( "DefaultIcon" );
+            icon.SetValue( "", this.IconPath );
+            icon.Close();
         }
 
         public static string GetCurrentProgID( string ext ) {
