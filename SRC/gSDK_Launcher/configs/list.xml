@@ -367,6 +367,12 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			<path>SDK\addons\backchanger\backchanger.exe</path>
 			<installed>false</installed>
 			</app> 
+			<app>
+			<name>HL1 SDK Folder</name>
+			<icon>SDK\Launcher\logos\sdk.ico</icon>
+			<path>SDK\Sources\</path>
+			<installed>false</installed>
+			</app> 
 		</category>
 		<category name="Help and Manuals">
 			<app>
