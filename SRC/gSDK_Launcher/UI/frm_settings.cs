@@ -91,15 +91,13 @@ namespace gSDK_Launcher {
         }
         private void brn_apply_Click( object sender, EventArgs e ) {
             try {
-                foreach ( var result in this.panel_config.Controls.OfType<ComboBox>() )
+                foreach (var result in this.panel_config.Controls.OfType<ComboBox>())
                     this.sv( result );
                 Action<string, ComboBox> sv = ( a, b ) => {
                     var it = b.SelectedItem;
                     var app = it as App;
                     string progid = "";
                     if ( it is string ) {
-                        //if ( it == "None" ) progid = null;
-                        //else
                         if ( it == "Other" ) return;
                     }
                     else progid = ( app ).Name.Replace( " ", "." );
@@ -116,12 +114,15 @@ namespace gSDK_Launcher {
                 sv( "spr", list_spr );
                 sv( "wad", list_wad );
             }
-            catch ( UnauthorizedAccessException ex ) {
+            catch (UnauthorizedAccessException ex) {
                 MessageBox.Show(
                     "Can't update associations: access denied",
                     "ЕГГОГ",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error );
+            }
+            catch (Exception ex) {
+                MessageBox.Show( ex.Message );
             }
             this.Close();
         }

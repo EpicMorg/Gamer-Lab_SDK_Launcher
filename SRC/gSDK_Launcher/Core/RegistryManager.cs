@@ -2,7 +2,7 @@
 namespace gSDK_Launcher.Core {
     public static class RegistryHelper {
         public static RegistryKey OOC( this RegistryKey k, string subkey ) {
-            return k.OpenSubKey( subkey ) ?? k.CreateSubKey( subkey );
+            return k.OpenSubKey( subkey, true ) ?? k.CreateSubKey( subkey );
         }
     }
 
@@ -29,7 +29,10 @@ namespace gSDK_Launcher.Core {
         public string IconPath { get; set; }
         public void Save() {
             var cur = Registry.ClassesRoot.OOC( "."+this.Extension );
-            cur.SetValue( "", ProgID );
+            if (!string.IsNullOrEmpty( ProgID ))
+                cur.SetValue( "", ProgID );
+            else
+                cur.DeleteValue( "" );
             var icon = cur.OOC( "DefaultIcon" );
             icon.SetValue( "", this.IconPath );
             icon.Close();
