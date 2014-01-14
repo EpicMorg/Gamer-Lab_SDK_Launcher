@@ -1,4 +1,4 @@
-![Ololo](http://static2.fjcdn.com/thumbnails/comments/indeed%2B_0f9f7b11e56daeb33bf499baca1533ee.gif)
+ 
 glodsrc SDK Launcher
 ====================
 
