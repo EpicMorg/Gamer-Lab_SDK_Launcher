@@ -90,30 +90,39 @@ namespace gSDK_Launcher {
             catch { }
         }
         private void brn_apply_Click( object sender, EventArgs e ) {
-            foreach ( var result in this.panel_config.Controls.OfType<ComboBox>() )
-                this.sv( result );
-            Action<string, ComboBox> sv = ( a, b ) => {
-                var it = b.SelectedItem;
-                var app = it as App;
-                string progid = "";
-                if ( it is string ) {
-                    //if ( it == "None" ) progid = null;
-                    //else
-                    if ( it == "Other" ) return;
-                }
-                else progid = ( app ).Name.Replace( " ", "." );
-                new Ext {
-                    Extension = a,
-                    ProgID = progid
-                }.Save();
-            };
-            sv( "rmf", list_rmf );
-            sv( "map", list_map );
-            sv( "bsp", list_bsp );
-            sv( "mdl", list_mdl );
-            sv( "pak", list_pak );
-            sv( "spr", list_spr );
-            sv( "wad", list_wad );
+            try {
+                foreach ( var result in this.panel_config.Controls.OfType<ComboBox>() )
+                    this.sv( result );
+                Action<string, ComboBox> sv = ( a, b ) => {
+                    var it = b.SelectedItem;
+                    var app = it as App;
+                    string progid = "";
+                    if ( it is string ) {
+                        //if ( it == "None" ) progid = null;
+                        //else
+                        if ( it == "Other" ) return;
+                    }
+                    else progid = ( app ).Name.Replace( " ", "." );
+                    new Ext {
+                        Extension = a,
+                        ProgID = progid
+                    }.Save();
+                };
+                sv( "rmf", list_rmf );
+                sv( "map", list_map );
+                sv( "bsp", list_bsp );
+                sv( "mdl", list_mdl );
+                sv( "pak", list_pak );
+                sv( "spr", list_spr );
+                sv( "wad", list_wad );
+            }
+            catch ( UnauthorizedAccessException ex ) {
+                MessageBox.Show(
+                    "Can't update associations: access denied",
+                    "ЕГГОГ",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error );
+            }
             this.Close();
         }
 
@@ -127,12 +136,12 @@ namespace gSDK_Launcher {
             }.Save();
         }
 
-        private void btn_update_Click(object sender, EventArgs e) {
-            if (MessageBox.Show("Updater will penmanently close launcher. Save settings before use it!" +Environment.NewLine+"Continue?", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes) {
-                MessageBox.Show("closing launcher via App..Exit();\r\nStarting updater.exe");
+        private void btn_update_Click( object sender, EventArgs e ) {
+            if ( MessageBox.Show( "Updater will penmanently close launcher. Save settings before use it!" + Environment.NewLine + "Continue?", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1 ) == DialogResult.Yes ) {
+                MessageBox.Show( "closing launcher via App..Exit();\r\nStarting updater.exe" );
             }
             else {
-                
+
             }
         }
     }

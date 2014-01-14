@@ -317,7 +317,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			<app>
 				<name>Wally</name>
 				<icon>SDK\Launcher\logos\Wally.ico</icon>
-				<path>SDK\addons\SprExplorer\Wally.exe</path>
+				<path>SDK\addons\Wally\Wally.exe</path>
 				<extensions>
 					<ext>wad</ext>
 					<ext>pak</ext>
