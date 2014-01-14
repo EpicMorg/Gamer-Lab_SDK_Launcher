@@ -25,6 +25,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
+
+using System.IO;
 using gSDK_vgui; 
 using System;
 
@@ -41,8 +43,14 @@ namespace gSDK_Launcher {
         }
 
         private void btn_rescan_Click(object sender, EventArgs e) {
-            var frmScanning = new frm_scanning();
-            frmScanning.ShowDialog();
+            //var frmScanning = new frm_scanning();
+            //frmScanning.ShowDialog();
+            var configpath = Path.Combine( "configs", "list.xml" );
+            try {
+                Globals.Config = Config.Load( configpath );
+                Globals.Config.Save( configpath );
+            }
+            catch {}
         }
 
         private void brn_apply_Click(object sender, EventArgs e) {

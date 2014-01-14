@@ -100,6 +100,7 @@ namespace gSDK_Launcher {
             this.listv_programs.TabIndex = 7;
             this.listv_programs.UseCompatibleStateImageBehavior = false;
             this.listv_programs.View = System.Windows.Forms.View.Tile;
+            this.listv_programs.DoubleClick += new System.EventHandler(this.listv_programs_DoubleClick);
             // 
             // btn_exit
             // 

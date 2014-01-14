@@ -8,10 +8,7 @@ namespace gSDK_Launcher {
         /// <returns></returns>
         public static bool CheckAppInstalled( App app ) {
             return File.Exists(
-                Path.Combine(
-                    Path.GetDirectoryName( 
-                        AssemblyInfoHelper.CurrentAssembly.Location
-                    ),
+                AssemblyInfoHelper.GetPath(
                     app.Path
                 )
             );

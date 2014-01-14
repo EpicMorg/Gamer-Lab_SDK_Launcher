@@ -26,9 +26,9 @@ THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
 
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using gSDK_vgui;
 using System.Windows.Forms;
 using System;
@@ -51,30 +51,33 @@ namespace gSDK_Launcher {
             Application.Exit();
         }
         private void frm_main_Load( object sender, EventArgs e ) {
-            var configpath = Path.Combine( "configs", "list.xml" );
-            try {
-                Globals.Config = Config.Load( configpath );
-            }
-            catch ( Exception ex ) {
-                if ( MessageBox.Show(
-                    "Cant't load config file. Create new?",
-                    "ЕГГОГ!",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Error ) != DialogResult.OK )
-                    return;
+            #region Load cfg
+                var configpath = Path.Combine( "configs", "list.xml" );
                 try {
-                    File.WriteAllText( configpath, Properties.Resources.dftcfg );
+                    Globals.Config = Config.Load( configpath );
                 }
-                catch ( Exception ex2 ) {
-                    MessageBox.Show(
-                        "ЕГГОГ",
-                        "Unable to update config. Contact to ya odmin.",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error );
-                    Application.Exit();
-                    return;
+                catch (Exception) {
+                    if ( MessageBox.Show(
+                        "Cant't load config file. Create new?",
+                        "ЕГГОГ!",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Error ) != DialogResult.OK )
+                        return;
+                    try {
+                        File.WriteAllText( configpath, Properties.Resources.dftcfg );
+                    }
+                    catch ( Exception ex2 ) {
+                        MessageBox.Show(
+                            "ЕГГОГ",
+                            "Unable to update config. Contact to ya odmin.",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error );
+                        Application.Exit();
+                        return;
+                    }
                 }
-            }
+            #endregion
+            
             this.listv_programs.BeginUpdate();
             this.listv_programs.Items.Clear();
             this.listv_programs.Groups.Clear();
@@ -82,19 +85,24 @@ namespace gSDK_Launcher {
             if (a!=null) a.Dispose();
             a = this.listv_programs.SmallImageList;
             if ( a != null ) a.Dispose();
-            this.listv_programs.LargeImageList = new ImageList();
-            this.listv_programs.LargeImageList.ImageSize = new Size(16,16);
+            this.listv_programs.LargeImageList = new ImageList {
+                ImageSize = new Size( 16, 16 )
+            };
             this.listv_programs.SmallImageList = this.listv_programs.LargeImageList;
+            Icon eric = SystemIcons.Error;
+            
             foreach ( var category in Globals.Config.Apps ) {
                 var grp = new ListViewGroup( category.Name, category.Name );
                 this.listv_programs.Groups.Add( grp );
                 foreach ( var app in category.Apps ) {
                     try {
-                        var ico = System.Drawing.Icon.ExtractAssociatedIcon( app.IconPath );
+                        var ico = File.Exists( app.IconPath )?
+                            Icon.ExtractAssociatedIcon( app.IconPath ):
+                            eric;
                         this.listv_programs.LargeImageList.Images.Add( app.IconPath, ico );
                     }
                     catch {
-                        this.listv_programs.LargeImageList.Images.Add( app.IconPath, System.Drawing.SystemIcons.Error );
+                        this.listv_programs.LargeImageList.Images.Add( app.IconPath, eric);
                     }
                     var item = new ListViewItem( app.Name, app.IconPath, grp ) {
                             Tag = app,
@@ -104,6 +112,22 @@ namespace gSDK_Launcher {
                 }
             }
             this.listv_programs.EndUpdate();
+        }
+
+        private void listv_programs_DoubleClick( object sender, EventArgs e ) {
+            var v = this.listv_programs.SelectedItems;
+            if ( v.Count == 0 ) return;
+            var it = v[ 0 ];
+            if ( it != null && ( it.Tag == null || !( it.Tag is App ) ) ) return;
+            var info = it.Tag as App;
+            try {
+                Process.Start( AssemblyInfoHelper.GetPath(
+                    info.Path
+                ) );
+            }
+            catch (Exception) {
+                MessageBox.Show( "Failed to run " + info.Name, "ЕГГОГ", MessageBoxButtons.OK, MessageBoxIcon.Error );
+            }
         }
     }
 }

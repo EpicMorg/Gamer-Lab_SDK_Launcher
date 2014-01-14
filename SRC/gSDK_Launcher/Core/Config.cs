@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace gSDK_Launcher {
     internal class Helper {
@@ -34,6 +35,53 @@ namespace gSDK_Launcher {
             var d = new XmlDocument();
             d.Load( path );
             return new Config( d.DocumentElement );
+        }
+
+        public void Save( string path ) {
+            var doc = new XDocument(
+                new XDeclaration("1.0","utf-8","yes"),
+                new XElement(
+                    "cfg",
+                    new XElement(
+                        "apps",
+                        this.Apps.Select(
+                            a=> new XElement(
+                                "category",
+                                new XAttribute("name", a.Name ),
+                                a.Apps.Select(
+                                    b=>new XElement(
+                                        "app",
+                                        new XElement("name",b.Name),
+                                        new XElement( "icon",b.IconPath ),
+                                        new XElement( "path",b.Path ),
+                                        new XElement( "installed", b.Installed ),
+                                        new XElement(
+                                            "extensions",
+                                            b.Extensions.Select(
+                                                c=>new XElement("ext",c)
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    new XElement(
+                        "category",
+                        new XAttribute( "name", "Support and Links" ),
+                        this.Support.Apps.Select(
+                           b => new XElement(
+                                "app",
+                                new XElement( "name", b.Name ),
+                                new XElement( "icon", b.IconPath ),
+                                new XElement( "path", b.Path ),
+                                new XElement( "installed", b.Installed )
+                            )
+                        )
+                    )
+                )
+            );
+            doc.Save( path );
         }
     }
 
