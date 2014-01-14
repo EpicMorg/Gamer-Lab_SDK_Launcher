@@ -61,7 +61,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>CSM Hammer Editor 3.5</name>
-				<icon>SDK\Launcher\logos\hammer.ico</icon>
+				<icon>SDK\Launcher\logos\csmh.ico</icon>
 				<path>SDK\editor.exe</path>
 				<extensions>
 					<ext>rmf</ext>
@@ -81,7 +81,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>Neon Hammer Editor 3.5</name>
-				<icon>SDK\Launcher\logos\neo.ico</icon>
+				<icon>SDK\Launcher\logos\neon.ico</icon>
 				<path>SDK\neon.exe</path>
 				<extensions>
 					<ext>rmf</ext>
@@ -91,7 +91,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>Neon Hammer Editor 3.5 Rus</name>
-				<icon>SDK\Launcher\logos\neo.ico</icon>
+				<icon>SDK\Launcher\logos\neon.ico</icon>
 				<path>SDK\neon_rus.exe</path>
 				<extensions>
 					<ext>rmf</ext>
@@ -107,7 +107,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>Sledge Editor</name>
-				<icon>SDK\Launcher\logos\QuArK.ico</icon>
+				<icon>SDK\Launcher\logos\Sledge.Edito.ico</icon>
 				<path>SDK\addons\Sledge\Sledge.Editor.exe</path>
 				<installed>false</installed>
 			</app>
@@ -273,7 +273,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<installed>false</installed>
 			</app>
 			<app>
-				<name>guistudiomdl</name>
+				<name>GUI studiomdl</name>
 				<icon>SDK\Launcher\logos\guistudiomdl.ico</icon>
 				<path>SDK\addons\guistudiomdl\guistudiomdl.exe</path> 
 				<installed>false</installed>
