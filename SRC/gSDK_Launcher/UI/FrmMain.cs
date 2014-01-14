@@ -25,6 +25,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
+
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using gSDK_vgui;
@@ -32,20 +34,20 @@ using System.Windows.Forms;
 using System;
 namespace gSDK_Launcher {
     public partial class FrmMain : FrmTemplate {
-        
+
         public FrmMain() {
             InitializeComponent();
         }
-        private void btn_about_Click(object sender, EventArgs e) {
+        private void btn_about_Click( object sender, EventArgs e ) {
             new frm_about().ShowDialog();
         }
-        private void button1_Click(object sender, EventArgs e) {
+        private void button1_Click( object sender, EventArgs e ) {
             new frm_scanning().ShowDialog();
         }
-        private void btn_settings_Click(object sender, EventArgs e) {
-           new frm_settings().ShowDialog();
+        private void btn_settings_Click( object sender, EventArgs e ) {
+            new frm_settings().ShowDialog();
         }
-        private void btn_exit_Click(object sender, EventArgs e) {
+        private void btn_exit_Click( object sender, EventArgs e ) {
             Application.Exit();
         }
         private void frm_main_Load( object sender, EventArgs e ) {
@@ -53,7 +55,7 @@ namespace gSDK_Launcher {
             try {
                 Globals.Config = Config.Load( configpath );
             }
-            catch (Exception ex) {
+            catch ( Exception ex ) {
                 if ( MessageBox.Show(
                     "Cant't load config file. Create new?",
                     "ЕГГОГ!",
@@ -63,7 +65,7 @@ namespace gSDK_Launcher {
                 try {
                     File.WriteAllText( configpath, Properties.Resources.dftcfg );
                 }
-                catch (Exception ex2) {
+                catch ( Exception ex2 ) {
                     MessageBox.Show(
                         "ЕГГОГ",
                         "Unable to update config. Contact to ya odmin.",
@@ -73,18 +75,32 @@ namespace gSDK_Launcher {
                     return;
                 }
             }
-            this.listv_programs.Items.Clear();
-            //this.listv_programs.Items.AddRange(
-            //    Globals.Config.Apps.Select( 
-            //    )
-            //);
             this.listv_programs.BeginUpdate();
-            foreach (var category in Globals.Config.Apps) {
-                var grp = new ListViewGroup( category.Name );
+            this.listv_programs.Items.Clear();
+            this.listv_programs.Groups.Clear();
+            IDisposable a = this.listv_programs.LargeImageList;
+            if (a!=null) a.Dispose();
+            a = this.listv_programs.SmallImageList;
+            if ( a != null ) a.Dispose();
+            this.listv_programs.LargeImageList = new ImageList();
+            this.listv_programs.LargeImageList.ImageSize = new Size(16,16);
+            this.listv_programs.SmallImageList = this.listv_programs.LargeImageList;
+            foreach ( var category in Globals.Config.Apps ) {
+                var grp = new ListViewGroup( category.Name, category.Name );
                 this.listv_programs.Groups.Add( grp );
-                foreach (var app in category.Apps) {
-                    var Item = new ListViewItem( app.Name, grp );
-                    this.listv_programs.Items.Add( Item );
+                foreach ( var app in category.Apps ) {
+                    try {
+                        var ico = System.Drawing.Icon.ExtractAssociatedIcon( app.IconPath );
+                        this.listv_programs.LargeImageList.Images.Add( app.IconPath, ico );
+                    }
+                    catch {
+                        this.listv_programs.LargeImageList.Images.Add( app.IconPath, System.Drawing.SystemIcons.Error );
+                    }
+                    var item = new ListViewItem( app.Name, app.IconPath, grp ) {
+                            Tag = app,
+                        };
+                    //item.ImageList = this.listv_programs.LargeImageList;
+                    this.listv_programs.Items.Add( item );
                 }
             }
             this.listv_programs.EndUpdate();

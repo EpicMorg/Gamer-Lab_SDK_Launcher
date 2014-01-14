@@ -99,6 +99,7 @@ namespace gSDK_Launcher {
             this.listv_programs.Size = new System.Drawing.Size(336, 180);
             this.listv_programs.TabIndex = 7;
             this.listv_programs.UseCompatibleStateImageBehavior = false;
+            this.listv_programs.View = System.Windows.Forms.View.Tile;
             // 
             // btn_exit
             // 
@@ -141,7 +142,7 @@ namespace gSDK_Launcher {
             this.btn_settings.UseVisualStyleBackColor = true;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
-            // frm_main
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

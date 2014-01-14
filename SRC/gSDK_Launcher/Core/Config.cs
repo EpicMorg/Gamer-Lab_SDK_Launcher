@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Xml;
 
 namespace gSDK_Launcher {
@@ -7,8 +8,8 @@ namespace gSDK_Launcher {
             return n.ChildNodes.OfType<XmlNode>().FirstOrDefault( a => a.Name == name );
         }
         public static string GNTBN( XmlNode n, string name ) {
-            return (GNBN( n, name )//??new XmlNode(){InnerText = ""}
-                ).InnerText;
+            var tmp = GNBN( n, name );
+            return tmp!=null ? tmp.InnerText : "";
         }
     }
 
@@ -25,7 +26,7 @@ namespace gSDK_Launcher {
                     .Select( a => new Category( a ) )
                     .ToArray();
             this.Support = new Category(
-                n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "apps" )
+                n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "category" )
             );
         }
 
@@ -47,7 +48,8 @@ namespace gSDK_Launcher {
         public App( XmlNode n ) {
             this.Name = Helper.GNTBN( n, "name" );
             this.IconPath = Helper.GNTBN( n, "icon" );
-            this.Installed = bool.Parse( Helper.GNTBN( n, "installed" ) );
+            var tmps = Helper.GNTBN( n, "installed" );
+            this.Installed = !String.IsNullOrEmpty( tmps )?bool.Parse(tmps ):false;
             this.Path = Helper.GNTBN( n, "path" );
             var tmp = Helper.GNBN( n, "extensions" );
             this.Extensions = tmp != null
