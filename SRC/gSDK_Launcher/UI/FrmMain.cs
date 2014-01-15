@@ -198,5 +198,10 @@ namespace gSDK_Launcher {
                 );
             }
         }
+
+        private void btn_additem_Click(object sender, EventArgs e) {
+            var frmcustom = new FrmCustomSection();
+            frmcustom.ShowDialog();
+        }
     }
 }

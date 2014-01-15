@@ -155,6 +155,7 @@ namespace gSDK_Launcher {
             this.btn_additem.TabIndex = 8;
             this.btn_additem.Text = "Add to menu";
             this.btn_additem.UseVisualStyleBackColor = true;
+            this.btn_additem.Click += new System.EventHandler(this.btn_additem_Click);
             // 
             // FrmMain
             // 
