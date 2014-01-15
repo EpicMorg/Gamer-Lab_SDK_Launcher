@@ -61,6 +61,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Drawing" />
@@ -71,6 +72,12 @@
     <Compile Include="Core\AssemblyInfoHelper.cs" />
     <Compile Include="Core\Config.cs" />
     <Compile Include="Core\RegistryManager.cs" />
+    <Compile Include="UI\FrmCustomSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmCustomSection.Designer.cs">
+      <DependentUpon>FrmCustomSection.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frm_about.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +113,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\SoftwareDetector.cs" />
     <Compile Include="UI\AbyrvalgTranslator.cs" />
+    <EmbeddedResource Include="UI\FrmCustomSection.resx">
+      <DependentUpon>FrmCustomSection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frm_about.resx">
       <DependentUpon>frm_about.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +200,7 @@
     </Content>
     <Content Include="langs\en-US.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="langs\ru-RU.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -56,6 +56,7 @@ namespace gSDK_Launcher {
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_about = new System.Windows.Forms.Button();
             this.btn_settings = new System.Windows.Forms.Button();
+            this.btn_additem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).BeginInit();
@@ -64,15 +65,15 @@ namespace gSDK_Launcher {
             // 
             // pic_btn_min
             // 
-            this.pic_btn_min.Location = new System.Drawing.Point(281, 12);
+            this.pic_btn_min.Location = new System.Drawing.Point(331, 12);
             // 
             // pic_btn_max
             // 
-            this.pic_btn_max.Location = new System.Drawing.Point(305, 12);
+            this.pic_btn_max.Location = new System.Drawing.Point(355, 12);
             // 
             // pic_btn_exit
             // 
-            this.pic_btn_exit.Location = new System.Drawing.Point(329, 12);
+            this.pic_btn_exit.Location = new System.Drawing.Point(379, 12);
             // 
             // lbl_title
             // 
@@ -96,7 +97,7 @@ namespace gSDK_Launcher {
             listViewItem1});
             this.listv_programs.Location = new System.Drawing.Point(12, 43);
             this.listv_programs.Name = "listv_programs";
-            this.listv_programs.Size = new System.Drawing.Size(336, 180);
+            this.listv_programs.Size = new System.Drawing.Size(386, 180);
             this.listv_programs.TabIndex = 7;
             this.listv_programs.UseCompatibleStateImageBehavior = false;
             this.listv_programs.View = System.Windows.Forms.View.Tile;
@@ -107,7 +108,7 @@ namespace gSDK_Launcher {
             this.btn_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_exit.FlatAppearance.BorderSize = 0;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_exit.Location = new System.Drawing.Point(272, 229);
+            this.btn_exit.Location = new System.Drawing.Point(322, 229);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(75, 25);
             this.btn_exit.TabIndex = 8;
@@ -143,17 +144,30 @@ namespace gSDK_Launcher {
             this.btn_settings.UseVisualStyleBackColor = true;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
+            // btn_additem
+            // 
+            this.btn_additem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_additem.FlatAppearance.BorderSize = 0;
+            this.btn_additem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_additem.Location = new System.Drawing.Point(219, 229);
+            this.btn_additem.Name = "btn_additem";
+            this.btn_additem.Size = new System.Drawing.Size(97, 25);
+            this.btn_additem.TabIndex = 8;
+            this.btn_additem.Text = "Add to menu";
+            this.btn_additem.UseVisualStyleBackColor = true;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 266);
+            this.ClientSize = new System.Drawing.Size(410, 266);
+            this.Controls.Add(this.btn_additem);
             this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.btn_about);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.listv_programs);
-            this.MinimumSize = new System.Drawing.Size(360, 266);
-            this.Name = "frm_main";
+            this.MinimumSize = new System.Drawing.Size(410, 266);
+            this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoldSource SDK Launcher";
             this.Load += new System.EventHandler(this.frm_main_Load);
@@ -166,6 +180,7 @@ namespace gSDK_Launcher {
             this.Controls.SetChildIndex(this.btn_exit, 0);
             this.Controls.SetChildIndex(this.btn_about, 0);
             this.Controls.SetChildIndex(this.btn_settings, 0);
+            this.Controls.SetChildIndex(this.btn_additem, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).EndInit();
@@ -181,6 +196,7 @@ namespace gSDK_Launcher {
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_about;
         private System.Windows.Forms.Button btn_settings;
+        private System.Windows.Forms.Button btn_additem;
  
 
        

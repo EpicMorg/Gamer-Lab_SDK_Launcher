@@ -38,9 +38,10 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="frm_credits">Autores</term>
 		<term name="frm_credits.lbl_special_thnx">Un agradecimiento especial a:</term>
 		<term name="frm_credits.lbl_and_community">y resursos hl-lab.ru</term>
-		<term name="frm_main.btn_about">Acerca del programa</term>
-		<term name="frm_main.btn_settings">Ajustes</term>
-		<term name="frm_main.btn_exit">Exit</term>
+		<term name="FrmMain.btn_about">Acerca del programa</term>
+		<term name="FrmMain.btn_settings">Ajustes</term>
+		<term name="FrmMain.btn_exit">Exit</term>
+		<term name="FrmMain.btn_additem">Добавить</term>
 		<term name="frm_scanning">Por favor, espere ...</term>
 		<term name="frm_scanning.lbl_prepearing_text">Por favor, espere ... Preparándose para lanzar ...</term>
 		<term name="FrmSettings">Ajustes</term>

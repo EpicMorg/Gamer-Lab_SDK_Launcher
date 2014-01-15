@@ -38,9 +38,10 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="frm_credits">Авторы</term>
 		<term name="frm_credits.lbl_special_thnx">Отдельное Спасибо:</term>
 		<term name="frm_credits.lbl_and_community">и ресурсу HL-Lab.ru!</term>
-		<term name="frm_main.btn_about">О программе</term>
-		<term name="frm_main.btn_settings">Настройки</term>
-		<term name="frm_main.btn_exit">Выход</term>
+		<term name="FrmMain.btn_about">О программе</term>
+		<term name="FrmMain.btn_settings">Настройки</term>
+		<term name="FrmMain.btn_exit">Выход</term>
+		<term name="FrmMain.btn_additem">Добавить</term>
 		<term name="frm_scanning">Пожалуйста, подождите...</term>
 		<term name="frm_scanning.lbl_prepearing_text">Пожалуйста, подождите... Подготовка к запуску...</term>
 		<term name="FrmSettings">Настройки</term>
@@ -51,5 +52,6 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="FrmSettings.btn_lang_info">Инфо</term>
 		<term name="FrmSettings.brn_apply">Применить</term>
 		<term name="FrmSettings.brn_update">Обновить</term>
+	
 	</translation>
 </language>

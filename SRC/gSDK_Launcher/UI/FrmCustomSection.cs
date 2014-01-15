@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--
+﻿/*
 *************************************************************************************
 Tis file is distributed under MIT license:
 *************************************************************************************
@@ -25,32 +24,22 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
--->
-<language>
-	<metadata>
-		<culture>en-US</culture>
-		<version>1.3.3.7</version>
-		<author>KastHack</author>
-	</metadata>
-	<translation>
-		<term name="frm_about">О Прогамме</term>
-		<term name="frm_about.btn_credits">Credits</term>
-		<term name="frm_credits">Credits</term>
-		<term name="frm_credits.lbl_special_thnx">Special thanks:</term>
-		<term name="frm_credits.lbl_and_community">and HL-Lab.ru Community!</term>
-		<term name="FrmMain.btn_about">About</term>
-		<term name="FrmMain.btn_settings">Config</term>
-		<term name="FrmMain.btn_exit">Close</term>
-		<term name="FrmMain.btn_additem">Add</term>
-		<term name="frm_scanning">Please wait...</term>
-		<term name="frm_scanning.lbl_prepearing_text">Please wait.. Prepearing..</term>
-		<term name="FrmSettings">Settings</term>
-		<term name="FrmSettings.lbl_def_lang">Default language:</term>
-		<term name="FrmSettings.lbl_ass_files">File associations:</term>
-		<term name="FrmSettings.lbl_compillers">Set default Compiler:</term>
-		<term name="FrmSettings.btn_rescan">Rescan and Fix program list</term>
-		<term name="FrmSettings.btn_lang_info">Info</term>
-		<term name="FrmSettings.brn_apply">Apply</term>
-		<term name="FrmSettings.brn_update">Update</term>
-	</translation>
-</language>
+*/
+
+using System;
+using gSDK_Launcher.Core;
+using gSDK_vgui;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace gSDK_Launcher.UI {
+    public partial class FrmCustomSection : FrmTemplate {
+        public FrmCustomSection() {
+            InitializeComponent();
+        }
+
+        private void FrmCustomSection_Load(object sender, EventArgs e) {
+
+        }
+    }
+}
