@@ -28,7 +28,7 @@ Launcher для GoldSource SDK от Hl-Lab.ru
 
 1. Запилить обновление компонентов
 2. Запилить менеджер конфигураций. Для добавления через него пользовательских программ(путей, url) и иконок к ним в отдельный блок
-'''xml
+```xml
 <category name="custom">
 	<app>
 		<name>Test app</name> 
@@ -37,4 +37,4 @@ Launcher для GoldSource SDK от Hl-Lab.ru
 		<params>-silent</params>
 	</app>
 </custom>
-'''
+```
