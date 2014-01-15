@@ -39,7 +39,7 @@ namespace gSDK_Launcher.UI {
         }
 
         private void FrmCustomSection_Load(object sender, EventArgs e) {
-
+            Globals.Translator.Translate(this.Controls.OfType<Control>(), this.Name);
         }
     }
 }

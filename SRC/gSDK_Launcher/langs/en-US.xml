@@ -41,7 +41,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="FrmMain.btn_about">About</term>
 		<term name="FrmMain.btn_settings">Config</term>
 		<term name="FrmMain.btn_exit">Close</term>
-		<term name="FrmMain.btn_additem">Add</term>
+		<term name="FrmMain.btn_additem">Edit menu</term>
 		<term name="frm_scanning">Please wait...</term>
 		<term name="frm_scanning.lbl_prepearing_text">Please wait.. Prepearing..</term>
 		<term name="FrmSettings">Settings</term>
@@ -52,5 +52,11 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="FrmSettings.btn_lang_info">Info</term>
 		<term name="FrmSettings.brn_apply">Apply</term>
 		<term name="FrmSettings.brn_update">Update</term>
+		<term name="FrmCustomSection">Edit</term>
+		<term name="FrmCustomSection.lbl_custom_list">Custom items:</term>
+		<term name="FrmCustomSection.lbl_commandline">Commanline arguments:</term>
+		<term name="FrmCustomSection.btn_add_item">Add</term>
+		<term name="FrmCustomSection.btn_delete_selected">Delete</term>
+		<term name="FrmCustomSection.btn_saveit">Save</term>
 	</translation>
 </language>

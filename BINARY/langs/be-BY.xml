@@ -41,7 +41,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="FrmMain.btn_about">Аб праграме</term>
 		<term name="FrmMain.btn_settings">Настройкі</term>
 		<term name="FrmMain.btn_exit">Выхад</term>
-		<term name="FrmMain.btn_additem">Добавить</term>
+		<term name="FrmMain.btn_additem">Ред. меню</term>
 		<term name="frm_scanning">Калі ласка, пачакайце ...</term>
 		<term name="frm_scanning.lbl_prepearing_text">Калі ласка, пачакайце ... Падрыхтоўка да запуску ...</term>
 		<term name="FrmSettings">Настройкі</term>
@@ -52,5 +52,11 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="FrmSettings.btn_lang_info">Інфармацыя</term>
 		<term name="FrmSettings.brn_apply">Прымяніць</term> 
 		<term name="FrmSettings.brn_update">Абнавіць</term>
+		<term name="FrmCustomSection">Редактировать меню</term>
+		<term name="FrmCustomSection.lbl_custom_list">Пользовательский список:</term>
+		<term name="FrmCustomSection.lbl_commandline">Параметры запуска:</term>
+		<term name="FrmCustomSection.btn_add_item">Добавить</term>
+		<term name="FrmCustomSection.btn_delete_selected">Удалить</term>
+		<term name="FrmCustomSection.btn_saveit">Сохранить</term>
 	</translation>
 </language>
