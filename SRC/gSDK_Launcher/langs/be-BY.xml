@@ -29,7 +29,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 <language>
 	<metadata>
 		<culture>be-BY</culture>
-		<version>0.2</version>
+		<version>0.2.1</version>
 		<author>NEO</author>
 	</metadata>
 	<translation>
@@ -49,7 +49,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="FrmSettings.lbl_compillers">Кампілятары па змаўчанні</term>
 		<term name="FrmSettings.btn_rescan">Абнавіць або выправіць спіс праграм у меню</term>
 		<term name="FrmSettings.btn_lang_info">Інфармацыя</term>
-		<term name="FrmSettings.brn_apply">Применить</term> 
-		<term name="FrmSettings.brn_update">Обновить</term>
+		<term name="FrmSettings.brn_apply">Прымяніць</term> 
+		<term name="FrmSettings.brn_update">Абнавіць</term>
 	</translation>
 </language>
