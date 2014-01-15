@@ -250,9 +250,9 @@ namespace gSDK_Launcher.UI {
             "Zonner\'s x32 SSE2",
             "Zonners\'s x64",
             "Vlucazan\'s x32 v31"});
-            this.comboBox1.Location = new System.Drawing.Point(182, 282);
+            this.comboBox1.Location = new System.Drawing.Point(169, 282);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(109, 21);
+            this.comboBox1.Size = new System.Drawing.Size(122, 21);
             this.comboBox1.TabIndex = 9;
             // 
             // list_wad

@@ -53,12 +53,12 @@ namespace gSDK_Launcher.UI {
                 .Select( AbyrvalgTranslator.Load )
                 .ToArray()
             );
-            this.dlist_lang.Items.Add(
-                new AbyrvalgTranslator {
-                    Author = "stam",
-                    Culture = "en-US",
-                    Version = "1.4.8.8"
-                } );
+            //this.dlist_lang.Items.Add(
+            //    new AbyrvalgTranslator {
+            //        Author = "stam",
+            //        Culture = "en-US",
+            //        Version = "1.0.0.1"
+            //    } );
             this.dlist_lang.SelectedItem =
                 this.dlist_lang.Items.OfType<AbyrvalgTranslator>().First( a => a.Culture == Globals.Config.LANG );
             this.dlist_lang.EndUpdate();
@@ -127,6 +127,7 @@ namespace gSDK_Launcher.UI {
                 }
                 foreach ( var result in this.panel_config.Controls.OfType<ComboBox>() )
                     this.sv( result );
+                Globals.Translator = c;
                 Action<string, ComboBox> sv = ( a, b ) => {
                     var it = b.SelectedItem;
                     var app = it as App;
@@ -180,12 +181,14 @@ namespace gSDK_Launcher.UI {
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button1 ) == DialogResult.Yes ) {
-                MessageBox.Show( "closing launcher via App..Exit();\r\nStarting updater.exe" );
+                MessageBox.Show( @"closing launcher via App..Exit();\r\nStarting updater.exe" );
             }
         }
 
-        private void btn_lang_info_Click(object sender, EventArgs e) { 
-            MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        private void btn_lang_info_Click(object sender, EventArgs e) {
+            var c = (this.dlist_lang.SelectedItem as AbyrvalgTranslator);
+            MessageBox.Show(
+                string.Format(@"By: {0}{1}Ver: {2}{1}Lang: {3}", c.Author, Environment.NewLine, c.Version, c.Culture), "",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }

@@ -188,6 +188,9 @@
     <Content Include="langs\be-BY.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="langs\en-US.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="langs\ru-RU.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

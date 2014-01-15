@@ -51,6 +51,8 @@ namespace gSDK_Launcher {
         private void btn_settings_Click( object sender, EventArgs e ) {
             new FrmSettings().ShowDialog();
             this.ReloadSoftware();
+            // Application.Restart();
+            Globals.Translator.Translate(this.Controls.OfType<Control>(), this.Name);
 
         }
         private void btn_exit_Click( object sender, EventArgs e ) {
