@@ -29,7 +29,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 <language>
 	<metadata>
 		<culture>es-ES</culture>
-		<version>0.2</version>
+		<version>0.3</version>
 		<author>NEO</author>
 	</metadata>
 	<translation>
@@ -49,7 +49,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="FrmSettings.lbl_compillers">Los compiladores predeterminada.</term>
 		<term name="FrmSettings.btn_rescan">Actualizar o corregir la lista de programas en el menú</term>
 		<term name="FrmSettings.btn_lang_info">Info.</term>
-		<term name="FrmSettings.brn_apply">Применить</term> 
-		<term name="FrmSettings.brn_update">Обновить</term>
+		<term name="FrmSettings.brn_apply">Aplicar</term> 
+		<term name="FrmSettings.brn_update">Update</term>
 	</translation>
 </language>
