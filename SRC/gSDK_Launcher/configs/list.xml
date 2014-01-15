@@ -259,7 +259,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			<app>
 				<name>GameCfgManager</name>
 				<icon>SDK\Launcher\logos\GameCfgManager.ico</icon>
-				<path>.\HL-LAB\dist\GameCfgManager.exe</path>
+				<path>SDK\GameCfgManager.exe</path>
 				<installed>false</installed>
 			</app>
 		</category>
