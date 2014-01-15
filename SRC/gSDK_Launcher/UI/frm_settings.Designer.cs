@@ -250,9 +250,9 @@ namespace gSDK_Launcher.UI {
             "Zonner\'s x32 SSE2",
             "Zonners\'s x64",
             "Vlucazan\'s x32 v31"});
-            this.comboBox1.Location = new System.Drawing.Point(135, 282);
+            this.comboBox1.Location = new System.Drawing.Point(182, 282);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 21);
+            this.comboBox1.Size = new System.Drawing.Size(109, 21);
             this.comboBox1.TabIndex = 9;
             // 
             // list_wad
@@ -394,6 +394,7 @@ namespace gSDK_Launcher.UI {
             this.btn_lang_info.TabIndex = 7;
             this.btn_lang_info.Text = "Info";
             this.btn_lang_info.UseVisualStyleBackColor = true;
+            this.btn_lang_info.Click += new System.EventHandler(this.btn_lang_info_Click);
             // 
             // brn_apply
             // 
@@ -420,7 +421,7 @@ namespace gSDK_Launcher.UI {
             this.btn_update.Visible = false;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
-            // frm_settings
+            // FrmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

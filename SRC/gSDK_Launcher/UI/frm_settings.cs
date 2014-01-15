@@ -183,5 +183,9 @@ namespace gSDK_Launcher.UI {
                 MessageBox.Show( "closing launcher via App..Exit();\r\nStarting updater.exe" );
             }
         }
+
+        private void btn_lang_info_Click(object sender, EventArgs e) { 
+            MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
     }
 }

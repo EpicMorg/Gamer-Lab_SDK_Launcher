@@ -28,14 +28,16 @@ namespace gSDK_Launcher.Core {
         public string ProgID { get; set; }
         public string IconPath { get; set; }
         public void Save() {
+            if (string.IsNullOrEmpty(ProgID)){
+                Registry.ClassesRoot.DeleteSubKeyTree("." + this.Extension, false);
+                return;
+            }
             var cur = Registry.ClassesRoot.OOC( "."+this.Extension );
-            if (!string.IsNullOrEmpty( ProgID ))
-                cur.SetValue( "", ProgID );
-            else
-                cur.DeleteValue( "" );
+            cur.SetValue("", ProgID);
             var icon = cur.OOC( "DefaultIcon" );
             icon.SetValue( "", this.IconPath );
             icon.Close();
+            cur.Close();
         }
 
         public static string GetCurrentProgID( string ext ) {
