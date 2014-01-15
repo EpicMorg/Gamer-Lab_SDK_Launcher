@@ -45,7 +45,7 @@ namespace gSDK_Launcher {
         private void btn_about_Click( object sender, EventArgs e ) {
             new frm_about().ShowDialog();
         }
-        private void button1_Click( object sender, EventArgs e ) {
+        private void button1_Click( object sender, EventArgs e ) {    
             new frm_scanning().ShowDialog();
         }
         private void btn_settings_Click( object sender, EventArgs e ) {
@@ -117,7 +117,7 @@ namespace gSDK_Launcher {
             if ( a != null ) a.Dispose();
             this.listv_programs.LargeImageList = new ImageList {
                 ImageSize = new Size( 16, 16 ),
-                ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
+                ColorDepth = ColorDepth.Depth32Bit
             };
             this.listv_programs.SmallImageList = this.listv_programs.LargeImageList;
             var eric = SystemIcons.Error;
@@ -128,9 +128,18 @@ namespace gSDK_Launcher {
                 foreach ( var app in category.Apps.Where( x => x.Installed ) ) {
                     var ip = AssemblyInfoHelper.GetPath( app.Path );
                     try {
-                        var ico = File.Exists( ip ) ?
-                            Icon.ExtractAssociatedIcon( ip ) :
-                            File.Exists( ip = AssemblyInfoHelper.GetPath( app.IconPath ) ) ? Icon.ExtractAssociatedIcon( ip ) : eric;
+                        Icon ico;
+                        if (File.Exists(ip))
+                            ico = Icon.ExtractAssociatedIcon(ip);
+                        else {
+                            if (File.Exists(ip = AssemblyInfoHelper.GetPath(app.IconPath)))
+                                ico = Icon.ExtractAssociatedIcon(ip);
+                            else
+                                {
+                              //      MessageBox.Show(ip);
+                                ico = eric;
+                                }
+                        }
                         this.listv_programs.LargeImageList.Images.Add( ip, ico );
                     }
                     catch {

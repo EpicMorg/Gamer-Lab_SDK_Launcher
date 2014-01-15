@@ -155,8 +155,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="configs\versions.xml" />
-    <Content Include="icons\wc.ico" />
-    <Content Include="icons\rad.ico" />
+    <Content Include="icons\wc.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons\rad.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="icons\BSPICON.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

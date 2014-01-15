@@ -364,7 +364,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>HL1 SDK Folder</name>
-				<icon>SDK\Launcher\icons\sdk.ico</icon>
+				<icon>Launcher\icons\sdk.ico</icon>
 				<path>SDK\Sources\</path>
 				<installed>false</installed>
 			</app>

@@ -1,515 +1,514 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--
-*************************************************************************************
-Tis file is distributed under MIT license:
-*************************************************************************************
-The MIT License (MIT)
-
-Copyright © 2013-2014 EpicMorg
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the ''Software''), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED ''AS IS'', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.", @"The MIT License (MIT)
-*************************************************************************************
--->
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <cfg>
-	<lang>ru-RU</lang>
-	<apps>
-		<category name="Editors">
-			<app>
-				<name>Valve Hammer Editor 3.5</name>
-				<icon>SDK\Launcher\logos\hammer.ico</icon>
-				<path>SDK\hammer.exe</path>
-				<extensions>
-					<ext>rmf</ext>
-					<ext>map</ext>
-				</extensions>
-				<installed>true</installed>
-			</app>
-			<app>
-				<name>Valve Hammer Editor 3.4</name>
-				<icon>SDK\Launcherlogos\hammer.ico</icon>
-				<path>SDK\hammer34.exe</path>
-				<extensions>
-					<ext>rmf</ext>
-					<ext>map</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Valve WorldCraft Editor 3.3</name>
-				<icon>SDK\Launcherlogos\hammer.ico</icon>
-				<path>SDK\wc.exe</path>
-				<extensions>
-					<ext>rmf</ext>
-					<ext>map</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>CSM Hammer Editor 3.5</name>
-				<icon>SDK\Launcher\logos\csmh.ico</icon>
-				<path>SDK\editor.exe</path>
-				<extensions>
-					<ext>rmf</ext>
-					<ext>map</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Neo Hammer Editor 3.5</name>
-				<icon>SDK\Launcher\logos\neo.ico</icon>
-				<path>SDK\neo.exe</path>
-				<extensions>
-					<ext>rmf</ext>
-					<ext>map</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Neon Hammer Editor 3.5</name>
-				<icon>SDK\Launcher\logos\neon.ico</icon>
-				<path>SDK\neon.exe</path>
-				<extensions>
-					<ext>rmf</ext>
-					<ext>map</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Neon Hammer Editor 3.5 Rus</name>
-				<icon>SDK\Launcher\logos\neon.ico</icon>
-				<path>SDK\neon_rus.exe</path>
-				<extensions>
-					<ext>rmf</ext>
-					<ext>map</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>QuArK</name>
-				<icon>SDK\Launcher\logos\QuArK.ico</icon>
-				<path>SDK\addons\QuArK\QuArK.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Sledge Editor</name>
-				<icon>SDK\Launcher\logos\Sledge.Edito.ico</icon>
-				<path>SDK\addons\Sledge\Sledge.Editor.exe</path>
-				<installed>false</installed>
-			</app>
-		</category>
-		<category name="Mapping">
-			<app>
-				<name>Automap</name>
-				<icon>SDK\Launcher\logos\Automap.ico</icon>
-				<path>SDK\addons\Automap\Automap.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>BSPViewer</name>
-				<icon>SDK\Launcher\logos\BSPViewer.ico</icon>
-				<path>SDK\addons\BSPViewer\BSPViewer.exe</path>
-				<extensions>
-					<ext>bsp</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>BSP Tools</name>
-				<icon>SDK\Launcher\logos\BSPtoolsLauncher.ico</icon>
-				<path>SDK\addons\BSP Tools\BSPtoolsLauncher.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Leak Marker</name>
-				<icon>SDK\Launcher\logos\LeakMarker01.ico</icon>
-				<path>SDK\addons\LeakMarker01\LeakMarker01.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>RES Gen</name>
-				<icon>SDK\Launcher\logos\RES_Gen.ico</icon>
-				<path>SDK\addons\RESGen\RES_Gen.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>RandMap</name>
-				<icon>SDK\Launcher\logos\RandMap.ico</icon>
-				<path>SDK\addons\RandMap\RandMap.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>MAPViewer</name>
-				<icon>SDK\Launcher\logos\MAPViewer.ico</icon>
-				<path>SDK\addons\map viewer\MAPViewer.exe</path>
-				<extensions>
-					<ext>map</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Crafty (Object Viewer)</name>
-				<icon>SDK\Launcher\logos\Crafty.ico</icon>
-				<path>SDK\addons\crafty\Crafty.exe</path>
-				<extensions>
-					<ext>bsp</ext>
-					<ext>map</ext>
-					<ext>mdl</ext>
-					<ext>rmf</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>GENSURF</name>
-				<icon>SDK\Launcher\logos\GENSURF.ico</icon>
-				<path>SDK\addons\gensurf\GENSURF.EXE</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Terrain Generator</name>
-				<icon>SDK\Launcher\logos\TerrainGenerator.ico</icon>
-				<path>SDK\addons\TerrainGenerator\TerrainGenerator.EXE</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Tool Box Lux</name>
-				<icon>SDK\Launcher\logos\TBLux.ico</icon>
-				<path>SDK\addons\TBLux\TBLux.EXE</path>
-				<installed>false</installed>
-			</app>
-		</category>
-		<category name="Compilling and Decompilling">
-			<app>
-				<name>Batch Compiler</name>
-				<icon>SDK\Launcher\logos\Batch Compiler.ico</icon>
-				<path>SDK\addons\Batch Compiler\Batch Compiler.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>GUIRipent</name>
-				<icon>SDK\Launcher\logos\GUIRipent.ico</icon>
-				<path>SDK\addons\GUIRipnet\GUIRipent.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>UCompiler</name>
-				<icon>SDK\Launcher\logos\UCompiler.ico</icon>
-				<path>SDK\addons\UCompiler\UCompiler.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>BSPTwoMap Launcher</name>
-				<icon>SDK\Launcher\logos\BSPTwoMap Launcher.ico</icon>
-				<path>SDK\addons\BSPTwoMap Launcher\BSPTwoMap_Launcher.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>BSP_MAP</name>
-				<icon>SDK\Launcher\logos\BSP_MAP.ico</icon>
-				<path>SDK\addons\bsp map\BSP_MAP.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>winbspc</name>
-				<icon>SDK\Launcher\logos\winbspc.ico</icon>
-				<path>SDK\addons\winbspc\winbspc.exe</path>
-				<installed>false</installed>
-			</app>
-		</category>
-		<category name="Content Managment">
-			<app>
-				<name>PakExpl</name>
-				<icon>SDK\Launcher\logos\PakExpl.ico</icon>
-				<path>SDK\addons\PakExpl\PakExpl.exe</path>
-				<extensions>
-					<ext>pak</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>PakScape</name>
-				<icon>SDK\Launcher\logos\PakScape.ico</icon>
-				<path>SDK\addons\PakScape\PakScape.exe</path>
-				<extensions>
-					<ext>pak</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Bsp2Zip or 17Ims</name>
-				<icon>SDK\Launcher\logos\17Ims.ico</icon>
-				<path>SDK\addons\bsp2zip\17Ims.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>GameCfgManager</name>
-				<icon>SDK\Launcher\logos\GameCfgManager.ico</icon>
-				<path>.\HL-LAB\dist\GameCfgManager.exe</path>
-				<installed>false</installed>
-			</app>
-		</category>
-		<category name="Modeling">
-			<app>
-				<name>Jed's HL model Viever 1.36</name>
-				<icon>SDK\Launcher\logos\hlmv.ico</icon>
-				<path>SDK\addons\hlmv\hlmv.exe</path>
-				<extensions>
-					<ext>mdl</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>GUI studiomdl</name>
-				<icon>SDK\Launcher\logos\guistudiomdl.ico</icon>
-				<path>SDK\addons\guistudiomdl\guistudiomdl.exe</path>
-				<installed>false</installed>
-			</app>
-		</category>
-		<category name="Texturing">
-			<app>
-				<name>Auto Seamer</name>
-				<icon>SDK\Launcher\logos\Auto Seamer.ico</icon>
-				<path>SDK\addons\Auto Seamer\Auto Seamer.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Orbital TexTiler</name>
-				<icon>SDK\Launcher\logos\Orbital.ico</icon>
-				<path>SDK\addons\Orbital TexTiler\Orbital TexTiler 1.0.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>QLumpy</name>
-				<icon>SDK\Launcher\logos\QLumpy.ico</icon>
-				<path>SDK\addons\QLumpy\QLumpy_Launcher.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>SPRAttrib</name>
-				<icon>SDK\Launcher\logos\SPRAttrib.ico</icon>
-				<path>SDK\addons\SPR Attrib\SPRAttrib.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>SprExplorer</name>
-				<icon>SDK\Launcher\logos\SprExplorer.ico</icon>
-				<path>SDK\addons\SprExplorer\SprExplorer.exe</path>
-				<extensions>
-					<ext>spr</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Wally</name>
-				<icon>SDK\Launcher\logos\Wally.ico</icon>
-				<path>SDK\addons\Wally\Wally.exe</path>
-				<extensions>
-					<ext>wad</ext>
-					<ext>pak</ext>
-				</extensions>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>TExtract Suite</name>
-				<icon>SDK\Launcher\logos\TExtract.ico</icon>
-				<path>SDK\addons\textract\TExtract suite v1.0.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Win Textract</name>
-				<icon>SDK\Launcher\logos\wintextract.ico</icon>
-				<path>SDK\addons\wintextract\wintextract.exe</path>
-				<installed>false</installed>
-			</app>
-		</category>
-		<category name="Modding">
-			<app>
-				<name>Hlcsm sprite manager</name>
-				<icon>SDK\Launcher\logos\Hlcsm.ico</icon>
-				<path>SDK\addons\hlcsm\Hlcsm.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>HILogoGen</name>
-				<icon>SDK\Launcher\logos\HILogoGen.ico</icon>
-				<path>SDK\addons\HILogoGen\HILogoGen 0.1.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>HLC</name>
-				<icon>SDK\Launcher\logos\HLC.ico</icon>
-				<path>SDK\addons\HLC\HLC.EXE</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Backchanger</name>
-				<icon>SDK\Launcher\logos\backchanger.ico</icon>
-				<path>SDK\addons\backchanger\backchanger.exe</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>HL1 SDK Folder</name>
-				<icon>SDK\Launcher\icons\sdk.ico</icon>
-				<path>SDK\Sources\</path>
-				<installed>false</installed>
-			</app>
-		</category>
-		<category name="Help and Manuals">
-			<app>
-				<name>C++ Manual</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\C++.chm</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Counter-Strike Mapping 1</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\Counter-Strike Mapping.chm</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Counter-Strike Mapping 2</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\mapping.chm</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>CS Manual by Dmitrich!</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\dmitrich!.chm</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>MilkShape3D</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\MilkShape3D.chm</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>RussianVHE</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\RussianVHE.chm</path>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>zhlt</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\zhlt.chm</path>
-				<installed>false</installed>
-			</app>
-
-		</category>
-		<category name="Compilers">
-			<app>
-				<name>Valve (Default) Very old</name>
-				<path name="bsp">SDK\tools\default\qbsp2.exe</path>
-				<path name="csg">SDK\tools\default\qcsg.exe</path>
-				<path name="rad">SDK\tools\default\qrad.exe</path>
-				<path name="vis">SDK\tools\default\vis.exe</path>
-				<default>true</default>
-				<installed>true</installed>
-			</app>
-			<app>
-				<name>Vluzacn x32 v31 (2014)</name>
-				<path name="bsp">SDK\tools\vluzacn\hlbsp.exe</path>
-				<path name="csg">SDK\tools\vluzacn\hlcsg.exe</path>
-				<path name="rad">SDK\tools\vluzacn\hlrad.exe</path>
-				<path name="vis">SDK\tools\vluzacn\hlvis.exe</path>
-				<default>false</default>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Zonner's x32 SSE</name>
-				<path name="bsp">SDK\tools\zonner-sse\hlbsp.exe</path>
-				<path name="csg">SDK\tools\zonner-sse\hlcsg.exe</path>
-				<path name="rad">SDK\tools\zonner-sse\hlrad.exe</path>
-				<path name="vis">SDK\tools\zonner-sse\hlvis.exe</path>
-				<default>false</default>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Zonner's x32 SSE2</name>
-				<path name="bsp">SDK\tools\zonner-sse2\hlbsp.exe</path>
-				<path name="csg">SDK\tools\zonner-sse2\hlcsg.exe</path>
-				<path name="rad">SDK\tools\zonner-sse2\hlrad.exe</path>
-				<path name="vis">SDK\tools\zonner-sse2\hlvis.exe</path>
-				<default>false</default>
-				<installed>false</installed>
-			</app>
-			<app>
-				<name>Zonner's x64</name>
-				<path name="bsp">SDK\tools\zonner-64\hlbsp.exe</path>
-				<path name="csg">SDK\tools\zonner-64\hlcsg.exe</path>
-				<path name="rad">SDK\tools\zonner-64\hlrad.exe</path>
-				<path name="vis">SDK\tools\zonner-64\hlvis.exe</path>
-				<default>false</default>
-				<installed>false</installed>
-			</app>
-		</category>
-	</apps>
-	<category name="Support and Links">
-		<app>
-			<name>Zoner's Half-Life Tools</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://zhlt.info/download-zhlt.html</path>
-			<installed>false</installed>
-		</app>
-		<app>
-			<name>HL-Lab.ru Community</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://hl-lab.ru/</path>
-			<installed>false</installed>
-		</app>
-		<app>
-			<name>CSM</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://cs-mapping.com.ua/</path>
-			<installed>false</installed>
-		</app>
-		<app>
-			<name>Forum CSMania</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://forum.csmania.ru/</path>
-			<installed>false</installed>
-		</app>
-		<app>
-			<name>Dmintrich!</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://cs-mapper.com/</path>
-			<installed>false</installed>
-		</app>
-		<app>
-			<name>.Net Framework 4.0 Web Installer</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://www.microsoft.com/ru-ru/download/details.aspx?id=17851</path>
-			<installed>false</installed>
-		</app>
-		<app>
-			<name>.Net Framework 4.5 Web Installer</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://www.microsoft.com/ru-ru/download/details.aspx?id=30653</path>
-			<installed>false</installed>
-		</app>
-		<app>
-			<name>EpicMorg Support</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://ww.epicm.org/</path>
-			<installed>false</installed>
-		</app>
-	</category>
+  <lang>ru-RU</lang>
+  <apps>
+    <category name="Editors">
+      <app>
+        <name>Valve Hammer Editor 3.5</name>
+        <icon>SDK\Launcher\logos\hammer.ico</icon>
+        <path>SDK\hammer.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>rmf</ext>
+          <ext>map</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>Valve Hammer Editor 3.4</name>
+        <icon>SDK\Launcherlogos\hammer.ico</icon>
+        <path>SDK\hammer34.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>rmf</ext>
+          <ext>map</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>Valve WorldCraft Editor 3.3</name>
+        <icon>SDK\Launcherlogos\hammer.ico</icon>
+        <path>SDK\wc.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>rmf</ext>
+          <ext>map</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>CSM Hammer Editor 3.5</name>
+        <icon>SDK\Launcher\logos\csmh.ico</icon>
+        <path>SDK\editor.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>rmf</ext>
+          <ext>map</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>Neo Hammer Editor 3.5</name>
+        <icon>SDK\Launcher\logos\neo.ico</icon>
+        <path>SDK\neo.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>rmf</ext>
+          <ext>map</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>Neon Hammer Editor 3.5</name>
+        <icon>SDK\Launcher\logos\neon.ico</icon>
+        <path>SDK\neon.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>rmf</ext>
+          <ext>map</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>Neon Hammer Editor 3.5 Rus</name>
+        <icon>SDK\Launcher\logos\neon.ico</icon>
+        <path>SDK\neon_rus.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>rmf</ext>
+          <ext>map</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>QuArK</name>
+        <icon>SDK\Launcher\logos\QuArK.ico</icon>
+        <path>SDK\addons\QuArK\QuArK.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Sledge Editor</name>
+        <icon>SDK\Launcher\logos\Sledge.Edito.ico</icon>
+        <path>SDK\addons\Sledge\Sledge.Editor.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+    </category>
+    <category name="Mapping">
+      <app>
+        <name>Automap</name>
+        <icon>SDK\Launcher\logos\Automap.ico</icon>
+        <path>SDK\addons\Automap\Automap.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>BSPViewer</name>
+        <icon>SDK\Launcher\logos\BSPViewer.ico</icon>
+        <path>SDK\addons\BSPViewer\BSPViewer.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>bsp</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>BSP Tools</name>
+        <icon>SDK\Launcher\logos\BSPtoolsLauncher.ico</icon>
+        <path>SDK\addons\BSP Tools\BSPtoolsLauncher.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Leak Marker</name>
+        <icon>SDK\Launcher\logos\LeakMarker01.ico</icon>
+        <path>SDK\addons\LeakMarker01\LeakMarker01.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>RES Gen</name>
+        <icon>SDK\Launcher\logos\RES_Gen.ico</icon>
+        <path>SDK\addons\RESGen\RES_Gen.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>RandMap</name>
+        <icon>SDK\Launcher\logos\RandMap.ico</icon>
+        <path>SDK\addons\RandMap\RandMap.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>MAPViewer</name>
+        <icon>SDK\Launcher\logos\MAPViewer.ico</icon>
+        <path>SDK\addons\map viewer\MAPViewer.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>map</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>Crafty (Object Viewer)</name>
+        <icon>SDK\Launcher\logos\Crafty.ico</icon>
+        <path>SDK\addons\crafty\Crafty.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>bsp</ext>
+          <ext>map</ext>
+          <ext>mdl</ext>
+          <ext>rmf</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>GENSURF</name>
+        <icon>SDK\Launcher\logos\GENSURF.ico</icon>
+        <path>SDK\addons\gensurf\GENSURF.EXE</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Terrain Generator</name>
+        <icon>SDK\Launcher\logos\TerrainGenerator.ico</icon>
+        <path>SDK\addons\TerrainGenerator\TerrainGenerator.EXE</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Tool Box Lux</name>
+        <icon>SDK\Launcher\logos\TBLux.ico</icon>
+        <path>SDK\addons\TBLux\TBLux.EXE</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+    </category>
+    <category name="Compilling and Decompilling">
+      <app>
+        <name>Batch Compiler</name>
+        <icon>SDK\Launcher\logos\Batch Compiler.ico</icon>
+        <path>SDK\addons\Batch Compiler\Batch Compiler.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>GUIRipent</name>
+        <icon>SDK\Launcher\logos\GUIRipent.ico</icon>
+        <path>SDK\addons\GUIRipnet\GUIRipent.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>UCompiler</name>
+        <icon>SDK\Launcher\logos\UCompiler.ico</icon>
+        <path>SDK\addons\UCompiler\UCompiler.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>BSPTwoMap Launcher</name>
+        <icon>SDK\Launcher\logos\BSPTwoMap Launcher.ico</icon>
+        <path>SDK\addons\BSPTwoMap Launcher\BSPTwoMap_Launcher.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>BSP_MAP</name>
+        <icon>SDK\Launcher\logos\BSP_MAP.ico</icon>
+        <path>SDK\addons\bsp map\BSP_MAP.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>winbspc</name>
+        <icon>SDK\Launcher\logos\winbspc.ico</icon>
+        <path>SDK\addons\winbspc\winbspc.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+    </category>
+    <category name="Content Managment">
+      <app>
+        <name>PakExpl</name>
+        <icon>SDK\Launcher\logos\PakExpl.ico</icon>
+        <path>SDK\addons\PakExpl\PakExpl.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>pak</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>PakScape</name>
+        <icon>SDK\Launcher\logos\PakScape.ico</icon>
+        <path>SDK\addons\PakScape\PakScape.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>pak</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>Bsp2Zip or 17Ims</name>
+        <icon>SDK\Launcher\logos\17Ims.ico</icon>
+        <path>SDK\addons\bsp2zip\17Ims.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>GameCfgManager</name>
+        <icon>SDK\Launcher\logos\GameCfgManager.ico</icon>
+        <path>.\HL-LAB\dist\GameCfgManager.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+    </category>
+    <category name="Modeling">
+      <app>
+        <name>Jed's HL model Viever 1.36</name>
+        <icon>SDK\Launcher\logos\hlmv.ico</icon>
+        <path>SDK\addons\hlmv\hlmv.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>mdl</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>GUI studiomdl</name>
+        <icon>SDK\Launcher\logos\guistudiomdl.ico</icon>
+        <path>SDK\addons\guistudiomdl\guistudiomdl.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+    </category>
+    <category name="Texturing">
+      <app>
+        <name>Auto Seamer</name>
+        <icon>SDK\Launcher\logos\Auto Seamer.ico</icon>
+        <path>SDK\addons\Auto Seamer\Auto Seamer.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Orbital TexTiler</name>
+        <icon>SDK\Launcher\logos\Orbital.ico</icon>
+        <path>SDK\addons\Orbital TexTiler\Orbital TexTiler 1.0.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>QLumpy</name>
+        <icon>SDK\Launcher\logos\QLumpy.ico</icon>
+        <path>SDK\addons\QLumpy\QLumpy_Launcher.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>SPRAttrib</name>
+        <icon>SDK\Launcher\logos\SPRAttrib.ico</icon>
+        <path>SDK\addons\SPR Attrib\SPRAttrib.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>SprExplorer</name>
+        <icon>SDK\Launcher\logos\SprExplorer.ico</icon>
+        <path>SDK\addons\SprExplorer\SprExplorer.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>spr</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>Wally</name>
+        <icon>SDK\Launcher\logos\Wally.ico</icon>
+        <path>SDK\addons\Wally\Wally.exe</path>
+        <installed>false</installed>
+        <extensions>
+          <ext>wad</ext>
+          <ext>pak</ext>
+        </extensions>
+      </app>
+      <app>
+        <name>TExtract Suite</name>
+        <icon>SDK\Launcher\logos\TExtract.ico</icon>
+        <path>SDK\addons\textract\TExtract suite v1.0.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Win Textract</name>
+        <icon>SDK\Launcher\logos\wintextract.ico</icon>
+        <path>SDK\addons\wintextract\wintextract.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+    </category>
+    <category name="Modding">
+      <app>
+        <name>Hlcsm sprite manager</name>
+        <icon>SDK\Launcher\logos\Hlcsm.ico</icon>
+        <path>SDK\addons\hlcsm\Hlcsm.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>HILogoGen</name>
+        <icon>SDK\Launcher\logos\HILogoGen.ico</icon>
+        <path>SDK\addons\HILogoGen\HILogoGen 0.1.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>HLC</name>
+        <icon>SDK\Launcher\logos\HLC.ico</icon>
+        <path>SDK\addons\HLC\HLC.EXE</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Backchanger</name>
+        <icon>SDK\Launcher\logos\backchanger.ico</icon>
+        <path>SDK\addons\backchanger\backchanger.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>HL1 SDK Folder</name>
+        <icon>Launcher\icons\sdk.ico</icon>
+        <path>SDK\Sources\</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+    </category>
+    <category name="Help and Manuals">
+      <app>
+        <name>C++ Manual</name>
+        <icon>SDK\Launcher\logos\man.ico</icon>
+        <path>SDK\manuals\C++.chm</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Counter-Strike Mapping 1</name>
+        <icon>SDK\Launcher\logos\man.ico</icon>
+        <path>SDK\manuals\Counter-Strike Mapping.chm</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Counter-Strike Mapping 2</name>
+        <icon>SDK\Launcher\logos\man.ico</icon>
+        <path>SDK\manuals\mapping.chm</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>CS Manual by Dmitrich!</name>
+        <icon>SDK\Launcher\logos\man.ico</icon>
+        <path>SDK\manuals\dmitrich!.chm</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>MilkShape3D</name>
+        <icon>SDK\Launcher\logos\man.ico</icon>
+        <path>SDK\manuals\MilkShape3D.chm</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>RussianVHE</name>
+        <icon>SDK\Launcher\logos\man.ico</icon>
+        <path>SDK\manuals\RussianVHE.chm</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>zhlt</name>
+        <icon>SDK\Launcher\logos\man.ico</icon>
+        <path>SDK\manuals\zhlt.chm</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+    </category>
+    <category name="Compilers">
+      <app>
+        <name>Valve (Default) Very old</name>
+        <icon></icon>
+        <path>SDK\tools\default\qbsp2.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Vluzacn x32 v31 (2014)</name>
+        <icon></icon>
+        <path>SDK\tools\vluzacn\hlbsp.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Zonner's x32 SSE</name>
+        <icon></icon>
+        <path>SDK\tools\zonner-sse\hlbsp.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Zonner's x32 SSE2</name>
+        <icon></icon>
+        <path>SDK\tools\zonner-sse2\hlbsp.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+      <app>
+        <name>Zonner's x64</name>
+        <icon></icon>
+        <path>SDK\tools\zonner-64\hlbsp.exe</path>
+        <installed>false</installed>
+        <extensions />
+      </app>
+    </category>
+  </apps>
+  <category name="Support and Links">
+    <app>
+      <name>Zoner's Half-Life Tools</name>
+      <icon>SDK\Launcher\logos\url.ico</icon>
+      <path>http://zhlt.info/download-zhlt.html</path>
+      <installed>false</installed>
+    </app>
+    <app>
+      <name>HL-Lab.ru Community</name>
+      <icon>SDK\Launcher\logos\url.ico</icon>
+      <path>http://hl-lab.ru/</path>
+      <installed>false</installed>
+    </app>
+    <app>
+      <name>CSM</name>
+      <icon>SDK\Launcher\logos\url.ico</icon>
+      <path>http://cs-mapping.com.ua/</path>
+      <installed>false</installed>
+    </app>
+    <app>
+      <name>Forum CSMania</name>
+      <icon>SDK\Launcher\logos\url.ico</icon>
+      <path>http://forum.csmania.ru/</path>
+      <installed>false</installed>
+    </app>
+    <app>
+      <name>Dmintrich!</name>
+      <icon>SDK\Launcher\logos\url.ico</icon>
+      <path>http://cs-mapper.com/</path>
+      <installed>false</installed>
+    </app>
+    <app>
+      <name>.Net Framework 4.0 Web Installer</name>
+      <icon>SDK\Launcher\logos\url.ico</icon>
+      <path>http://www.microsoft.com/ru-ru/download/details.aspx?id=17851</path>
+      <installed>false</installed>
+    </app>
+    <app>
+      <name>.Net Framework 4.5 Web Installer</name>
+      <icon>SDK\Launcher\logos\url.ico</icon>
+      <path>http://www.microsoft.com/ru-ru/download/details.aspx?id=30653</path>
+      <installed>false</installed>
+    </app>
+    <app>
+      <name>EpicMorg Support</name>
+      <icon>SDK\Launcher\logos\url.ico</icon>
+      <path>http://ww.epicm.org/</path>
+      <installed>false</installed>
+    </app>
+  </category>
 </cfg>
