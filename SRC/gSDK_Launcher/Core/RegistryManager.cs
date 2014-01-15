@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using System.Windows.Forms;
+using Microsoft.Win32;
 namespace gSDK_Launcher.Core {
     public static class RegistryHelper {
         public static RegistryKey OOC( this RegistryKey k, string subkey ) {
@@ -14,7 +15,7 @@ namespace gSDK_Launcher.Core {
         public void Save() {
             var cur = Registry.ClassesRoot.OOC( this.Name );
             var icon = cur.OOC( "DefaultIcon" );
-            icon.SetValue( "", this.IconPath  );
+            icon.SetValue( "", this.IconPath );
             icon.Close();
             var command = cur.OOC( "shell" ).OOC( "open" ).OOC( "command" );
             command.SetValue( "", string.Format( "\"{0}\" \"%1\"", this.Command ) );
@@ -28,21 +29,23 @@ namespace gSDK_Launcher.Core {
         public string ProgID { get; set; }
         public string IconPath { get; set; }
         public void Save() {
-            if (string.IsNullOrEmpty(ProgID)){
-                Registry.ClassesRoot.DeleteSubKeyTree("." + this.Extension, false);
+            if ( string.IsNullOrEmpty( ProgID ) ) {
+                Registry.ClassesRoot.DeleteSubKeyTree( "." + this.Extension, false );
                 return;
             }
-            var cur = Registry.ClassesRoot.OOC( "."+this.Extension );
-            cur.SetValue("", ProgID);
-            var icon = cur.OOC( "DefaultIcon" );
-            icon.SetValue( "", this.IconPath );
-            icon.Close();
+            var cur = Registry.ClassesRoot.OOC( "." + this.Extension );
+            cur.SetValue( "", ProgID );
+            if ( !string.IsNullOrEmpty( this.IconPath ) ) {
+                var icon = cur.OOC( "DefaultIcon" );
+                icon.SetValue( "", this.IconPath );
+                icon.Close();
+            }
             cur.Close();
         }
 
         public static string GetCurrentProgID( string ext ) {
             var cur = Registry.ClassesRoot.OpenSubKey( "." + ext );
-            return cur!=null?cur.GetValue( "" ) as string:null;
+            return cur != null ? cur.GetValue( "" ) as string : null;
         }
     }
 }

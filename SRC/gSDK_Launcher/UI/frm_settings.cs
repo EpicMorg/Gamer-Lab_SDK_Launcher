@@ -53,12 +53,6 @@ namespace gSDK_Launcher.UI {
                 .Select( AbyrvalgTranslator.Load )
                 .ToArray()
             );
-            //this.dlist_lang.Items.Add(
-            //    new AbyrvalgTranslator {
-            //        Author = "stam",
-            //        Culture = "en-US",
-            //        Version = "1.0.0.1"
-            //    } );
             this.dlist_lang.SelectedItem =
                 this.dlist_lang.Items.OfType<AbyrvalgTranslator>().First( a => a.Culture == Globals.Config.LANG );
             this.dlist_lang.EndUpdate();
@@ -96,7 +90,6 @@ namespace gSDK_Launcher.UI {
             }
             b.EndUpdate();
         }
-        //я в ыцакмпыииовырдолиюрглжмрварг
         private static App[] GetAppForExt( string x ) {
             return
                 Globals.Config.Apps.SelectMany( a => a.Apps )
@@ -125,29 +118,16 @@ namespace gSDK_Launcher.UI {
                         )
                     );
                 }
-                foreach ( var result in this.panel_config.Controls.OfType<ComboBox>() )
-                    this.sv( result );
+                //foreach ( var result in this.panel_config.Controls.OfType<ComboBox>() )
+                //    this.sv( result );
                 Globals.Translator = c;
-                Action<string, ComboBox> sv = ( a, b ) => {
-                    var it = b.SelectedItem;
-                    var app = it as App;
-                    var progid = "";
-                    if ( it is string ) {
-                        if ( (string) it == "Other" ) return;
-                    }
-                    else if ( app != null ) progid = ( app ).Name.Replace( " ", "." );
-                    new Ext {
-                        Extension = a,
-                        ProgID = progid
-                    }.Save();
-                };
-                sv( "rmf", this.list_rmf );
-                sv( "map", this.list_map );
-                sv( "bsp", this.list_bsp );
-                sv( "mdl", this.list_mdl );
-                sv( "pak", this.list_pak );
-                sv( "spr", this.list_spr );
-                sv( "wad", this.list_wad );
+                svExt( "rmf", this.list_rmf );
+                svExt( "map", this.list_map );
+                svExt( "bsp", this.list_bsp );
+                svExt( "mdl", this.list_mdl );
+                svExt( "pak", this.list_pak );
+                svExt( "spr", this.list_spr );
+                svExt( "wad", this.list_wad );
             }
             catch (UnauthorizedAccessException) {
                 MessageBox.Show(
@@ -162,13 +142,30 @@ namespace gSDK_Launcher.UI {
             this.Close();
         }
 
-        private void sv( ComboBox l ) {
-            var app = l.SelectedItem as App;
-            if ( app == null ) return;
-            new ProgID {
-                Command = app.Path,
-                IconPath = app.Path,
-                Name = app.Name.Replace( " ", "." )
+        private static void svExt( string a, ComboBox b ) {
+            var it = b.SelectedItem;
+            var app = it as App;
+            var progid = "";
+            var ip = Path.Combine(
+                Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
+                "icons",
+                a + ".ico" );
+            if ( it is string ) {
+                if ( (string) it == "Other" ) return;
+            }
+            else if ( app != null ) {
+                var n = app.Name.Replace( " ", "." );
+                new ProgID {
+                    Command = AssemblyInfoHelper.GetPath( app.Path ),
+                    IconPath = ip,
+                    Name = n
+                }.Save();
+                progid = n;
+            }
+            new Ext {
+                Extension = a,
+                ProgID = progid,
+                IconPath = ip
             }.Save();
         }
 
