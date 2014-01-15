@@ -1,5 +1,5 @@
  
-goldsrc SDK Launcher
+goldsrc SDK Launcher RC1
 ====================
 
 Launcher для GoldSource SDK от Hl-Lab.ru
@@ -9,10 +9,9 @@ Launcher для GoldSource SDK от Hl-Lab.ru
 ====================
  
 1. Сделать MessageBox с инфой о переводе.
-2. Проверить регистрацию файлов с иконками.
-
-
-
+2. Проверить регистрацию файлов с иконками + добавить ассоциацию с wc и rad на notepad.
+3. подумать над Global ToDo.
+ 
 ###TODO for NEO:
 ====================
 1. Нарисовать иконки.
@@ -20,5 +19,22 @@ Launcher для GoldSource SDK от Hl-Lab.ru
 
 ###TODO for STAM:
 ====================
-1. Обновить готовые иконки.
+1. Обновить готовые иконки и лаунчер.
 2. Пересобрать инсталл для тестирования.
+3. Запилить сплэшскрин. (под вопросом)
+
+####Glogal TODO
+====================
+
+1. Запилить обновление компонентов
+2. Запилить менеджер конфигураций. Для добавления через него пользовательских программ(путей, url) и иконок к ним в отдельный блок
+'''xml
+<category name="custom">
+	<app>
+		<name>Test app</name> 
+		<icon>C:/Documents/test app.ico</icon> 
+		<path>C:/Documents/test app.exe</path>
+		<params>-silent</params>
+	</app>
+</custom>
+'''
