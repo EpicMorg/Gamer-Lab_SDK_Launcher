@@ -27,7 +27,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 */
 
 using System;
-using gSDK_Launcher.Core;
+using System.IO;
 using gSDK_vgui;
 using System.Linq;
 using System.Windows.Forms;
@@ -38,8 +38,46 @@ namespace gSDK_Launcher.UI {
             InitializeComponent();
         }
 
-        private void FrmCustomSection_Load(object sender, EventArgs e) {
-            Globals.Translator.Translate(this.Controls.OfType<Control>(), this.Name);
+        private void FrmCustomSection_Load( object sender, EventArgs e ) {
+            Globals.Translator.Translate( this.Controls.OfType<Control>(), this.Name );
+            this.list_custom_items.Items.AddRange( Globals.Config.Custom.Apps.Select( a=>new ListViewItem(Name=a.Name){Tag = a} ).ToArray() );
+        }
+
+        private void button1_Click( object sender, EventArgs e ) {
+            if ( ofdExe.ShowDialog() == DialogResult.OK )
+                textBox1.Text = ofdExe.FileName;
+        }
+
+        private void btn_delete_selected_Click( object sender, EventArgs e ) {
+            var v = list_custom_items.SelectedIndices;
+            if ( v.Count == 0 ) return;
+            list_custom_items.BeginUpdate();
+            foreach ( var v2 in v.OfType<int>().Reverse().ToArray() )
+                list_custom_items.Items.RemoveAt( v2 );
+            list_custom_items.EndUpdate();
+        }
+
+        private void btn_add_item_Click( object sender, EventArgs e ) {
+            var app = new App {
+                    Path = new RPath {
+                        Path = textBox1.Text,
+                        Type = PathType.Absolute
+                    },
+                    Installed = true,
+                    Params = txt_arguments.Text,
+                    Extensions = new string[]{}
+                };
+            app.Name = Path.GetFileName( app.Path.ToString()) + app.Params;
+            app.IconPath = app.Path;
+            list_custom_items.Items.Add(
+                new ListViewItem( app.Name ) {
+                    Tag = app
+                } );
+        }
+
+        private void btn_saveit_Click( object sender, EventArgs e ) {
+            Globals.Config.Custom.Apps =
+                this.list_custom_items.Items.OfType<ListViewItem>().Select( a => a.Tag ).OfType<App>().ToArray();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
@@ -10,13 +11,26 @@ namespace gSDK_Launcher {
         }
         public static string GNTBN( XmlNode n, string name ) {
             var tmp = GNBN( n, name );
-            return tmp!=null ? tmp.InnerText : "";
+            return tmp != null ? tmp.InnerText : "";
+        }
+        public static RPath GRPath( XmlNode n ) {
+            if ( n == null ) throw new ArgumentNullException();
+            var attr = n.Attributes[ "type" ];
+            var v = attr != null ? attr.InnerText : "Relative";
+            return new RPath {
+                Path = n.InnerText,
+                Type = (PathType) Enum.Parse( typeof( PathType ), v )
+            };
         }
     }
 
     public class Config {
+        private const string snlName = "Support and Links";
+        private const string custName = "Custom";
+
         public Category[] Apps { get; set; }
         public Category Support { get; set; }
+        public Category Custom { get; set; }
         public string LANG { get; set; }
         public Config() { }
 
@@ -27,9 +41,8 @@ namespace gSDK_Launcher {
                     .ChildNodes.OfType<XmlNode>()
                     .Select( a => new Category( a ) )
                     .ToArray();
-            this.Support = new Category(
-                n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "category" )
-            );
+            this.Support = new Category( n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "category" && a.Attributes[ "name" ] != null && a.Attributes[ "name" ].Value == snlName ) );
+            this.Custom = new Category( n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "category" && a.Attributes[ "name" ] != null && a.Attributes[ "name" ].Value == custName ) );
             this.LANG = n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "lang" ).InnerText;
         }
 
@@ -40,63 +53,72 @@ namespace gSDK_Launcher {
         }
 
         public void Save( string path ) {
-            var doc = new XDocument(
-                new XDeclaration("1.0","utf-8","yes"),
+            new XDocument(
+                new XDeclaration( "1.0", "utf-8", "yes" ),
                 new XElement(
                     "cfg",
+                    new XElement( "lang", this.LANG ),
+                    new XElement( "apps", SerializeCatList( this.Apps ) ),
                     new XElement(
-                        "lang",
-                        this.LANG
-                    ),
-                    new XElement(
-                        "apps",
-                        this.Apps.Select(
-                            a=> new XElement(
-                                "category",
-                                new XAttribute("name", a.Name ),
-                                a.Apps.Select(
-                                    b=>new XElement(
-                                        "app",
-                                        new XElement("name",b.Name),
-                                        new XElement( "icon",b.IconPath ),
-                                        new XElement( "path",b.Path ),
-                                        new XElement( "installed", b.Installed ),
-                                        new XElement(
-                                            "extensions",
-                                            b.Extensions.Select(
-                                                c=>new XElement("ext",c)
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
+                        "category",
+                        new XAttribute( "name", snlName ),
+                        this.Support.Apps.Select( SerializeApp )
                     ),
                     new XElement(
                         "category",
-                        new XAttribute( "name", "Support and Links" ),
-                        this.Support.Apps.Select(
-                           b => new XElement(
-                                "app",
-                                new XElement( "name", b.Name ),
-                                new XElement( "icon", b.IconPath ),
-                                new XElement( "path", b.Path ),
-                                new XElement( "installed", b.Installed )
-                            )
-                        )
+                        new XAttribute( "name", custName ),
+                        this.Custom.Apps.Select( SerializeApp )
                     )
                 )
+            ).Save( path );
+        }
+
+        private IEnumerable<XElement> SerializeCatList( IEnumerable<Category> cats ) {
+            return cats.Select( SerializeCat );
+        }
+
+        private static XElement SerializeCat( Category a ) {
+            return new XElement( "category", new XAttribute( "name", a.Name ), a.Apps.Select( SerializeApp ) );
+        }
+
+        private static XElement SerializeApp( App b ) {
+            return new XElement(
+                "app",
+                new XElement( "name", b.Name ),
+                new XElement(
+                    "icon",
+                    new XAttribute(
+                        "type",
+                        b.IconPath.Type
+                    ),
+                    b.IconPath.Path
+                ),
+                new XElement( "path", new XAttribute(
+                        "type",
+                        b.Path.Type
+                    ),
+                    b.Path.Path
+                ),
+                new XElement( "installed", b.Installed ),
+                new XElement(
+                    "extensions",
+                    b.Extensions.Select(
+                        c => new XElement( "ext", c )
+                    )
+                ),
+                new XElement( "cmdargs", b.Params )
             );
-            doc.Save( path );
         }
     }
 
     public class App {
         public string Name { get; set; }
-        public string IconPath { get; set; }
-        public string Path { get; set; }
+        public RPath IconPath { get; set; }
+        public RPath Path { get; set; }
+        public string Params { get; set; }
         public string[] Extensions { get; set; }
         public bool Installed { get; set; }
+
         public override string ToString() {
             return Name;
         }
@@ -104,10 +126,12 @@ namespace gSDK_Launcher {
         public App() { }
         public App( XmlNode n ) {
             this.Name = Helper.GNTBN( n, "name" );
-            this.IconPath = Helper.GNTBN( n, "icon" );
+            var tmpn = Helper.GNBN( n, "icon" );
+            if(tmpn!=null) this.IconPath = Helper.GRPath( tmpn );
             var tmps = Helper.GNTBN( n, "installed" );
-            this.Installed = !String.IsNullOrEmpty( tmps )?bool.Parse(tmps ):false;
-            this.Path = Helper.GNTBN( n, "path" );
+            this.Installed = !String.IsNullOrEmpty( tmps ) && bool.Parse( tmps );
+            tmpn = Helper.GNBN( n, "path" );
+            if ( tmpn != null ) this.Path = Helper.GRPath( tmpn );
             var tmp = Helper.GNBN( n, "extensions" );
             this.Extensions = tmp != null
                                   ? tmp.ChildNodes.OfType<XmlNode>()
@@ -115,7 +139,7 @@ namespace gSDK_Launcher {
                                         .Select( a => a.InnerText )
                                         .ToArray()
                                   : new string[] { };
-
+            this.Params = Helper.GNTBN( n, "cmdargs" );
         }
     }
 
@@ -134,4 +158,21 @@ namespace gSDK_Launcher {
             }
         }
     }
+
+    public class RPath {
+        public PathType Type { get; set; }
+        public string Path { get; set; }
+
+        public override string ToString() {
+            return Type == PathType.Absolute ? Path : AssemblyInfoHelper.GetPath( Path );
+        }
+    }
+
+    public enum PathType {
+        Absolute,
+        Relative
+    }
 }
+/*
+ * Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+ */

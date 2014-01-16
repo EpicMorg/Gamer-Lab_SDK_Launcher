@@ -32,8 +32,8 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<category name="Editors">
 			<app>
 				<name>Valve Hammer Editor 3.5</name>
-				<icon>SDK\Launcher\logos\hammer.ico</icon>
-				<path>SDK\hammer.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\hammer.ico</icon>
+        <path type="Relative">SDK\hammer.exe</path>
 				<extensions>
 					<ext>rmf</ext>
 					<ext>map</ext>
@@ -42,8 +42,8 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>Valve Hammer Editor 3.4</name>
-				<icon>SDK\Launcherlogos\hammer.ico</icon>
-				<path>SDK\hammer34.exe</path>
+        <icon type="Relative">SDK\Launcherlogos\hammer.ico</icon>
+				<path type="Relative">SDK\hammer34.exe</path>
 				<extensions>
 					<ext>rmf</ext>
 					<ext>map</ext>
@@ -52,8 +52,8 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>Valve WorldCraft Editor 3.3</name>
-				<icon>SDK\Launcherlogos\hammer.ico</icon>
-				<path>SDK\wc.exe</path>
+        <icon type="Relative">SDK\Launcherlogos\hammer.ico</icon>
+        <path type="Relative">SDK\wc.exe</path>
 				<extensions>
 					<ext>rmf</ext>
 					<ext>map</ext>
@@ -62,8 +62,8 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>CSM Hammer Editor 3.5</name>
-				<icon>SDK\Launcher\logos\csmh.ico</icon>
-				<path>SDK\editor.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\csmh.ico</icon>
+        <path type="Relative">SDK\editor.exe</path>
 				<extensions>
 					<ext>rmf</ext>
 					<ext>map</ext>
@@ -72,8 +72,8 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>Neo Hammer Editor 3.5</name>
-				<icon>SDK\Launcher\logos\neo.ico</icon>
-				<path>SDK\neo.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\neo.ico</icon>
+        <path type="Relative">SDK\neo.exe</path>
 				<extensions>
 					<ext>rmf</ext>
 					<ext>map</ext>
@@ -82,8 +82,8 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>Neon Hammer Editor 3.5</name>
-				<icon>SDK\Launcher\logos\neon.ico</icon>
-				<path>SDK\neon.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\neon.ico</icon>
+        <path type="Relative">SDK\neon.exe</path>
 				<extensions>
 					<ext>rmf</ext>
 					<ext>map</ext>
@@ -92,8 +92,8 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>Neon Hammer Editor 3.5 Rus</name>
-				<icon>SDK\Launcher\logos\neon.ico</icon>
-				<path>SDK\neon_rus.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\neon.ico</icon>
+        <path type="Relative">SDK\neon_rus.exe</path>
 				<extensions>
 					<ext>rmf</ext>
 					<ext>map</ext>
@@ -102,28 +102,28 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>QuArK</name>
-				<icon>SDK\Launcher\logos\QuArK.ico</icon>
-				<path>SDK\addons\QuArK\QuArK.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\QuArK.ico</icon>
+        <path type="Relative">SDK\addons\QuArK\QuArK.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>Sledge Editor</name>
-				<icon>SDK\Launcher\logos\Sledge.Edito.ico</icon>
-				<path>SDK\addons\Sledge\Sledge.Editor.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\Sledge.Edito.ico</icon>
+        <path type="Relative">SDK\addons\Sledge\Sledge.Editor.exe</path>
 				<installed>false</installed>
 			</app>
 		</category>
 		<category name="Mapping">
 			<app>
 				<name>Automap</name>
-				<icon>SDK\Launcher\logos\Automap.ico</icon>
-				<path>SDK\addons\Automap\Automap.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\Automap.ico</icon>
+        <path type="Relative">SDK\addons\Automap\Automap.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>BSPViewer</name>
-				<icon>SDK\Launcher\logos\BSPViewer.ico</icon>
-				<path>SDK\addons\BSPViewer\BSPViewer.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\BSPViewer.ico</icon>
+        <path type="Relative">SDK\addons\BSPViewer\BSPViewer.exe</path>
 				<extensions>
 					<ext>bsp</ext>
 				</extensions>
@@ -131,32 +131,32 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>BSP Tools</name>
-				<icon>SDK\Launcher\logos\BSPtoolsLauncher.ico</icon>
-				<path>SDK\addons\BSP Tools\BSPtoolsLauncher.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\BSPtoolsLauncher.ico</icon>
+        <path type="Relative">SDK\addons\BSP Tools\BSPtoolsLauncher.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>Leak Marker</name>
-				<icon>SDK\Launcher\logos\LeakMarker01.ico</icon>
-				<path>SDK\addons\LeakMarker01\LeakMarker01.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\LeakMarker01.ico</icon>
+        <path type="Relative">SDK\addons\LeakMarker01\LeakMarker01.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>RES Gen</name>
-				<icon>SDK\Launcher\logos\RES_Gen.ico</icon>
-				<path>SDK\addons\RESGen\RES_Gen.exe</path>
+        <icon type="Relative">SDK\Launcher\logos\RES_Gen.ico</icon>
+        <path type="Relative">SDK\addons\RESGen\RES_Gen.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>RandMap</name>
-				<icon>SDK\Launcher\logos\RandMap.ico</icon>
-				<path>SDK\addons\RandMap\RandMap.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\RandMap.ico</icon>
+				<path type="Relative">SDK\addons\RandMap\RandMap.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>MAPViewer</name>
-				<icon>SDK\Launcher\logos\MAPViewer.ico</icon>
-				<path>SDK\addons\map viewer\MAPViewer.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\MAPViewer.ico</icon>
+				<path type="Relative">SDK\addons\map viewer\MAPViewer.exe</path>
 				<extensions>
 					<ext>map</ext>
 				</extensions>
@@ -164,8 +164,8 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>Crafty (Object Viewer)</name>
-				<icon>SDK\Launcher\logos\Crafty.ico</icon>
-				<path>SDK\addons\crafty\Crafty.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\Crafty.ico</icon>
+				<path type="Relative">SDK\addons\crafty\Crafty.exe</path>
 				<extensions>
 					<ext>bsp</ext>
 					<ext>map</ext>
@@ -176,66 +176,66 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>GENSURF</name>
-				<icon>SDK\Launcher\logos\GENSURF.ico</icon>
-				<path>SDK\addons\gensurf\GENSURF.EXE</path>
+				<icon type="Relative">SDK\Launcher\logos\GENSURF.ico</icon>
+				<path type="Relative">SDK\addons\gensurf\GENSURF.EXE</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>Terrain Generator</name>
-				<icon>SDK\Launcher\logos\TerrainGenerator.ico</icon>
-				<path>SDK\addons\TerrainGenerator\TerrainGenerator.EXE</path>
+				<icon type="Relative">SDK\Launcher\logos\TerrainGenerator.ico</icon>
+				<path type="Relative">SDK\addons\TerrainGenerator\TerrainGenerator.EXE</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>Tool Box Lux</name>
-				<icon>SDK\Launcher\logos\TBLux.ico</icon>
-				<path>SDK\addons\TBLux\TBLux.EXE</path>
+				<icon type="Relative">SDK\Launcher\logos\TBLux.ico</icon>
+				<path type="Relative">SDK\addons\TBLux\TBLux.EXE</path>
 				<installed>false</installed>
 			</app>
 		</category>
 		<category name="Compilling and Decompilling">
 			<app>
 				<name>Batch Compiler</name>
-				<icon>SDK\Launcher\logos\Batch Compiler.ico</icon>
-				<path>SDK\addons\Batch Compiler\Batch Compiler.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\Batch Compiler.ico</icon>
+				<path type="Relative">SDK\addons\Batch Compiler\Batch Compiler.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>GUIRipent</name>
-				<icon>SDK\Launcher\logos\GUIRipent.ico</icon>
-				<path>SDK\addons\GUIRipnet\GUIRipent.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\GUIRipent.ico</icon>
+				<path type="Relative">SDK\addons\GUIRipnet\GUIRipent.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>UCompiler</name>
-				<icon>SDK\Launcher\logos\UCompiler.ico</icon>
-				<path>SDK\addons\UCompiler\UCompiler.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\UCompiler.ico</icon>
+				<path type="Relative">SDK\addons\UCompiler\UCompiler.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>BSPTwoMap Launcher</name>
-				<icon>SDK\Launcher\logos\BSPTwoMap Launcher.ico</icon>
-				<path>SDK\addons\BSPTwoMap Launcher\BSPTwoMap_Launcher.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\BSPTwoMap Launcher.ico</icon>
+				<path type="Relative">SDK\addons\BSPTwoMap Launcher\BSPTwoMap_Launcher.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>BSP_MAP</name>
-				<icon>SDK\Launcher\logos\BSP_MAP.ico</icon>
-				<path>SDK\addons\bsp map\BSP_MAP.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\BSP_MAP.ico</icon>
+				<path type="Relative">SDK\addons\bsp map\BSP_MAP.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>winbspc</name>
-				<icon>SDK\Launcher\logos\winbspc.ico</icon>
-				<path>SDK\addons\winbspc\winbspc.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\winbspc.ico</icon>
+				<path type="Relative">SDK\addons\winbspc\winbspc.exe</path>
 				<installed>false</installed>
 			</app>
 		</category>
 		<category name="Content Managment">
 			<app>
 				<name>PakExpl</name>
-				<icon>SDK\Launcher\logos\PakExpl.ico</icon>
-				<path>SDK\addons\PakExpl\PakExpl.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\PakExpl.ico</icon>
+				<path type="Relative">SDK\addons\PakExpl\PakExpl.exe</path>
 				<extensions>
 					<ext>pak</ext>
 				</extensions>
@@ -243,8 +243,8 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>PakScape</name>
-				<icon>SDK\Launcher\logos\PakScape.ico</icon>
-				<path>SDK\addons\PakScape\PakScape.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\PakScape.ico</icon>
+				<path type="Relative">SDK\addons\PakScape\PakScape.exe</path>
 				<extensions>
 					<ext>pak</ext>
 				</extensions>
@@ -252,22 +252,22 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>Bsp2Zip or 17Ims</name>
-				<icon>SDK\Launcher\logos\17Ims.ico</icon>
-				<path>SDK\addons\bsp2zip\17Ims.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\17Ims.ico</icon>
+				<path type="Relative">SDK\addons\bsp2zip\17Ims.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>GameCfgManager</name>
-				<icon>SDK\Launcher\logos\GameCfgManager.ico</icon>
-				<path>SDK\GameCfgManager.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\GameCfgManager.ico</icon>
+				<path type="Relative">SDK\GameCfgManager.exe</path>
 				<installed>false</installed>
 			</app>
 		</category>
 		<category name="Modeling">
 			<app>
 				<name>Jed's HL model Viever 1.36</name>
-				<icon>SDK\Launcher\logos\hlmv.ico</icon>
-				<path>SDK\addons\hlmv\hlmv.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\hlmv.ico</icon>
+				<path type="Relative">SDK\addons\hlmv\hlmv.exe</path>
 				<extensions>
 					<ext>mdl</ext>
 				</extensions>
@@ -275,40 +275,40 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>GUI studiomdl</name>
-				<icon>SDK\Launcher\logos\guistudiomdl.ico</icon>
-				<path>SDK\addons\guistudiomdl\guistudiomdl.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\guistudiomdl.ico</icon>
+				<path type="Relative">SDK\addons\guistudiomdl\guistudiomdl.exe</path>
 				<installed>false</installed>
 			</app>
 		</category>
 		<category name="Texturing">
 			<app>
 				<name>Auto Seamer</name>
-				<icon>SDK\Launcher\logos\Auto Seamer.ico</icon>
-				<path>SDK\addons\Auto Seamer\Auto Seamer.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\Auto Seamer.ico</icon>
+				<path type="Relative">SDK\addons\Auto Seamer\Auto Seamer.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>Orbital TexTiler</name>
-				<icon>SDK\Launcher\logos\Orbital.ico</icon>
-				<path>SDK\addons\Orbital TexTiler\Orbital TexTiler 1.0.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\Orbital.ico</icon>
+				<path type="Relative">SDK\addons\Orbital TexTiler\Orbital TexTiler 1.0.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>QLumpy</name>
-				<icon>SDK\Launcher\logos\QLumpy.ico</icon>
-				<path>SDK\addons\QLumpy\QLumpy_Launcher.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\QLumpy.ico</icon>
+				<path type="Relative">SDK\addons\QLumpy\QLumpy_Launcher.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>SPRAttrib</name>
-				<icon>SDK\Launcher\logos\SPRAttrib.ico</icon>
-				<path>SDK\addons\SPR Attrib\SPRAttrib.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\SPRAttrib.ico</icon>
+				<path type="Relative">SDK\addons\SPR Attrib\SPRAttrib.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>SprExplorer</name>
-				<icon>SDK\Launcher\logos\SprExplorer.ico</icon>
-				<path>SDK\addons\SprExplorer\SprExplorer.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\SprExplorer.ico</icon>
+				<path type="Relative">SDK\addons\SprExplorer\SprExplorer.exe</path>
 				<extensions>
 					<ext>spr</ext>
 				</extensions>
@@ -316,8 +316,8 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>Wally</name>
-				<icon>SDK\Launcher\logos\Wally.ico</icon>
-				<path>SDK\addons\Wally\Wally.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\Wally.ico</icon>
+				<path type="Relative">SDK\addons\Wally\Wally.exe</path>
 				<extensions>
 					<ext>wad</ext>
 					<ext>pak</ext>
@@ -326,90 +326,90 @@ THE SOFTWARE.", @"The MIT License (MIT)
 			</app>
 			<app>
 				<name>TExtract Suite</name>
-				<icon>SDK\Launcher\logos\TExtract.ico</icon>
-				<path>SDK\addons\textract\TExtract suite v1.0.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\TExtract.ico</icon>
+				<path type="Relative">SDK\addons\textract\TExtract suite v1.0.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>Win Textract</name>
-				<icon>SDK\Launcher\logos\wintextract.ico</icon>
-				<path>SDK\addons\wintextract\wintextract.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\wintextract.ico</icon>
+				<path type="Relative">SDK\addons\wintextract\wintextract.exe</path>
 				<installed>false</installed>
 			</app>
 		</category>
 		<category name="Modding">
 			<app>
 				<name>Hlcsm sprite manager</name>
-				<icon>SDK\Launcher\logos\Hlcsm.ico</icon>
-				<path>SDK\addons\hlcsm\Hlcsm.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\Hlcsm.ico</icon>
+				<path type="Relative">SDK\addons\hlcsm\Hlcsm.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>HILogoGen</name>
-				<icon>SDK\Launcher\logos\HILogoGen.ico</icon>
-				<path>SDK\addons\HILogoGen\HILogoGen 0.1.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\HILogoGen.ico</icon>
+				<path type="Relative">SDK\addons\HILogoGen\HILogoGen 0.1.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>HLC</name>
-				<icon>SDK\Launcher\logos\HLC.ico</icon>
-				<path>SDK\addons\HLC\HLC.EXE</path>
+				<icon type="Relative">SDK\Launcher\logos\HLC.ico</icon>
+				<path type="Relative">SDK\addons\HLC\HLC.EXE</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>Backchanger</name>
-				<icon>SDK\Launcher\logos\backchanger.ico</icon>
-				<path>SDK\addons\backchanger\backchanger.exe</path>
+				<icon type="Relative">SDK\Launcher\logos\backchanger.ico</icon>
+				<path type="Relative">SDK\addons\backchanger\backchanger.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>HL1 SDK Folder</name>
-				<icon>Launcher\icons\sdk.ico</icon>
-				<path>SDK\Sources\</path>
+				<icon type="Relative">Launcher\icons\sdk.ico</icon>
+				<path type="Relative">SDK\Sources\</path>
 				<installed>false</installed>
 			</app>
 		</category>
 		<category name="Help and Manuals">
 			<app>
 				<name>C++ Manual</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\C++.chm</path>
+				<icon type="Relative">SDK\Launcher\logos\man.ico</icon>
+				<path type="Relative">SDK\manuals\C++.chm</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>Counter-Strike Mapping 1</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\Counter-Strike Mapping.chm</path>
+				<icon type="Relative">SDK\Launcher\logos\man.ico</icon>
+				<path type="Relative">SDK\manuals\Counter-Strike Mapping.chm</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>Counter-Strike Mapping 2</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\mapping.chm</path>
+				<icon type="Relative">SDK\Launcher\logos\man.ico</icon>
+				<path type="Relative">SDK\manuals\mapping.chm</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>CS Manual by Dmitrich!</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\dmitrich!.chm</path>
+				<icon type="Relative">SDK\Launcher\logos\man.ico</icon>
+				<path type="Relative">SDK\manuals\dmitrich!.chm</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>MilkShape3D</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\MilkShape3D.chm</path>
+				<icon type="Relative">SDK\Launcher\logos\man.ico</icon>
+				<path type="Relative">SDK\manuals\MilkShape3D.chm</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>RussianVHE</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\RussianVHE.chm</path>
+				<icon type="Relative">SDK\Launcher\logos\man.ico</icon>
+				<path type="Relative">SDK\manuals\RussianVHE.chm</path>
 				<installed>false</installed>
 			</app>
 			<app>
 				<name>zhlt</name>
-				<icon>SDK\Launcher\logos\man.ico</icon>
-				<path>SDK\manuals\zhlt.chm</path>
+				<icon type="Relative">SDK\Launcher\logos\man.ico</icon>
+				<path type="Relative">SDK\manuals\zhlt.chm</path>
 				<installed>false</installed>
 			</app>
 
@@ -465,51 +465,52 @@ THE SOFTWARE.", @"The MIT License (MIT)
 	<category name="Support and Links">
 		<app>
 			<name>Zoner's Half-Life Tools</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://zhlt.info/download-zhlt.html</path>
+			<icon type="Relative">SDK\Launcher\logos\url.ico</icon>
+			<path type="Absolute">http://zhlt.info/download-zhlt.html</path>
 			<installed>false</installed>
 		</app>
 		<app>
 			<name>HL-Lab.ru Community</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://hl-lab.ru/</path>
+			<icon type="Relative">SDK\Launcher\logos\url.ico</icon>
+			<path type="Absolute">http://hl-lab.ru/</path>
 			<installed>false</installed>
 		</app>
 		<app>
 			<name>CSM</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://cs-mapping.com.ua/</path>
+			<icon type="Relative">SDK\Launcher\logos\url.ico</icon>
+			<path type="Absolute">http://cs-mapping.com.ua/</path>
 			<installed>false</installed>
 		</app>
 		<app>
 			<name>Forum CSMania</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://forum.csmania.ru/</path>
+			<icon type="Relative">SDK\Launcher\logos\url.ico</icon>
+			<path type="Absolute">http://forum.csmania.ru/</path>
 			<installed>false</installed>
 		</app>
 		<app>
 			<name>Dmintrich!</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://cs-mapper.com/</path>
+			<icon type="Relative">SDK\Launcher\logos\url.ico</icon>
+			<path type="Absolute">http://cs-mapper.com/</path>
 			<installed>false</installed>
 		</app>
 		<app>
 			<name>.Net Framework 4.0 Web Installer</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://www.microsoft.com/ru-ru/download/details.aspx?id=17851</path>
+			<icon type="Relative">SDK\Launcher\logos\url.ico</icon>
+			<path type="Absolute">http://www.microsoft.com/ru-ru/download/details.aspx?id=17851</path>
 			<installed>false</installed>
 		</app>
 		<app>
 			<name>.Net Framework 4.5 Web Installer</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://www.microsoft.com/ru-ru/download/details.aspx?id=30653</path>
+			<icon type="Relative">SDK\Launcher\logos\url.ico</icon>
+			<path type="Absolute">http://www.microsoft.com/ru-ru/download/details.aspx?id=30653</path>
 			<installed>false</installed>
 		</app>
 		<app>
 			<name>EpicMorg Support</name>
-			<icon>SDK\Launcher\logos\url.ico</icon>
-			<path>http://ww.epicm.org/</path>
+			<icon type="Relative">SDK\Launcher\logos\url.ico</icon>
+			<path type="Absolute">http://ww.epicm.org/</path>
 			<installed>false</installed>
 		</app>
 	</category>
+  <category name="Custom"></category>
 </cfg>

@@ -156,7 +156,7 @@ namespace gSDK_Launcher.UI {
             else if ( app != null ) {
                 var n = app.Name.Replace( " ", "." );
                 new ProgID {
-                    Command = AssemblyInfoHelper.GetPath( app.Path ),
+                    Command = app.Path.ToString(),
                     IconPath = ip,
                     Name = n
                 }.Save();

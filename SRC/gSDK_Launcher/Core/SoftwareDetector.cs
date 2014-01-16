@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace gSDK_Launcher {
@@ -9,18 +10,21 @@ namespace gSDK_Launcher {
         /// <param name="app"></param>
         /// <returns></returns>
         public static bool CheckAppInstalled( App app ) {
-
-            var p = AssemblyInfoHelper.GetPath( app.Path );
+            var p = app.Path.ToString();
             var r = File.Exists( p )||Directory.Exists( p );
-            //if ( !r ) MessageBox.Show( p );
             return r;
         }
         /// <summary>
         /// Check all app in category and set 'installed' flag to real value
         /// </summary>
         public static void CheckAllInCategory( Category c ) {
-            foreach (var app in c.Apps)
-                app.Installed = CheckAppInstalled( app );
+            try {
+                foreach (var app in c.Apps)
+                    app.Installed = CheckAppInstalled( app );
+            }
+            catch (Exception ex) {
+                
+            }
         }
 
         public static void CheckAllInConfig( Config c ) {

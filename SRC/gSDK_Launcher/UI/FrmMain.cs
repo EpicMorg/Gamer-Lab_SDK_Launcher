@@ -25,7 +25,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
-
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
@@ -45,21 +44,15 @@ namespace gSDK_Launcher {
         private void btn_about_Click( object sender, EventArgs e ) {
             new frm_about().ShowDialog();
         }
-        private void button1_Click( object sender, EventArgs e ) {    
-            new frm_scanning().ShowDialog();
-        }
         private void btn_settings_Click( object sender, EventArgs e ) {
             new FrmSettings().ShowDialog();
             this.ReloadSoftware();
-            // Application.Restart();
             Globals.Translator.Translate(this.Controls.OfType<Control>(), this.Name);
-
         }
         private void btn_exit_Click( object sender, EventArgs e ) {
             Application.Exit();
         }
         private void frm_main_Load( object sender, EventArgs e ) {
-
             #region Load cfg
             var configpath = Path.Combine(
                 Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
@@ -85,18 +78,18 @@ namespace gSDK_Launcher {
             }
             catch ( Exception ) {
                 if ( MessageBox.Show(
-                    "Cant't load config file. Create new?",
-                    "ЕГГОГ!",
+                    @"Cant't load config file. Create new?",
+                    @"ЕГГОГ!",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Error ) != DialogResult.OK )
                     return;
                 try {
                     File.WriteAllText( configpath, Properties.Resources.dftcfg );
                 }
-                catch ( Exception ex2 ) {
+                catch (Exception) {
                     MessageBox.Show(
-                        "ЕГГОГ",
-                        "Unable to update config. Contact to ya odmin.",
+                        @"ЕГГОГ",
+                        @"Unable to update config. Contact to ya odmin.",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error );
                     Application.Exit();
@@ -123,85 +116,68 @@ namespace gSDK_Launcher {
             };
             this.listv_programs.SmallImageList = this.listv_programs.LargeImageList;
             var eric = SystemIcons.Error;
-
             foreach ( var category in Globals.Config.Apps ) {
                 var grp = new ListViewGroup( category.Name, category.Name );
                 this.listv_programs.Groups.Add( grp );
                 foreach ( var app in category.Apps.Where( x => x.Installed ) ) {
-                    var ip = AssemblyInfoHelper.GetPath( app.Path );
+                    var ip = app.Path.ToString();
                     try {
-                        Icon ico;
-                        if (File.Exists(ip))
-                            ico = Icon.ExtractAssociatedIcon(ip);
-                        else {
-                            if (File.Exists(ip = AssemblyInfoHelper.GetPath(app.IconPath)))
-                                ico = Icon.ExtractAssociatedIcon(ip);
-                            else
-                                {
-                              //      MessageBox.Show(ip);
-                                ico = eric;
-                                }
-                        }
+                        var ico = File.Exists( ip )
+                                  ? Icon.ExtractAssociatedIcon( ip )
+                                  : ( File.Exists( ip = AssemblyInfoHelper.GetPath( app.IconPath.ToString() ) )
+                                          ? Icon.ExtractAssociatedIcon( ip )
+                                          : eric );
                         this.listv_programs.LargeImageList.Images.Add( ip, ico );
                     }
                     catch {
                         this.listv_programs.LargeImageList.Images.Add( ip, eric );
                     }
-                    var item = new ListViewItem( app.Name, ip, grp ) {
+                    this.listv_programs.Items.Add( new ListViewItem( app.Name, ip, grp ) {
                         Tag = app,
-                    };
-                    //item.ImageList = this.listv_programs.LargeImageList;
-                    this.listv_programs.Items.Add( item );
+                    } );
                 }
             }
             var gr = new ListViewGroup( Globals.Config.Support.Name, Globals.Config.Support.Name );
             this.listv_programs.Groups.Add( gr );
             foreach ( var app in Globals.Config.Support.Apps ) {
-                var ip = AssemblyInfoHelper.GetPath( app.Path );
+                var ip = app.Path.ToString();
                 try {
-                    // this.listv_programs.LargeImageList.Images.Add(ip, System.Drawing.SystemIcons.WinLogo);
                     this.listv_programs.LargeImageList.Images.Add( ip, Properties.Resources.ie );
                 }
                 catch {
                     this.listv_programs.LargeImageList.Images.Add( ip, eric );
                 }
                 var item = new ListViewItem( app.Name, ip, gr ) {
-
-                    Tag = app,
+                    Tag = app
                 };
-
-                //item.ImageList = this.listv_programs.LargeImageList;
                 this.listv_programs.Items.Add( item );
             }
             this.listv_programs.EndUpdate();
         }
-
         private void listv_programs_DoubleClick( object sender, EventArgs e ) {
             var v = this.listv_programs.SelectedItems;
             if ( v.Count == 0 ) return;
             var it = v[ 0 ];
-            if ( it != null && ( it.Tag == null || !( it.Tag is App ) ) ) return;
+            if ( it == null ) return;
             var info = it.Tag as App;
+            if ( info != null ) return;
             try {
-
-                Process.Start( info.Path.StartsWith( "http" ) ? info.Path : AssemblyInfoHelper.GetPath( info.Path ) );
+                Process.Start( info.Path.ToString(), info.Params );
             }
             catch ( Exception ) {
                 MessageBox.Show(
                     string.Format(
                         "Failed to run {0}({1})",
-                        info.Name, AssemblyInfoHelper.GetPath( info.Path )
+                        info.Name, info.Path.ToString()
                     ),
-                    "ЕГГОГ",
+                    @"ЕГГОГ",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
             }
         }
-
         private void btn_additem_Click(object sender, EventArgs e) {
-            var frmcustom = new FrmCustomSection();
-            frmcustom.ShowDialog();
+            new FrmCustomSection().ShowDialog();
         }
     }
 }
