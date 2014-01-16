@@ -53,9 +53,7 @@ namespace gSDK_Launcher.UI {
             // 
             // pic_btn_max
             // 
-            this.pic_btn_max.Enabled = false;
             this.pic_btn_max.Location = new System.Drawing.Point(298, 12);
-            this.pic_btn_max.Visible = false;
             // 
             // pic_btn_exit
             // 
@@ -86,6 +84,7 @@ namespace gSDK_Launcher.UI {
             // 
             // lbl_programselect
             // 
+            this.lbl_programselect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_programselect.AutoSize = true;
             this.lbl_programselect.Location = new System.Drawing.Point(3, 213);
             this.lbl_programselect.Name = "lbl_programselect";
@@ -95,6 +94,7 @@ namespace gSDK_Launcher.UI {
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(68)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(286, 229);
@@ -107,6 +107,8 @@ namespace gSDK_Launcher.UI {
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Location = new System.Drawing.Point(6, 229);
@@ -207,7 +209,6 @@ namespace gSDK_Launcher.UI {
             this.Controls.Add(this.btn_add_item);
             this.Controls.Add(this.btn_saveit);
             this.Controls.Add(this.panel_back);
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(352, 368);
             this.Name = "FrmCustomSection";
