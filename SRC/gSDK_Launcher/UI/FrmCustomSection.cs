@@ -78,6 +78,12 @@ namespace gSDK_Launcher.UI {
         private void btn_saveit_Click( object sender, EventArgs e ) {
             Globals.Config.Custom.Apps =
                 this.list_custom_items.Items.OfType<ListViewItem>().Select( a => a.Tag ).OfType<App>().ToArray();
+
+            var configpath = Path.Combine(
+                Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
+                "configs",
+                "list.xml" );
+            Globals.Config.Save( configpath );
         }
     }
 }
