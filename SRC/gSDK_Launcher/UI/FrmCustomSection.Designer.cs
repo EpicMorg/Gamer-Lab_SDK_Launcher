@@ -26,80 +26,80 @@ namespace gSDK_Launcher.UI {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.panel_back = new Panel();
-            this.label1 = new Label();
-            this.button1 = new Button();
-            this.textBox1 = new TextBox();
-            this.lbl_commandline = new Label();
-            this.lbl_custom_list = new Label();
-            this.txt_arguments = new TextBox();
-            this.list_custom_items = new ListView();
-            this.btn_saveit = new Button();
-            this.btn_add_item = new Button();
-            this.btn_delete_selected = new Button();
-            this.ofdExe = new OpenFileDialog();
-            ((ISupportInitialize)(this.pic_btn_min)).BeginInit();
-            ((ISupportInitialize)(this.pic_btn_max)).BeginInit();
-            ((ISupportInitialize)(this.pic_btn_exit)).BeginInit();
-            ((ISupportInitialize)(this.pic_logo)).BeginInit();
+            this.panel_back = new System.Windows.Forms.Panel();
+            this.lbl_programselect = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbl_commandline = new System.Windows.Forms.Label();
+            this.lbl_custom_list = new System.Windows.Forms.Label();
+            this.txt_arguments = new System.Windows.Forms.TextBox();
+            this.list_custom_items = new System.Windows.Forms.ListView();
+            this.btn_saveit = new System.Windows.Forms.Button();
+            this.btn_add_item = new System.Windows.Forms.Button();
+            this.btn_delete_selected = new System.Windows.Forms.Button();
+            this.ofdExe = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.panel_back.SuspendLayout();
             this.SuspendLayout();
             // 
             // pic_btn_min
             // 
             this.pic_btn_min.Enabled = false;
-            this.pic_btn_min.Location = new Point(274, 12);
+            this.pic_btn_min.Location = new System.Drawing.Point(274, 12);
             this.pic_btn_min.Visible = false;
             // 
             // pic_btn_max
             // 
             this.pic_btn_max.Enabled = false;
-            this.pic_btn_max.Location = new Point(298, 12);
+            this.pic_btn_max.Location = new System.Drawing.Point(298, 12);
             this.pic_btn_max.Visible = false;
             // 
             // pic_btn_exit
             // 
-            this.pic_btn_exit.Location = new Point(322, 12);
+            this.pic_btn_exit.Location = new System.Drawing.Point(322, 12);
             // 
             // lbl_title
             // 
-            this.lbl_title.Size = new Size(54, 13);
+            this.lbl_title.Size = new System.Drawing.Size(54, 13);
             this.lbl_title.Text = "Edit menu";
             // 
             // panel_back
             // 
-            this.panel_back.Anchor = ((AnchorStyles)((((AnchorStyles.Top | AnchorStyles.Bottom) 
-            | AnchorStyles.Left) 
-            | AnchorStyles.Right)));
-            this.panel_back.BackColor = Color.FromArgb(62, 70, 55);
-            this.panel_back.Controls.Add(this.label1);
+            this.panel_back.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
+            this.panel_back.Controls.Add(this.lbl_programselect);
             this.panel_back.Controls.Add(this.button1);
             this.panel_back.Controls.Add(this.textBox1);
             this.panel_back.Controls.Add(this.lbl_commandline);
             this.panel_back.Controls.Add(this.lbl_custom_list);
             this.panel_back.Controls.Add(this.txt_arguments);
             this.panel_back.Controls.Add(this.list_custom_items);
-            this.panel_back.Location = new Point(12, 34);
+            this.panel_back.Location = new System.Drawing.Point(12, 34);
             this.panel_back.Name = "panel_back";
-            this.panel_back.Size = new Size(328, 293);
+            this.panel_back.Size = new System.Drawing.Size(328, 293);
             this.panel_back.TabIndex = 7;
             // 
-            // label1
+            // lbl_programselect
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new Point(3, 213);
-            this.label1.Name = "label1";
-            this.label1.Size = new Size(46, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Program";
+            this.lbl_programselect.AutoSize = true;
+            this.lbl_programselect.Location = new System.Drawing.Point(3, 213);
+            this.lbl_programselect.Name = "lbl_programselect";
+            this.lbl_programselect.Size = new System.Drawing.Size(49, 13);
+            this.lbl_programselect.TabIndex = 5;
+            this.lbl_programselect.Text = "Program:";
             // 
             // button1
             // 
-            this.button1.BackColor = Color.FromArgb(76, 88, 68);
-            this.button1.FlatStyle = FlatStyle.Flat;
-            this.button1.Location = new Point(286, 229);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(88)))), ((int)(((byte)(68)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(286, 229);
             this.button1.Name = "button1";
-            this.button1.Size = new Size(39, 21);
+            this.button1.Size = new System.Drawing.Size(39, 21);
             this.button1.TabIndex = 4;
             this.button1.Text = "...";
             this.button1.UseVisualStyleBackColor = false;
@@ -107,64 +107,64 @@ namespace gSDK_Launcher.UI {
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = Color.FromArgb(62, 70, 55);
-            this.textBox1.BorderStyle = BorderStyle.FixedSingle;
-            this.textBox1.Location = new Point(6, 229);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(6, 229);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new Size(274, 20);
+            this.textBox1.Size = new System.Drawing.Size(274, 20);
             this.textBox1.TabIndex = 3;
             // 
             // lbl_commandline
             // 
-            this.lbl_commandline.Anchor = ((AnchorStyles)((AnchorStyles.Bottom | AnchorStyles.Left)));
+            this.lbl_commandline.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_commandline.AutoSize = true;
-            this.lbl_commandline.Location = new Point(3, 254);
+            this.lbl_commandline.Location = new System.Drawing.Point(3, 254);
             this.lbl_commandline.Name = "lbl_commandline";
-            this.lbl_commandline.Size = new Size(119, 13);
+            this.lbl_commandline.Size = new System.Drawing.Size(119, 13);
             this.lbl_commandline.TabIndex = 2;
             this.lbl_commandline.Text = "Commanline arguments:";
             // 
             // lbl_custom_list
             // 
             this.lbl_custom_list.AutoSize = true;
-            this.lbl_custom_list.Location = new Point(3, 9);
+            this.lbl_custom_list.Location = new System.Drawing.Point(3, 9);
             this.lbl_custom_list.Name = "lbl_custom_list";
-            this.lbl_custom_list.Size = new Size(72, 13);
+            this.lbl_custom_list.Size = new System.Drawing.Size(72, 13);
             this.lbl_custom_list.TabIndex = 2;
             this.lbl_custom_list.Text = "Custom items:";
             // 
             // txt_arguments
             // 
-            this.txt_arguments.Anchor = ((AnchorStyles)(((AnchorStyles.Bottom | AnchorStyles.Left) 
-            | AnchorStyles.Right)));
-            this.txt_arguments.BackColor = Color.FromArgb(62, 70, 55);
-            this.txt_arguments.BorderStyle = BorderStyle.FixedSingle;
-            this.txt_arguments.Location = new Point(6, 270);
+            this.txt_arguments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_arguments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
+            this.txt_arguments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_arguments.Location = new System.Drawing.Point(6, 270);
             this.txt_arguments.Name = "txt_arguments";
-            this.txt_arguments.Size = new Size(319, 20);
+            this.txt_arguments.Size = new System.Drawing.Size(319, 20);
             this.txt_arguments.TabIndex = 1;
             // 
             // list_custom_items
             // 
-            this.list_custom_items.Anchor = ((AnchorStyles)((((AnchorStyles.Top | AnchorStyles.Bottom) 
-            | AnchorStyles.Left) 
-            | AnchorStyles.Right)));
-            this.list_custom_items.BackColor = Color.FromArgb(62, 70, 55);
-            this.list_custom_items.BorderStyle = BorderStyle.FixedSingle;
-            this.list_custom_items.ForeColor = Color.FromArgb(136, 145, 128);
-            this.list_custom_items.Location = new Point(3, 25);
+            this.list_custom_items.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.list_custom_items.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
+            this.list_custom_items.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.list_custom_items.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
+            this.list_custom_items.Location = new System.Drawing.Point(3, 25);
             this.list_custom_items.Name = "list_custom_items";
-            this.list_custom_items.Size = new Size(322, 185);
+            this.list_custom_items.Size = new System.Drawing.Size(322, 185);
             this.list_custom_items.TabIndex = 0;
             this.list_custom_items.UseCompatibleStateImageBehavior = false;
             // 
             // btn_saveit
             // 
-            this.btn_saveit.Anchor = ((AnchorStyles)((AnchorStyles.Bottom | AnchorStyles.Right)));
-            this.btn_saveit.FlatStyle = FlatStyle.Popup;
-            this.btn_saveit.Location = new Point(265, 333);
+            this.btn_saveit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_saveit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_saveit.Location = new System.Drawing.Point(265, 333);
             this.btn_saveit.Name = "btn_saveit";
-            this.btn_saveit.Size = new Size(75, 23);
+            this.btn_saveit.Size = new System.Drawing.Size(75, 23);
             this.btn_saveit.TabIndex = 8;
             this.btn_saveit.Text = "Save";
             this.btn_saveit.UseVisualStyleBackColor = true;
@@ -172,11 +172,11 @@ namespace gSDK_Launcher.UI {
             // 
             // btn_add_item
             // 
-            this.btn_add_item.Anchor = ((AnchorStyles)((AnchorStyles.Bottom | AnchorStyles.Left)));
-            this.btn_add_item.FlatStyle = FlatStyle.Popup;
-            this.btn_add_item.Location = new Point(12, 333);
+            this.btn_add_item.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_add_item.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_add_item.Location = new System.Drawing.Point(12, 333);
             this.btn_add_item.Name = "btn_add_item";
-            this.btn_add_item.Size = new Size(75, 23);
+            this.btn_add_item.Size = new System.Drawing.Size(75, 23);
             this.btn_add_item.TabIndex = 8;
             this.btn_add_item.Text = "Add";
             this.btn_add_item.UseVisualStyleBackColor = true;
@@ -184,11 +184,11 @@ namespace gSDK_Launcher.UI {
             // 
             // btn_delete_selected
             // 
-            this.btn_delete_selected.Anchor = ((AnchorStyles)((AnchorStyles.Bottom | AnchorStyles.Left)));
-            this.btn_delete_selected.FlatStyle = FlatStyle.Popup;
-            this.btn_delete_selected.Location = new Point(93, 333);
+            this.btn_delete_selected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_delete_selected.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_delete_selected.Location = new System.Drawing.Point(93, 333);
             this.btn_delete_selected.Name = "btn_delete_selected";
-            this.btn_delete_selected.Size = new Size(75, 23);
+            this.btn_delete_selected.Size = new System.Drawing.Size(75, 23);
             this.btn_delete_selected.TabIndex = 8;
             this.btn_delete_selected.Text = "Delete";
             this.btn_delete_selected.UseVisualStyleBackColor = true;
@@ -201,18 +201,18 @@ namespace gSDK_Launcher.UI {
             // 
             // FrmCustomSection
             // 
-            this.AutoScaleDimensions = new SizeF(6F, 13F);
-            this.ClientSize = new Size(352, 368);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(352, 368);
             this.Controls.Add(this.btn_delete_selected);
             this.Controls.Add(this.btn_add_item);
             this.Controls.Add(this.btn_saveit);
             this.Controls.Add(this.panel_back);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new Size(352, 368);
+            this.MinimumSize = new System.Drawing.Size(352, 368);
             this.Name = "FrmCustomSection";
             this.ShowInTaskbar = false;
-            this.StartPosition = FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Edit menu";
             this.Load += new System.EventHandler(this.FrmCustomSection_Load);
             this.Controls.SetChildIndex(this.lbl_title, 0);
@@ -224,10 +224,10 @@ namespace gSDK_Launcher.UI {
             this.Controls.SetChildIndex(this.btn_saveit, 0);
             this.Controls.SetChildIndex(this.btn_add_item, 0);
             this.Controls.SetChildIndex(this.btn_delete_selected, 0);
-            ((ISupportInitialize)(this.pic_btn_min)).EndInit();
-            ((ISupportInitialize)(this.pic_btn_max)).EndInit();
-            ((ISupportInitialize)(this.pic_btn_exit)).EndInit();
-            ((ISupportInitialize)(this.pic_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.panel_back.ResumeLayout(false);
             this.panel_back.PerformLayout();
             this.ResumeLayout(false);
@@ -245,7 +245,7 @@ namespace gSDK_Launcher.UI {
         private Label lbl_commandline;
         private Label lbl_custom_list;
         private TextBox txt_arguments;
-        private Label label1;
+        private Label lbl_programselect;
         private Button button1;
         private TextBox textBox1;
         private OpenFileDialog ofdExe;

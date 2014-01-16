@@ -58,5 +58,6 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="FrmCustomSection.btn_add_item">Добавить</term>
 		<term name="FrmCustomSection.btn_delete_selected">Удалить</term>
 		<term name="FrmCustomSection.btn_saveit">Сохранить</term>
+		<term name="FrmCustomSection.lbl_programselect">Программа:</term> 
 	</translation>
 </language>
