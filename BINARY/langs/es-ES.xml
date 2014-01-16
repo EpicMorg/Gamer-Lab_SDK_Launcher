@@ -29,7 +29,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 <language>
 	<metadata>
 		<culture>es-ES</culture>
-		<version>0.2.1</version>
+		<version>0.2.2</version>
 		<author>NEO</author>
 	</metadata>
 	<translation>
@@ -52,11 +52,11 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="FrmSettings.btn_lang_info">Info.</term>
 		<term name="FrmSettings.brn_apply">Aplicar</term> 
 		<term name="FrmSettings.brn_update">Update</term>
-		<term name="FrmCustomSection">Редактировать меню</term>
-		<term name="FrmCustomSection.lbl_custom_list">Пользовательский список:</term>
-		<term name="FrmCustomSection.lbl_commandline">Параметры запуска:</term>
-		<term name="FrmCustomSection.btn_add_item">Добавить</term>
-		<term name="FrmCustomSection.btn_delete_selected">Удалить</term>
-		<term name="FrmCustomSection.btn_saveit">Сохранить</term>
+		<term name="FrmCustomSection">Ьodificar el menú</term>
+		<term name="FrmCustomSection.lbl_custom_list">Lista personalizada:</term>
+		<term name="FrmCustomSection.lbl_commandline">Parámetros de inicio:</term>
+		<term name="FrmCustomSection.btn_add_item">Añadir </term>
+		<term name="FrmCustomSection.btn_delete_selected">Eliminar</term>
+		<term name="FrmCustomSection.btn_saveit">Guardar</term>
 	</translation>
 </language>
