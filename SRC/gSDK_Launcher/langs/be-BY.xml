@@ -52,11 +52,11 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		<term name="FrmSettings.btn_lang_info">Інфармацыя</term>
 		<term name="FrmSettings.brn_apply">Прымяніць</term> 
 		<term name="FrmSettings.brn_update">Абнавіць</term>
-		<term name="FrmCustomSection">Редактировать меню</term>
-		<term name="FrmCustomSection.lbl_custom_list">Пользовательский список:</term>
-		<term name="FrmCustomSection.lbl_commandline">Параметры запуска:</term>
-		<term name="FrmCustomSection.btn_add_item">Добавить</term>
-		<term name="FrmCustomSection.btn_delete_selected">Удалить</term>
-		<term name="FrmCustomSection.btn_saveit">Сохранить</term>
+		<term name="FrmCustomSection">Змяніць меню</term>
+		<term name="FrmCustomSection.lbl_custom_list">Карыстальніцкі спіс:</term>
+		<term name="FrmCustomSection.lbl_commandline">Параметры запуску:</term>
+		<term name="FrmCustomSection.btn_add_item">Дабавіць</term>
+		<term name="FrmCustomSection.btn_delete_selected">Удаліць</term>
+		<term name="FrmCustomSection.btn_saveit">Сахраніць</term>
 	</translation>
 </language>
