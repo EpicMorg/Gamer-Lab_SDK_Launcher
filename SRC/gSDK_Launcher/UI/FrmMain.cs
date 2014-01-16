@@ -47,7 +47,7 @@ namespace gSDK_Launcher {
         private void btn_settings_Click( object sender, EventArgs e ) {
             new FrmSettings().ShowDialog();
             this.ReloadSoftware();
-            Globals.Translator.Translate(this.Controls.OfType<Control>(), this.Name);
+            Globals.Translator.Translate( this.Controls.OfType<Control>(), this.Name );
         }
         private void btn_exit_Click( object sender, EventArgs e ) {
             Application.Exit();
@@ -86,7 +86,7 @@ namespace gSDK_Launcher {
                 try {
                     File.WriteAllText( configpath, Properties.Resources.dftcfg );
                 }
-                catch (Exception) {
+                catch ( Exception ) {
                     MessageBox.Show(
                         @"ЕГГОГ",
                         @"Unable to update config. Contact to ya odmin.",
@@ -116,37 +116,33 @@ namespace gSDK_Launcher {
             };
             this.listv_programs.SmallImageList = this.listv_programs.LargeImageList;
             var eric = SystemIcons.Error;
-            foreach ( var category in Globals.Config.Apps ) {
-                var grp = new ListViewGroup( category.Name, category.Name );
-                this.listv_programs.Groups.Add( grp );
-                foreach ( var app in category.Apps.Where( x => x.Installed ) ) {
-                    var ip = app.Path.ToString();
-                    try {
-                        var ico = File.Exists( ip )
-                                  ? Icon.ExtractAssociatedIcon( ip )
-                                  : ( File.Exists( ip = AssemblyInfoHelper.GetPath( app.IconPath.ToString() ) )
-                                          ? Icon.ExtractAssociatedIcon( ip )
-                                          : eric );
-                        this.listv_programs.LargeImageList.Images.Add( ip, ico );
+            foreach ( var category in  Globals.Config.Apps.Concat(new[] {Globals.Config.Custom }) ) {
+                    var grp = new ListViewGroup( category.Name, category.Name );
+                    this.listv_programs.Groups.Add( grp );
+                    foreach ( var app in category.Apps.Where( x => x.Installed ) ) {
+                        var ip = app.Path.ToString();
+                        try {
+                            var ico = File.Exists( ip )
+                                      ? Icon.ExtractAssociatedIcon( ip )
+                                      : ( File.Exists( ip = AssemblyInfoHelper.GetPath( app.IconPath.ToString() ) )
+                                              ? Icon.ExtractAssociatedIcon( ip )
+                                              : eric );
+                            this.listv_programs.LargeImageList.Images.Add( ip, ico );
+                        }
+                        catch {
+                            this.listv_programs.LargeImageList.Images.Add( ip, eric );
+                        }
+                        this.listv_programs.Items.Add( new ListViewItem( app.Name, ip, grp ) {
+                            Tag = app,
+                        } );
                     }
-                    catch {
-                        this.listv_programs.LargeImageList.Images.Add( ip, eric );
-                    }
-                    this.listv_programs.Items.Add( new ListViewItem( app.Name, ip, grp ) {
-                        Tag = app,
-                    } );
-                }
+                //}
             }
             var gr = new ListViewGroup( Globals.Config.Support.Name, Globals.Config.Support.Name );
             this.listv_programs.Groups.Add( gr );
             foreach ( var app in Globals.Config.Support.Apps ) {
                 var ip = app.Path.ToString();
-                try {
-                    this.listv_programs.LargeImageList.Images.Add( ip, Properties.Resources.ie );
-                }
-                catch {
-                    this.listv_programs.LargeImageList.Images.Add( ip, eric );
-                }
+                this.listv_programs.LargeImageList.Images.Add( ip, Properties.Resources.ie );
                 var item = new ListViewItem( app.Name, ip, gr ) {
                     Tag = app
                 };
@@ -160,7 +156,7 @@ namespace gSDK_Launcher {
             var it = v[ 0 ];
             if ( it == null ) return;
             var info = it.Tag as App;
-            if ( info != null ) return;
+            if ( info == null ) return;
             try {
                 Process.Start( info.Path.ToString(), info.Params );
             }
@@ -168,7 +164,7 @@ namespace gSDK_Launcher {
                 MessageBox.Show(
                     string.Format(
                         "Failed to run {0}({1})",
-                        info.Name, info.Path.ToString()
+                        info.Name, info.Path
                     ),
                     @"ЕГГОГ",
                     MessageBoxButtons.OK,
@@ -176,7 +172,7 @@ namespace gSDK_Launcher {
                 );
             }
         }
-        private void btn_additem_Click(object sender, EventArgs e) {
+        private void btn_additem_Click( object sender, EventArgs e ) {
             new FrmCustomSection().ShowDialog();
             this.ReloadSoftware();
         }
