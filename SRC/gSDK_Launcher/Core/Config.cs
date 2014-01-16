@@ -82,32 +82,19 @@ namespace gSDK_Launcher {
         }
 
         private static XElement SerializeApp( App b ) {
-            return new XElement(
-                "app",
-                new XElement( "name", b.Name ),
-                new XElement(
-                    "icon",
-                    new XAttribute(
-                        "type",
-                        b.IconPath.Type
-                    ),
-                    b.IconPath.Path
-                ),
-                new XElement( "path", new XAttribute(
-                        "type",
-                        b.Path.Type
-                    ),
-                    b.Path.Path
-                ),
-                new XElement( "installed", b.Installed ),
-                new XElement(
-                    "extensions",
-                    b.Extensions.Select(
-                        c => new XElement( "ext", c )
-                    )
-                ),
-                new XElement( "cmdargs", b.Params )
-            );
+            try {
+                return new XElement(
+                    "app",
+                    new XElement( "name", b.Name ),
+                    new XElement( "icon", new XAttribute( "type", b.IconPath.Type ), b.IconPath.Path ),
+                    new XElement( "path", new XAttribute( "type", b.Path.Type ), b.Path.Path ),
+                    new XElement( "installed", b.Installed ),
+                    new XElement( "extensions", b.Extensions.Select( c => new XElement( "ext", c ) ) ),
+                    new XElement( "cmdargs", b.Params ) );
+            }
+            catch ( Exception ex ) {
+                throw;
+            }
         }
     }
 
@@ -125,13 +112,16 @@ namespace gSDK_Launcher {
 
         public App() { }
         public App( XmlNode n ) {
+            XmlNode tmpn;
+            Func<string, RPath> gn = s => ( tmpn = Helper.GNBN( n, s ) ) != null ? Helper.GRPath( tmpn ) : new RPath {
+                Type = PathType.Relative,
+                Path = ""
+            };
             this.Name = Helper.GNTBN( n, "name" );
-            var tmpn = Helper.GNBN( n, "icon" );
-            if(tmpn!=null) this.IconPath = Helper.GRPath( tmpn );
+            this.IconPath = gn( "icon" );
             var tmps = Helper.GNTBN( n, "installed" );
             this.Installed = !String.IsNullOrEmpty( tmps ) && bool.Parse( tmps );
-            tmpn = Helper.GNBN( n, "path" );
-            if ( tmpn != null ) this.Path = Helper.GRPath( tmpn );
+            this.Path = gn( "path" );
             var tmp = Helper.GNBN( n, "extensions" );
             this.Extensions = tmp != null
                                   ? tmp.ChildNodes.OfType<XmlNode>()

@@ -83,7 +83,9 @@ namespace gSDK_Launcher.UI {
                 Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
                 "configs",
                 "list.xml" );
+            
             Globals.Config.Save( configpath );
+            this.Close();
         }
     }
 }
