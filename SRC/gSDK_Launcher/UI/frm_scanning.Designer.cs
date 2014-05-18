@@ -50,8 +50,10 @@ namespace gSDK_Launcher {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.lbl_prepearing_text = new System.Windows.Forms.Label();
             this.progressbar_prepearing = new System.Windows.Forms.ProgressBar();
+            this.timer_updating = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).BeginInit();
@@ -103,6 +105,11 @@ namespace gSDK_Launcher {
             this.progressbar_prepearing.UseWaitCursor = true;
             this.progressbar_prepearing.Value = 100;
             // 
+            // timer_updating
+            // 
+            this.timer_updating.Interval = 3000;
+            this.timer_updating.Tick += new System.EventHandler(this.timer_updating_Tick);
+            // 
             // frm_scanning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,6 +146,7 @@ namespace gSDK_Launcher {
 
         private System.Windows.Forms.Label lbl_prepearing_text;
         private System.Windows.Forms.ProgressBar progressbar_prepearing;
+        private System.Windows.Forms.Timer timer_updating;
        
     }
 }

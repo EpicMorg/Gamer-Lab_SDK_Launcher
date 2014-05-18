@@ -70,8 +70,17 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				</extensions>
 				<installed>false</installed>
 			</app>
+      <app>
+        <name>Jackhammer</name>
+        <icon type="Relative">SDK\Launcher\logos\Jackhammer.ico</icon>
+        <path type="Relative">SDK\addons\Jackhammer\jackhammer.exe</path>
+        <extensions>
+          <ext>rmf</ext> 
+        </extensions>
+        <installed>false</installed>
+      </app>
 			<app>
-				<name>Neo Hammer Editor 3.5</name>
+				<name>Neo Hammer Editor 3.5.1</name>
         <icon type="Relative">SDK\Launcher\logos\neo.ico</icon>
         <path type="Relative">SDK\neo.exe</path>
 				<extensions>
@@ -121,7 +130,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<installed>false</installed>
 			</app>
 			<app>
-				<name>BSPViewer</name>
+				<name>BSP Viewer</name>
         <icon type="Relative">SDK\Launcher\logos\BSPViewer.ico</icon>
         <path type="Relative">SDK\addons\BSPViewer\BSPViewer.exe</path>
 				<extensions>
@@ -154,7 +163,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<installed>false</installed>
 			</app>
 			<app>
-				<name>MAPViewer</name>
+				<name>MAP Viewer</name>
 				<icon type="Relative">SDK\Launcher\logos\MAPViewer.ico</icon>
 				<path type="Relative">SDK\addons\map viewer\MAPViewer.exe</path>
 				<extensions>
@@ -219,13 +228,13 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<installed>false</installed>
 			</app>
 			<app>
-				<name>BSP_MAP</name>
+				<name>BSP2MAP</name>
 				<icon type="Relative">SDK\Launcher\logos\BSP_MAP.ico</icon>
 				<path type="Relative">SDK\addons\bsp map\BSP_MAP.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
-				<name>winbspc</name>
+				<name>WinBspc</name>
 				<icon type="Relative">SDK\Launcher\logos\winbspc.ico</icon>
 				<path type="Relative">SDK\addons\winbspc\winbspc.exe</path>
 				<installed>false</installed>
@@ -233,7 +242,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 		</category>
 		<category name="Content Managment">
 			<app>
-				<name>PakExpl</name>
+				<name>PakExplorer</name>
 				<icon type="Relative">SDK\Launcher\logos\PakExpl.ico</icon>
 				<path type="Relative">SDK\addons\PakExpl\PakExpl.exe</path>
 				<extensions>
@@ -257,7 +266,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<installed>false</installed>
 			</app>
 			<app>
-				<name>GameCfgManager</name>
+				<name>Game Cfg Manager</name>
 				<icon type="Relative">SDK\Launcher\logos\GameCfgManager.ico</icon>
 				<path type="Relative">SDK\GameCfgManager.exe</path>
 				<installed>false</installed>
@@ -300,13 +309,13 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<installed>false</installed>
 			</app>
 			<app>
-				<name>SPRAttrib</name>
+				<name>SPR Attrib</name>
 				<icon type="Relative">SDK\Launcher\logos\SPRAttrib.ico</icon>
 				<path type="Relative">SDK\addons\SPR Attrib\SPRAttrib.exe</path>
 				<installed>false</installed>
 			</app>
 			<app>
-				<name>SprExplorer</name>
+				<name>Spr Explorer</name>
 				<icon type="Relative">SDK\Launcher\logos\SprExplorer.ico</icon>
 				<path type="Relative">SDK\addons\SprExplorer\SprExplorer.exe</path>
 				<extensions>
@@ -345,7 +354,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<installed>false</installed>
 			</app>
 			<app>
-				<name>HILogoGen</name>
+				<name>HI Logo Gen</name>
 				<icon type="Relative">SDK\Launcher\logos\HILogoGen.ico</icon>
 				<path type="Relative">SDK\addons\HILogoGen\HILogoGen 0.1.exe</path>
 				<installed>false</installed>

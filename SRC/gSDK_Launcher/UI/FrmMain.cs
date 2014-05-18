@@ -40,6 +40,11 @@ namespace gSDK_Launcher {
 
         public FrmMain() {
             InitializeComponent();
+            if (Program.Refresh) {
+               // MessageBox.Show("true");
+                frm_scanning frmscanning = new frm_scanning();
+                frmscanning.ShowDialog();
+            }
         }
         private void btn_about_Click( object sender, EventArgs e ) {
             new frm_about().ShowDialog();
@@ -54,32 +59,28 @@ namespace gSDK_Launcher {
         }
         private void frm_main_Load( object sender, EventArgs e ) {
             #region Load cfg
-            var configpath = Path.Combine(
-                Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
-                "configs",
-                "list.xml" );
+
+            var d = Path.GetDirectoryName(AssemblyInfoHelper.CurrentAssembly.Location);
+            var configpath = Path.Combine( d, "configs", "list.xml" );
             try {
                 Globals.Config = Config.Load( configpath );
                 if ( String.IsNullOrEmpty( Globals.Config.LANG ) ) {
                     Globals.Config.LANG = CultureInfo.CurrentUICulture.Name;
                 }
-                var trans = Path.Combine(
-                        Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
-                        "langs",
-                        Globals.Config.LANG + ".xml" );
+                var trans = Path.Combine(d,"langs", Globals.Config.LANG + ".xml" );
                 if ( File.Exists( trans ) )
                     Globals.Translator = AbyrvalgTranslator.Load( trans );
                 else
                     Globals.Translator = new AbyrvalgTranslator {
                         Author = "stam",
                         Culture = "en-US",
-                        Version = "1.4.8.8"
+                        Version = "1.5.0.0"
                     };
             }
             catch ( Exception ) {
                 if ( MessageBox.Show(
                     @"Cant't load config file. Create new?",
-                    @"ЕГГОГ!",
+                    @"Error!",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Error ) != DialogResult.OK )
                     return;
@@ -88,8 +89,8 @@ namespace gSDK_Launcher {
                 }
                 catch ( Exception ) {
                     MessageBox.Show(
-                        @"ЕГГОГ",
-                        @"Unable to update config. Contact to ya odmin.",
+                        @"Error",
+                        @"Unable to update config. Contact to support.",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error );
                     Application.Exit();
@@ -166,7 +167,7 @@ namespace gSDK_Launcher {
                         "Failed to run {0}({1})",
                         info.Name, info.Path
                     ),
-                    @"ЕГГОГ",
+                    @"Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );

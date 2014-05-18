@@ -126,7 +126,7 @@ namespace gSDK_Launcher {
             // lbl_and_community
             // 
             this.lbl_and_community.AutoSize = true;
-            this.lbl_and_community.Location = new System.Drawing.Point(119, 88);
+            this.lbl_and_community.Location = new System.Drawing.Point(49, 88);
             this.lbl_and_community.Name = "lbl_and_community";
             this.lbl_and_community.Size = new System.Drawing.Size(132, 13);
             this.lbl_and_community.TabIndex = 5;
@@ -148,7 +148,7 @@ namespace gSDK_Launcher {
             this.link_serj.ForeColor = System.Drawing.Color.White;
             this.link_serj.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.link_serj.LinkColor = System.Drawing.Color.White;
-            this.link_serj.Location = new System.Drawing.Point(212, 70);
+            this.link_serj.Location = new System.Drawing.Point(206, 70);
             this.link_serj.Name = "link_serj";
             this.link_serj.Size = new System.Drawing.Size(39, 13);
             this.link_serj.TabIndex = 3;
@@ -164,7 +164,7 @@ namespace gSDK_Launcher {
             this.link_neo.ForeColor = System.Drawing.Color.White;
             this.link_neo.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.link_neo.LinkColor = System.Drawing.Color.White;
-            this.link_neo.Location = new System.Drawing.Point(176, 70);
+            this.link_neo.Location = new System.Drawing.Point(170, 70);
             this.link_neo.Name = "link_neo";
             this.link_neo.Size = new System.Drawing.Size(30, 13);
             this.link_neo.TabIndex = 3;

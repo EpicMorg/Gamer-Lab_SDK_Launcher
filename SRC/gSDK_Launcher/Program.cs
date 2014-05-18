@@ -26,13 +26,16 @@ THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace gSDK_Launcher {
     static class Program {
+        public static bool Refresh;
         [STAThread]
-        static void Main() {
+        static void Main(string[] args) {
             try {
+                Refresh = args.Contains("--refresh");
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault( false );
                 Application.Run( new FrmMain() );
@@ -45,3 +48,12 @@ namespace gSDK_Launcher {
         }
     }
 }
+
+
+/*
+
+Дописать лист хмл + добавить названия версий туда!
+ * 
+ * можно написать самописную тулзу для конферта карт!
+
+*/

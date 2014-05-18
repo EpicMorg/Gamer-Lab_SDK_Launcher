@@ -34,11 +34,17 @@ using gSDK_vgui;
 namespace gSDK_Launcher {
     public partial class frm_scanning : FrmTemplate {
         public frm_scanning() {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void frm_scanning_Load(object sender, EventArgs e) {
-            Globals.Translator.Translate( this.Controls.OfType<Control>(), this.Name );
+            timer_updating.Start();
+            //Globals.Translator.Translate(this.Controls.OfType<Control>(), this.Name);
+        }
+
+        private void timer_updating_Tick(object sender, EventArgs e) {
+           timer_updating.Stop();
+           Application.Exit();
         }
     }
 }
