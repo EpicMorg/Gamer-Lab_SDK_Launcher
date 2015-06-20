@@ -13,12 +13,12 @@ namespace gSDK_Launcher.Core {
         public string Name { get; set; }
 
         public void Save() {
-            var cur = Registry.ClassesRoot.OOC( this.Name );
+            var cur = Registry.ClassesRoot.OOC( Name );
             var icon = cur.OOC( "DefaultIcon" );
-            icon.SetValue( "", this.IconPath );
+            icon.SetValue( "", IconPath );
             icon.Close();
             var command = cur.OOC( "shell" ).OOC( "open" ).OOC( "command" );
-            command.SetValue( "", string.Format( "\"{0}\" \"%1\"", this.Command ) );
+            command.SetValue( "", string.Format( "\"{0}\" \"%1\"", Command ) );
             command.Close();
             cur.Close();
         }
@@ -30,14 +30,14 @@ namespace gSDK_Launcher.Core {
         public string IconPath { get; set; }
         public void Save() {
             if ( string.IsNullOrEmpty( ProgID ) ) {
-                Registry.ClassesRoot.DeleteSubKeyTree( "." + this.Extension, false );
+                Registry.ClassesRoot.DeleteSubKeyTree( "." + Extension, false );
                 return;
             }
-            var cur = Registry.ClassesRoot.OOC( "." + this.Extension );
+            var cur = Registry.ClassesRoot.OOC( "." + Extension );
             cur.SetValue( "", ProgID );
-            if ( !string.IsNullOrEmpty( this.IconPath ) ) {
+            if ( !string.IsNullOrEmpty( IconPath ) ) {
                 var icon = cur.OOC( "DefaultIcon" );
-                icon.SetValue( "", this.IconPath );
+                icon.SetValue( "", IconPath );
                 icon.Close();
             }
             cur.Close();

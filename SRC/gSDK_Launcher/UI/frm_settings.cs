@@ -36,14 +36,14 @@ using gSDK_vgui;
 namespace gSDK_Launcher.UI {
     public partial class FrmSettings : FrmTemplate {
         public FrmSettings() {
-            this.InitializeComponent();
+            InitializeComponent();
         }
         private void frm_settings_Load( object sender, EventArgs e ) {
-            this.dlist_lang.SelectedIndex = 0;
-            Globals.Translator.Translate( this.Controls.OfType<Control>(), this.Name );
-            this.dlist_lang.BeginUpdate();
-            this.dlist_lang.Items.Clear();
-            this.dlist_lang.Items.AddRange(
+            dlist_lang.SelectedIndex = 0;
+            Globals.Translator.Translate( Controls.OfType<Control>(), Name );
+            dlist_lang.BeginUpdate();
+            dlist_lang.Items.Clear();
+            dlist_lang.Items.AddRange(
                 Directory.GetFiles(
                     Path.Combine(
                         Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
@@ -53,16 +53,16 @@ namespace gSDK_Launcher.UI {
                 .Select( AbyrvalgTranslator.Load )
                 .ToArray()
             );
-            this.dlist_lang.SelectedItem =
-                this.dlist_lang.Items.OfType<AbyrvalgTranslator>().First( a => a.Culture == Globals.Config.LANG );
-            this.dlist_lang.EndUpdate();
-            LoadExt( "rmf", this.list_rmf );
-            LoadExt( "map", this.list_map );
-            LoadExt( "bsp", this.list_bsp );
-            LoadExt( "mdl", this.list_mdl );
-            LoadExt( "pak", this.list_pak );
-            LoadExt( "spr", this.list_spr );
-            LoadExt( "wad", this.list_wad );
+            dlist_lang.SelectedItem =
+                dlist_lang.Items.OfType<AbyrvalgTranslator>().First( a => a.Culture == Globals.Config.Lang );
+            dlist_lang.EndUpdate();
+            LoadExt( "rmf", list_rmf );
+            LoadExt( "map", list_map );
+            LoadExt( "bsp", list_bsp );
+            LoadExt( "mdl", list_mdl );
+            LoadExt( "pak", list_pak );
+            LoadExt( "spr", list_spr );
+            LoadExt( "wad", list_wad );
         }
 
         private static void LoadExt( string a, ComboBox b ) {
@@ -107,9 +107,9 @@ namespace gSDK_Launcher.UI {
         }
         private void brn_apply_Click( object sender, EventArgs e ) {
             try {
-                var c = ( this.dlist_lang.SelectedItem as AbyrvalgTranslator );
-                if ( c != null && Globals.Config.LANG != c.Culture ) {
-                    Globals.Config.LANG = c.Culture;
+                var c = ( dlist_lang.SelectedItem as AbyrvalgTranslator );
+                if ( c != null && Globals.Config.Lang != c.Culture ) {
+                    Globals.Config.Lang = c.Culture;
                     Globals.Config.Save(
                         Path.Combine(
                             Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
@@ -121,13 +121,13 @@ namespace gSDK_Launcher.UI {
                 //foreach ( var result in this.panel_config.Controls.OfType<ComboBox>() )
                 //    this.sv( result );
                 Globals.Translator = c;
-                svExt( "rmf", this.list_rmf );
-                svExt( "map", this.list_map );
-                svExt( "bsp", this.list_bsp );
-                svExt( "mdl", this.list_mdl );
-                svExt( "pak", this.list_pak );
-                svExt( "spr", this.list_spr );
-                svExt( "wad", this.list_wad );
+                svExt( "rmf", list_rmf );
+                svExt( "map", list_map );
+                svExt( "bsp", list_bsp );
+                svExt( "mdl", list_mdl );
+                svExt( "pak", list_pak );
+                svExt( "spr", list_spr );
+                svExt( "wad", list_wad );
             }
             catch (UnauthorizedAccessException) {
                 MessageBox.Show(
@@ -139,7 +139,7 @@ namespace gSDK_Launcher.UI {
             catch ( Exception ex ) {
                 MessageBox.Show( ex.Message );
             }
-            this.Close();
+            Close();
         }
 
         private static void svExt( string a, ComboBox b ) {
@@ -183,7 +183,7 @@ namespace gSDK_Launcher.UI {
         }
 
         private void btn_lang_info_Click(object sender, EventArgs e) {
-            var c = (this.dlist_lang.SelectedItem as AbyrvalgTranslator);
+            var c = (dlist_lang.SelectedItem as AbyrvalgTranslator);
             MessageBox.Show(
                 string.Format(@"By: {0}{1}Ver: {2}{1}Lang: {3}", c.Author, Environment.NewLine, c.Version, c.Culture), "",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }

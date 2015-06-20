@@ -25,8 +25,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
-namespace gSDK_Launcher {
-    partial class frm_credits {
+namespace gSDK_Launcher.UI {
+    partial class FrmCredits {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -244,7 +244,7 @@ namespace gSDK_Launcher {
             this.Controls.Add(this.panel_credits);
             this.MaximumSize = new System.Drawing.Size(300, 336);
             this.MinimumSize = new System.Drawing.Size(300, 336);
-            this.Name = "frm_credits";
+            this.Name = "FrmCredits";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Credits";

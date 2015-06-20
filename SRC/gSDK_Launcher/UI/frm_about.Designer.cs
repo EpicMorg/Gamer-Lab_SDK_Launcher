@@ -25,8 +25,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
-namespace gSDK_Launcher {
-    partial class frm_about {
+namespace gSDK_Launcher.UI {
+    partial class FrmAbout {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -200,7 +200,7 @@ namespace gSDK_Launcher {
             this.MaximumSize = new System.Drawing.Size(300, 177);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(300, 177);
-            this.Name = "frm_about";
+            this.Name = "FrmAbout";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";

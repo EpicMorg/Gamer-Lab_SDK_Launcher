@@ -1,22 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace gSDK_Launcher {
+namespace gSDK_Launcher.Core {
     internal class Helper {
-        public static XmlNode GNBN( XmlNode n, string name ) {
+        public static XmlNode Gnbn( XmlNode n, string name ) {
             return n.ChildNodes.OfType<XmlNode>().FirstOrDefault( a => a.Name == name );
         }
-        public static string GNTBN( XmlNode n, string name ) {
-            var tmp = GNBN( n, name );
-            return tmp != null ? tmp.InnerText : "";
+        public static string Gntbn( XmlNode n, string name ) {
+            var tmp = Gnbn( n, name );
+            return tmp?.InnerText ?? "";
         }
-        public static RPath GRPath( XmlNode n ) {
+        public static RPath GrPath( XmlNode n ) {
             if ( n == null ) throw new ArgumentNullException();
+            Debug.Assert(n.Attributes != null, "n.Attributes != null");
             var attr = n.Attributes[ "type" ];
-            var v = attr != null ? attr.InnerText : "Relative";
+            var v = attr?.InnerText ?? "Relative";
             return new RPath {
                 Path = n.InnerText,
                 Type = (PathType) Enum.Parse( typeof( PathType ), v )
@@ -25,25 +27,25 @@ namespace gSDK_Launcher {
     }
 
     public class Config {
-        private const string snlName = "Support and Links";
-        private const string custName = "Custom";
+        private const string SnlName = "Support and Links";
+        private const string CustName = "Custom";
 
         public Category[] Apps { get; set; }
         public Category Support { get; set; }
         public Category Custom { get; set; }
-        public string LANG { get; set; }
+        public string Lang { get; set; }
         public Config() { }
 
         public Config( XmlNode n ) {
-            this.Apps =
+            Apps =
                 n.ChildNodes.OfType<XmlNode>()
                     .First( a => a.Name == "apps" )
                     .ChildNodes.OfType<XmlNode>()
                     .Select( a => new Category( a ) )
                     .ToArray();
-            this.Support = new Category( n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "category" && a.Attributes[ "name" ] != null && a.Attributes[ "name" ].Value == snlName ) );
-            this.Custom = new Category( n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "category" && a.Attributes[ "name" ] != null && a.Attributes[ "name" ].Value == custName ) );
-            this.LANG = n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "lang" ).InnerText;
+            Support = new Category( n.ChildNodes.OfType<XmlNode>().First( a => a.Attributes != null && (a.Name == "category" && a.Attributes[ "name" ] != null && a.Attributes[ "name" ].Value == SnlName) ) );
+            Custom = new Category( n.ChildNodes.OfType<XmlNode>().First( a => a.Attributes != null && (a.Name == "category" && a.Attributes[ "name" ] != null && a.Attributes[ "name" ].Value == CustName) ) );
+            Lang = n.ChildNodes.OfType<XmlNode>().First( a => a.Name == "lang" ).InnerText;
         }
 
         public static Config Load( string path ) {
@@ -57,17 +59,17 @@ namespace gSDK_Launcher {
                 new XDeclaration( "1.0", "utf-8", "yes" ),
                 new XElement(
                     "cfg",
-                    new XElement( "lang", this.LANG ),
-                    new XElement( "apps", SerializeCatList( this.Apps ) ),
+                    new XElement( "lang", Lang ),
+                    new XElement( "apps", SerializeCatList( Apps ) ),
                     new XElement(
                         "category",
-                        new XAttribute( "name", snlName ),
-                        this.Support.Apps.Select( SerializeApp )
+                        new XAttribute( "name", SnlName ),
+                        Support.Apps.Select( SerializeApp )
                     ),
                     new XElement(
                         "category",
-                        new XAttribute( "name", custName ),
-                        this.Custom.Apps.Select( SerializeApp )
+                        new XAttribute( "name", CustName ),
+                        Custom.Apps.Select( SerializeApp )
                     )
                 )
             ).Save( path );
@@ -93,6 +95,7 @@ namespace gSDK_Launcher {
                     new XElement( "cmdargs", b.Params ) );
             }
             catch ( Exception ex ) {
+                Console.WriteLine(ex); //dev>>null
                 throw;
             }
         }
@@ -113,23 +116,21 @@ namespace gSDK_Launcher {
         public App() { }
         public App( XmlNode n ) {
             XmlNode tmpn;
-            Func<string, RPath> gn = s => ( tmpn = Helper.GNBN( n, s ) ) != null ? Helper.GRPath( tmpn ) : new RPath {
+            Func<string, RPath> gn = s => ( tmpn = Helper.Gnbn( n, s ) ) != null ? Helper.GrPath( tmpn ) : new RPath {
                 Type = PathType.Relative,
                 Path = ""
             };
-            this.Name = Helper.GNTBN( n, "name" );
-            this.IconPath = gn( "icon" );
-            var tmps = Helper.GNTBN( n, "installed" );
-            this.Installed = !String.IsNullOrEmpty( tmps ) && bool.Parse( tmps );
-            this.Path = gn( "path" );
-            var tmp = Helper.GNBN( n, "extensions" );
-            this.Extensions = tmp != null
-                                  ? tmp.ChildNodes.OfType<XmlNode>()
-                                        .Where( a => a.Name == "ext" )
-                                        .Select( a => a.InnerText )
-                                        .ToArray()
-                                  : new string[] { };
-            this.Params = Helper.GNTBN( n, "cmdargs" );
+            Name = Helper.Gntbn( n, "name" );
+            IconPath = gn( "icon" );
+            var tmps = Helper.Gntbn( n, "installed" );
+            Installed = !String.IsNullOrEmpty( tmps ) && bool.Parse( tmps );
+            Path = gn( "path" );
+            var tmp = Helper.Gnbn( n, "extensions" );
+            Extensions = tmp?.ChildNodes.OfType<XmlNode>()
+                .Where( a => a.Name == "ext" )
+                .Select( a => a.InnerText )
+                .ToArray() ?? new string[] { };
+            Params = Helper.Gntbn( n, "cmdargs" );
         }
     }
 
@@ -139,9 +140,10 @@ namespace gSDK_Launcher {
         public Category() { }
 
         public Category( XmlNode n ) {
-            try {
-                this.Name = n.Attributes[ "name" ].Value;
-                this.Apps = n.ChildNodes.OfType<XmlNode>().Select( a => new App( a ) ).ToArray();
+            try
+            {
+                if (n.Attributes != null) Name = n.Attributes[ "name" ].Value;
+                Apps = n.ChildNodes.OfType<XmlNode>().Select( a => new App( a ) ).ToArray();
             }
             catch {
 

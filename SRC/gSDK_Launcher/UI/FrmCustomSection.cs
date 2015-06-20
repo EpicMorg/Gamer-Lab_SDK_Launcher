@@ -31,6 +31,7 @@ using System.IO;
 using gSDK_vgui;
 using System.Linq;
 using System.Windows.Forms;
+using gSDK_Launcher.Core;
 
 namespace gSDK_Launcher.UI {
     public partial class FrmCustomSection : FrmTemplate {
@@ -39,8 +40,8 @@ namespace gSDK_Launcher.UI {
         }
 
         private void FrmCustomSection_Load( object sender, EventArgs e ) {
-            Globals.Translator.Translate( this.Controls.OfType<Control>(), this.Name );
-            this.list_custom_items.Items.AddRange( Globals.Config.Custom.Apps.Select( a=>new ListViewItem(Name=a.Name){Tag = a} ).ToArray() );
+            Globals.Translator.Translate( Controls.OfType<Control>(), Name );
+            list_custom_items.Items.AddRange( Globals.Config.Custom.Apps.Select( a=>new ListViewItem(Name=a.Name){Tag = a} ).ToArray() );
         }
 
         private void button1_Click( object sender, EventArgs e ) {
@@ -77,7 +78,7 @@ namespace gSDK_Launcher.UI {
 
         private void btn_saveit_Click( object sender, EventArgs e ) {
             Globals.Config.Custom.Apps =
-                this.list_custom_items.Items.OfType<ListViewItem>().Select( a => a.Tag ).OfType<App>().ToArray();
+                list_custom_items.Items.OfType<ListViewItem>().Select( a => a.Tag ).OfType<App>().ToArray();
 
             var configpath = Path.Combine(
                 Path.GetDirectoryName( AssemblyInfoHelper.CurrentAssembly.Location ),
@@ -85,7 +86,7 @@ namespace gSDK_Launcher.UI {
                 "list.xml" );
             
             Globals.Config.Save( configpath );
-            this.Close();
+            Close();
         }
     }
 }

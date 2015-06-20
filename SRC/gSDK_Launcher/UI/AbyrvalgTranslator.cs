@@ -40,12 +40,12 @@ namespace gSDK_Launcher.UI {
         }
 
         public void Translate( IEnumerable<Control> controls, string parent ) {
-            if ( this._translation == null ) return;
+            if ( _translation == null ) return;
             foreach ( var control in controls ) {
                 string s;
-                if ( this._translation.TryGetValue( parent + "." + control.Name, out s ) )
+                if ( _translation.TryGetValue( parent + "." + control.Name, out s ) )
                     control.Text = s;
-                this.Translate( control.Controls.OfType<Control>(), parent );
+                Translate( control.Controls.OfType<Control>(), parent );
             }
         }
     }

@@ -25,20 +25,23 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.", @"The MIT License (MIT)
 *************************************************************************************
 */
+
 using System;
 using System.IO;
 using System.Linq;
-using System.Windows.Forms;
-using gSDK_vgui;
 using System.Reflection;
-namespace gSDK_Launcher {
-    public partial class frm_about : FrmTemplate {
-        public frm_about() {
+using System.Windows.Forms;
+using gSDK_Launcher.Core;
+using gSDK_vgui;
+
+namespace gSDK_Launcher.UI {
+    public partial class FrmAbout : FrmTemplate {
+        public FrmAbout() {
             InitializeComponent();
-            this.labelProductName.Text = AssemblyProduct;
-            this.labelVersion.Text = String.Format("{0}", AssemblyVersion);
-            this.labelCopyright.Text = AssemblyCopyright;
-            this.lbl_libver.Text = AssemblyInfoHelper.VGuinfo.GetName().Version.ToString();
+            labelProductName.Text = AssemblyProduct;
+            labelVersion.Text = string.Format("{0}", AssemblyVersion);
+            labelCopyright.Text = AssemblyCopyright;
+            lbl_libver.Text = AssemblyInfoHelper.VGuinfo.GetName().Version.ToString();
 
         }
         public string AssemblyTitle {
@@ -49,11 +52,8 @@ namespace gSDK_Launcher {
                            : Path.GetFileNameWithoutExtension( AssemblyInfoHelper.CurrentAssembly.CodeBase );
             }
         }
-        public string AssemblyVersion {
-            get {
-                return AssemblyInfoHelper.CurrentAssembly.GetName().Version.ToString();
-            }
-        }
+        public string AssemblyVersion => AssemblyInfoHelper.CurrentAssembly.GetName().Version.ToString();
+
         public string AssemblyDescription {
             get {
                 var attr = AssemblyInfoHelper.GetAttribute<AssemblyDescriptionAttribute>();
@@ -79,15 +79,15 @@ namespace gSDK_Launcher {
             }
         }
         private void btn_close_Click(object sender, EventArgs e) {
-            this.Close();
+            Close();
         }
         private void btn_credits_Click(object sender, EventArgs e) {
-            var frmCredits = new frm_credits();
+            var frmCredits = new FrmCredits();
             frmCredits.ShowDialog();
         }
 
         private void frm_about_Load( object sender, EventArgs e ) {
-            Globals.Translator.Translate( this.Controls.OfType<Control>(), this.Name );
+            Globals.Translator.Translate( Controls.OfType<Control>(), Name );
         }
     }
 }

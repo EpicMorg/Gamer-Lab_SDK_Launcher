@@ -37,7 +37,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EpicMorg")]
 [assembly: AssemblyProduct("GoldSource SDK Launcher")]
-[assembly: AssemblyCopyright("Copyright © EpicMorg 2014")]
+[assembly: AssemblyCopyright("Copyright © EpicMorg 2015")]
 [assembly: AssemblyTrademark("EpicMorg")]
 [assembly: AssemblyCulture("")]
 

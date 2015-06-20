@@ -1,8 +1,7 @@
 ﻿using System;
 using System.IO;
-using System.Windows.Forms;
 
-namespace gSDK_Launcher {
+namespace gSDK_Launcher.Core {
     public class SoftwareDetector {
         /// <summary>
         /// Path must be relative from sdk installation
@@ -23,7 +22,7 @@ namespace gSDK_Launcher {
                     app.Installed = CheckAppInstalled( app );
             }
             catch (Exception ex) {
-                
+               Console.WriteLine(ex); //dev>>null
             }
         }
 
