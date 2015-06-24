@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Configs\AbyrvalgTranslator.cs" />
+    <Compile Include="Configs\AssemblyInfoHelper.cs" />
+    <Compile Include="Configs\Config.cs" />
+    <Compile Include="Configs\Globals.cs" />
+    <Compile Include="Configs\RegistryManager.cs" />
+    <Compile Include="Configs\SoftwareDetector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
