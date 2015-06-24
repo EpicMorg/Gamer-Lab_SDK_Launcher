@@ -73,11 +73,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI\LauncherForms\FrmContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LauncherForms\FrmContent.Designer.cs">
+      <DependentUpon>FrmContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LauncherForms\FrmCompiling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LauncherForms\FrmCompiling.Designer.cs">
+      <DependentUpon>FrmCompiling.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\LauncherForms\FrmEditors.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\LauncherForms\FrmEditors.Designer.cs">
       <DependentUpon>FrmEditors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LauncherForms\FrmMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LauncherForms\FrmMapping.Designer.cs">
+      <DependentUpon>FrmMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LauncherForms\FrmModelling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LauncherForms\FrmModelling.Designer.cs">
+      <DependentUpon>FrmModelling.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SystemForms\FrmAbout.cs">
       <SubType>Form</SubType>
@@ -145,8 +169,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\LauncherForms\FrmCompiling.resx">
+      <DependentUpon>FrmCompiling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LauncherForms\FrmContent.resx">
+      <DependentUpon>FrmContent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\LauncherForms\FrmEditors.resx">
       <DependentUpon>FrmEditors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LauncherForms\FrmMapping.resx">
+      <DependentUpon>FrmMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LauncherForms\FrmModelling.resx">
+      <DependentUpon>FrmModelling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemForms\FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Windows.Forms;
 using glSDK.UI.LauncherForms;
 using glSDK.UI.ModernUITemplate;
 using glSDK.UI.SystemForms;
-using MetroFramework;
 
 namespace glSDK.UI
 {
@@ -11,15 +9,11 @@ namespace glSDK.UI
     {
         public FrmMain()
         {
-            
             InitializeComponent();
-         
-
         }
 
         private void metroTileGit_Click(object sender, System.EventArgs e)
         {
-            
             var frm = new FrmGitClone();
             Hide();
             frm.ShowDialog();
@@ -30,7 +24,6 @@ namespace glSDK.UI
         private void FrmMain_Load(object sender, System.EventArgs e)
         {
             FocusMe();
- 
         }
 
         private void metroTileAbout_Click(object sender, System.EventArgs e)
@@ -65,6 +58,41 @@ namespace glSDK.UI
             Show();
             FocusMe();
         }
-         
+
+        private void metroTileMapping_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmMapping();
+            Hide();
+            frm.ShowDialog();
+            Show();
+            FocusMe();
+        }
+
+        private void metroTileCompiling_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmCompiling();
+            Hide();
+            frm.ShowDialog();
+            Show();
+            FocusMe();
+        }
+
+        private void metroTileContent_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmContent();
+            Hide();
+            frm.ShowDialog();
+            Show();
+            FocusMe();
+        }
+
+        private void metroTileModelling_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmModelling();
+            Hide();
+            frm.ShowDialog();
+            Show();
+            FocusMe();
+        }
     }
 }

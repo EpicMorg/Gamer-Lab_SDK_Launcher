@@ -21,42 +21,50 @@ namespace glSDK.UI.SystemForms
             metroProgressBar.Value = 0;
             metroBtnGitClone.Text = Strings.Clone;
         }
+
         #region Design
+
         private void CloningEffects()
         {
             metroProgressBar.Value = 0;
             metroBtnGitClone.Text = Strings.Cloning;
             Refresh();
         }
+
         private void CloneEffects()
         {
             metroProgressBar.Value = 0;
             metroBtnGitClone.Text = Strings.Clone;
             Refresh();
         }
+
         private void ClonedEffects()
         {
             metroBtnGitClone.Text = Strings.Cloned;
             metroProgressBar.Value = 100;
             Refresh();
         }
+
         private void CanceledEffects()
         {
             metroBtnGitClone.Text = Strings.Canceled;
             metroProgressBar.Value = 0;
             Refresh();
             timer.Start();
-            
         }
+
         private void timer_Tick(object sender, EventArgs e)
         {
             CloneEffects();
         }
+
         private void metroComboBoxGit_SelectedIndexChanged(object sender, EventArgs e)
         {
             CloneEffects();
         }
+
         #endregion
+
         private void metroBtnGitClone_Click(object sender, EventArgs e)
         {
             var folder = new FolderBrowserDialog();
@@ -75,7 +83,6 @@ namespace glSDK.UI.SystemForms
                         {
                             Repository.Clone("https://github.com/EpicMorg/Gamer-Lab_SDK_Launcher.git",
                                 folder.SelectedPath);
-
                         }
                         catch (Exception ex)
                         {
@@ -93,8 +100,14 @@ namespace glSDK.UI.SystemForms
                     }
                     break;
                 case 1:
-                    try { Process.Start("steam://install/254430"); }
-                    catch (Exception ex) { Console.WriteLine(ex); } // dev >> null 
+                    try
+                    {
+                        Process.Start("steam://install/254430");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    } // dev >> null 
                     break;
                 case 2:
                     CloningEffects();
@@ -104,7 +117,6 @@ namespace glSDK.UI.SystemForms
                         {
                             Repository.Clone("https://github.com/ValveSoftware/halflife.git",
                                 folder.SelectedPath);
-
                         }
                         catch (Exception ex)
                         {
@@ -129,7 +141,6 @@ namespace glSDK.UI.SystemForms
                         {
                             Repository.Clone("https://github.com/ValveSoftware/source-sdk-2013.git",
                                 folder.SelectedPath);
-
                         }
                         catch (Exception ex)
                         {
@@ -154,7 +165,6 @@ namespace glSDK.UI.SystemForms
                         {
                             Repository.Clone("https://github.com/ValveSoftware/openvr.git",
                                 folder.SelectedPath);
-
                         }
                         catch (Exception ex)
                         {
