@@ -219,11 +219,14 @@
             this.Controls.Add(this.metroTile5);
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroTileGit);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(0, 40);
             this.Name = "FrmMain";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "GoldSRC SDK Launcher";
+            this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);

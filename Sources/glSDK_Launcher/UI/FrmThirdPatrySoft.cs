@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
-using MetroFramework.Forms;
+using glSDK.UI.ModernUITemplate;
 
 namespace glSDK.UI
 {
-    public partial class FrmThirdPatrySoft : MetroForm
+    public partial class FrmThirdPatrySoft : FrmTmp
 
     {
         public FrmThirdPatrySoft()

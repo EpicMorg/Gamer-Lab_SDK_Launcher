@@ -3,12 +3,12 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using LibGit2Sharp;
 using glSDK.LOCALE;
-using MetroFramework.Forms;
+using glSDK.UI.ModernUITemplate;
 
 
 namespace glSDK.UI
 {
-    public partial class FrmGitClone : MetroForm
+    public partial class FrmGitClone : FrmTmp
     {
         public FrmGitClone()
         {

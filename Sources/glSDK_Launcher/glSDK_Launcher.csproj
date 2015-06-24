@@ -105,6 +105,12 @@
     <Compile Include="UI\FrmThirdPatrySoft.Designer.cs">
       <DependentUpon>FrmThirdPatrySoft.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ModernUITemplate\FrmTmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ModernUITemplate\FrmTmp.Designer.cs">
+      <DependentUpon>FrmTmp.cs</DependentUpon>
+    </Compile>
     <Compile Include="WRAPPER\CoreHandler.cs" />
     <EmbeddedResource Include="LOCALE\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmThirdPatrySoft.resx">
       <DependentUpon>FrmThirdPatrySoft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ModernUITemplate\FrmTmp.resx">
+      <DependentUpon>FrmTmp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -103,8 +103,7 @@
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "About";
-            this.Theme = MetroFramework.MetroThemeStyle.Default;
-            this.Load += new System.EventHandler(this.FrmAbout_Load);
+            this.Theme = MetroFramework.MetroThemeStyle.Default; 
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

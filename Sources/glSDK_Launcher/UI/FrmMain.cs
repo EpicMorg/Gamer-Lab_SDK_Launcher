@@ -1,10 +1,11 @@
 ﻿using System.Windows.Forms;
 using glSDK.Properties;
+using glSDK.UI.ModernUITemplate;
 using MetroFramework.Forms;
 
 namespace glSDK.UI
 {
-    public partial class FrmMain : MetroForm
+    public partial class FrmMain : FrmTmp
     {
         public FrmMain()
         {

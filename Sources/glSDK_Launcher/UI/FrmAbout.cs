@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Reflection;
-using MetroFramework.Forms;
+using glSDK.UI.ModernUITemplate;
 
 
 namespace glSDK.UI
 {
-    public partial class FrmAbout : MetroForm
+    public partial class FrmAbout : FrmTmp
     {
         public FrmAbout()
         {
@@ -14,10 +14,7 @@ namespace glSDK.UI
             metroLabelVer.Text = AssemblyVersion;
         }
 
-        private void FrmAbout_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         public string AssemblyVersion => Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
