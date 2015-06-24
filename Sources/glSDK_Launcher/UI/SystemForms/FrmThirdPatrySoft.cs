@@ -54,7 +54,7 @@ namespace glSDK.UI.SystemForms
 
         private void FrmThirdPatrySoft_Load(object sender, EventArgs e)
         {
-
+            FocusMe();
         }
     }
 }

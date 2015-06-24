@@ -37,5 +37,10 @@ namespace glSDK.UI.SystemForms
             var frm = new FrmThirdPatrySoft();
             frm.ShowDialog();
         }
+
+        private void FrmAbout_Load(object sender, EventArgs e)
+        {
+            FocusMe();
+        }
     }
 }

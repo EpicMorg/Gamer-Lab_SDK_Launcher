@@ -63,9 +63,39 @@ namespace glSDK.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap download_black {
+        internal static System.Drawing.Bitmap download_dark {
             get {
-                object obj = ResourceManager.GetObject("download_black", resourceCulture);
+                object obj = ResourceManager.GetObject("download_dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download_light {
+            get {
+                object obj = ResourceManager.GetObject("download_light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap internet_dark {
+            get {
+                object obj = ResourceManager.GetObject("internet_dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap internet_light {
+            get {
+                object obj = ResourceManager.GetObject("internet_light", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,6 +106,46 @@ namespace glSDK.Properties {
         internal static System.Drawing.Bitmap NewLogo {
             get {
                 object obj = ResourceManager.GetObject("NewLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reset_dark {
+            get {
+                object obj = ResourceManager.GetObject("reset_dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reset_light {
+            get {
+                object obj = ResourceManager.GetObject("reset_light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_dark {
+            get {
+                object obj = ResourceManager.GetObject("save_dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_disk {
+            get {
+                object obj = ResourceManager.GetObject("save_disk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

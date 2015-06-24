@@ -8,5 +8,10 @@ namespace glSDK.UI.LauncherForms
         {
             InitializeComponent();
         }
+
+        private void FrmEditors_Load(object sender, System.EventArgs e)
+        {
+            FocusMe();
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace glSDK.UI
 
         private void FrmMain_Load(object sender, System.EventArgs e)
         {
-
+            FocusMe();
         }
 
         private void metroTileAbout_Click(object sender, System.EventArgs e)
@@ -36,6 +36,24 @@ namespace glSDK.UI
         private void metroTile1_Click(object sender, System.EventArgs e)
         {
             var frm = new FrmEditors();
+            Hide();
+            frm.ShowDialog();
+            Show();
+            FocusMe();
+        }
+
+        private void metroTileSettings_Click(object sender, System.EventArgs e)
+        {
+            var frm = new FrmSettings();
+            Hide();
+            frm.ShowDialog();
+            Show();
+            FocusMe();
+        }
+
+        private void metroTile19_Click(object sender, System.EventArgs e)
+        {
+            var frm = new FrmLinks();
             Hide();
             frm.ShowDialog();
             Show();

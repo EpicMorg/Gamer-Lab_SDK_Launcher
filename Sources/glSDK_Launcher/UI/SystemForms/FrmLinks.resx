@@ -117,43 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="download_dark" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEwAAABMCAYAAADHl1ErAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAbpJREFUeF7t2DErRWEcx/GbpGQ2eAPKQCaLshhks0gGm8Vqsxi8BYPF5g1YvACD
-        MngJyiArgxgk/H7uferp8fuf65aTes7vU9/udf6Xev7LPU7PzMzMzMzMzMzM/s1nkAXUspgF1LKYBdSy
-        mAXUspgF1LKYBdSymAXUspgF1LKYBdSymAXUslhn7Q9eI2pZrMne4LVKH2i9/1ZSy2KRVfTef1snHv4Z
-        zX3/9FO5qJQyi55QNK9CWsAdmuGFQpqXlabRLYrm1ciXcIUmUS6f5+Um0CWK5lXJD8nOUK6cp3KnqGle
-        lfKg7AAlas4Sfss2zaujDstvzi1Eas5oA/Gz0bxK6rDsBS0V1/IWED+jZqxa90gdmD2Ia6lhv1eteZTu
-        nf4i3tMtoqrx7vwNqQWMEv/GGuqEHaSWMEq7qFMOkVrEbzpCnXSM1EKaOkGdNYbOkVqM6gKNo06bQtdI
-        LSjvBvGzBuXTh7Lo6Uan8fnWIyqXxWvR87POW0avKC2L91oryBpsIv6TzbZ5wYbjY5z8sY+Z2X/KbxPa
-        rBrqcG1UDXW4NqqGOlwbVUMdro3MzMzMzMzMzMzMzOrU630BpJHQ8CqfJjIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="NewLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NewLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="download_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download_light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="internet_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\internet_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="internet_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\internet_light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="reset_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reset_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="reset_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reset_light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save_disk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_disk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

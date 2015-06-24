@@ -48,5 +48,10 @@ namespace glSDK.UI.SystemForms
             Process.Start("https://www.facebook.com/groups/hl.lab.ru/");
             Process.Start("http://steamcommunity.com//groups/gamer-lab_com");
         }
+
+        private void FrmCredits_Load(object sender, EventArgs e)
+        {
+            FocusMe();
+        }
     }
 }

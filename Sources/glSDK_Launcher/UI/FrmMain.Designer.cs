@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
-            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroTileAbout = new MetroFramework.Controls.MetroTile();
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
@@ -40,16 +37,11 @@
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile17 = new MetroFramework.Controls.MetroTile();
+            this.metroTileSettings = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTileGit = new MetroFramework.Controls.MetroTile();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // metroStyleManager1
-            // 
-            this.metroStyleManager1.Owner = null;
             // 
             // metroTileAbout
             // 
@@ -98,7 +90,9 @@
             this.metroTile19.TabIndex = 17;
             this.metroTile19.Text = "Links";
             this.metroTile19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile19.TileImage = global::glSDK.Properties.Resources.internet_dark;
             this.metroTile19.UseSelectable = true;
+            this.metroTile19.Click += new System.EventHandler(this.metroTile19_Click);
             // 
             // metroTile7
             // 
@@ -148,17 +142,18 @@
             this.metroTile2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroTile2.UseSelectable = true;
             // 
-            // metroTile17
+            // metroTileSettings
             // 
-            this.metroTile17.ActiveControl = null;
-            this.metroTile17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile17.Location = new System.Drawing.Point(23, 255);
-            this.metroTile17.Name = "metroTile17";
-            this.metroTile17.Size = new System.Drawing.Size(90, 90);
-            this.metroTile17.TabIndex = 22;
-            this.metroTile17.Text = "Settings";
-            this.metroTile17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile17.UseSelectable = true;
+            this.metroTileSettings.ActiveControl = null;
+            this.metroTileSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileSettings.Location = new System.Drawing.Point(23, 255);
+            this.metroTileSettings.Name = "metroTileSettings";
+            this.metroTileSettings.Size = new System.Drawing.Size(90, 90);
+            this.metroTileSettings.TabIndex = 22;
+            this.metroTileSettings.Text = "Settings";
+            this.metroTileSettings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileSettings.UseSelectable = true;
+            this.metroTileSettings.Click += new System.EventHandler(this.metroTileSettings_Click);
             // 
             // metroTile5
             // 
@@ -207,6 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(430, 377);
             this.Controls.Add(this.metroTileAbout);
             this.Controls.Add(this.metroTile8);
@@ -216,7 +212,7 @@
             this.Controls.Add(this.metroTile3);
             this.Controls.Add(this.metroTile6);
             this.Controls.Add(this.metroTile2);
-            this.Controls.Add(this.metroTile17);
+            this.Controls.Add(this.metroTileSettings);
             this.Controls.Add(this.metroTile5);
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroTileGit);
@@ -229,14 +225,11 @@
             this.Text = "GoldSRC SDK Launcher";
             this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
-        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private MetroFramework.Controls.MetroTile metroTileAbout;
         private MetroFramework.Controls.MetroTile metroTile8;
         private MetroFramework.Controls.MetroTile metroTile4;
@@ -245,7 +238,7 @@
         private MetroFramework.Controls.MetroTile metroTile3;
         private MetroFramework.Controls.MetroTile metroTile6;
         private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile17;
+        private MetroFramework.Controls.MetroTile metroTileSettings;
         private MetroFramework.Controls.MetroTile metroTile5;
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTile metroTileGit;

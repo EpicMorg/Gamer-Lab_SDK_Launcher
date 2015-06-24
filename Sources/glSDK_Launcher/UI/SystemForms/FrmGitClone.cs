@@ -16,6 +16,7 @@ namespace glSDK.UI.SystemForms
 
         private void FrmGitClone_Load(object sender, EventArgs e)
         {
+            FocusMe();
             metroComboBoxGit.SelectedIndex = 0;
             metroProgressBar.Value = 0;
             metroBtnGitClone.Text = Strings.Clone;

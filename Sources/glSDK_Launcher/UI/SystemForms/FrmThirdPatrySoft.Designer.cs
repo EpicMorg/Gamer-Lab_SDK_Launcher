@@ -138,7 +138,9 @@
             this.Movable = false;
             this.Name = "FrmThirdPatrySoft";
             this.Resizable = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "";
             this.Load += new System.EventHandler(this.FrmThirdPatrySoft_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

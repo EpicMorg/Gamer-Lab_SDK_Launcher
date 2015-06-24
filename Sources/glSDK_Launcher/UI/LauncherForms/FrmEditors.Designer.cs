@@ -41,6 +41,7 @@
             this.Name = "FrmEditors";
             this.Resizable = false;
             this.Text = "Editors";
+            this.Load += new System.EventHandler(this.FrmEditors_Load);
             this.ResumeLayout(false);
 
         }
