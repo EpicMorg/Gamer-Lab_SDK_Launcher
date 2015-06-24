@@ -2,7 +2,7 @@
 
 namespace glSDK.UI
 {
-    public partial class FrmMain : Form
+    public partial class FrmMain : SettableForm
     {
         public FrmMain()
         {
