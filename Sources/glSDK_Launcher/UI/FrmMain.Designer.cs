@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.metroTileAbout = new MetroFramework.Controls.MetroTile();
-            this.metroTile8 = new MetroFramework.Controls.MetroTile();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTile19 = new MetroFramework.Controls.MetroTile();
-            this.metroTile7 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.metroTileManuals = new MetroFramework.Controls.MetroTile();
+            this.metroTileContent = new MetroFramework.Controls.MetroTile();
+            this.metroTileLinks = new MetroFramework.Controls.MetroTile();
+            this.metroTileModding = new MetroFramework.Controls.MetroTile();
+            this.metroTileCompilling = new MetroFramework.Controls.MetroTile();
+            this.metroTileTexturing = new MetroFramework.Controls.MetroTile();
+            this.metroTileMapping = new MetroFramework.Controls.MetroTile();
             this.metroTileSettings = new MetroFramework.Controls.MetroTile();
-            this.metroTile5 = new MetroFramework.Controls.MetroTile();
+            this.metroTileModelling = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTileGit = new MetroFramework.Controls.MetroTile();
+            this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTileAbout
@@ -56,91 +59,91 @@
             this.metroTileAbout.UseSelectable = true;
             this.metroTileAbout.Click += new System.EventHandler(this.metroTileAbout_Click);
             // 
-            // metroTile8
+            // metroTileManuals
             // 
-            this.metroTile8.ActiveControl = null;
-            this.metroTile8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile8.Location = new System.Drawing.Point(311, 159);
-            this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(90, 90);
-            this.metroTile8.TabIndex = 15;
-            this.metroTile8.Text = "Manuals";
-            this.metroTile8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile8.UseSelectable = true;
+            this.metroTileManuals.ActiveControl = null;
+            this.metroTileManuals.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileManuals.Location = new System.Drawing.Point(311, 159);
+            this.metroTileManuals.Name = "metroTileManuals";
+            this.metroTileManuals.Size = new System.Drawing.Size(90, 90);
+            this.metroTileManuals.TabIndex = 15;
+            this.metroTileManuals.Text = "Manuals";
+            this.metroTileManuals.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileManuals.UseSelectable = true;
             // 
-            // metroTile4
+            // metroTileContent
             // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile4.Location = new System.Drawing.Point(311, 63);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(90, 90);
-            this.metroTile4.TabIndex = 16;
-            this.metroTile4.Text = "Content";
-            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile4.UseSelectable = true;
+            this.metroTileContent.ActiveControl = null;
+            this.metroTileContent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileContent.Location = new System.Drawing.Point(311, 63);
+            this.metroTileContent.Name = "metroTileContent";
+            this.metroTileContent.Size = new System.Drawing.Size(90, 90);
+            this.metroTileContent.TabIndex = 16;
+            this.metroTileContent.Text = "Content";
+            this.metroTileContent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileContent.UseSelectable = true;
             // 
-            // metroTile19
+            // metroTileLinks
             // 
-            this.metroTile19.ActiveControl = null;
-            this.metroTile19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile19.Location = new System.Drawing.Point(215, 255);
-            this.metroTile19.Name = "metroTile19";
-            this.metroTile19.Size = new System.Drawing.Size(90, 90);
-            this.metroTile19.TabIndex = 17;
-            this.metroTile19.Text = "Links";
-            this.metroTile19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile19.TileImage = global::glSDK.Properties.Resources.internet_dark;
-            this.metroTile19.UseSelectable = true;
-            this.metroTile19.Click += new System.EventHandler(this.metroTile19_Click);
+            this.metroTileLinks.ActiveControl = null;
+            this.metroTileLinks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileLinks.Location = new System.Drawing.Point(215, 255);
+            this.metroTileLinks.Name = "metroTileLinks";
+            this.metroTileLinks.Size = new System.Drawing.Size(90, 90);
+            this.metroTileLinks.TabIndex = 17;
+            this.metroTileLinks.Text = "Links";
+            this.metroTileLinks.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileLinks.TileImage = global::glSDK.Properties.Resources.internet_dark;
+            this.metroTileLinks.UseSelectable = true;
+            this.metroTileLinks.Click += new System.EventHandler(this.metroTileFrmLinks_Click);
             // 
-            // metroTile7
+            // metroTileModding
             // 
-            this.metroTile7.ActiveControl = null;
-            this.metroTile7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile7.Location = new System.Drawing.Point(215, 159);
-            this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(90, 90);
-            this.metroTile7.TabIndex = 18;
-            this.metroTile7.Text = "Modding";
-            this.metroTile7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile7.UseSelectable = true;
+            this.metroTileModding.ActiveControl = null;
+            this.metroTileModding.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileModding.Location = new System.Drawing.Point(215, 159);
+            this.metroTileModding.Name = "metroTileModding";
+            this.metroTileModding.Size = new System.Drawing.Size(90, 90);
+            this.metroTileModding.TabIndex = 18;
+            this.metroTileModding.Text = "Modding";
+            this.metroTileModding.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileModding.UseSelectable = true;
             // 
-            // metroTile3
+            // metroTileCompilling
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile3.Location = new System.Drawing.Point(215, 63);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(90, 90);
-            this.metroTile3.TabIndex = 19;
-            this.metroTile3.Text = "Compiling";
-            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile3.UseSelectable = true;
+            this.metroTileCompilling.ActiveControl = null;
+            this.metroTileCompilling.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileCompilling.Location = new System.Drawing.Point(215, 63);
+            this.metroTileCompilling.Name = "metroTileCompilling";
+            this.metroTileCompilling.Size = new System.Drawing.Size(90, 90);
+            this.metroTileCompilling.TabIndex = 19;
+            this.metroTileCompilling.Text = "Compiling";
+            this.metroTileCompilling.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileCompilling.UseSelectable = true;
             // 
-            // metroTile6
+            // metroTileTexturing
             // 
-            this.metroTile6.ActiveControl = null;
-            this.metroTile6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile6.Location = new System.Drawing.Point(119, 159);
-            this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(90, 90);
-            this.metroTile6.TabIndex = 20;
-            this.metroTile6.Text = "Texturing";
-            this.metroTile6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile6.UseSelectable = true;
+            this.metroTileTexturing.ActiveControl = null;
+            this.metroTileTexturing.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileTexturing.Location = new System.Drawing.Point(119, 159);
+            this.metroTileTexturing.Name = "metroTileTexturing";
+            this.metroTileTexturing.Size = new System.Drawing.Size(90, 90);
+            this.metroTileTexturing.TabIndex = 20;
+            this.metroTileTexturing.Text = "Texturing";
+            this.metroTileTexturing.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileTexturing.UseSelectable = true;
             // 
-            // metroTile2
+            // metroTileMapping
             // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile2.Location = new System.Drawing.Point(119, 63);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(90, 90);
-            this.metroTile2.TabIndex = 21;
-            this.metroTile2.Text = "Mapping";
-            this.metroTile2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile2.UseSelectable = true;
+            this.metroTileMapping.ActiveControl = null;
+            this.metroTileMapping.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileMapping.Location = new System.Drawing.Point(119, 63);
+            this.metroTileMapping.Name = "metroTileMapping";
+            this.metroTileMapping.Size = new System.Drawing.Size(90, 90);
+            this.metroTileMapping.TabIndex = 21;
+            this.metroTileMapping.Text = "Mapping";
+            this.metroTileMapping.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileMapping.UseSelectable = true;
             // 
             // metroTileSettings
             // 
@@ -155,17 +158,17 @@
             this.metroTileSettings.UseSelectable = true;
             this.metroTileSettings.Click += new System.EventHandler(this.metroTileSettings_Click);
             // 
-            // metroTile5
+            // metroTileModelling
             // 
-            this.metroTile5.ActiveControl = null;
-            this.metroTile5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile5.Location = new System.Drawing.Point(23, 159);
-            this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(90, 90);
-            this.metroTile5.TabIndex = 23;
-            this.metroTile5.Text = "Modelling";
-            this.metroTile5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile5.UseSelectable = true;
+            this.metroTileModelling.ActiveControl = null;
+            this.metroTileModelling.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileModelling.Location = new System.Drawing.Point(23, 159);
+            this.metroTileModelling.Name = "metroTileModelling";
+            this.metroTileModelling.Size = new System.Drawing.Size(90, 90);
+            this.metroTileModelling.TabIndex = 23;
+            this.metroTileModelling.Text = "Modelling";
+            this.metroTileModelling.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileModelling.UseSelectable = true;
             // 
             // metroTile1
             // 
@@ -177,6 +180,7 @@
             this.metroTile1.TabIndex = 24;
             this.metroTile1.Text = "Editors";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile1.TileCount = 2;
             this.metroTile1.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile1.TileImage")));
             this.metroTile1.UseSelectable = true;
             this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
@@ -197,6 +201,10 @@
             this.metroTileGit.UseSelectable = true;
             this.metroTileGit.Click += new System.EventHandler(this.metroTileGit_Click);
             // 
+            // metroStyleManager
+            // 
+            this.metroStyleManager.Owner = null;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,15 +213,15 @@
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(430, 377);
             this.Controls.Add(this.metroTileAbout);
-            this.Controls.Add(this.metroTile8);
-            this.Controls.Add(this.metroTile4);
-            this.Controls.Add(this.metroTile19);
-            this.Controls.Add(this.metroTile7);
-            this.Controls.Add(this.metroTile3);
-            this.Controls.Add(this.metroTile6);
-            this.Controls.Add(this.metroTile2);
+            this.Controls.Add(this.metroTileManuals);
+            this.Controls.Add(this.metroTileContent);
+            this.Controls.Add(this.metroTileLinks);
+            this.Controls.Add(this.metroTileModding);
+            this.Controls.Add(this.metroTileCompilling);
+            this.Controls.Add(this.metroTileTexturing);
+            this.Controls.Add(this.metroTileMapping);
             this.Controls.Add(this.metroTileSettings);
-            this.Controls.Add(this.metroTile5);
+            this.Controls.Add(this.metroTileModelling);
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroTileGit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -225,23 +233,25 @@
             this.Text = "GoldSRC SDK Launcher";
             this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.Load += new System.EventHandler(this.FrmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private MetroFramework.Controls.MetroTile metroTileAbout;
-        private MetroFramework.Controls.MetroTile metroTile8;
-        private MetroFramework.Controls.MetroTile metroTile4;
-        private MetroFramework.Controls.MetroTile metroTile19;
-        private MetroFramework.Controls.MetroTile metroTile7;
-        private MetroFramework.Controls.MetroTile metroTile3;
-        private MetroFramework.Controls.MetroTile metroTile6;
-        private MetroFramework.Controls.MetroTile metroTile2;
+        private MetroFramework.Controls.MetroTile metroTileManuals;
+        private MetroFramework.Controls.MetroTile metroTileContent;
+        private MetroFramework.Controls.MetroTile metroTileLinks;
+        private MetroFramework.Controls.MetroTile metroTileModding;
+        private MetroFramework.Controls.MetroTile metroTileCompilling;
+        private MetroFramework.Controls.MetroTile metroTileTexturing;
+        private MetroFramework.Controls.MetroTile metroTileMapping;
         private MetroFramework.Controls.MetroTile metroTileSettings;
-        private MetroFramework.Controls.MetroTile metroTile5;
+        private MetroFramework.Controls.MetroTile metroTileModelling;
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTile metroTileGit;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager;
     }
 }
 

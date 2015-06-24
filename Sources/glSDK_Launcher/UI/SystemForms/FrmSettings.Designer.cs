@@ -130,6 +130,7 @@
             this.metroButtonSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.metroButtonSave.TabIndex = 4;
             this.metroButtonSave.TabStop = false;
+            this.metroButtonSave.Click += new System.EventHandler(this.metroButtonSave_Click);
             // 
             // metroButtonReset
             // 
@@ -141,6 +142,7 @@
             this.metroButtonReset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.metroButtonReset.TabIndex = 4;
             this.metroButtonReset.TabStop = false;
+            this.metroButtonReset.Click += new System.EventHandler(this.metroButtonReset_Click);
             // 
             // FrmSettings
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLinks));
             this.metroLinkZHLT = new MetroFramework.Controls.MetroLink();
             this.metroLinkHlLab = new MetroFramework.Controls.MetroLink();
             this.metroLinkCSM = new MetroFramework.Controls.MetroLink();
@@ -133,6 +134,7 @@
             this.Controls.Add(this.metroLinkCSM);
             this.Controls.Add(this.metroLinkHlLab);
             this.Controls.Add(this.metroLinkZHLT);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmLinks";
             this.Resizable = false;
