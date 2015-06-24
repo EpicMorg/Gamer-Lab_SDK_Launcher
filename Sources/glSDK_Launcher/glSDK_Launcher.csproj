@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\FrmGitClone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmGitClone.Designer.cs">
+      <DependentUpon>FrmGitClone.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\FrmGitClone.resx">
+      <DependentUpon>FrmGitClone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>

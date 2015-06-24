@@ -7,7 +7,15 @@ namespace glSDK.UI
         public FrmMain()
         {
             InitializeComponent();
-            metroComboBoxGit.SelectedIndex = 0;
+        }
+
+        private void metroTileGit_Click(object sender, System.EventArgs e)
+        {
+            var frmGit = new FrmGitClone();
+            Hide();
+            frmGit.ShowDialog();
+            Show();
+            FocusMe();
         }
     }
 }
