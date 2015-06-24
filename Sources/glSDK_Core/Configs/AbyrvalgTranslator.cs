@@ -23,11 +23,11 @@ namespace glSDK.Configs {
 
         public static AbyrvalgTranslator Load( string path ) {
             var doc = XDocument.Load( path );
-            var meta = doc.Root.Descendants( "metadata" ).First();
+            var meta = doc.Root?.Descendants( "metadata" ).First();
             return new AbyrvalgTranslator() {
-                Culture = meta.Descendants( "culture" ).First().Value,
-                Author = meta.Descendants( "author" ).First().Value,
-                Version = meta.Descendants( "version" ).First().Value,
+                Culture = meta?.Descendants( "culture" ).First().Value,
+                Author = meta?.Descendants( "author" ).First().Value,
+                Version = meta?.Descendants( "version" ).First().Value,
                 _translation = doc
                     .Descendants( "translation" )
                     .First()

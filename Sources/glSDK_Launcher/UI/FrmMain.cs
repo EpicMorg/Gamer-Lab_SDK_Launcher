@@ -7,6 +7,7 @@ namespace glSDK.UI
         public FrmMain()
         {
             InitializeComponent();
+            metroComboBoxGit.SelectedIndex = 0;
         }
     }
 }

@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("glSDK_Core")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Launcher Core")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("glSDK_Core")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("EpicMorg, Gamer-Lab.com")]
+[assembly: AssemblyProduct("Launcher Core")]
+[assembly: AssemblyCopyright("Copyright © EpicMorg 2015")]
+[assembly: AssemblyTrademark("EpicMorg, Gamer-Lab.com")]
 [assembly: AssemblyCulture("")]
 
 // Параметр ComVisible со значением FALSE делает типы в сборке невидимыми 
