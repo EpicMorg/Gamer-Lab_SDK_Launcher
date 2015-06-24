@@ -1,4 +1,4 @@
-﻿namespace glSDK.UI
+﻿namespace glSDK.UI.SystemForms
 {
     partial class FrmCredits
     {

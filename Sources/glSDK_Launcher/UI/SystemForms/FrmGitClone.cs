@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Diagnostics;
-using LibGit2Sharp;
+using System.Windows.Forms;
 using glSDK.LOCALE;
 using glSDK.UI.ModernUITemplate;
+using LibGit2Sharp;
 
-
-namespace glSDK.UI
+namespace glSDK.UI.SystemForms
 {
     public partial class FrmGitClone : FrmTmp
     {

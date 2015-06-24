@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using glSDK.UI.ModernUITemplate;
 
-namespace glSDK.UI
+namespace glSDK.UI.SystemForms
 {
     public partial class FrmThirdPatrySoft : FrmTmp
 
@@ -50,6 +50,11 @@ namespace glSDK.UI
         private void metroLinkMIT3_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/libgit2/libgit2sharp/blob/master/LICENSE.md");
+        }
+
+        private void FrmThirdPatrySoft_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

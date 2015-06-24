@@ -1,7 +1,6 @@
-﻿using System.Windows.Forms;
-using glSDK.Properties;
+﻿using glSDK.UI.LauncherForms;
 using glSDK.UI.ModernUITemplate;
-using MetroFramework.Forms;
+using glSDK.UI.SystemForms; 
 
 namespace glSDK.UI
 {
@@ -32,6 +31,15 @@ namespace glSDK.UI
         {
             var frm = new FrmAbout();
             frm.ShowDialog();
+        }
+
+        private void metroTile1_Click(object sender, System.EventArgs e)
+        {
+            var frm = new FrmEditors();
+            Hide();
+            frm.ShowDialog();
+            Show();
+            FocusMe();
         }
     }
 }

@@ -2,8 +2,7 @@
 using System.Reflection;
 using glSDK.UI.ModernUITemplate;
 
-
-namespace glSDK.UI
+namespace glSDK.UI.SystemForms
 {
     public partial class FrmAbout : FrmTmp
     {

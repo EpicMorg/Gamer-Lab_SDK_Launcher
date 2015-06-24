@@ -73,22 +73,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmAbout.cs">
+    <Compile Include="UI\LauncherForms\FrmEditors.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmAbout.Designer.cs">
+    <Compile Include="UI\LauncherForms\FrmEditors.Designer.cs">
+      <DependentUpon>FrmEditors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SystemForms\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SystemForms\FrmAbout.Designer.cs">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmCredits.cs">
+    <Compile Include="UI\SystemForms\FrmCredits.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmCredits.Designer.cs">
+    <Compile Include="UI\SystemForms\FrmCredits.Designer.cs">
       <DependentUpon>FrmCredits.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmGitClone.cs">
+    <Compile Include="UI\SystemForms\FrmGitClone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmGitClone.Designer.cs">
+    <Compile Include="UI\SystemForms\FrmGitClone.Designer.cs">
       <DependentUpon>FrmGitClone.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmMain.cs">
@@ -99,10 +105,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\FrmThirdPatrySoft.cs">
+    <Compile Include="UI\SystemForms\FrmThirdPatrySoft.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmThirdPatrySoft.Designer.cs">
+    <Compile Include="UI\SystemForms\FrmThirdPatrySoft.Designer.cs">
       <DependentUpon>FrmThirdPatrySoft.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ModernUITemplate\FrmTmp.cs">
@@ -127,19 +133,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\FrmAbout.resx">
+    <EmbeddedResource Include="UI\LauncherForms\FrmEditors.resx">
+      <DependentUpon>FrmEditors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SystemForms\FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmCredits.resx">
+    <EmbeddedResource Include="UI\SystemForms\FrmCredits.resx">
       <DependentUpon>FrmCredits.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmGitClone.resx">
+    <EmbeddedResource Include="UI\SystemForms\FrmGitClone.resx">
       <DependentUpon>FrmGitClone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmThirdPatrySoft.resx">
+    <EmbeddedResource Include="UI\SystemForms\FrmThirdPatrySoft.resx">
       <DependentUpon>FrmThirdPatrySoft.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ModernUITemplate\FrmTmp.resx">

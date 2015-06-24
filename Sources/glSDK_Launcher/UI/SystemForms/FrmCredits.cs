@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using glSDK.UI.ModernUITemplate;
 
-namespace glSDK.UI
+namespace glSDK.UI.SystemForms
 {
     public partial class FrmCredits : FrmTmp
     {

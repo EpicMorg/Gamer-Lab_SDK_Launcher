@@ -1,4 +1,4 @@
-﻿namespace glSDK.UI
+﻿namespace glSDK.UI.SystemForms
 {
     partial class FrmThirdPatrySoft
     {
@@ -139,6 +139,7 @@
             this.Name = "FrmThirdPatrySoft";
             this.Resizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.FrmThirdPatrySoft_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
