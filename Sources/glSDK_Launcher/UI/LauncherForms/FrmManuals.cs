@@ -5,11 +5,11 @@ namespace glSDK.UI.LauncherForms
 {
     /// <summary>
     /// </summary>
-    public partial class FrmTexturing : FrmTmp
+    public partial class FrmManuals : FrmTmp
     {
         /// <summary>
         /// </summary>
-        public FrmTexturing()
+        public FrmManuals()
         {
             InitializeComponent();
         }
@@ -18,7 +18,7 @@ namespace glSDK.UI.LauncherForms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FmTexturing_Load(object sender, EventArgs e)
+        private void FrmManuals_Load(object sender, EventArgs e)
         {
 
         }

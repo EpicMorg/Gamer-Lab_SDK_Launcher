@@ -68,9 +68,12 @@
             this.metroTileManuals.Name = "metroTileManuals";
             this.metroTileManuals.Size = new System.Drawing.Size(90, 90);
             this.metroTileManuals.TabIndex = 15;
+            this.metroTileManuals.Tag = "";
             this.metroTileManuals.Text = "Manuals";
             this.metroTileManuals.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileManuals.TileCount = 7;
             this.metroTileManuals.UseSelectable = true;
+            this.metroTileManuals.Click += new System.EventHandler(this.metroTileManuals_Click);
             // 
             // metroTileContent
             // 
@@ -99,7 +102,7 @@
             this.metroTileLinks.TileCount = 7;
             this.metroTileLinks.TileImage = global::glSDK.Properties.Resources.internet_dark;
             this.metroTileLinks.UseSelectable = true;
-            this.metroTileLinks.Click += new System.EventHandler(this.metroTileFrmLinks_Click);
+            this.metroTileLinks.Click += new System.EventHandler(this.metroTileFemLinks_Click);
             // 
             // metroTileModding
             // 
@@ -111,7 +114,9 @@
             this.metroTileModding.TabIndex = 18;
             this.metroTileModding.Text = "Modding";
             this.metroTileModding.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileModding.TileCount = 15;
             this.metroTileModding.UseSelectable = true;
+            this.metroTileModding.Click += new System.EventHandler(this.metroTileModing_Click);
             // 
             // metroTileCompiling
             // 
@@ -137,7 +142,9 @@
             this.metroTileTexturing.TabIndex = 20;
             this.metroTileTexturing.Text = "Texturing";
             this.metroTileTexturing.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTileTexturing.TileCount = 1;
             this.metroTileTexturing.UseSelectable = true;
+            this.metroTileTexturing.Click += new System.EventHandler(this.metroTileTexturing_Click);
             // 
             // metroTileMapping
             // 
@@ -179,7 +186,7 @@
             this.metroTileModelling.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroTileModelling.TileCount = 7;
             this.metroTileModelling.UseSelectable = true;
-            this.metroTileModelling.Click += new System.EventHandler(this.metroTileModelling_Click);
+            this.metroTileModelling.Click += new System.EventHandler(this.metroTileModeling_Click);
             // 
             // metroTile1
             // 
@@ -244,7 +251,7 @@
             this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "GoldSRC SDK Launcher";
             this.Theme = MetroFramework.MetroThemeStyle.Default;
-            this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.Load += new System.EventHandler(this.FmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             this.ResumeLayout(false);
 

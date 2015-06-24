@@ -1,6 +1,8 @@
 ﻿namespace glSDK.UI.LauncherForms
 {
-    partial class FrmTexturing
+    /// <summary>
+    /// </summary>
+    partial class FrmModding
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +32,16 @@
         {
             this.SuspendLayout();
             // 
-            // FrmTexturing
+            // FrmModding
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 377);
             this.MaximizeBox = false;
-            this.Name = "FrmTexturing";
+            this.Name = "FrmModding";
             this.Resizable = false;
-            this.Text = "Texturing";
-            this.Load += new System.EventHandler(this.FmTexturing_Load);
+            this.Text = "Modding";
+            this.Load += new System.EventHandler(this.FmModding_Load);
             this.ResumeLayout(false);
 
         }
