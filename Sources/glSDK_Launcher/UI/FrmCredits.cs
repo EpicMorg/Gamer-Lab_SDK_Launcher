@@ -18,32 +18,35 @@ namespace glSDK.UI
 
         private void metroLinkSTAM_Click(object sender, EventArgs e)
         {
-            Process.Start("");
+            Process.Start("https://stam.epicm.org/");
         }
 
         private void metroLinkKST_Click(object sender, EventArgs e)
         {
-            Process.Start("");
+            Process.Start("https://kasthack.epicm.org/");
         }
 
         private void metroLinkOlegus_Click(object sender, EventArgs e)
         {
-            Process.Start("");
+            Process.Start("https://olegus-dark-industries.tk/");
         }
 
         private void metroLinkSergey_Click(object sender, EventArgs e)
         {
-            Process.Start("");
+            Process.Start("http://gamer-lab.com/rus/Сергей");
         }
 
         private void metroLinkCheater_Click(object sender, EventArgs e)
         {
-            Process.Start("");
+           // Process.Start("");
         }
 
         private void metroLinkHLCommunity_Click(object sender, EventArgs e)
         {
-            Process.Start("");
+            Process.Start("http://gamer-lab.com/");
+            Process.Start("https://vk.com/hl_lab");
+            Process.Start("https://www.facebook.com/groups/hl.lab.ru/");
+            Process.Start("http://steamcommunity.com//groups/gamer-lab_com");
         }
     }
 }

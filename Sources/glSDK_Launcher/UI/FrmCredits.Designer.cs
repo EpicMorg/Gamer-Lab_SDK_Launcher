@@ -61,7 +61,7 @@
             // 
             // metroButtonOK
             // 
-            this.metroButtonOK.Location = new System.Drawing.Point(222, 308);
+            this.metroButtonOK.Location = new System.Drawing.Point(222, 329);
             this.metroButtonOK.Name = "metroButtonOK";
             this.metroButtonOK.Size = new System.Drawing.Size(145, 23);
             this.metroButtonOK.TabIndex = 2;
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 350);
+            this.ClientSize = new System.Drawing.Size(390, 375);
             this.Controls.Add(this.metroLinkHLCommunity);
             this.Controls.Add(this.metroLinkCheater);
             this.Controls.Add(this.metroLinkSergey);
