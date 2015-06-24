@@ -72,7 +72,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UI\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmCredits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmCredits.Designer.cs">
+      <DependentUpon>FrmCredits.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmGitClone.cs">
       <SubType>Form</SubType>
@@ -88,17 +99,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\SettableForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\SettableForm.Designer.cs">
-      <DependentUpon>SettableForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="WRAPPER\CoreHandler.cs" />
     <EmbeddedResource Include="LOCALE\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="LOCALE\Strings.ru.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -111,14 +115,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmCredits.resx">
+      <DependentUpon>FrmCredits.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmGitClone.resx">
       <DependentUpon>FrmGitClone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\SettableForm.resx">
-      <DependentUpon>SettableForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -2664,6 +2671,10 @@
     <Content Include="ICONS\WindowsPhone\light\appbar.youtube.play.png" />
     <Content Include="ICONS\WindowsPhone\light\appbar.youtube.png" />
     <Content Include="ICONS\WindowsPhone\light\appbar.zune.png" />
+    <None Include="Resources\NewLogo.png" />
+    <None Include="Resources\download_black.png" />
+    <None Include="Resources\download_black1.png" />
+    <None Include="Resources\download_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -43,6 +43,9 @@
             resources.ApplyResources(this.metroBtnGitClone, "metroBtnGitClone");
             this.metroBtnGitClone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroBtnGitClone.Name = "metroBtnGitClone";
+            this.metroBtnGitClone.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroBtnGitClone.TileImage = global::glSDK.Properties.Resources.download_black;
+            this.metroBtnGitClone.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroBtnGitClone.UseSelectable = true;
             this.metroBtnGitClone.Click += new System.EventHandler(this.metroBtnGitClone_Click);
             // 

@@ -61,7 +61,7 @@ namespace glSDK.LOCALE {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Отменено.
+        ///   Ищет локализованную строку, похожую на Canceled.
         /// </summary>
         internal static string Canceled {
             get {
@@ -70,7 +70,7 @@ namespace glSDK.LOCALE {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Склонировать.
+        ///   Ищет локализованную строку, похожую на Clone.
         /// </summary>
         internal static string Clone {
             get {
@@ -79,7 +79,7 @@ namespace glSDK.LOCALE {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Склонировано.
+        ///   Ищет локализованную строку, похожую на Cloned.
         /// </summary>
         internal static string Cloned {
             get {
@@ -88,7 +88,7 @@ namespace glSDK.LOCALE {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Клонирование.
+        ///   Ищет локализованную строку, похожую на Cloning.
         /// </summary>
         internal static string Cloning {
             get {

@@ -118,15 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Canceled" xml:space="preserve">
-    <value>Отменено</value>
+    <value>Canceled</value>
   </data>
   <data name="Clone" xml:space="preserve">
-    <value>Склонировать</value>
+    <value>Clone</value>
   </data>
   <data name="Cloned" xml:space="preserve">
-    <value>Склонировано</value>
+    <value>Cloned</value>
   </data>
   <data name="Cloning" xml:space="preserve">
-    <value>Клонирование</value>
+    <value>Cloning</value>
   </data>
 </root>
