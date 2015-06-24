@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "glSDK_Core", "glSDK_Core\glSDK_Core.csproj", "{383FE563-5C1F-4074-B5AF-35E1362F182B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "glSDK_Launcher", "glSDK_Launcher\glSDK_Launcher.csproj", "{8B3B3BCA-6BD3-41D8-8A66-59F8DDD34975}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{383FE563-5C1F-4074-B5AF-35E1362F182B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383FE563-5C1F-4074-B5AF-35E1362F182B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383FE563-5C1F-4074-B5AF-35E1362F182B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383FE563-5C1F-4074-B5AF-35E1362F182B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B3B3BCA-6BD3-41D8-8A66-59F8DDD34975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B3B3BCA-6BD3-41D8-8A66-59F8DDD34975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B3B3BCA-6BD3-41D8-8A66-59F8DDD34975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B3B3BCA-6BD3-41D8-8A66-59F8DDD34975}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
