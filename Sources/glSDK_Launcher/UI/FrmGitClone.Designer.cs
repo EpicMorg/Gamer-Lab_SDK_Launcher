@@ -28,53 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGitClone));
             this.metroBtnGitClone = new MetroFramework.Controls.MetroTile();
             this.metroComboBoxGit = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabelInfo = new MetroFramework.Controls.MetroLabel();
+            this.metroProgressBar = new MetroFramework.Controls.MetroProgressBar();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // metroBtnGitClone
             // 
             this.metroBtnGitClone.ActiveControl = null;
-            this.metroBtnGitClone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.metroBtnGitClone, "metroBtnGitClone");
             this.metroBtnGitClone.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroBtnGitClone.Location = new System.Drawing.Point(51, 180);
             this.metroBtnGitClone.Name = "metroBtnGitClone";
-            this.metroBtnGitClone.Size = new System.Drawing.Size(411, 40);
-            this.metroBtnGitClone.TabIndex = 7;
-            this.metroBtnGitClone.Text = "Clone";
-            this.metroBtnGitClone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroBtnGitClone.UseSelectable = true;
             this.metroBtnGitClone.Click += new System.EventHandler(this.metroBtnGitClone_Click);
             // 
             // metroComboBoxGit
             // 
-            this.metroComboBoxGit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroComboBoxGit.ItemHeight = 23;
+            resources.ApplyResources(this.metroComboBoxGit, "metroComboBoxGit");
             this.metroComboBoxGit.Items.AddRange(new object[] {
-            "Launcher (EpicMorg Git, Official)",
-            "Half-Life SDK (Steam, Official)",
-            "Half-Life SDK (Valve Git, Official)",
-            "Source SDK (Valve Git, Official)",
-            "OpenVR SDK (Valve Git, Official)"});
-            this.metroComboBoxGit.Location = new System.Drawing.Point(51, 145);
+            resources.GetString("metroComboBoxGit.Items"),
+            resources.GetString("metroComboBoxGit.Items1"),
+            resources.GetString("metroComboBoxGit.Items2"),
+            resources.GetString("metroComboBoxGit.Items3"),
+            resources.GetString("metroComboBoxGit.Items4")});
             this.metroComboBoxGit.Name = "metroComboBoxGit";
-            this.metroComboBoxGit.Size = new System.Drawing.Size(411, 29);
-            this.metroComboBoxGit.TabIndex = 6;
             this.metroComboBoxGit.UseSelectable = true;
+            this.metroComboBoxGit.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxGit_SelectedIndexChanged);
+            // 
+            // metroLabelInfo
+            // 
+            resources.ApplyResources(this.metroLabelInfo, "metroLabelInfo");
+            this.metroLabelInfo.Name = "metroLabelInfo";
+            this.metroLabelInfo.WrapToLine = true;
+            // 
+            // metroProgressBar
+            // 
+            resources.ApplyResources(this.metroProgressBar, "metroProgressBar");
+            this.metroProgressBar.Name = "metroProgressBar";
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1500;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // FrmGitClone
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 279);
+            this.Controls.Add(this.metroProgressBar);
+            this.Controls.Add(this.metroLabelInfo);
             this.Controls.Add(this.metroBtnGitClone);
             this.Controls.Add(this.metroComboBoxGit);
             this.MaximizeBox = false;
             this.Name = "FrmGitClone";
             this.Resizable = false;
-            this.Text = "FrmGitClone";
             this.Load += new System.EventHandler(this.FrmGitClone_Load);
             this.ResumeLayout(false);
 
@@ -84,5 +95,8 @@
 
         private MetroFramework.Controls.MetroTile metroBtnGitClone;
         private MetroFramework.Controls.MetroComboBox metroComboBoxGit;
+        private MetroFramework.Controls.MetroLabel metroLabelInfo;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar;
+        private System.Windows.Forms.Timer timer;
     }
 }

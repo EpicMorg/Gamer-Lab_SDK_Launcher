@@ -117,4 +117,151 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="metroBtnGitClone.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="metroBtnGitClone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 180</value>
+  </data>
+  <data name="metroBtnGitClone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 40</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="metroBtnGitClone.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="metroBtnGitClone.Text" xml:space="preserve">
+    <value>Clone</value>
+  </data>
+  <data name="metroBtnGitClone.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;metroBtnGitClone.Name" xml:space="preserve">
+    <value>metroBtnGitClone</value>
+  </data>
+  <data name="&gt;&gt;metroBtnGitClone.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTile, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;metroBtnGitClone.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;metroBtnGitClone.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="metroComboBoxGit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="metroComboBoxGit.ItemHeight" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="metroComboBoxGit.Items" xml:space="preserve">
+    <value>Launcher (EpicMorg Git, Official)</value>
+  </data>
+  <data name="metroComboBoxGit.Items1" xml:space="preserve">
+    <value>Half-Life SDK (Steam, Official)</value>
+  </data>
+  <data name="metroComboBoxGit.Items2" xml:space="preserve">
+    <value>Half-Life SDK (Valve Git, Official)</value>
+  </data>
+  <data name="metroComboBoxGit.Items3" xml:space="preserve">
+    <value>Source SDK (Valve Git, Official)</value>
+  </data>
+  <data name="metroComboBoxGit.Items4" xml:space="preserve">
+    <value>OpenVR SDK (Valve Git, Official)</value>
+  </data>
+  <data name="metroComboBoxGit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 145</value>
+  </data>
+  <data name="metroComboBoxGit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 29</value>
+  </data>
+  <data name="metroComboBoxGit.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;metroComboBoxGit.Name" xml:space="preserve">
+    <value>metroComboBoxGit</value>
+  </data>
+  <data name="&gt;&gt;metroComboBoxGit.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroComboBox, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;metroComboBoxGit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;metroComboBoxGit.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="metroLabelInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 60</value>
+  </data>
+  <data name="metroLabelInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 82</value>
+  </data>
+  <data name="metroLabelInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="metroLabelInfo.Text" xml:space="preserve">
+    <value>Select repository and download the latest selected sources. If you selected "HLSDK" from steam - install and login first.</value>
+  </data>
+  <data name="&gt;&gt;metroLabelInfo.Name" xml:space="preserve">
+    <value>metroLabelInfo</value>
+  </data>
+  <data name="&gt;&gt;metroLabelInfo.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;metroLabelInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;metroLabelInfo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="metroProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 226</value>
+  </data>
+  <data name="metroProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 23</value>
+  </data>
+  <data name="metroProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;metroProgressBar.Name" xml:space="preserve">
+    <value>metroProgressBar</value>
+  </data>
+  <data name="&gt;&gt;metroProgressBar.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroProgressBar, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;metroProgressBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;metroProgressBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>513, 279</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Get sources</value>
+  </data>
+  <data name="&gt;&gt;timer.Name" xml:space="preserve">
+    <value>timer</value>
+  </data>
+  <data name="&gt;&gt;timer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmGitClone</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>glSDK.UI.SettableForm, glSDK_Launcher, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>
