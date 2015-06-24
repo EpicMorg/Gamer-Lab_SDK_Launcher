@@ -265,7 +265,6 @@
             // 
             this.metroComboBoxGit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroComboBoxGit.FormattingEnabled = true;
             this.metroComboBoxGit.ItemHeight = 23;
             this.metroComboBoxGit.Items.AddRange(new object[] {
             "Half-Life SDK (Steam)",
