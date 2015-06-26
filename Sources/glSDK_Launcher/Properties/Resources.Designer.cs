@@ -83,6 +83,16 @@ namespace glSDK.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap en_us {
+            get {
+                object obj = ResourceManager.GetObject("en_us", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap internet_dark {
             get {
                 object obj = ResourceManager.GetObject("internet_dark", resourceCulture);
@@ -126,6 +136,16 @@ namespace glSDK.Properties {
         internal static System.Drawing.Bitmap reset_light {
             get {
                 object obj = ResourceManager.GetObject("reset_light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ru_ru {
+            get {
+                object obj = ResourceManager.GetObject("ru_ru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

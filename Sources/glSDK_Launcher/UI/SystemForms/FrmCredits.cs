@@ -38,7 +38,8 @@ namespace glSDK.UI.SystemForms
 
         private void metroLinkCheater_Click(object sender, EventArgs e)
         {
-           // Process.Start("");
+            try { Process.Start("skype:samsrs123?chat");}
+            catch (Exception skypeException) { Console.WriteLine(skypeException);}
         }
 
         private void metroLinkHLCommunity_Click(object sender, EventArgs e)

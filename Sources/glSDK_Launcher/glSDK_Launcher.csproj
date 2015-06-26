@@ -17345,6 +17345,7 @@
     <Content Include="ICONS\WindowsPhone\light\appbar.youtube.play.png" />
     <Content Include="ICONS\WindowsPhone\light\appbar.youtube.png" />
     <Content Include="ICONS\WindowsPhone\light\appbar.zune.png" />
+    <Content Include="XML\list.xml" />
     <None Include="Resources\reset_light.png" />
     <None Include="Resources\reset_dark.png" />
     <None Include="Resources\save_disk.png" />

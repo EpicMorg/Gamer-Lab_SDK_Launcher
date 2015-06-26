@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+*************************************************************************************
+Tis file is distributed under MIT license:
+*************************************************************************************
+The MIT License (MIT)
+
+Copyright © 2013-2015 EpicMorg
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the ''Software''), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED ''AS IS'', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.", @"The MIT License (MIT)
+*************************************************************************************
+-->
+<cfg>
+	<lang>en-US</lang>
+	<apps>
+		<category name="Editors">
+			<app>
+				<name>Valve Hammer Editor 3.5</name>
+        <path type="Relative">SDK\hammer.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Valve Hammer Editor 3.4</name>
+				<path type="Relative">SDK\hammer34.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Valve WorldCraft Editor 3.3</name>
+        <path type="Relative">SDK\wc.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>CSM Hammer Editor 3.5</name>
+        <path type="Relative">SDK\editor.exe</path>
+				<installed>false</installed>
+			</app>
+      <app>
+        <name>Jackhammer</name>
+        <path type="Relative">SDK\addons\Jackhammer\jackhammer.exe</path>
+        <installed>false</installed>
+      </app>
+			<app>
+				<name>Neo Hammer Editor 3.5.1</name>
+        <path type="Relative">SDK\neo.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Neon Hammer Editor 3.5</name>
+        <path type="Relative">SDK\neon.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Neon Hammer Editor 3.5 Rus</name>
+        <path type="Relative">SDK\neon_rus.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>QuArK</name>
+        <path type="Relative">SDK\addons\QuArK\QuArK.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Sledge Editor</name>
+        <path type="Relative">SDK\addons\Sledge\Sledge.Editor.exe</path>
+				<installed>false</installed>
+			</app>
+		</category>
+		<category name="Mapping">
+			<app>
+				<name>Automap</name>
+        <path type="Relative">SDK\addons\Automap\Automap.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>BSP Viewer</name>
+        <path type="Relative">SDK\addons\BSPViewer\BSPViewer.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>BSP Tools</name>
+        <path type="Relative">SDK\addons\BSP Tools\BSPtoolsLauncher.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Leak Marker</name>
+        <path type="Relative">SDK\addons\LeakMarker01\LeakMarker01.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>RES Gen</name>
+        <path type="Relative">SDK\addons\RESGen\RES_Gen.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>RandMap</name>
+				<path type="Relative">SDK\addons\RandMap\RandMap.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>MAP Viewer</name>
+				<path type="Relative">SDK\addons\map viewer\MAPViewer.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Crafty (Object Viewer)</name>
+				<path type="Relative">SDK\addons\crafty\Crafty.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>GENSURF</name>
+				<path type="Relative">SDK\addons\gensurf\GENSURF.EXE</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Terrain Generator</name>
+				<path type="Relative">SDK\addons\TerrainGenerator\TerrainGenerator.EXE</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Tool Box Lux</name>
+				<path type="Relative">SDK\addons\TBLux\TBLux.EXE</path>
+				<installed>false</installed>
+			</app>
+		</category>
+		<category name="Compilling and Decompilling">
+			<app>
+				<name>Batch Compiler</name>
+				<path type="Relative">SDK\addons\Batch Compiler\Batch Compiler.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>GUIRipent</name>
+				<path type="Relative">SDK\addons\GUIRipnet\GUIRipent.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>UCompiler</name>
+				<path type="Relative">SDK\addons\UCompiler\UCompiler.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>BSPTwoMap Launcher</name>
+				<path type="Relative">SDK\addons\BSPTwoMap Launcher\BSPTwoMap_Launcher.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>BSP2MAP</name>
+				<path type="Relative">SDK\addons\bsp map\BSP_MAP.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>WinBspc</name>
+				<path type="Relative">SDK\addons\winbspc\winbspc.exe</path>
+				<installed>false</installed>
+			</app>
+		</category>
+		<category name="Content Managment">
+			<app>
+				<name>PakExplorer</name>
+				<path type="Relative">SDK\addons\PakExpl\PakExpl.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>PakScape</name>
+				<path type="Relative">SDK\addons\PakScape\PakScape.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Bsp2Zip or 17Ims</name>
+				<path type="Relative">SDK\addons\bsp2zip\17Ims.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Game Cfg Manager</name>
+				<path type="Relative">SDK\GameCfgManager.exe</path>
+				<installed>false</installed>
+			</app>
+		</category>
+		<category name="Modeling">
+			<app>
+				<name>Jed's HL model Viever 1.36</name>
+				<path type="Relative">SDK\addons\hlmv\hlmv.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>GUI studiomdl</name>
+				<path type="Relative">SDK\addons\guistudiomdl\guistudiomdl.exe</path>
+				<installed>false</installed>
+			</app>
+		</category>
+		<category name="Texturing">
+			<app>
+				<name>Auto Seamer</name>
+				<path type="Relative">SDK\addons\Auto Seamer\Auto Seamer.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Orbital TexTiler</name>
+				<path type="Relative">SDK\addons\Orbital TexTiler\Orbital TexTiler 1.0.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>QLumpy</name>
+				<path type="Relative">SDK\addons\QLumpy\QLumpy_Launcher.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>SPR Attrib</name>
+				<path type="Relative">SDK\addons\SPR Attrib\SPRAttrib.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Spr Explorer</name>
+				<path type="Relative">SDK\addons\SprExplorer\SprExplorer.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Wally</name>
+				<path type="Relative">SDK\addons\Wally\Wally.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>TExtract Suite</name>
+				<path type="Relative">SDK\addons\textract\TExtract suite v1.0.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Win Textract</name>
+				<path type="Relative">SDK\addons\wintextract\wintextract.exe</path>
+				<installed>false</installed>
+			</app>
+		</category>
+		<category name="Modding">
+			<app>
+				<name>Hlcsm sprite manager</name>
+				<path type="Relative">SDK\addons\hlcsm\Hlcsm.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>HI Logo Gen</name>
+				<path type="Relative">SDK\addons\HILogoGen\HILogoGen 0.1.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>HLC</name>
+				<path type="Relative">SDK\addons\HLC\HLC.EXE</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Backchanger</name>
+				<path type="Relative">SDK\addons\backchanger\backchanger.exe</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>HL1 SDK Folder</name>
+				<path type="Relative">SDK\Sources\</path>
+				<installed>false</installed>
+			</app>
+		</category>
+		<category name="Help and Manuals">
+			<app>
+				<name>C++ Manual</name>
+				<path type="Relative">SDK\manuals\C++.chm</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Counter-Strike Mapping 1</name>
+				<path type="Relative">SDK\manuals\Counter-Strike Mapping.chm</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>Counter-Strike Mapping 2</name>
+				<path type="Relative">SDK\manuals\mapping.chm</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>CS Manual by Dmitrich!</name>
+				<path type="Relative">SDK\manuals\dmitrich!.chm</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>MilkShape3D</name>
+				<path type="Relative">SDK\manuals\MilkShape3D.chm</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>RussianVHE</name>
+				<path type="Relative">SDK\manuals\RussianVHE.chm</path>
+				<installed>false</installed>
+			</app>
+			<app>
+				<name>zhlt</name>>
+				<path type="Relative">SDK\manuals\zhlt.chm</path>
+				<installed>false</installed>
+			</app>
+		</category>
+	</apps>
+</cfg>
+s

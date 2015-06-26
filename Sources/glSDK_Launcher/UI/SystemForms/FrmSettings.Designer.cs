@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSettings));
-            this.metroButtonReset = new System.Windows.Forms.PictureBox();
-            this.metroButtonSave = new System.Windows.Forms.PictureBox();
             this.metroToggleLog = new MetroFramework.Controls.MetroToggle();
             this.metroComboBoxShadow = new MetroFramework.Controls.MetroComboBox();
             this.metroComboBoxTheme = new MetroFramework.Controls.MetroComboBox();
@@ -41,33 +39,13 @@
             this.metroLabelSkin = new MetroFramework.Controls.MetroLabel();
             this.metroComboBoxLang = new MetroFramework.Controls.MetroComboBox();
             this.metroLabelLang = new MetroFramework.Controls.MetroLabel();
+            this.picLang = new System.Windows.Forms.PictureBox();
+            this.metroButtonReset = new System.Windows.Forms.PictureBox();
+            this.metroButtonSave = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picLang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroButtonReset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroButtonSave)).BeginInit();
             this.SuspendLayout();
-            // 
-            // metroButtonReset
-            // 
-            this.metroButtonReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButtonReset.Image = global::glSDK.Properties.Resources.reset_dark;
-            this.metroButtonReset.Location = new System.Drawing.Point(249, 278);
-            this.metroButtonReset.Name = "metroButtonReset";
-            this.metroButtonReset.Size = new System.Drawing.Size(76, 76);
-            this.metroButtonReset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.metroButtonReset.TabIndex = 4;
-            this.metroButtonReset.TabStop = false;
-            this.metroButtonReset.Click += new System.EventHandler(this.metroButtonReset_Click);
-            // 
-            // metroButtonSave
-            // 
-            this.metroButtonSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButtonSave.Image = global::glSDK.Properties.Resources.save_dark;
-            this.metroButtonSave.Location = new System.Drawing.Point(331, 278);
-            this.metroButtonSave.Name = "metroButtonSave";
-            this.metroButtonSave.Size = new System.Drawing.Size(76, 76);
-            this.metroButtonSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.metroButtonSave.TabIndex = 4;
-            this.metroButtonSave.TabStop = false;
-            this.metroButtonSave.Click += new System.EventHandler(this.metroButtonSave_Click);
             // 
             // metroToggleLog
             // 
@@ -150,9 +128,9 @@
             // 
             this.metroComboBoxLang.FormattingEnabled = true;
             this.metroComboBoxLang.ItemHeight = 23;
-            this.metroComboBoxLang.Location = new System.Drawing.Point(23, 244);
+            this.metroComboBoxLang.Location = new System.Drawing.Point(64, 244);
             this.metroComboBoxLang.Name = "metroComboBoxLang";
-            this.metroComboBoxLang.Size = new System.Drawing.Size(384, 29);
+            this.metroComboBoxLang.Size = new System.Drawing.Size(343, 29);
             this.metroComboBoxLang.TabIndex = 6;
             this.metroComboBoxLang.UseSelectable = true;
             // 
@@ -165,6 +143,42 @@
             this.metroLabelLang.TabIndex = 5;
             this.metroLabelLang.Text = "Language:";
             // 
+            // picLang
+            // 
+            this.picLang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLang.Image = global::glSDK.Properties.Resources.en_us;
+            this.picLang.Location = new System.Drawing.Point(23, 244);
+            this.picLang.Name = "picLang";
+            this.picLang.Size = new System.Drawing.Size(35, 29);
+            this.picLang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picLang.TabIndex = 4;
+            this.picLang.TabStop = false;
+            this.picLang.Click += new System.EventHandler(this.metroButtonReset_Click);
+            // 
+            // metroButtonReset
+            // 
+            this.metroButtonReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButtonReset.Image = global::glSDK.Properties.Resources.reset_dark;
+            this.metroButtonReset.Location = new System.Drawing.Point(249, 278);
+            this.metroButtonReset.Name = "metroButtonReset";
+            this.metroButtonReset.Size = new System.Drawing.Size(76, 76);
+            this.metroButtonReset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.metroButtonReset.TabIndex = 4;
+            this.metroButtonReset.TabStop = false;
+            this.metroButtonReset.Click += new System.EventHandler(this.metroButtonReset_Click);
+            // 
+            // metroButtonSave
+            // 
+            this.metroButtonSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButtonSave.Image = global::glSDK.Properties.Resources.save_dark;
+            this.metroButtonSave.Location = new System.Drawing.Point(331, 278);
+            this.metroButtonSave.Name = "metroButtonSave";
+            this.metroButtonSave.Size = new System.Drawing.Size(76, 76);
+            this.metroButtonSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.metroButtonSave.TabIndex = 4;
+            this.metroButtonSave.TabStop = false;
+            this.metroButtonSave.Click += new System.EventHandler(this.metroButtonSave_Click);
+            // 
             // FrmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +186,7 @@
             this.ClientSize = new System.Drawing.Size(430, 377);
             this.Controls.Add(this.metroComboBoxLang);
             this.Controls.Add(this.metroLabelLang);
+            this.Controls.Add(this.picLang);
             this.Controls.Add(this.metroButtonReset);
             this.Controls.Add(this.metroButtonSave);
             this.Controls.Add(this.metroToggleLog);
@@ -189,6 +204,7 @@
             this.Resizable = false;
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.FrmSettings_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picLang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroButtonReset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroButtonSave)).EndInit();
             this.ResumeLayout(false);
@@ -210,5 +226,6 @@
         private MetroFramework.Controls.MetroComboBox metroComboBoxShadow;
         private MetroFramework.Controls.MetroComboBox metroComboBoxLang;
         private MetroFramework.Controls.MetroLabel metroLabelLang;
+        private System.Windows.Forms.PictureBox picLang;
     }
 }
