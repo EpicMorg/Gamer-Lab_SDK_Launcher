@@ -30,7 +30,12 @@ THE SOFTWARE.", @"The MIT License (MIT)
 	<lang>en-US</lang>
 	<apps>
 		<category name="Editors">
-			<app>
+      <app>
+        <name>Valve Hammer Editor 3.5.3</name>
+        <path type="Relative">SDK\hammer353.exe</path>
+        <installed>false</installed>
+      </app>
+      <app>
 				<name>Valve Hammer Editor 3.5</name>
         <path type="Relative">SDK\hammer.exe</path>
 				<installed>false</installed>
@@ -310,6 +315,17 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<installed>false</installed>
 			</app>
 		</category>
+    <category name="Other">
+      <app>
+        <name>U need a Unit</name>
+        <path type="Relative">SDK\addons\uneed\uneed.exe</path>
+        <installed>false</installed>
+      </app>
+      <app>
+        <name>U need a Unit Patchded</name>
+        <path type="Relative">SDK\addons\uneed\uneed.patched.exe</path>
+        <installed>false</installed>
+      </app>
+    </category>
 	</apps>
 </cfg>
-s

@@ -177,5 +177,14 @@ namespace glSDK.UI
             Show();
             FocusMe();
         }
+
+        private void metroTileOther_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmOther();
+            Hide();
+            frm.ShowDialog();
+            Show();
+            FocusMe();
+        }
     }
 }
