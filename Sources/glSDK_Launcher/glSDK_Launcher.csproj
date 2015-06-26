@@ -139,6 +139,12 @@
     <Compile Include="UI\SystemForms\FrmCredits.Designer.cs">
       <DependentUpon>FrmCredits.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\SystemForms\Compiller\FrmDatCompiller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SystemForms\Compiller\FrmDatCompiller.Designer.cs">
+      <DependentUpon>FrmDatCompiller.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SystemForms\FrmGitClone.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemForms\FrmCredits.resx">
       <DependentUpon>FrmCredits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SystemForms\Compiller\FrmDatCompiller.resx">
+      <DependentUpon>FrmDatCompiller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemForms\FrmGitClone.resx">
       <DependentUpon>FrmGitClone.cs</DependentUpon>
@@ -17354,6 +17363,7 @@
     <Content Include="ICONS\WindowsPhone\light\appbar.youtube.play.png" />
     <Content Include="ICONS\WindowsPhone\light\appbar.youtube.png" />
     <Content Include="ICONS\WindowsPhone\light\appbar.zune.png" />
+    <Content Include="XML\compiller.xml" />
     <Content Include="XML\list.xml" />
     <None Include="Resources\reset_light.png" />
     <None Include="Resources\reset_dark.png" />

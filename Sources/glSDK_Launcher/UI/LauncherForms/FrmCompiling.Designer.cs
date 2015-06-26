@@ -50,6 +50,7 @@
             this.metroTileCompile.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroTileCompile.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTileCompile.TileImage")));
             this.metroTileCompile.UseSelectable = true;
+            this.metroTileCompile.Click += new System.EventHandler(this.metroTileCompile_Click);
             // 
             // metroTileBatchCompiler
             // 
