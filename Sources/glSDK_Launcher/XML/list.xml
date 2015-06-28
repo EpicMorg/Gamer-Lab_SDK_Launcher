@@ -258,7 +258,7 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<installed>false</installed>
 			</app>
 			<app>
-				<name>HI Logo Gen</name>
+				<name>HL Logo Gen</name>
 				<path type="Relative">SDK\addons\HILogoGen\HILogoGen 0.1.exe</path>
 				<installed>false</installed>
 			</app>
@@ -277,6 +277,11 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<path type="Relative">SDK\Sources\</path>
 				<installed>false</installed>
 			</app>
+      <app>
+        <name>Textures Folder</name>
+        <path type="Relative">SDK\Textures\</path>
+        <installed>false</installed>
+      </app>
 		</category>
 		<category name="Help and Manuals">
 			<app>
@@ -314,6 +319,16 @@ THE SOFTWARE.", @"The MIT License (MIT)
 				<path type="Relative">SDK\manuals\zhlt.chm</path>
 				<installed>false</installed>
 			</app>
+      <app>
+        <name>HL-SDK</name>>
+        <path type="Relative">SDK\manuals\HL-SDKT.chm</path>
+        <installed>false</installed>
+      </app>
+      <app>
+        <name>Hammer 3.4</name>>
+        <path type="Relative">SDK\manuals\hammer34.chm</path>
+        <installed>false</installed>
+      </app>
 		</category>
     <category name="Other">
       <app>
@@ -324,6 +339,11 @@ THE SOFTWARE.", @"The MIT License (MIT)
       <app>
         <name>U need a Unit Patchded</name>
         <path type="Relative">SDK\addons\uneed\uneed.patched.exe</path>
+        <installed>false</installed>
+      </app>
+      <app>
+        <name>Unit converter</name>
+        <path type="Relative">SDK\addons\uniconv\uniconv.patched.exe</path>
         <installed>false</installed>
       </app>
     </category>

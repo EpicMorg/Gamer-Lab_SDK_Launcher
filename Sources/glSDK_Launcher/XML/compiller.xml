@@ -1,1 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<compillers>
+  <profile name="Half-Life">
+    <gameexe>C:\Half-Life\hl.exe</gameexe>
+    <mod>C:\Half-Life\valve</mod>
+    <csg params="-high -verbose">C:\SDK\tools\hlcsg.exe</csg>
+    <bsp params="-full">C:\SDK\tools\hlcsg.exe</bsp>
+    <vis params="">C:\SDK\tools\hlcsg.exe"</vis>
+    <rad params="-full">C:\SDK\tools\hlcsg.exe</rad>
+  </profile>
+  <profile name="Cstrike">
+    <gameexe>C:\Half-Life\hl.exe</gameexe>
+    <mod>C:\Half-Life\cstrike</mod>
+    <csg params="-high -verbose">C:\SDK\tools\hlcsg.exe</csg>
+    <bsp params="-full">C:\SDK\tools\hlcsg.exe</bsp>
+    <vis params="">C:\SDK\tools\hlcsg.exe"</vis>
+    <rad params="-full">C:\SDK\tools\hlcsg.exe</rad>
+  </profile>
+</compillers>
