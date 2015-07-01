@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Xml.Serialization;
-using glSDK.Annotations;
 
 namespace glSDK.Pocos {
     [Serializable]
@@ -25,8 +24,6 @@ namespace glSDK.Pocos {
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
         public virtual void OnPropertyChanged( [CallerMemberName] string propertyName = null ) {
             PropertyChanged?.Invoke( this, new PropertyChangedEventArgs( propertyName ) );
         }
@@ -75,8 +72,6 @@ namespace glSDK.Pocos {
         public Command Rad { get; set; } = new Command();
         public override string ToString() => Name;
         public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged( [CallerMemberName] string propertyName = null ) {
             PropertyChanged?.Invoke( this, new PropertyChangedEventArgs( propertyName ) );
         }
@@ -118,8 +113,6 @@ namespace glSDK.Pocos {
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged( [CallerMemberName] string propertyName = null ) {
             PropertyChanged?.Invoke( this, new PropertyChangedEventArgs( propertyName ) );
         }
