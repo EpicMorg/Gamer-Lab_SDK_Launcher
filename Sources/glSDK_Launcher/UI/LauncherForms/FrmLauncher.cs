@@ -15,7 +15,7 @@ namespace glSDK.UI.LauncherForms
     public partial class FrmLauncher : FrmTmp
     {
         private Category _category;
-
+        public int Offset { get; set; } =0;
         public Category Category
         {
             get
@@ -37,7 +37,7 @@ namespace glSDK.UI.LauncherForms
                 .Where( a=>File.Exists( a.Path ) )
                 .ToList();
             this.SuspendLayout();
-            for ( int i = 0; i < apps.Count; i++ ) {
+            for ( int i = Offset; i < apps.Count+Offset; i++ ) {
                 var app = apps[ i ];
                 const int size = 90;
                 var btn = new MetroTile() {
@@ -54,11 +54,7 @@ namespace glSDK.UI.LauncherForms
             this.ResumeLayout();
         }
 
-        public FrmLauncher()
-        {
-            InitializeComponent();
-        }
-
+        public FrmLauncher() { InitializeComponent(); }
         private void metroTileCompile_Click(object sender, EventArgs e) => ShowForm( new FrmDatCompiller() );
     }
 }

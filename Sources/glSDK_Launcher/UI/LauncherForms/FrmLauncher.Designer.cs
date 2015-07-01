@@ -38,7 +38,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmLauncher";
             this.Resizable = false;
-            this.Text = "Compiling and Decompiling";
+            this.Text = "";
             this.ResumeLayout(false);
 
         }

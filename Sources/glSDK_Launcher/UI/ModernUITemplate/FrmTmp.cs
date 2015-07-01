@@ -9,7 +9,7 @@ namespace glSDK.UI.ModernUITemplate
         {
             InitializeComponent();
         }
-        protected void ShowForm(FrmTmp form)
+        internal void ShowForm(FrmTmp form)
         {
             Hide();
             form.ShowDialog();

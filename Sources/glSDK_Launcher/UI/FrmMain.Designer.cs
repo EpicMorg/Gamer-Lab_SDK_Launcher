@@ -44,7 +44,6 @@
             this.metroTileGit = new MetroFramework.Controls.MetroTile();
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroTileOther = new MetroFramework.Controls.MetroTile();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,19 +174,11 @@
             this.metroTileOther.UseSelectable = true;
             this.metroTileOther.Click += new System.EventHandler(this.metroTileOther_Click);
             // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FrmMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.metroTileOther);
             this.Controls.Add(this.metroTileAbout);
             this.Controls.Add(this.metroTileManuals);
@@ -227,7 +218,6 @@
         private MetroFramework.Controls.MetroTile metroTileGit;
         private MetroFramework.Components.MetroStyleManager metroStyleManager;
         private MetroFramework.Controls.MetroTile metroTileOther;
-        private System.Windows.Forms.Button button1;
     }
 }
 
