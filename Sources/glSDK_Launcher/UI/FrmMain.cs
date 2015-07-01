@@ -4,6 +4,8 @@ using glSDK.Pocos;
 using glSDK.UI.LauncherForms;
 using glSDK.UI.ModernUITemplate;
 using glSDK.UI.SystemForms;
+using glSDK.UI.SystemForms.Compiller;
+
 namespace glSDK.UI {
     public partial class FrmMain : FrmTmp {
         public FrmMain() {
@@ -28,5 +30,6 @@ namespace glSDK.UI {
         private void metroTileModing_Click( object sender, EventArgs e ) => ShowLauncher( "Modding" );
         private void metroTileManuals_Click( object sender, EventArgs e ) => ShowLauncher( "Help and Manuals" );
         private void metroTileOther_Click( object sender, EventArgs e ) => ShowLauncher( "Other" );
+        private void button1_Click( object sender, EventArgs e ) => ShowForm( new FrmDatCompiller() );
     }
 }

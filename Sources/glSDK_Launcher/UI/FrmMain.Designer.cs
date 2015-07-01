@@ -44,23 +44,24 @@
             this.metroTileGit = new MetroFramework.Controls.MetroTile();
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroTileOther = new MetroFramework.Controls.MetroTile();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTileAbout
             // 
-            resources.ApplyResources(this.metroTileAbout, "metroTileAbout");
             this.metroTileAbout.ActiveControl = null;
             this.metroTileAbout.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileAbout, "metroTileAbout");
             this.metroTileAbout.Name = "metroTileAbout";
             this.metroTileAbout.UseSelectable = true;
             this.metroTileAbout.Click += new System.EventHandler(this.metroTileAbout_Click);
             // 
             // metroTileManuals
             // 
-            resources.ApplyResources(this.metroTileManuals, "metroTileManuals");
             this.metroTileManuals.ActiveControl = null;
             this.metroTileManuals.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileManuals, "metroTileManuals");
             this.metroTileManuals.Name = "metroTileManuals";
             this.metroTileManuals.Tag = "";
             this.metroTileManuals.UseSelectable = true;
@@ -68,18 +69,18 @@
             // 
             // metroTileContent
             // 
-            resources.ApplyResources(this.metroTileContent, "metroTileContent");
             this.metroTileContent.ActiveControl = null;
             this.metroTileContent.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileContent, "metroTileContent");
             this.metroTileContent.Name = "metroTileContent";
             this.metroTileContent.UseSelectable = true;
             this.metroTileContent.Click += new System.EventHandler(this.metroTileContent_Click);
             // 
             // metroTileLinks
             // 
-            resources.ApplyResources(this.metroTileLinks, "metroTileLinks");
             this.metroTileLinks.ActiveControl = null;
             this.metroTileLinks.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileLinks, "metroTileLinks");
             this.metroTileLinks.Name = "metroTileLinks";
             this.metroTileLinks.TileImage = global::glSDK.Properties.Resources.internet_dark;
             this.metroTileLinks.UseSelectable = true;
@@ -87,63 +88,63 @@
             // 
             // metroTileModding
             // 
-            resources.ApplyResources(this.metroTileModding, "metroTileModding");
             this.metroTileModding.ActiveControl = null;
             this.metroTileModding.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileModding, "metroTileModding");
             this.metroTileModding.Name = "metroTileModding";
             this.metroTileModding.UseSelectable = true;
             this.metroTileModding.Click += new System.EventHandler(this.metroTileModing_Click);
             // 
             // metroTileCompiling
             // 
-            resources.ApplyResources(this.metroTileCompiling, "metroTileCompiling");
             this.metroTileCompiling.ActiveControl = null;
             this.metroTileCompiling.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileCompiling, "metroTileCompiling");
             this.metroTileCompiling.Name = "metroTileCompiling";
             this.metroTileCompiling.UseSelectable = true;
             this.metroTileCompiling.Click += new System.EventHandler(this.metroTileCompiling_Click);
             // 
             // metroTileTexturing
             // 
-            resources.ApplyResources(this.metroTileTexturing, "metroTileTexturing");
             this.metroTileTexturing.ActiveControl = null;
             this.metroTileTexturing.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileTexturing, "metroTileTexturing");
             this.metroTileTexturing.Name = "metroTileTexturing";
             this.metroTileTexturing.UseSelectable = true;
             this.metroTileTexturing.Click += new System.EventHandler(this.metroTileTexturing_Click);
             // 
             // metroTileMapping
             // 
-            resources.ApplyResources(this.metroTileMapping, "metroTileMapping");
             this.metroTileMapping.ActiveControl = null;
             this.metroTileMapping.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileMapping, "metroTileMapping");
             this.metroTileMapping.Name = "metroTileMapping";
             this.metroTileMapping.UseSelectable = true;
             this.metroTileMapping.Click += new System.EventHandler(this.metroTileMapping_Click);
             // 
             // metroTileSettings
             // 
-            resources.ApplyResources(this.metroTileSettings, "metroTileSettings");
             this.metroTileSettings.ActiveControl = null;
             this.metroTileSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileSettings, "metroTileSettings");
             this.metroTileSettings.Name = "metroTileSettings";
             this.metroTileSettings.UseSelectable = true;
             this.metroTileSettings.Click += new System.EventHandler(this.metroTileSettings_Click);
             // 
             // metroTileModelling
             // 
-            resources.ApplyResources(this.metroTileModelling, "metroTileModelling");
             this.metroTileModelling.ActiveControl = null;
             this.metroTileModelling.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileModelling, "metroTileModelling");
             this.metroTileModelling.Name = "metroTileModelling";
             this.metroTileModelling.UseSelectable = true;
             this.metroTileModelling.Click += new System.EventHandler(this.metroTileModeling_Click);
             // 
             // metroTile1
             // 
-            resources.ApplyResources(this.metroTile1, "metroTile1");
             this.metroTile1.ActiveControl = null;
             this.metroTile1.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTile1, "metroTile1");
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile1.TileImage")));
             this.metroTile1.UseSelectable = true;
@@ -151,10 +152,10 @@
             // 
             // metroTileGit
             // 
-            resources.ApplyResources(this.metroTileGit, "metroTileGit");
             this.metroTileGit.ActiveControl = null;
             this.metroTileGit.BackColor = System.Drawing.Color.White;
             this.metroTileGit.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileGit, "metroTileGit");
             this.metroTileGit.Name = "metroTileGit";
             this.metroTileGit.TileImage = global::glSDK.Properties.Resources.NewLogo;
             this.metroTileGit.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -167,18 +168,26 @@
             // 
             // metroTileOther
             // 
-            resources.ApplyResources(this.metroTileOther, "metroTileOther");
             this.metroTileOther.ActiveControl = null;
             this.metroTileOther.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.metroTileOther, "metroTileOther");
             this.metroTileOther.Name = "metroTileOther";
             this.metroTileOther.UseSelectable = true;
             this.metroTileOther.Click += new System.EventHandler(this.metroTileOther_Click);
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.metroTileOther);
             this.Controls.Add(this.metroTileAbout);
             this.Controls.Add(this.metroTileManuals);
@@ -218,6 +227,7 @@
         private MetroFramework.Controls.MetroTile metroTileGit;
         private MetroFramework.Components.MetroStyleManager metroStyleManager;
         private MetroFramework.Controls.MetroTile metroTileOther;
+        private System.Windows.Forms.Button button1;
     }
 }
 
