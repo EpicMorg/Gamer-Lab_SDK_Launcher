@@ -56,15 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configs\AbyrvalgTranslator.cs" />
-    <Compile Include="Configs\AssemblyInfoHelper.cs" />
-    <Compile Include="Configs\Config.cs" />
-    <Compile Include="Configs\Globals.cs" />
-    <Compile Include="Configs\Langs.cs" />
-    <Compile Include="Configs\RegistryManager.cs" />
-    <Compile Include="Configs\SoftwareDetector.cs" />
-    <Compile Include="Configs\Styles.cs" />
-    <Compile Include="Configs\Theme.cs" />
+    <Compile Include="Pocos\Apps.cs" />
+    <Compile Include="Pocos\Compilers.cs" />
+    <Compile Include="Pocos\DataManager.cs" />
+    <Compile Include="Pocos\Settings.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

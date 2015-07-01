@@ -9,10 +9,16 @@ namespace glSDK.UI.ModernUITemplate
         {
             InitializeComponent();
         }
-
+        protected void ShowForm(FrmTmp form)
+        {
+            Hide();
+            form.ShowDialog();
+            Show();
+            FocusMe();
+        }
         private void FrmTmp_Load(object sender, EventArgs e)
         {
-
+            //Theme = Program.Settings.Theme;
         }
     }
 }

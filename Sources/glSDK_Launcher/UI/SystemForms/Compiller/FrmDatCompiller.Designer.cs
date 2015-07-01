@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.metroLabelSelectProfile = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBoxProfile = new MetroFramework.Controls.MetroComboBox();
+            this.cmbProfile = new MetroFramework.Controls.MetroComboBox();
             this.metroButtonEditProfile = new MetroFramework.Controls.MetroButton();
             this.metroLabelSelectMap = new MetroFramework.Controls.MetroLabel();
             this.metroTextBoxBrowse = new MetroFramework.Controls.MetroTextBox();
             this.metroButtonBrowse = new MetroFramework.Controls.MetroButton();
-            this.metroTextBoxLog = new MetroFramework.Controls.MetroTextBox();
+            this.txtLog = new MetroFramework.Controls.MetroTextBox();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroToggleRun = new MetroFramework.Controls.MetroToggle();
+            this.chkRun = new MetroFramework.Controls.MetroToggle();
             this.metroLabelRun = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
@@ -49,15 +49,15 @@
             this.metroLabelSelectProfile.TabIndex = 0;
             this.metroLabelSelectProfile.Text = "Select profile:";
             // 
-            // metroComboBoxProfile
+            // cmbProfile
             // 
-            this.metroComboBoxProfile.FormattingEnabled = true;
-            this.metroComboBoxProfile.ItemHeight = 23;
-            this.metroComboBoxProfile.Location = new System.Drawing.Point(23, 82);
-            this.metroComboBoxProfile.Name = "metroComboBoxProfile";
-            this.metroComboBoxProfile.Size = new System.Drawing.Size(303, 29);
-            this.metroComboBoxProfile.TabIndex = 1;
-            this.metroComboBoxProfile.UseSelectable = true;
+            this.cmbProfile.FormattingEnabled = true;
+            this.cmbProfile.ItemHeight = 23;
+            this.cmbProfile.Location = new System.Drawing.Point(23, 82);
+            this.cmbProfile.Name = "cmbProfile";
+            this.cmbProfile.Size = new System.Drawing.Size(303, 29);
+            this.cmbProfile.TabIndex = 1;
+            this.cmbProfile.UseSelectable = true;
             // 
             // metroButtonEditProfile
             // 
@@ -102,20 +102,20 @@
             this.metroButtonBrowse.UseSelectable = true;
             this.metroButtonBrowse.Click += new System.EventHandler(this.metroButtonBrowse_Click);
             // 
-            // metroTextBoxLog
+            // txtLog
             // 
-            this.metroTextBoxLog.Lines = new string[0];
-            this.metroTextBoxLog.Location = new System.Drawing.Point(23, 165);
-            this.metroTextBoxLog.MaxLength = 32767;
-            this.metroTextBoxLog.Multiline = true;
-            this.metroTextBoxLog.Name = "metroTextBoxLog";
-            this.metroTextBoxLog.PasswordChar = '\0';
-            this.metroTextBoxLog.ReadOnly = true;
-            this.metroTextBoxLog.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxLog.SelectedText = "";
-            this.metroTextBoxLog.Size = new System.Drawing.Size(384, 120);
-            this.metroTextBoxLog.TabIndex = 5;
-            this.metroTextBoxLog.UseSelectable = true;
+            this.txtLog.Lines = new string[0];
+            this.txtLog.Location = new System.Drawing.Point(23, 165);
+            this.txtLog.MaxLength = 32767;
+            this.txtLog.Multiline = true;
+            this.txtLog.Name = "txtLog";
+            this.txtLog.PasswordChar = '\0';
+            this.txtLog.ReadOnly = true;
+            this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtLog.SelectedText = "";
+            this.txtLog.Size = new System.Drawing.Size(384, 120);
+            this.txtLog.TabIndex = 5;
+            this.txtLog.UseSelectable = true;
             // 
             // metroTile1
             // 
@@ -128,16 +128,17 @@
             this.metroTile1.Text = "Run";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
-            // metroToggleRun
+            // chkRun
             // 
-            this.metroToggleRun.AutoSize = true;
-            this.metroToggleRun.Location = new System.Drawing.Point(327, 291);
-            this.metroToggleRun.Name = "metroToggleRun";
-            this.metroToggleRun.Size = new System.Drawing.Size(80, 17);
-            this.metroToggleRun.TabIndex = 7;
-            this.metroToggleRun.Text = "Off";
-            this.metroToggleRun.UseSelectable = true;
+            this.chkRun.AutoSize = true;
+            this.chkRun.Location = new System.Drawing.Point(327, 291);
+            this.chkRun.Name = "chkRun";
+            this.chkRun.Size = new System.Drawing.Size(80, 17);
+            this.chkRun.TabIndex = 7;
+            this.chkRun.Text = "Off";
+            this.chkRun.UseSelectable = true;
             // 
             // metroLabelRun
             // 
@@ -153,13 +154,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 377);
-            this.Controls.Add(this.metroToggleRun);
+            this.Controls.Add(this.chkRun);
             this.Controls.Add(this.metroTile1);
-            this.Controls.Add(this.metroTextBoxLog);
+            this.Controls.Add(this.txtLog);
             this.Controls.Add(this.metroButtonBrowse);
             this.Controls.Add(this.metroTextBoxBrowse);
             this.Controls.Add(this.metroButtonEditProfile);
-            this.Controls.Add(this.metroComboBoxProfile);
+            this.Controls.Add(this.cmbProfile);
             this.Controls.Add(this.metroLabelRun);
             this.Controls.Add(this.metroLabelSelectMap);
             this.Controls.Add(this.metroLabelSelectProfile);
@@ -176,14 +177,14 @@
         #endregion
 
         private MetroFramework.Controls.MetroLabel metroLabelSelectProfile;
-        private MetroFramework.Controls.MetroComboBox metroComboBoxProfile;
+        private MetroFramework.Controls.MetroComboBox cmbProfile;
         private MetroFramework.Controls.MetroButton metroButtonEditProfile;
         private MetroFramework.Controls.MetroLabel metroLabelSelectMap;
         private MetroFramework.Controls.MetroTextBox metroTextBoxBrowse;
         private MetroFramework.Controls.MetroButton metroButtonBrowse;
-        private MetroFramework.Controls.MetroTextBox metroTextBoxLog;
+        private MetroFramework.Controls.MetroTextBox txtLog;
         private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroToggle metroToggleRun;
+        private MetroFramework.Controls.MetroToggle chkRun;
         private MetroFramework.Controls.MetroLabel metroLabelRun;
     }
 }

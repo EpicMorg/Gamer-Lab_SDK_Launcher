@@ -1,4 +1,6 @@
-﻿namespace glSDK.UI.SystemForms.Compiller
+﻿using glSDK.Pocos;
+
+namespace glSDK.UI.SystemForms.Compiller
 {
     partial class FrmDatCompillerProfile
     {
@@ -28,264 +30,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.metroGridProfiles = new MetroFramework.Controls.MetroGrid();
-            this.ProfilesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroTextBoxNewProfileName = new MetroFramework.Controls.MetroTextBox();
-            this.metroButtonAddNewName = new MetroFramework.Controls.MetroButton();
-            this.metroButtonDelete = new MetroFramework.Controls.MetroButton();
-            this.metroButtonSave = new MetroFramework.Controls.MetroButton();
-            this.metroTextBoxGameExePath = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabelGameExePath = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBoxModDirPath = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabelModDirPath = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBoxCSGexecutablePath = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBoxBSPexecutablePath = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabelCSGexecutablePath = new MetroFramework.Controls.MetroLabel();
-            this.metroLabelBSPexecutablePath = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBoxVISexecutablePath = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabelVISexecutablePath = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBoxRADexecutablePath = new MetroFramework.Controls.MetroTextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroLabelRADexecutablePath = new MetroFramework.Controls.MetroLabel();
-            this.metroButtonRADexecutablePath = new MetroFramework.Controls.MetroButton();
-            this.metroButtonVISexecutablePath = new MetroFramework.Controls.MetroButton();
-            this.metroButtonBSPexecutablePath = new MetroFramework.Controls.MetroButton();
-            this.metroButtonCSGexecutablePath = new MetroFramework.Controls.MetroButton();
-            this.metroButtonModDirPath = new MetroFramework.Controls.MetroButton();
+            this.metroLabelVISexecutablePath = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelBSPexecutablePath = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelModDirPath = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelCSGexecutablePath = new MetroFramework.Controls.MetroLabel();
+            this.txtRadArgs = new MetroFramework.Controls.MetroTextBox();
+            this.txtRadPath = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabelGameExePath = new MetroFramework.Controls.MetroLabel();
+            this.txtVisArgs = new MetroFramework.Controls.MetroTextBox();
+            this.txtVisPath = new MetroFramework.Controls.MetroTextBox();
             this.metroButtonGameExePath = new MetroFramework.Controls.MetroButton();
-            this.metroTextBoxCSGexecutableParams = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBoxBSPexecutableParams = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabelVISexecutableParams = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabelRADexecutableParams = new MetroFramework.Controls.MetroTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGridProfiles)).BeginInit();
+            this.metroButtonModDirPath = new MetroFramework.Controls.MetroButton();
+            this.metroButtonCSGexecutablePath = new MetroFramework.Controls.MetroButton();
+            this.metroButtonBSPexecutablePath = new MetroFramework.Controls.MetroButton();
+            this.metroButtonVISexecutablePath = new MetroFramework.Controls.MetroButton();
+            this.metroButtonRADexecutablePath = new MetroFramework.Controls.MetroButton();
+            this.metroButtonSave = new MetroFramework.Controls.MetroButton();
+            this.txtBspArgs = new MetroFramework.Controls.MetroTextBox();
+            this.txtBspPath = new MetroFramework.Controls.MetroTextBox();
+            this.metroButtonDelete = new MetroFramework.Controls.MetroButton();
+            this.txtMod = new MetroFramework.Controls.MetroTextBox();
+            this.txtCsgArgs = new MetroFramework.Controls.MetroTextBox();
+            this.txtCsgPath = new MetroFramework.Controls.MetroTextBox();
+            this.metroButtonAddNewName = new MetroFramework.Controls.MetroButton();
+            this.txtGameExe = new MetroFramework.Controls.MetroTextBox();
+            this.txtName = new MetroFramework.Controls.MetroTextBox();
+            this.dgvProfiles = new MetroFramework.Controls.MetroGrid();
+            this.ProfilesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtGameArgs = new MetroFramework.Controls.MetroTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProfiles)).BeginInit();
             this.SuspendLayout();
-            // 
-            // metroGridProfiles
-            // 
-            this.metroGridProfiles.AllowUserToAddRows = false;
-            this.metroGridProfiles.AllowUserToDeleteRows = false;
-            this.metroGridProfiles.AllowUserToResizeRows = false;
-            this.metroGridProfiles.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGridProfiles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGridProfiles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGridProfiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridProfiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.metroGridProfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.metroGridProfiles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProfilesName});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGridProfiles.DefaultCellStyle = dataGridViewCellStyle5;
-            this.metroGridProfiles.EnableHeadersVisualStyles = false;
-            this.metroGridProfiles.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGridProfiles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGridProfiles.Location = new System.Drawing.Point(23, 92);
-            this.metroGridProfiles.Name = "metroGridProfiles";
-            this.metroGridProfiles.ReadOnly = true;
-            this.metroGridProfiles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGridProfiles.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.metroGridProfiles.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGridProfiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGridProfiles.Size = new System.Drawing.Size(301, 84);
-            this.metroGridProfiles.TabIndex = 0;
-            // 
-            // ProfilesName
-            // 
-            this.ProfilesName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProfilesName.HeaderText = "Name";
-            this.ProfilesName.Name = "ProfilesName";
-            this.ProfilesName.ReadOnly = true;
-            this.ProfilesName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // metroTextBoxNewProfileName
-            // 
-            this.metroTextBoxNewProfileName.Lines = new string[0];
-            this.metroTextBoxNewProfileName.Location = new System.Drawing.Point(23, 63);
-            this.metroTextBoxNewProfileName.MaxLength = 32767;
-            this.metroTextBoxNewProfileName.Name = "metroTextBoxNewProfileName";
-            this.metroTextBoxNewProfileName.PasswordChar = '\0';
-            this.metroTextBoxNewProfileName.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxNewProfileName.SelectedText = "";
-            this.metroTextBoxNewProfileName.Size = new System.Drawing.Size(301, 23);
-            this.metroTextBoxNewProfileName.TabIndex = 1;
-            this.metroTextBoxNewProfileName.UseSelectable = true;
-            // 
-            // metroButtonAddNewName
-            // 
-            this.metroButtonAddNewName.Location = new System.Drawing.Point(330, 63);
-            this.metroButtonAddNewName.Name = "metroButtonAddNewName";
-            this.metroButtonAddNewName.Size = new System.Drawing.Size(77, 23);
-            this.metroButtonAddNewName.TabIndex = 2;
-            this.metroButtonAddNewName.Text = "Add";
-            this.metroButtonAddNewName.UseSelectable = true;
-            // 
-            // metroButtonDelete
-            // 
-            this.metroButtonDelete.Location = new System.Drawing.Point(330, 92);
-            this.metroButtonDelete.Name = "metroButtonDelete";
-            this.metroButtonDelete.Size = new System.Drawing.Size(77, 23);
-            this.metroButtonDelete.TabIndex = 2;
-            this.metroButtonDelete.Text = "Delete";
-            this.metroButtonDelete.UseSelectable = true;
-            // 
-            // metroButtonSave
-            // 
-            this.metroButtonSave.Location = new System.Drawing.Point(23, 470);
-            this.metroButtonSave.Name = "metroButtonSave";
-            this.metroButtonSave.Size = new System.Drawing.Size(384, 37);
-            this.metroButtonSave.TabIndex = 2;
-            this.metroButtonSave.Text = "Save";
-            this.metroButtonSave.UseSelectable = true;
-            // 
-            // metroTextBoxGameExePath
-            // 
-            this.metroTextBoxGameExePath.Lines = new string[0];
-            this.metroTextBoxGameExePath.Location = new System.Drawing.Point(23, 201);
-            this.metroTextBoxGameExePath.MaxLength = 32767;
-            this.metroTextBoxGameExePath.Name = "metroTextBoxGameExePath";
-            this.metroTextBoxGameExePath.PasswordChar = '\0';
-            this.metroTextBoxGameExePath.ReadOnly = true;
-            this.metroTextBoxGameExePath.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxGameExePath.SelectedText = "";
-            this.metroTextBoxGameExePath.Size = new System.Drawing.Size(301, 23);
-            this.metroTextBoxGameExePath.TabIndex = 1;
-            this.metroTextBoxGameExePath.UseSelectable = true;
-            // 
-            // metroLabelGameExePath
-            // 
-            this.metroLabelGameExePath.AutoSize = true;
-            this.metroLabelGameExePath.Location = new System.Drawing.Point(23, 179);
-            this.metroLabelGameExePath.Name = "metroLabelGameExePath";
-            this.metroLabelGameExePath.Size = new System.Drawing.Size(216, 19);
-            this.metroLabelGameExePath.TabIndex = 3;
-            this.metroLabelGameExePath.Text = "Game exe path (C:\\Half-Life\\hl.exe):";
-            // 
-            // metroTextBoxModDirPath
-            // 
-            this.metroTextBoxModDirPath.Lines = new string[0];
-            this.metroTextBoxModDirPath.Location = new System.Drawing.Point(23, 249);
-            this.metroTextBoxModDirPath.MaxLength = 32767;
-            this.metroTextBoxModDirPath.Name = "metroTextBoxModDirPath";
-            this.metroTextBoxModDirPath.PasswordChar = '\0';
-            this.metroTextBoxModDirPath.ReadOnly = true;
-            this.metroTextBoxModDirPath.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxModDirPath.SelectedText = "";
-            this.metroTextBoxModDirPath.Size = new System.Drawing.Size(301, 23);
-            this.metroTextBoxModDirPath.TabIndex = 1;
-            this.metroTextBoxModDirPath.UseSelectable = true;
-            // 
-            // metroLabelModDirPath
-            // 
-            this.metroLabelModDirPath.AutoSize = true;
-            this.metroLabelModDirPath.Location = new System.Drawing.Point(23, 227);
-            this.metroLabelModDirPath.Name = "metroLabelModDirPath";
-            this.metroLabelModDirPath.Size = new System.Drawing.Size(208, 19);
-            this.metroLabelModDirPath.TabIndex = 3;
-            this.metroLabelModDirPath.Text = "Mod directory (C:\\Half-Life\\valve):";
-            // 
-            // metroTextBoxCSGexecutablePath
-            // 
-            this.metroTextBoxCSGexecutablePath.Lines = new string[0];
-            this.metroTextBoxCSGexecutablePath.Location = new System.Drawing.Point(23, 297);
-            this.metroTextBoxCSGexecutablePath.MaxLength = 32767;
-            this.metroTextBoxCSGexecutablePath.Name = "metroTextBoxCSGexecutablePath";
-            this.metroTextBoxCSGexecutablePath.PasswordChar = '\0';
-            this.metroTextBoxCSGexecutablePath.ReadOnly = true;
-            this.metroTextBoxCSGexecutablePath.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxCSGexecutablePath.SelectedText = "";
-            this.metroTextBoxCSGexecutablePath.Size = new System.Drawing.Size(208, 23);
-            this.metroTextBoxCSGexecutablePath.TabIndex = 1;
-            this.metroTextBoxCSGexecutablePath.UseSelectable = true;
-            // 
-            // metroTextBoxBSPexecutablePath
-            // 
-            this.metroTextBoxBSPexecutablePath.Lines = new string[0];
-            this.metroTextBoxBSPexecutablePath.Location = new System.Drawing.Point(23, 345);
-            this.metroTextBoxBSPexecutablePath.MaxLength = 32767;
-            this.metroTextBoxBSPexecutablePath.Name = "metroTextBoxBSPexecutablePath";
-            this.metroTextBoxBSPexecutablePath.PasswordChar = '\0';
-            this.metroTextBoxBSPexecutablePath.ReadOnly = true;
-            this.metroTextBoxBSPexecutablePath.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxBSPexecutablePath.SelectedText = "";
-            this.metroTextBoxBSPexecutablePath.Size = new System.Drawing.Size(208, 23);
-            this.metroTextBoxBSPexecutablePath.TabIndex = 1;
-            this.metroTextBoxBSPexecutablePath.UseSelectable = true;
-            // 
-            // metroLabelCSGexecutablePath
-            // 
-            this.metroLabelCSGexecutablePath.AutoSize = true;
-            this.metroLabelCSGexecutablePath.Location = new System.Drawing.Point(23, 275);
-            this.metroLabelCSGexecutablePath.Name = "metroLabelCSGexecutablePath";
-            this.metroLabelCSGexecutablePath.Size = new System.Drawing.Size(103, 19);
-            this.metroLabelCSGexecutablePath.TabIndex = 3;
-            this.metroLabelCSGexecutablePath.Text = "CSG Executable:";
-            // 
-            // metroLabelBSPexecutablePath
-            // 
-            this.metroLabelBSPexecutablePath.AutoSize = true;
-            this.metroLabelBSPexecutablePath.Location = new System.Drawing.Point(23, 323);
-            this.metroLabelBSPexecutablePath.Name = "metroLabelBSPexecutablePath";
-            this.metroLabelBSPexecutablePath.Size = new System.Drawing.Size(101, 19);
-            this.metroLabelBSPexecutablePath.TabIndex = 3;
-            this.metroLabelBSPexecutablePath.Text = "BSP Executable:";
-            // 
-            // metroTextBoxVISexecutablePath
-            // 
-            this.metroTextBoxVISexecutablePath.Lines = new string[0];
-            this.metroTextBoxVISexecutablePath.Location = new System.Drawing.Point(23, 393);
-            this.metroTextBoxVISexecutablePath.MaxLength = 32767;
-            this.metroTextBoxVISexecutablePath.Name = "metroTextBoxVISexecutablePath";
-            this.metroTextBoxVISexecutablePath.PasswordChar = '\0';
-            this.metroTextBoxVISexecutablePath.ReadOnly = true;
-            this.metroTextBoxVISexecutablePath.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxVISexecutablePath.SelectedText = "";
-            this.metroTextBoxVISexecutablePath.Size = new System.Drawing.Size(208, 23);
-            this.metroTextBoxVISexecutablePath.TabIndex = 1;
-            this.metroTextBoxVISexecutablePath.UseSelectable = true;
-            // 
-            // metroLabelVISexecutablePath
-            // 
-            this.metroLabelVISexecutablePath.AutoSize = true;
-            this.metroLabelVISexecutablePath.Location = new System.Drawing.Point(23, 371);
-            this.metroLabelVISexecutablePath.Name = "metroLabelVISexecutablePath";
-            this.metroLabelVISexecutablePath.Size = new System.Drawing.Size(96, 19);
-            this.metroLabelVISexecutablePath.TabIndex = 3;
-            this.metroLabelVISexecutablePath.Text = "VIS Executable:";
-            // 
-            // metroTextBoxRADexecutablePath
-            // 
-            this.metroTextBoxRADexecutablePath.Lines = new string[0];
-            this.metroTextBoxRADexecutablePath.Location = new System.Drawing.Point(23, 441);
-            this.metroTextBoxRADexecutablePath.MaxLength = 32767;
-            this.metroTextBoxRADexecutablePath.Name = "metroTextBoxRADexecutablePath";
-            this.metroTextBoxRADexecutablePath.PasswordChar = '\0';
-            this.metroTextBoxRADexecutablePath.ReadOnly = true;
-            this.metroTextBoxRADexecutablePath.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxRADexecutablePath.SelectedText = "";
-            this.metroTextBoxRADexecutablePath.Size = new System.Drawing.Size(208, 23);
-            this.metroTextBoxRADexecutablePath.TabIndex = 1;
-            this.metroTextBoxRADexecutablePath.UseSelectable = true;
             // 
             // metroLabelRADexecutablePath
             // 
@@ -296,55 +74,104 @@
             this.metroLabelRADexecutablePath.TabIndex = 3;
             this.metroLabelRADexecutablePath.Text = "RAD Executable:";
             // 
-            // metroButtonRADexecutablePath
+            // metroLabelVISexecutablePath
             // 
-            this.metroButtonRADexecutablePath.Location = new System.Drawing.Point(330, 441);
-            this.metroButtonRADexecutablePath.Name = "metroButtonRADexecutablePath";
-            this.metroButtonRADexecutablePath.Size = new System.Drawing.Size(77, 23);
-            this.metroButtonRADexecutablePath.TabIndex = 2;
-            this.metroButtonRADexecutablePath.Text = "Browse";
-            this.metroButtonRADexecutablePath.UseSelectable = true;
-            this.metroButtonRADexecutablePath.Click += new System.EventHandler(this.metroButtonRADexecutablePath_Click);
+            this.metroLabelVISexecutablePath.AutoSize = true;
+            this.metroLabelVISexecutablePath.Location = new System.Drawing.Point(23, 371);
+            this.metroLabelVISexecutablePath.Name = "metroLabelVISexecutablePath";
+            this.metroLabelVISexecutablePath.Size = new System.Drawing.Size(96, 19);
+            this.metroLabelVISexecutablePath.TabIndex = 3;
+            this.metroLabelVISexecutablePath.Text = "VIS Executable:";
             // 
-            // metroButtonVISexecutablePath
+            // metroLabelBSPexecutablePath
             // 
-            this.metroButtonVISexecutablePath.Location = new System.Drawing.Point(330, 393);
-            this.metroButtonVISexecutablePath.Name = "metroButtonVISexecutablePath";
-            this.metroButtonVISexecutablePath.Size = new System.Drawing.Size(77, 23);
-            this.metroButtonVISexecutablePath.TabIndex = 2;
-            this.metroButtonVISexecutablePath.Text = "Browse";
-            this.metroButtonVISexecutablePath.UseSelectable = true;
-            this.metroButtonVISexecutablePath.Click += new System.EventHandler(this.metroButtonVISexecutablePath_Click);
+            this.metroLabelBSPexecutablePath.AutoSize = true;
+            this.metroLabelBSPexecutablePath.Location = new System.Drawing.Point(23, 323);
+            this.metroLabelBSPexecutablePath.Name = "metroLabelBSPexecutablePath";
+            this.metroLabelBSPexecutablePath.Size = new System.Drawing.Size(101, 19);
+            this.metroLabelBSPexecutablePath.TabIndex = 3;
+            this.metroLabelBSPexecutablePath.Text = "BSP Executable:";
             // 
-            // metroButtonBSPexecutablePath
+            // metroLabelModDirPath
             // 
-            this.metroButtonBSPexecutablePath.Location = new System.Drawing.Point(330, 345);
-            this.metroButtonBSPexecutablePath.Name = "metroButtonBSPexecutablePath";
-            this.metroButtonBSPexecutablePath.Size = new System.Drawing.Size(77, 23);
-            this.metroButtonBSPexecutablePath.TabIndex = 2;
-            this.metroButtonBSPexecutablePath.Text = "Browse";
-            this.metroButtonBSPexecutablePath.UseSelectable = true;
-            this.metroButtonBSPexecutablePath.Click += new System.EventHandler(this.metroButtonBSPexecutablePath_Click);
+            this.metroLabelModDirPath.AutoSize = true;
+            this.metroLabelModDirPath.Location = new System.Drawing.Point(23, 227);
+            this.metroLabelModDirPath.Name = "metroLabelModDirPath";
+            this.metroLabelModDirPath.Size = new System.Drawing.Size(208, 19);
+            this.metroLabelModDirPath.TabIndex = 3;
+            this.metroLabelModDirPath.Text = "Mod directory (C:\\Half-Life\\valve):";
             // 
-            // metroButtonCSGexecutablePath
+            // metroLabelCSGexecutablePath
             // 
-            this.metroButtonCSGexecutablePath.Location = new System.Drawing.Point(330, 297);
-            this.metroButtonCSGexecutablePath.Name = "metroButtonCSGexecutablePath";
-            this.metroButtonCSGexecutablePath.Size = new System.Drawing.Size(77, 23);
-            this.metroButtonCSGexecutablePath.TabIndex = 2;
-            this.metroButtonCSGexecutablePath.Text = "Browse";
-            this.metroButtonCSGexecutablePath.UseSelectable = true;
-            this.metroButtonCSGexecutablePath.Click += new System.EventHandler(this.metroButtonCSGexecutablePath_Click);
+            this.metroLabelCSGexecutablePath.AutoSize = true;
+            this.metroLabelCSGexecutablePath.Location = new System.Drawing.Point(23, 275);
+            this.metroLabelCSGexecutablePath.Name = "metroLabelCSGexecutablePath";
+            this.metroLabelCSGexecutablePath.Size = new System.Drawing.Size(103, 19);
+            this.metroLabelCSGexecutablePath.TabIndex = 3;
+            this.metroLabelCSGexecutablePath.Text = "CSG Executable:";
             // 
-            // metroButtonModDirPath
+            // txtRadArgs
             // 
-            this.metroButtonModDirPath.Location = new System.Drawing.Point(330, 249);
-            this.metroButtonModDirPath.Name = "metroButtonModDirPath";
-            this.metroButtonModDirPath.Size = new System.Drawing.Size(77, 23);
-            this.metroButtonModDirPath.TabIndex = 2;
-            this.metroButtonModDirPath.Text = "Browse";
-            this.metroButtonModDirPath.UseSelectable = true;
-            this.metroButtonModDirPath.Click += new System.EventHandler(this.metroButtonModDirPath_Click);
+            this.txtRadArgs.Lines = new string[0];
+            this.txtRadArgs.Location = new System.Drawing.Point(237, 441);
+            this.txtRadArgs.MaxLength = 32767;
+            this.txtRadArgs.Name = "txtRadArgs";
+            this.txtRadArgs.PasswordChar = '\0';
+            this.txtRadArgs.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtRadArgs.SelectedText = "";
+            this.txtRadArgs.Size = new System.Drawing.Size(87, 23);
+            this.txtRadArgs.TabIndex = 1;
+            this.txtRadArgs.UseSelectable = true;
+            // 
+            // txtRadPath
+            // 
+            this.txtRadPath.Lines = new string[0];
+            this.txtRadPath.Location = new System.Drawing.Point(23, 441);
+            this.txtRadPath.MaxLength = 32767;
+            this.txtRadPath.Name = "txtRadPath";
+            this.txtRadPath.PasswordChar = '\0';
+            this.txtRadPath.ReadOnly = true;
+            this.txtRadPath.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtRadPath.SelectedText = "";
+            this.txtRadPath.Size = new System.Drawing.Size(208, 23);
+            this.txtRadPath.TabIndex = 1;
+            this.txtRadPath.UseSelectable = true;
+            // 
+            // metroLabelGameExePath
+            // 
+            this.metroLabelGameExePath.AutoSize = true;
+            this.metroLabelGameExePath.Location = new System.Drawing.Point(23, 179);
+            this.metroLabelGameExePath.Name = "metroLabelGameExePath";
+            this.metroLabelGameExePath.Size = new System.Drawing.Size(216, 19);
+            this.metroLabelGameExePath.TabIndex = 3;
+            this.metroLabelGameExePath.Text = "Game exe path (C:\\Half-Life\\hl.exe):";
+            // 
+            // txtVisArgs
+            // 
+            this.txtVisArgs.Lines = new string[0];
+            this.txtVisArgs.Location = new System.Drawing.Point(237, 393);
+            this.txtVisArgs.MaxLength = 32767;
+            this.txtVisArgs.Name = "txtVisArgs";
+            this.txtVisArgs.PasswordChar = '\0';
+            this.txtVisArgs.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtVisArgs.SelectedText = "";
+            this.txtVisArgs.Size = new System.Drawing.Size(87, 23);
+            this.txtVisArgs.TabIndex = 1;
+            this.txtVisArgs.UseSelectable = true;
+            // 
+            // txtVisPath
+            // 
+            this.txtVisPath.Lines = new string[0];
+            this.txtVisPath.Location = new System.Drawing.Point(23, 393);
+            this.txtVisPath.MaxLength = 32767;
+            this.txtVisPath.Name = "txtVisPath";
+            this.txtVisPath.PasswordChar = '\0';
+            this.txtVisPath.ReadOnly = true;
+            this.txtVisPath.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtVisPath.SelectedText = "";
+            this.txtVisPath.Size = new System.Drawing.Size(208, 23);
+            this.txtVisPath.TabIndex = 1;
+            this.txtVisPath.UseSelectable = true;
             // 
             // metroButtonGameExePath
             // 
@@ -356,73 +183,268 @@
             this.metroButtonGameExePath.UseSelectable = true;
             this.metroButtonGameExePath.Click += new System.EventHandler(this.metroButtonGameExePath_Click);
             // 
-            // metroTextBoxCSGexecutableParams
+            // metroButtonModDirPath
             // 
-            this.metroTextBoxCSGexecutableParams.Lines = new string[0];
-            this.metroTextBoxCSGexecutableParams.Location = new System.Drawing.Point(237, 297);
-            this.metroTextBoxCSGexecutableParams.MaxLength = 32767;
-            this.metroTextBoxCSGexecutableParams.Name = "metroTextBoxCSGexecutableParams";
-            this.metroTextBoxCSGexecutableParams.PasswordChar = '\0';
-            this.metroTextBoxCSGexecutableParams.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxCSGexecutableParams.SelectedText = "";
-            this.metroTextBoxCSGexecutableParams.Size = new System.Drawing.Size(87, 23);
-            this.metroTextBoxCSGexecutableParams.TabIndex = 1;
-            this.metroTextBoxCSGexecutableParams.UseSelectable = true;
+            this.metroButtonModDirPath.Location = new System.Drawing.Point(330, 249);
+            this.metroButtonModDirPath.Name = "metroButtonModDirPath";
+            this.metroButtonModDirPath.Size = new System.Drawing.Size(77, 23);
+            this.metroButtonModDirPath.TabIndex = 2;
+            this.metroButtonModDirPath.Text = "Browse";
+            this.metroButtonModDirPath.UseSelectable = true;
+            this.metroButtonModDirPath.Click += new System.EventHandler(this.metroButtonModDirPath_Click);
             // 
-            // metroTextBoxBSPexecutableParams
+            // metroButtonCSGexecutablePath
             // 
-            this.metroTextBoxBSPexecutableParams.Lines = new string[0];
-            this.metroTextBoxBSPexecutableParams.Location = new System.Drawing.Point(237, 345);
-            this.metroTextBoxBSPexecutableParams.MaxLength = 32767;
-            this.metroTextBoxBSPexecutableParams.Name = "metroTextBoxBSPexecutableParams";
-            this.metroTextBoxBSPexecutableParams.PasswordChar = '\0';
-            this.metroTextBoxBSPexecutableParams.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxBSPexecutableParams.SelectedText = "";
-            this.metroTextBoxBSPexecutableParams.Size = new System.Drawing.Size(87, 23);
-            this.metroTextBoxBSPexecutableParams.TabIndex = 1;
-            this.metroTextBoxBSPexecutableParams.UseSelectable = true;
+            this.metroButtonCSGexecutablePath.Location = new System.Drawing.Point(330, 297);
+            this.metroButtonCSGexecutablePath.Name = "metroButtonCSGexecutablePath";
+            this.metroButtonCSGexecutablePath.Size = new System.Drawing.Size(77, 23);
+            this.metroButtonCSGexecutablePath.TabIndex = 2;
+            this.metroButtonCSGexecutablePath.Text = "Browse";
+            this.metroButtonCSGexecutablePath.UseSelectable = true;
+            this.metroButtonCSGexecutablePath.Click += new System.EventHandler(this.metroButtonCSGexecutablePath_Click);
             // 
-            // metroLabelVISexecutableParams
+            // metroButtonBSPexecutablePath
             // 
-            this.metroLabelVISexecutableParams.Lines = new string[0];
-            this.metroLabelVISexecutableParams.Location = new System.Drawing.Point(237, 393);
-            this.metroLabelVISexecutableParams.MaxLength = 32767;
-            this.metroLabelVISexecutableParams.Name = "metroLabelVISexecutableParams";
-            this.metroLabelVISexecutableParams.PasswordChar = '\0';
-            this.metroLabelVISexecutableParams.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroLabelVISexecutableParams.SelectedText = "";
-            this.metroLabelVISexecutableParams.Size = new System.Drawing.Size(87, 23);
-            this.metroLabelVISexecutableParams.TabIndex = 1;
-            this.metroLabelVISexecutableParams.UseSelectable = true;
+            this.metroButtonBSPexecutablePath.Location = new System.Drawing.Point(330, 345);
+            this.metroButtonBSPexecutablePath.Name = "metroButtonBSPexecutablePath";
+            this.metroButtonBSPexecutablePath.Size = new System.Drawing.Size(77, 23);
+            this.metroButtonBSPexecutablePath.TabIndex = 2;
+            this.metroButtonBSPexecutablePath.Text = "Browse";
+            this.metroButtonBSPexecutablePath.UseSelectable = true;
+            this.metroButtonBSPexecutablePath.Click += new System.EventHandler(this.metroButtonBSPexecutablePath_Click);
             // 
-            // metroLabelRADexecutableParams
+            // metroButtonVISexecutablePath
             // 
-            this.metroLabelRADexecutableParams.Lines = new string[0];
-            this.metroLabelRADexecutableParams.Location = new System.Drawing.Point(237, 441);
-            this.metroLabelRADexecutableParams.MaxLength = 32767;
-            this.metroLabelRADexecutableParams.Name = "metroLabelRADexecutableParams";
-            this.metroLabelRADexecutableParams.PasswordChar = '\0';
-            this.metroLabelRADexecutableParams.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroLabelRADexecutableParams.SelectedText = "";
-            this.metroLabelRADexecutableParams.Size = new System.Drawing.Size(87, 23);
-            this.metroLabelRADexecutableParams.TabIndex = 1;
-            this.metroLabelRADexecutableParams.UseSelectable = true;
+            this.metroButtonVISexecutablePath.Location = new System.Drawing.Point(330, 393);
+            this.metroButtonVISexecutablePath.Name = "metroButtonVISexecutablePath";
+            this.metroButtonVISexecutablePath.Size = new System.Drawing.Size(77, 23);
+            this.metroButtonVISexecutablePath.TabIndex = 2;
+            this.metroButtonVISexecutablePath.Text = "Browse";
+            this.metroButtonVISexecutablePath.UseSelectable = true;
+            this.metroButtonVISexecutablePath.Click += new System.EventHandler(this.metroButtonVISexecutablePath_Click);
+            // 
+            // metroButtonRADexecutablePath
+            // 
+            this.metroButtonRADexecutablePath.Location = new System.Drawing.Point(330, 441);
+            this.metroButtonRADexecutablePath.Name = "metroButtonRADexecutablePath";
+            this.metroButtonRADexecutablePath.Size = new System.Drawing.Size(77, 23);
+            this.metroButtonRADexecutablePath.TabIndex = 2;
+            this.metroButtonRADexecutablePath.Text = "Browse";
+            this.metroButtonRADexecutablePath.UseSelectable = true;
+            this.metroButtonRADexecutablePath.Click += new System.EventHandler(this.metroButtonRADexecutablePath_Click);
+            // 
+            // metroButtonSave
+            // 
+            this.metroButtonSave.Location = new System.Drawing.Point(23, 470);
+            this.metroButtonSave.Name = "metroButtonSave";
+            this.metroButtonSave.Size = new System.Drawing.Size(384, 37);
+            this.metroButtonSave.TabIndex = 2;
+            this.metroButtonSave.Text = "Save";
+            this.metroButtonSave.UseSelectable = true;
+            this.metroButtonSave.Click += new System.EventHandler(this.metroButtonSave_Click);
+            // 
+            // txtBspArgs
+            // 
+            this.txtBspArgs.Lines = new string[0];
+            this.txtBspArgs.Location = new System.Drawing.Point(237, 345);
+            this.txtBspArgs.MaxLength = 32767;
+            this.txtBspArgs.Name = "txtBspArgs";
+            this.txtBspArgs.PasswordChar = '\0';
+            this.txtBspArgs.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBspArgs.SelectedText = "";
+            this.txtBspArgs.Size = new System.Drawing.Size(87, 23);
+            this.txtBspArgs.TabIndex = 1;
+            this.txtBspArgs.UseSelectable = true;
+            // 
+            // txtBspPath
+            // 
+            this.txtBspPath.Lines = new string[0];
+            this.txtBspPath.Location = new System.Drawing.Point(23, 345);
+            this.txtBspPath.MaxLength = 32767;
+            this.txtBspPath.Name = "txtBspPath";
+            this.txtBspPath.PasswordChar = '\0';
+            this.txtBspPath.ReadOnly = true;
+            this.txtBspPath.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBspPath.SelectedText = "";
+            this.txtBspPath.Size = new System.Drawing.Size(208, 23);
+            this.txtBspPath.TabIndex = 1;
+            this.txtBspPath.UseSelectable = true;
+            // 
+            // metroButtonDelete
+            // 
+            this.metroButtonDelete.Location = new System.Drawing.Point(330, 92);
+            this.metroButtonDelete.Name = "metroButtonDelete";
+            this.metroButtonDelete.Size = new System.Drawing.Size(77, 23);
+            this.metroButtonDelete.TabIndex = 2;
+            this.metroButtonDelete.Text = "Delete";
+            this.metroButtonDelete.UseSelectable = true;
+            this.metroButtonDelete.Click += new System.EventHandler(this.metroButtonDelete_Click);
+            // 
+            // txtMod
+            // 
+            this.txtMod.Lines = new string[0];
+            this.txtMod.Location = new System.Drawing.Point(23, 249);
+            this.txtMod.MaxLength = 32767;
+            this.txtMod.Name = "txtMod";
+            this.txtMod.PasswordChar = '\0';
+            this.txtMod.ReadOnly = true;
+            this.txtMod.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMod.SelectedText = "";
+            this.txtMod.Size = new System.Drawing.Size(301, 23);
+            this.txtMod.TabIndex = 1;
+            this.txtMod.UseSelectable = true;
+            // 
+            // txtCsgArgs
+            // 
+            this.txtCsgArgs.Lines = new string[0];
+            this.txtCsgArgs.Location = new System.Drawing.Point(237, 297);
+            this.txtCsgArgs.MaxLength = 32767;
+            this.txtCsgArgs.Name = "txtCsgArgs";
+            this.txtCsgArgs.PasswordChar = '\0';
+            this.txtCsgArgs.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCsgArgs.SelectedText = "";
+            this.txtCsgArgs.Size = new System.Drawing.Size(87, 23);
+            this.txtCsgArgs.TabIndex = 1;
+            this.txtCsgArgs.UseSelectable = true;
+            // 
+            // txtCsgPath
+            // 
+            this.txtCsgPath.Lines = new string[0];
+            this.txtCsgPath.Location = new System.Drawing.Point(23, 297);
+            this.txtCsgPath.MaxLength = 32767;
+            this.txtCsgPath.Name = "txtCsgPath";
+            this.txtCsgPath.PasswordChar = '\0';
+            this.txtCsgPath.ReadOnly = true;
+            this.txtCsgPath.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCsgPath.SelectedText = "";
+            this.txtCsgPath.Size = new System.Drawing.Size(208, 23);
+            this.txtCsgPath.TabIndex = 1;
+            this.txtCsgPath.UseSelectable = true;
+            // 
+            // metroButtonAddNewName
+            // 
+            this.metroButtonAddNewName.Location = new System.Drawing.Point(330, 63);
+            this.metroButtonAddNewName.Name = "metroButtonAddNewName";
+            this.metroButtonAddNewName.Size = new System.Drawing.Size(77, 23);
+            this.metroButtonAddNewName.TabIndex = 2;
+            this.metroButtonAddNewName.Text = "Add";
+            this.metroButtonAddNewName.UseSelectable = true;
+            this.metroButtonAddNewName.Click += new System.EventHandler(this.metroButtonAddNewName_Click);
+            // 
+            // txtGameExe
+            // 
+            this.txtGameExe.Lines = new string[0];
+            this.txtGameExe.Location = new System.Drawing.Point(23, 201);
+            this.txtGameExe.MaxLength = 32767;
+            this.txtGameExe.Name = "txtGameExe";
+            this.txtGameExe.PasswordChar = '\0';
+            this.txtGameExe.ReadOnly = true;
+            this.txtGameExe.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtGameExe.SelectedText = "";
+            this.txtGameExe.Size = new System.Drawing.Size(208, 23);
+            this.txtGameExe.TabIndex = 1;
+            this.txtGameExe.UseSelectable = true;
+            // 
+            // txtName
+            // 
+            this.txtName.Lines = new string[0];
+            this.txtName.Location = new System.Drawing.Point(23, 63);
+            this.txtName.MaxLength = 32767;
+            this.txtName.Name = "txtName";
+            this.txtName.PasswordChar = '\0';
+            this.txtName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtName.SelectedText = "";
+            this.txtName.Size = new System.Drawing.Size(301, 23);
+            this.txtName.TabIndex = 1;
+            this.txtName.UseSelectable = true;
+            // 
+            // dgvProfiles
+            // 
+            this.dgvProfiles.AllowUserToAddRows = false;
+            this.dgvProfiles.AllowUserToDeleteRows = false;
+            this.dgvProfiles.AllowUserToResizeRows = false;
+            this.dgvProfiles.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvProfiles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProfiles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvProfiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProfiles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProfiles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProfilesName});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProfiles.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProfiles.EnableHeadersVisualStyles = false;
+            this.dgvProfiles.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgvProfiles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvProfiles.Location = new System.Drawing.Point(23, 92);
+            this.dgvProfiles.Name = "dgvProfiles";
+            this.dgvProfiles.ReadOnly = true;
+            this.dgvProfiles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProfiles.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProfiles.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvProfiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProfiles.Size = new System.Drawing.Size(301, 84);
+            this.dgvProfiles.TabIndex = 0;
+            this.dgvProfiles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProfiles_CellContentClick);
+            // 
+            // ProfilesName
+            // 
+            this.ProfilesName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProfilesName.DataPropertyName = "Name";
+            this.ProfilesName.HeaderText = "Name";
+            this.ProfilesName.Name = "ProfilesName";
+            this.ProfilesName.ReadOnly = true;
+            this.ProfilesName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // txtGameArgs
+            // 
+            this.txtGameArgs.Lines = new string[0];
+            this.txtGameArgs.Location = new System.Drawing.Point(237, 201);
+            this.txtGameArgs.MaxLength = 32767;
+            this.txtGameArgs.Name = "txtGameArgs";
+            this.txtGameArgs.PasswordChar = '\0';
+            this.txtGameArgs.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtGameArgs.SelectedText = "";
+            this.txtGameArgs.Size = new System.Drawing.Size(87, 23);
+            this.txtGameArgs.TabIndex = 4;
+            this.txtGameArgs.UseSelectable = true;
             // 
             // FrmDatCompillerProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 530);
+            this.Controls.Add(this.txtGameArgs);
             this.Controls.Add(this.metroLabelRADexecutablePath);
             this.Controls.Add(this.metroLabelVISexecutablePath);
             this.Controls.Add(this.metroLabelBSPexecutablePath);
             this.Controls.Add(this.metroLabelModDirPath);
             this.Controls.Add(this.metroLabelCSGexecutablePath);
-            this.Controls.Add(this.metroLabelRADexecutableParams);
-            this.Controls.Add(this.metroTextBoxRADexecutablePath);
+            this.Controls.Add(this.txtRadArgs);
+            this.Controls.Add(this.txtRadPath);
             this.Controls.Add(this.metroLabelGameExePath);
-            this.Controls.Add(this.metroLabelVISexecutableParams);
-            this.Controls.Add(this.metroTextBoxVISexecutablePath);
+            this.Controls.Add(this.txtVisArgs);
+            this.Controls.Add(this.txtVisPath);
             this.Controls.Add(this.metroButtonGameExePath);
             this.Controls.Add(this.metroButtonModDirPath);
             this.Controls.Add(this.metroButtonCSGexecutablePath);
@@ -430,16 +452,16 @@
             this.Controls.Add(this.metroButtonVISexecutablePath);
             this.Controls.Add(this.metroButtonRADexecutablePath);
             this.Controls.Add(this.metroButtonSave);
-            this.Controls.Add(this.metroTextBoxBSPexecutableParams);
-            this.Controls.Add(this.metroTextBoxBSPexecutablePath);
+            this.Controls.Add(this.txtBspArgs);
+            this.Controls.Add(this.txtBspPath);
             this.Controls.Add(this.metroButtonDelete);
-            this.Controls.Add(this.metroTextBoxModDirPath);
-            this.Controls.Add(this.metroTextBoxCSGexecutableParams);
-            this.Controls.Add(this.metroTextBoxCSGexecutablePath);
+            this.Controls.Add(this.txtMod);
+            this.Controls.Add(this.txtCsgArgs);
+            this.Controls.Add(this.txtCsgPath);
             this.Controls.Add(this.metroButtonAddNewName);
-            this.Controls.Add(this.metroTextBoxGameExePath);
-            this.Controls.Add(this.metroTextBoxNewProfileName);
-            this.Controls.Add(this.metroGridProfiles);
+            this.Controls.Add(this.txtGameExe);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.dgvProfiles);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmDatCompillerProfile";
@@ -447,7 +469,7 @@
             this.ShowInTaskbar = false;
             this.Text = "Profiles";
             this.Load += new System.EventHandler(this.FrmDatCompillerProfile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.metroGridProfiles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProfiles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,23 +477,22 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroGrid metroGridProfiles;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProfilesName;
-        private MetroFramework.Controls.MetroTextBox metroTextBoxNewProfileName;
+        private MetroFramework.Controls.MetroGrid dgvProfiles;
+        private MetroFramework.Controls.MetroTextBox txtName;
         private MetroFramework.Controls.MetroButton metroButtonAddNewName;
         private MetroFramework.Controls.MetroButton metroButtonDelete;
         private MetroFramework.Controls.MetroButton metroButtonSave;
-        private MetroFramework.Controls.MetroTextBox metroTextBoxGameExePath;
+        private MetroFramework.Controls.MetroTextBox txtGameExe;
         private MetroFramework.Controls.MetroLabel metroLabelGameExePath;
-        private MetroFramework.Controls.MetroTextBox metroTextBoxModDirPath;
+        private MetroFramework.Controls.MetroTextBox txtMod;
         private MetroFramework.Controls.MetroLabel metroLabelModDirPath;
-        private MetroFramework.Controls.MetroTextBox metroTextBoxCSGexecutablePath;
-        private MetroFramework.Controls.MetroTextBox metroTextBoxBSPexecutablePath;
+        private MetroFramework.Controls.MetroTextBox txtCsgPath;
+        private MetroFramework.Controls.MetroTextBox txtBspPath;
         private MetroFramework.Controls.MetroLabel metroLabelCSGexecutablePath;
         private MetroFramework.Controls.MetroLabel metroLabelBSPexecutablePath;
-        private MetroFramework.Controls.MetroTextBox metroTextBoxVISexecutablePath;
+        private MetroFramework.Controls.MetroTextBox txtVisPath;
         private MetroFramework.Controls.MetroLabel metroLabelVISexecutablePath;
-        private MetroFramework.Controls.MetroTextBox metroTextBoxRADexecutablePath;
+        private MetroFramework.Controls.MetroTextBox txtRadPath;
         private MetroFramework.Controls.MetroLabel metroLabelRADexecutablePath;
         private MetroFramework.Controls.MetroButton metroButtonRADexecutablePath;
         private MetroFramework.Controls.MetroButton metroButtonVISexecutablePath;
@@ -479,9 +500,11 @@
         private MetroFramework.Controls.MetroButton metroButtonCSGexecutablePath;
         private MetroFramework.Controls.MetroButton metroButtonModDirPath;
         private MetroFramework.Controls.MetroButton metroButtonGameExePath;
-        private MetroFramework.Controls.MetroTextBox metroTextBoxCSGexecutableParams;
-        private MetroFramework.Controls.MetroTextBox metroTextBoxBSPexecutableParams;
-        private MetroFramework.Controls.MetroTextBox metroLabelVISexecutableParams;
-        private MetroFramework.Controls.MetroTextBox metroLabelRADexecutableParams;
+        private MetroFramework.Controls.MetroTextBox txtCsgArgs;
+        private MetroFramework.Controls.MetroTextBox txtBspArgs;
+        private MetroFramework.Controls.MetroTextBox txtVisArgs;
+        private MetroFramework.Controls.MetroTextBox txtRadArgs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProfilesName;
+        private MetroFramework.Controls.MetroTextBox txtGameArgs;
     }
 }

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props" Condition="Exists('..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props')" />
   <Import Project="..\packages\LibGit2Sharp.NativeBinaries.1.0.55\build\LibGit2Sharp.NativeBinaries.props" Condition="Exists('..\packages\LibGit2Sharp.NativeBinaries.1.0.55\build\LibGit2Sharp.NativeBinaries.props')" />
+  <Import Project="..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props" Condition="Exists('..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8B3B3BCA-6BD3-41D8-8A66-59F8DDD34975}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>glSDK</RootNamespace>
     <AssemblyName>glSDK_Launcher</AssemblyName>
@@ -39,6 +39,9 @@
   <PropertyGroup>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="LibGit2Sharp, Version=0.21.0.176, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LibGit2Sharp.0.21.0.176\lib\net40\LibGit2Sharp.dll</HintPath>
@@ -69,64 +72,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="LOCALE\Strings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
-    <Compile Include="UI\LauncherForms\FrmContent.cs">
+    <Compile Include="UI\LauncherForms\FrmLauncher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\LauncherForms\FrmContent.Designer.cs">
-      <DependentUpon>FrmContent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmCompiling.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmCompiling.Designer.cs">
-      <DependentUpon>FrmCompiling.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmEditors.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmEditors.Designer.cs">
-      <DependentUpon>FrmEditors.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmManuals.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmManuals.Designer.cs">
-      <DependentUpon>FrmManuals.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmMapping.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmMapping.Designer.cs">
-      <DependentUpon>FrmMapping.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmModding.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmModding.Designer.cs">
-      <DependentUpon>FrmModding.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmModelling.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmModelling.Designer.cs">
-      <DependentUpon>FrmModelling.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmOther.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmOther.Designer.cs">
-      <DependentUpon>FrmOther.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmTexturing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\LauncherForms\FrmTexturing.Designer.cs">
-      <DependentUpon>FrmTexturing.cs</DependentUpon>
+    <Compile Include="UI\LauncherForms\FrmLauncher.Designer.cs">
+      <DependentUpon>FrmLauncher.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SystemForms\Compiller\FrmDatCompillerProfile.cs">
       <SubType>Form</SubType>
@@ -190,7 +146,6 @@
     <Compile Include="UI\ModernUITemplate\FrmTmp.Designer.cs">
       <DependentUpon>FrmTmp.cs</DependentUpon>
     </Compile>
-    <Compile Include="WRAPPER\CoreHandler.cs" />
     <EmbeddedResource Include="LOCALE\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
@@ -206,32 +161,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\LauncherForms\FrmCompiling.resx">
-      <DependentUpon>FrmCompiling.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FrmMain.ru.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\LauncherForms\FrmContent.resx">
-      <DependentUpon>FrmContent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\LauncherForms\FrmEditors.resx">
-      <DependentUpon>FrmEditors.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\LauncherForms\FrmManuals.resx">
-      <DependentUpon>FrmManuals.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\LauncherForms\FrmMapping.resx">
-      <DependentUpon>FrmMapping.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\LauncherForms\FrmModding.resx">
-      <DependentUpon>FrmModding.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\LauncherForms\FrmModelling.resx">
-      <DependentUpon>FrmModelling.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\LauncherForms\FrmOther.resx">
-      <DependentUpon>FrmOther.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\LauncherForms\FrmTexturing.resx">
-      <DependentUpon>FrmTexturing.cs</DependentUpon>
+    <EmbeddedResource Include="UI\LauncherForms\FrmLauncher.resx">
+      <DependentUpon>FrmLauncher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SystemForms\Compiller\FrmDatCompillerProfile.resx">
       <DependentUpon>FrmDatCompillerProfile.cs</DependentUpon>
@@ -17373,7 +17307,7 @@
     <Content Include="ICONS\WindowsPhone\light\appbar.youtube.play.png" />
     <Content Include="ICONS\WindowsPhone\light\appbar.youtube.png" />
     <Content Include="ICONS\WindowsPhone\light\appbar.zune.png" />
-    <Content Include="XML\compiller.xml" />
+    <Content Include="XML\Compilers.xml" />
     <Content Include="XML\list.xml" />
     <None Include="Resources\reset_light.png" />
     <None Include="Resources\reset_dark.png" />
@@ -17390,9 +17324,18 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
+    <Error Condition="!Exists('..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props'))" />
+    <Error Condition="!Exists('..\packages\LibGit2Sharp.NativeBinaries.1.0.55\build\LibGit2Sharp.NativeBinaries.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LibGit2Sharp.NativeBinaries.1.0.55\build\LibGit2Sharp.NativeBinaries.props'))" />
+  </Target>
+  <!--
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
     <Error Condition="!Exists('..\packages\LibGit2Sharp.NativeBinaries.1.0.55\build\LibGit2Sharp.NativeBinaries.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LibGit2Sharp.NativeBinaries.1.0.55\build\LibGit2Sharp.NativeBinaries.props'))" />
     <Error Condition="!Exists('..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props'))" />
   </Target>
+  -->
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

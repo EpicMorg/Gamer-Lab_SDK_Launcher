@@ -129,4 +129,16 @@
   <data name="Cloning" xml:space="preserve">
     <value>Cloning</value>
   </data>
+  <data name="FrmDatCompiller_metroTile1_Click_Map_file_doesn_t_exist" xml:space="preserve">
+    <value>Map file doesn't exist</value>
+  </data>
+  <data name="FrmDatCompiller_metroTile1_Click_No_profile_selected" xml:space="preserve">
+    <value>No profile selected</value>
+  </data>
+  <data name="FrmDatCompiller_MissingCompiler_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="NoValidCompilerSpecified" xml:space="preserve">
+    <value>No valid {0} specified. Do you want to proceed without {0}?</value>
+  </data>
 </root>
