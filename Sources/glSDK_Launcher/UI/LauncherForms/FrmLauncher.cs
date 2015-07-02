@@ -56,10 +56,5 @@ namespace glSDK.UI.LauncherForms
 
         public FrmLauncher() { InitializeComponent(); }
         private void metroTileCompile_Click(object sender, EventArgs e) => ShowForm( new FrmDatCompiller() );
-
-        private void FrmLauncher_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

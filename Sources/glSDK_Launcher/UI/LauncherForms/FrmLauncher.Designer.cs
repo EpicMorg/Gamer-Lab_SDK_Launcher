@@ -39,7 +39,6 @@
             this.Name = "FrmLauncher";
             this.Resizable = false;
             this.Text = "";
-            this.Load += new System.EventHandler(this.FrmLauncher_Load);
             this.ResumeLayout(false);
 
         }

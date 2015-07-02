@@ -84,6 +84,7 @@
             this.metroTextBoxBrowse.Location = new System.Drawing.Point(23, 136);
             this.metroTextBoxBrowse.MaxLength = 32767;
             this.metroTextBoxBrowse.Name = "metroTextBoxBrowse";
+            this.metroTextBoxBrowse.PasswordChar = '\0';
             this.metroTextBoxBrowse.ReadOnly = true;
             this.metroTextBoxBrowse.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBoxBrowse.SelectedText = "";
@@ -108,6 +109,7 @@
             this.txtLog.MaxLength = 32767;
             this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
+            this.txtLog.PasswordChar = '\0';
             this.txtLog.ReadOnly = true;
             this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtLog.SelectedText = "";

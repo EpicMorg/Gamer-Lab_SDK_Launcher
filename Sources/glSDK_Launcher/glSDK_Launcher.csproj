@@ -7,7 +7,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8B3B3BCA-6BD3-41D8-8A66-59F8DDD34975}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>glSDK</RootNamespace>
     <AssemblyName>glSDK_Launcher</AssemblyName>
@@ -17308,9 +17308,7 @@
     <Content Include="ICONS\WindowsPhone\light\appbar.youtube.png" />
     <Content Include="ICONS\WindowsPhone\light\appbar.zune.png" />
     <Content Include="XML\Compilers.xml" />
-    <Content Include="XML\list.xml">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="XML\list.xml" />
     <None Include="Resources\reset_light.png" />
     <None Include="Resources\reset_dark.png" />
     <None Include="Resources\save_disk.png" />
