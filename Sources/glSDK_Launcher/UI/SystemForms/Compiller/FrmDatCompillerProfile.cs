@@ -88,8 +88,13 @@ namespace glSDK.UI.SystemForms.Compiller
         }
         private void metroButtonGameExePath_Click(object sender, EventArgs e)
         {
-            var open = new FolderBrowserDialog();
-            if ( open.ShowDialog() == DialogResult.OK ) txtGameExe.Text = open.SelectedPath;
+            var open = new OpenFileDialog
+            {
+                CheckFileExists = true,
+                CheckPathExists = true,
+                Filter = @"HL.exe|hl.exe"
+            };
+            if ( open.ShowDialog() == DialogResult.OK ) txtGameExe.Text = open.FileName;
         }
         private void metroButtonModDirPath_Click(object sender, EventArgs e)
         {

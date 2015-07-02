@@ -116,7 +116,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtRadArgs.Location = new System.Drawing.Point(237, 441);
             this.txtRadArgs.MaxLength = 32767;
             this.txtRadArgs.Name = "txtRadArgs";
-            this.txtRadArgs.PasswordChar = '\0';
             this.txtRadArgs.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtRadArgs.SelectedText = "";
             this.txtRadArgs.Size = new System.Drawing.Size(87, 23);
@@ -129,7 +128,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtRadPath.Location = new System.Drawing.Point(23, 441);
             this.txtRadPath.MaxLength = 32767;
             this.txtRadPath.Name = "txtRadPath";
-            this.txtRadPath.PasswordChar = '\0';
             this.txtRadPath.ReadOnly = true;
             this.txtRadPath.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtRadPath.SelectedText = "";
@@ -152,7 +150,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtVisArgs.Location = new System.Drawing.Point(237, 393);
             this.txtVisArgs.MaxLength = 32767;
             this.txtVisArgs.Name = "txtVisArgs";
-            this.txtVisArgs.PasswordChar = '\0';
             this.txtVisArgs.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtVisArgs.SelectedText = "";
             this.txtVisArgs.Size = new System.Drawing.Size(87, 23);
@@ -165,7 +162,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtVisPath.Location = new System.Drawing.Point(23, 393);
             this.txtVisPath.MaxLength = 32767;
             this.txtVisPath.Name = "txtVisPath";
-            this.txtVisPath.PasswordChar = '\0';
             this.txtVisPath.ReadOnly = true;
             this.txtVisPath.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtVisPath.SelectedText = "";
@@ -249,7 +245,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtBspArgs.Location = new System.Drawing.Point(237, 345);
             this.txtBspArgs.MaxLength = 32767;
             this.txtBspArgs.Name = "txtBspArgs";
-            this.txtBspArgs.PasswordChar = '\0';
             this.txtBspArgs.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBspArgs.SelectedText = "";
             this.txtBspArgs.Size = new System.Drawing.Size(87, 23);
@@ -262,7 +257,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtBspPath.Location = new System.Drawing.Point(23, 345);
             this.txtBspPath.MaxLength = 32767;
             this.txtBspPath.Name = "txtBspPath";
-            this.txtBspPath.PasswordChar = '\0';
             this.txtBspPath.ReadOnly = true;
             this.txtBspPath.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBspPath.SelectedText = "";
@@ -286,7 +280,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtMod.Location = new System.Drawing.Point(23, 249);
             this.txtMod.MaxLength = 32767;
             this.txtMod.Name = "txtMod";
-            this.txtMod.PasswordChar = '\0';
             this.txtMod.ReadOnly = true;
             this.txtMod.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtMod.SelectedText = "";
@@ -300,7 +293,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtCsgArgs.Location = new System.Drawing.Point(237, 297);
             this.txtCsgArgs.MaxLength = 32767;
             this.txtCsgArgs.Name = "txtCsgArgs";
-            this.txtCsgArgs.PasswordChar = '\0';
             this.txtCsgArgs.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtCsgArgs.SelectedText = "";
             this.txtCsgArgs.Size = new System.Drawing.Size(87, 23);
@@ -313,7 +305,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtCsgPath.Location = new System.Drawing.Point(23, 297);
             this.txtCsgPath.MaxLength = 32767;
             this.txtCsgPath.Name = "txtCsgPath";
-            this.txtCsgPath.PasswordChar = '\0';
             this.txtCsgPath.ReadOnly = true;
             this.txtCsgPath.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtCsgPath.SelectedText = "";
@@ -337,7 +328,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtGameExe.Location = new System.Drawing.Point(23, 201);
             this.txtGameExe.MaxLength = 32767;
             this.txtGameExe.Name = "txtGameExe";
-            this.txtGameExe.PasswordChar = '\0';
             this.txtGameExe.ReadOnly = true;
             this.txtGameExe.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGameExe.SelectedText = "";
@@ -351,7 +341,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtName.Location = new System.Drawing.Point(23, 63);
             this.txtName.MaxLength = 32767;
             this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
             this.txtName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(301, 23);
@@ -422,7 +411,6 @@ namespace glSDK.UI.SystemForms.Compiller
             this.txtGameArgs.Location = new System.Drawing.Point(237, 201);
             this.txtGameArgs.MaxLength = 32767;
             this.txtGameArgs.Name = "txtGameArgs";
-            this.txtGameArgs.PasswordChar = '\0';
             this.txtGameArgs.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtGameArgs.SelectedText = "";
             this.txtGameArgs.Size = new System.Drawing.Size(87, 23);

@@ -2,7 +2,7 @@
 <Compilers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Profiles>
     <Profile Name="Half-Life 3">
-      <GameExe>C:\Half-Life\hl.exe</GameExe>
+      <Game />
       <Mod>C:\Half-Life\valve</Mod>
       <Csg Params="-high -verbose">C:\SDK\tools\hlcsg.exe</Csg>
       <Bsp Params="-high -verbose">C:\SDK\tools\hlbsp.exe</Bsp>
@@ -10,22 +10,32 @@
       <Rad Params="-high -verbose">C:\SDK\tools\hlrad.exe</Rad>
     </Profile>
     <Profile Name="rewrgferg">
+      <Game />
       <Csg Params="erfer" />
       <Bsp Params="ergfewr" />
       <Vis Params="erfewrf" />
       <Rad Params="erfer" />
     </Profile>
     <Profile Name="ergferg">
+      <Game />
       <Csg Params="ergtr" />
       <Bsp Params="ertgrtiyuikjhtgrf" />
       <Vis Params="ujikujny" />
       <Rad Params="ijuijkuij" />
     </Profile>
     <Profile Name="erfewrtgr">
+      <Game />
       <Csg Params="tgt5yh" />
       <Bsp Params="yht6yh" />
       <Vis Params="yuhjyu" />
       <Rad Params="uhjuj" />
+    </Profile>
+    <Profile Name="ФЫ">
+      <Game Params="ФВЫ" />
+      <Csg Params="ФВ" />
+      <Bsp Params="ФВЫ" />
+      <Vis Params="ФВЫ" />
+      <Rad Params="ФВ" />
     </Profile>
   </Profiles>
 </Compilers>
